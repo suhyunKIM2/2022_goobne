@@ -1,252 +1,349 @@
-﻿ <!DOCTYPE html>
-<html lang="ko">
- <head>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<title>HTML List</title>
+<link rel="stylesheet" type="text/css" href="http://bid.goobne.net//guide/css/guide.css" />
+<script type="text/javascript"  src="http://bid.goobne.net//guide/js/jquery-1.11.0.min.js"></script>
+<script language="javascript" type="text/javascript">
+$(document).ready(function(){
+	$(".workList table tbody tr").each(function(){
+		//테이블 넘버링
+		var trNo =  $(this).index()+1;
+		$("td.no",this).html(trNo);
+	});
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	var link = $(".link > a");
+    link.click(function(){
+		link.removeClass("red");
+		$(this).addClass("red");
+	});
+});
+</script>
+</head>
+<body>
 
-    <title>굽네치킨 BackOffice</title>
- <script src="/html/js/includepath.js"></script>
+<div id="container">
+	<h3 class="scrTit">:: 굽네리뉴얼 퍼블리싱 :: FRONT</h3>   
+	<div id="contents">
 
- <header data-include-path="/html/include/header_doc.html"></header>
+		<!-------------------- tabCont01 -------------------->
+		<div class="tabCont" id="tabCont01">
+			<!-- List Table -->
+			<div class="workList">
+				<table summary="작업목록 리스트" >
+					<caption>작업 목록</caption>
+					<colgroup>
+						<col width="40px" class="no" /> 
+						<col width="60px" class="gb" />
+						<col width="10%" class="dep1" />
+						<col width="10%" class="dep2" />
+						<col width="5%" class="dep3" /> 
+						<col width="15%" class="link" />
+						<col width="100px" class="date" />
+						<col width="*" class="txt" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="no">No.</th>
+							<th scope="col" class="gb">구분</th>
+							<th scope="col" class="dep1">1depth</th>
+							<th scope="col" class="dep2">2depth</th>
+							<th scope="col" class="dep3">3depth</th> 
+							<th scope="col" class="link">HTML파일명(Link)</th>
+							<th scope="col" class="date">완료일</th>
+							<th scope="col" class="txt">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+                        <tr id="UTILL" >
+							<td class="no"></td>
+							<td class="gb" rowspan="3">공통</td>
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"></td>
+						</tr>
+						<tr id="UTILL" >
+							<td class="no"></td>
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="/main.html" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt">
+							   
+							</td>
+						</tr>
+						<tr id="UTILL" >
+							<td class="no"></td> 
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt">
+                                
+                            </td>
+						</tr>
+						<tr class="menu">
+							<td class="no"></td>
+							<td class="gb" rowspan="15">MENU</td>
+							<td class="dep1" rowspan="4"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"></td>
+						</tr>
+						<tr>
+							<td class="no"></td> 
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td>
+						</tr>  
+						<tr>
+							<td class="no"></td> 
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt">
+                              
+                            </td>
+						</tr>  
+                        <tr>
+							<td class="no"></td> 
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt">
+                                
+                            </td>
+						</tr>  
+						<tr>
+							<td class="no"></td> 
+							<td class="dep1" rowspan="3"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td>
+						</tr>
+                        <tr>
+							<td class="no"></td> 
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr>
+						<tr>
+							<td class="no"></td> 
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr>
+						<tr>
+							<td class="no"></td> 
+							<td class="dep1" rowspan="2" ></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr>
+						<tr>
+							<td class="no"></td> 
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr> 
+
+                        <tr>
+							<td class="no"></td> 
+							<td class="dep1" rowspan="2"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr>
+						<tr>
+							<td class="no"></td> 
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr> 
+
+                        <tr>
+							<td class="no"></td> 
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr> 
  
- </head>
-<body id="page-top">
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-        
-        <!-- Sidebar 공통 왼쪽 메뉴 -->
-        <div data-include-path="/html/include/nav_left.html"></div>
-    <!-- End of Sidebar -->
+                       <tr>
+							<td class="no"></td> 
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt">
+                                
+                            </td> 
+						</tr> 
 
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar 공통 top-->
-                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
-                
-            <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">온라인 매출 현황</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> 엑셀다운로드</a>
-                    </div>
-                    <div class ="day_box">
-                        <input type="text" id="datepicker" placeholder="0000-00-00"> ~ <input type="text" id="datepicker2" placeholder="0000-00-00">
-                        <button type="button" onClick="" class="btn_set"> 검색</button>
-                    </div>
-                    <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4 mb_g">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">PC</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>e-쿠폰</b></li>
-                                                <li><span class="PC_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="PC_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="stats_01" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>금액권</b></li>
-                                                <li><span class="PC_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="PC_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="stats_02" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>선결제</b></li>
-                                                <li><span class="PC_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="PC_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="stats_03" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>후불카드</b></li>
-                                                <li><span class="PC_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="PC_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="stats_04" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>후불현금</b></li>
-                                                <li><span class="PC_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="PC_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="stats_05" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Mobile</h6>
-                                </div>
-                                <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>e-쿠폰</b></li>
-                                                <li><span class="MO_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="MO_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="m_stats_01" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>금액권</b></li>
-                                                <li><span class="MO_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="MO_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="m_stats_02" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>선결제</b></li>
-                                                <li><span class="MO_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="MO_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="m_stats_03" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>후불카드</b></li>
-                                                <li><span class="MO_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="MO_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="m_stats_04" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="chart-pie pt-4 pb-2">
-                                        <div class="canvas_box">
-                                            <ul class="canvas_box_ul">
-                                                <li><b>후불현금</b></li>
-                                                <li><span class="MO_de_color">배달</span> <span>45% / 1000건</span></li>
-                                                <li><span class="MO_ta_color">포장</span> <span>55% / 1000건</span></li>
-                                            </ul>
-                                        <canvas id="m_stats_05" class="goobne_canvas"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer 공통 footer-->
-            <footer data-include-path="/html/include/footer.html"></footer>
-            
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+						<tr>
+							<td class="no"></td> 
+							<td class="dep1" rowspan="2"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td> 
+						</tr> 
+						<tr>
+							<td class="no"></td>  
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span>2021.05.10</span></td>
+							<td class="txt"><span></span></td> 
+						</tr> 
+					</tbody>
+				</table>
+			</div>
+			<!-- List Table -->
+		</div>
+		<!-------------------- tabCont01 -------------------->
+ 
+	</div>
     
-    
-    
-<!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <div style="padding-top:10px;"></div>
+	<h3 class="scrTit">:: 굽네리뉴얼 관리자 :: OFFICE <span style="float: right;"><a href="http://office.goob-ne.com:8080/test/index.html" target="_blank">test 샘플 보러가기</a></span></h3>   
+	<div id="contents">
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+		<!-------------------- tabCont01 -------------------->
+		<div class="tabCont" id="tabCont01">
+			<!-- List Table -->
+			<div class="workList">
+				<table summary="작업목록 리스트" >
+					<caption>작업 목록</caption>
+					<colgroup>
+						<col width="40px" class="no" /> 
+						<col width="60px" class="gb" />
+						<col width="10%" class="dep1" />
+						<col width="10%" class="dep2" />
+						<col width="5%" class="dep3" /> 
+						<col width="15%" class="link" />
+						<col width="100px" class="date" />
+						<col width="*" class="txt" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" class="no">No.</th>
+							<th scope="col" class="gb">구분</th>
+							<th scope="col" class="dep1">1depth</th>
+							<th scope="col" class="dep2">2depth</th>
+							<th scope="col" class="dep3">3depth</th> 
+							<th scope="col" class="link">HTML파일명(Link)</th>
+							<th scope="col" class="date">완료일</th>
+							<th scope="col" class="txt">비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr id="UTILL" >
+							<td class="no"></td>
+							<td class="gb" rowspan="2">공통</td>
+							<td class="dep1">메인</td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="/html/main.html" target="_blank">/html/main.html</a></td>
+							<td class="date"><span>2022.04.08</span></td>
+							<td class="txt">
+							  - header, left, footer 등 공통 레이아웃 확정
+                              - main에 들어가는 contants 영역 진행중 
+							</td>
+						</tr>
+						<tr id="UTILL" >
+							<td class="no"></td> 
+							<td class="dep1">로그인</td>
+							<td class="dep2"></td>
+							<td class="dep3"></td> 
+							<td class="link"><a href="/html/login.html" target="_blank">/html/login.html</a></td>
+							<td class="date"><span>2022.04.08</span></td>
+							<td class="txt">
+                            - 로그인페이지 확정 
+                            </td>
+						</tr>
+						<tr class="menu">
+							<td class="no"></td>
+							<td class="gb"></td>
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>
+							<td class="link"><a href="#" target="_blank"> </a></td>
+							<td class="date"><span> </span></td>
+							<td class="txt"></td>
+						</tr>
+						<tr>
+							<td class="no"></td>
+							<td class="gb"></td>
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>  
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td>
+						</tr>
+                        <tr>
+							<td class="no"></td>
+							<td class="gb"></td>
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>  
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td>
+						</tr>
+                        <tr>
+							<td class="no"></td>
+							<td class="gb"></td>
+							<td class="dep1"></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>  
+							<td class="link"><a href="" target="_blank"></a></td>
+							<td class="date"><span></span></td>
+							<td class="txt"><span></span></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- List Table -->
+		</div>
+		<!-------------------- tabCont01 -------------------->
+ 
+	</div>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+<!-- <a href="#none" id="toTop">Top</a> -->
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+</div>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
 </body>
-
 </html>

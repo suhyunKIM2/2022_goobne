@@ -14,3 +14,11 @@ window.addEventListener('load', function() {
                 }
             });
         });
+/*새로고침 TOP고정*/        
+window.onload = function() {
+			setTimeout (function () {
+				scrollTo(0,0);
+
+			},100);
+
+		}        
