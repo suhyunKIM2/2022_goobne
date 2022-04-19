@@ -250,8 +250,9 @@ $(document).ready(function(){
 						<col width="60px" class="gb" />
 						<col width="10%" class="dep1" />
 						<col width="10%" class="dep2" />
-						<col width="5%" class="dep3" /> 
-						<col width="15%" class="link" />
+						<col width="10%" class="dep3" /> 
+                        <col width="10%" class="dep4" /> 
+						<col width="10%" class="link" />
 						<col width="100px" class="date" />
 						<col width="*" class="txt" />
 					</colgroup>
@@ -262,6 +263,7 @@ $(document).ready(function(){
 							<th scope="col" class="dep1">1depth</th>
 							<th scope="col" class="dep2">2depth</th>
 							<th scope="col" class="dep3">3depth</th> 
+                            <th scope="col" class="dep4">4depth</th> 
 							<th scope="col" class="link">HTML파일명(Link)</th>
 							<th scope="col" class="date">완료일</th>
 							<th scope="col" class="txt">비고</th>
@@ -274,6 +276,7 @@ $(document).ready(function(){
 							<td class="dep1">메인</td>
 							<td class="dep2"></td>
 							<td class="dep3"></td> 
+                            <td class="dep4"></td>
 							<td class="link"><a href="/html/main.html" target="_blank">/html/main.html</a></td>
 							<td class="date"><span>2022.04.08</span></td>
 							<td class="txt">
@@ -286,6 +289,7 @@ $(document).ready(function(){
 							<td class="dep1">로그인</td>
 							<td class="dep2"></td>
 							<td class="dep3"></td> 
+                            <td class="dep4"></td> 
 							<td class="link"><a href="/html/login.html" target="_blank">/html/login.html</a></td>
 							<td class="date"><span>2022.04.08</span></td>
 							<td class="txt">
@@ -294,40 +298,75 @@ $(document).ready(function(){
 						</tr>
 						<tr class="menu">
 							<td class="no"></td>
-							<td class="gb"></td>
-							<td class="dep1"></td>
+							<td class="gb"  rowspan="2">매출현황</td>
+							<td class="dep1"><a href="/html/main.html" target="_blank"> 온라인매출현황</a></td>
 							<td class="dep2"></td>
 							<td class="dep3"></td>
-							<td class="link"><a href="#" target="_blank"> </a></td>
+                            <td class="dep4"></td>
+							<td class="link"><a href="/html/main.html" target="_blank">/html/main.html</a></td>
 							<td class="date"><span> </span></td>
 							<td class="txt"></td>
 						</tr>
 						<tr>
 							<td class="no"></td>
-							<td class="gb"></td>
-							<td class="dep1"></td>
+							<td class="dep1">매장매출현황</td>
 							<td class="dep2"></td>
-							<td class="dep3"></td>  
+							<td class="dep3"></td>
+                            <td class="dep4"></td>
 							<td class="link"><a href="" target="_blank"></a></td>
 							<td class="date"><span></span></td>
 							<td class="txt"><span></span></td>
 						</tr>
                         <tr>
 							<td class="no"></td>
-							<td class="gb"></td>
-							<td class="dep1"></td>
+							<td class="gb"  rowspan="4">회원관리</td>
+							<td class="dep1"><a href="/html/member/member_current.html" target="_blank">회원 관리 현황</a></td>
 							<td class="dep2"></td>
 							<td class="dep3"></td>  
-							<td class="link"><a href="" target="_blank"></a></td>
+                            <td class="dep4"></td>  
+							<td class="link"><a href="/html/member/member_current.html" target="_blank">/html/member/member_current.html</a></td>
 							<td class="date"><span></span></td>
 							<td class="txt"><span></span></td>
 						</tr>
                         <tr>
 							<td class="no"></td>
-							<td class="gb"></td>
-							<td class="dep1"></td>
+							<td class="dep1"><a href="/html/member/member_management.html" target="_blank">회원관리</a></td>
+							<td class="dep2">
+                                <a href="/html/member/member_management_info.html" target="_blank">회원정보수정<br> /html/member/member_management_info.html</a><br>
+                                <a href="/html/report/app_push.html" target="_blank">App푸쉬<br> /html/report/app_push.html</a><br>
+                                <a href="/html/report/sms.html" target="_blank">sms<br> /html/report/sms.html</a><br>
+                                <a href="/html/report/inform_talk.html" target="_blank">알림톡<br> /html/report/inform_talk.html</a>
+                            </td>
+							<td class="dep3"></td>  
+                            <td class="dep4"></td>
+							<td class="link">
+                                <a href="/html/member/member_management_info.html" target="_blank">회원정보수정<br> /html/member/member_management_info.html</a><br>
+                                <a href="/html/report/app_push.html" target="_blank">App푸쉬<br> /html/report/app_push.html</a><br>
+                                <a href="/html/report/sms.html" target="_blank">sms<br> /html/report/sms.html</a><br>
+                                <a href="/html/report/inform_talk.html" target="_blank">알림톡<br> /html/report/inform_talk.html</a>
+                            </td>
+							<td class="date"><span>2022.04.19</span></td>
+							<td class="txt">
+                             <span>- 해당 페이지 및 팝업 완료<br> 
+                             - sms 보내기 페이지  : 모바일 이미지 영역 표시 
+                            </span></td>
+						</tr>
+                        <tr>
+							<td class="no"></td>
+							<td class="dep1"><a href="" target="_blank">탈퇴회원 조회</a></td>
 							<td class="dep2"></td>
 							<td class="dep3"></td>  
+                            <td class="dep4"></td>
+							<td class="link"><a href="/html/member/unregister.html" target="_blank">/html/member/unregister.html</a></td>
+							<td class="date"><span>2022.04.19</span></td>
+							<td class="txt"><span></span></td>
+						</tr>
+                        <tr>
+							<td class="no"></td>
+							<td class="dep1"><a href="" target="_blank">메세지발송내역</a></td>
+							<td class="dep2"></td>
+							<td class="dep3"></td>  
+                            <td class="dep4"></td>
 							<td class="link"><a href="" target="_blank"></a></td>
 							<td class="date"><span></span></td>
 							<td class="txt"><span></span></td>
