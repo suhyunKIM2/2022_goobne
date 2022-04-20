@@ -1,14 +1,47 @@
-﻿<!-- Bootstrap core JavaScript-->
-    <script src="http://office.goob-ne.com:8080/html/vendor/jquery/jquery.min.js"></script>
-    <script src="http://office.goob-ne.com:8080/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+﻿<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="http://office.goob-ne.com:8080/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="http://office.goob-ne.com:8080/html/js/sb-admin-2.min.js"></script>
+    <script src="/html/js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="http://office.goob-ne.com:8080/html/vendor/chart.js/Chart.min.js"></script>
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
 
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
    
