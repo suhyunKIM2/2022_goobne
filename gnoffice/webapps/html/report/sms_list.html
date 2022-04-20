@@ -37,135 +37,136 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
-                        <h1 class="h3 mb-0 text-gray-900">선택회원 알림톡</h1>
+                        <h1 class="h3 mb-0 text-gray-900">메세지 발송내역</h1>
                     </div>
                     <div class="col-xl-4 col-lg-5">
                     <ul class="nav nav-tabs">
                       <li class="nav-item">
-                        <a class="nav-link  active" href="/html/report/app_push.html">App 푸시</a>
+                        <a class="nav-link" href="/html/report/app_push_list.html">App 푸시 발송내역</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link"  href="/html/report/sms.html">SMS</a>
+                        <a class="nav-link active"  href="/html/report/sms_list.html">SMS 발송내역</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/html/report/inform_talk.html">알림톡</a>
+                        <a class="nav-link" href="/html/report/inform_talk_list.html">알림톡 발송내역</a>
                       </li>
                     </ul>
                     <div class="tab-content">
                       <div class="tab-pane fade show active">
-                        <div style="margin-top:2%;text-align: right;">
-                            <ul class="list_inline">
-                                <li>
-                                    <a href="#" class="btn btn-success btn-icon-split">
-                                        <span class="text">+ 엑셀 연락처 업로드</span>
-                                    </a>
-                                </li>
-                                <li>
-                                <a href="#" class="btn btn-info btn-icon-split" data-toggle="modal" data-target="#exampleModalLabel_1">
-                                    <span class="text">+ 연락처 추가하기</span>
+                      <ul class="list_inline" style="text-align: right;margin-top: 2%;">
+                             <li style="float:left;">
+                                <select class="selectpicker">
+                                <option>전체</option>
+                                <option>발송내역</option>
+                                <option>테스트발송내역</option>
+                                </select>
+                            </li>
+                            <li><input type="text" id="datepicker" placeholder="0000-00-00"> ~ <input type="text" id="datepicker2" placeholder="0000-00-00"></li>
+                            <li>
+                                <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                    <span class="text">조회</span>
                                 </a>
                             </li>
-                                </ul>
-                            </div>
-                            <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0">
-                            <tr>
-                                <th class="bg-gray-200">발송대상</th>
-                                <td>
-                                    <textarea id="phone_number" name="phone_number" style="width:100%;min-height:50px;padding:0.5rem;    border: 1px solid #e9e9e9;overflow: auto;"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-gray-200">발송타입</th>
-                                <td>
-                                    <div>
-                                   <input type="checkbox" id="check1"><label for="check1">지금발송</label>
-                                   </div>
-                                   <div style="float:left;">
-                                    <input type="checkbox" id="check2"><label for="check2">예약 발송</label>
-                                    </div>
-                                    <div class ="day_box" style="float:left;width:auto;margin:0;">
-                                        <input type="text" id="datepicker" placeholder="0000-00-00" style="height:30px;line-height: 30px;">
-                                    </div>
-                                    <div class="left_line">
-                                    <ul class="list_inline">
-                                    <li>
-                                        <select class="selectpicker">
-                                            <option>00</option>
-                                            <option>01</option>
-                                            <option>02</option>
-                                            <option>03</option>
-                                            <option>04</option>
-                                            <option>05</option>
-                                            <option>06</option>
-                                            <option>07</option>
-                                            <option>08</option>
-                                            <option>09</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                            <option>13</option>
-                                            <option>14</option>
-                                            <option>15</option>
-                                            <option>16</option>
-                                            <option>17</option>
-                                            <option>18</option>
-                                            <option>19</option>
-                                            <option>20</option>
-                                            <option>21</option>
-                                            <option>22</option>
-                                            <option>23</option>
-                                            <option>24</option>
-                                        </select>
-                                    </li>
-                                    <li><spna>:</span></li>
-                                    <li>
-                                        <select class="selectpicker">
-                                            <option>00</option>
-                                            <option>05</option>
-                                            <option>10</option>
-                                            <option>15</option>
-                                            <option>20</option>
-                                            <option>25</option>
-                                            <option>30</option>
-                                            <option>35</option>
-                                            <option>40</option>
-                                            <option>45</option>
-                                            <option>50</option>
-                                            <option>55</option>
-                                        </select>
-                                    </li>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-gray-200">발송내용</th>
-                                <td>
-                                    <div><input type="checkbox" id="check1"><label for="check1">앞단 광고 넣기 (정보 통신망법 50조의거)</label></div>
-                                    <textarea id="story" name="story" style="width:100%;min-height:500px;padding:0.5rem;border: 1px solid #e9e9e9;"></textarea>
-                                </td>
-                            </tr>
-                        </table>
+                            </ul>
+                          <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>번호</th>
+                                    <th>등급</th>
+                                    <th>아이디</th>
+                                    <th>성명</th>
+                                    <th>휴대폰</th>
+                                    <th>발송일</th>
+                                    <th>전송</th>
+                                 </tr>
+                            </thead>
+                            <!--- 등급별 class "member_card + 1.슈퍼관리자 : member_01 / 2.운영관리자 : member_02 / 3.매장관리자 : member_03 / 4.임직원 : member_04 / 5.일반회원 : member_05" ----> 
+                            <tbody>
+                                <tr>
+                                    <td>N</td>
+                                    <td>
+                                       <div class="member_card member_01">
+
+                                            슈퍼
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>홍길동동</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <span class="send">전송</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_02">
+                                            운영
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>뽀로로</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <span class="fail">실패</span>
+                                        <span class="fail small_font">( 수신거부 )</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_03">
+                                            매장
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>루피</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <span class="fail">실패</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_04">
+                                            임직원
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>크롱</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <span class="send">전송</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_05">
+                                             일반
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>라이언</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <span class="send">전송</span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>  
                       </div>
                      
-                    </div>
-                    
-                     
                      </div>
-                        
-                        <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;">
-                            <ul class="list_inline">
-                                <li>
-                                    <a href="#" class="btn btn-secondary btn-icon-split btn-S" data-toggle="modal" data-target="#exampleModalLabel_2">
-                                        <span class="text">테스트 발송하기</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-primary btn-icon-split btn-S">
-                                       <span class="text" style="width:133px;">발송하기</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                 </div>
+                      
                     
                         
                 </div>

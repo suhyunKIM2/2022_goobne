@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="app_push.html" server="218.145.161.78//data/gncns/" local="132948245149558740" remote="132948566190000000" Dst="0" />
-<file name="sms.html" server="218.145.161.78//data/gncns/" local="132948252598890833" remote="132948573620000000" Dst="0" />
-<file name="inform_talk.html" server="218.145.161.78//data/gncns/" local="132948241890906476" remote="132948563050000000" Dst="0" />
-<file name="app_push_list.html" server="218.145.161.78//data/gncns/" local="132948289197604808" remote="132948610230000000" Dst="0" />
+<file name="app_push.html" server="218.145.161.78//data/gncns/" local="132948887246364322" remote="132949208260000000" Dst="0" />
+<file name="sms.html" server="218.145.161.78//data/gncns/" local="132948888038762976" remote="132949209070000000" Dst="0" />
+<file name="inform_talk.html" server="218.145.161.78//data/gncns/" local="132948887915568131" remote="132949208950000000" Dst="0" />
+<file name="app_push_list.html" server="218.145.161.78//data/gncns/" local="132948895464842753" remote="132949216520000000" Dst="0" />
+<file name="inform_talk_list.html" server="218.145.161.78//data/gncns/" local="132948896258297385" remote="132949217290000000" Dst="0" />
+<file name="sms_list.html" server="218.145.161.78//data/gncns/" local="132948896170371005" remote="132949217190000000" Dst="0" />
 </dwsync>

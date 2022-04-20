@@ -9,6 +9,22 @@ ul{list-style: none;padding-left:0;}
 .container_auto{width:95%;margin: auto;}
 .fade:not(.show){display:none;}
 #wrapper #content-wrapper #content{overflow: hidden;}
+.table-bordered td, .table-bordered th {
+    border: 1px solid #d4d4d4;
+}
+.bg-gray-200 {
+    background-color: #f4f4f4!important;
+}
+.table {
+    color: #46474c;
+}
+
+
+/*메세지전송실패*/
+.send,.fail{font-weight:600;display: block;}
+.send{color:#0652b8;}
+.fail{color:#DF0205;}
+.small_font{font-size:13px;}
 
 /*popup*/
 .modal{background: rgb(0,0,0,0.5);z-index: 9999;}
