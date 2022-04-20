@@ -24,6 +24,16 @@
     <script src="/html/js/modal_popup.js"></script>  
 <!--- E: modal_popup---->
 
+<!-- S: include summernote(에디터) css/js -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="/html/js/summernote/js/summernote-lite.js"></script>
+    <script src="/html/js/summernote/js/summernote.js"></script>
+<!-- E: include summernote(에디터) css/js -->
+
+<!-- S: 파일업로드 -->
+    <script src="/html/js/file_upload.js"></script> 
+<!-- E: 파일업로드 -->
+
      <script>
          $(document).ready(function() {
           $('select').niceSelect();
@@ -35,7 +45,7 @@
         });
     </script>
     <script type="text/javascript">
-	
+	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
   function maxLengthCheck(object){
     if (object.value.length > object.maxLength){
       //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
@@ -44,4 +54,3 @@
   }
   
 </script>
-   
