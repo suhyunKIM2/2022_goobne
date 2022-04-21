@@ -37,146 +37,104 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
-                        <h1 class="h3 mb-0 text-gray-900">선택회원 알림톡</h1>
+                        <h1 class="h3 mb-0 text-gray-900">이벤트 게시판</h1>
                     </div>
                     <div class="col-xl-4 col-lg-5">
                     <ul class="nav nav-tabs">
                       <li class="nav-item">
-                        <a class="nav-link" href="/html/report/app_push.html">App 푸시</a>
+                        <a class="nav-link  active" href="/html/bbs/event_ing.html">진행중인 이벤트</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link"  href="/html/report/sms.html">SMS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link active" href="/html/report/inform_talk.html">알림톡</a>
+                        <a class="nav-link"  href="/html/bbs/event_end.html">종료된 이벤트</a>
                       </li>
                     </ul>
                     <div class="tab-content">
                       <div class="tab-pane fade show active">
-                        <div style="margin-top:2%;text-align: right;">
-                            <ul class="list_inline">
-                                <li>
-                                    <a href="#" class="btn btn-success btn-icon-split">
-                                        <span class="text">+ 엑셀 연락처 업로드</span>
-                                    </a>
-                                </li>
-                                <li>
-                                <a href="#" class="btn btn-info btn-icon-split" data-toggle="modal" data-target="#exampleModalLabel_1">
-                                    <span class="text">+ 연락처 추가하기</span>
+                      <ul class="list_inline" style="text-align: right;    margin-top: 2%;">
+                            <li style="float:left;">
+                            <a href="#" class="btn btn-info btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text" onClick="location.href='/html/bbs/event_write.html'">등록</span>
                                 </a>
                             </li>
-                                </ul>
-                            </div>
-                            <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0">
-                            <tr>
-                                <th class="bg-gray-200">발송대상</th>
-                                <td>
-                                    <textarea id="phone_number" name="phone_number" style="width:100%;min-height:50px;padding:0.5rem;    border: 1px solid #e9e9e9;overflow: auto;"></textarea>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-gray-200">발송타입</th>
-                                <td>
-                                    <div>
-                                   <input type="checkbox" id="check1" name="only_ch"><label for="check1">지금발송</label>
-                                   </div>
-                                   <div style="float:left;">
-                                    <input type="checkbox" id="check2" name="only_ch"><label for="check2">예약 발송</label>
-                                    </div>
-                                    <div class ="day_box" style="float:left;width:auto;margin:0;">
-                                        <input type="text" id="datepicker" placeholder="0000-00-00" style="height:30px;line-height: 30px;">
-                                    </div>
-                                    <div class="left_line">
-                                    <ul class="list_inline">
-                                    <li>
-                                        <select class="selectpicker">
-                                            <option>00</option>
-                                            <option>01</option>
-                                            <option>02</option>
-                                            <option>03</option>
-                                            <option>04</option>
-                                            <option>05</option>
-                                            <option>06</option>
-                                            <option>07</option>
-                                            <option>08</option>
-                                            <option>09</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
-                                            <option>13</option>
-                                            <option>14</option>
-                                            <option>15</option>
-                                            <option>16</option>
-                                            <option>17</option>
-                                            <option>18</option>
-                                            <option>19</option>
-                                            <option>20</option>
-                                            <option>21</option>
-                                            <option>22</option>
-                                            <option>23</option>
-                                            <option>24</option>
-                                        </select>
-                                    </li>
-                                    <li><spna>:</span></li>
-                                    <li>
-                                        <select class="selectpicker">
-                                            <option>00</option>
-                                            <option>05</option>
-                                            <option>10</option>
-                                            <option>15</option>
-                                            <option>20</option>
-                                            <option>25</option>
-                                            <option>30</option>
-                                            <option>35</option>
-                                            <option>40</option>
-                                            <option>45</option>
-                                            <option>50</option>
-                                            <option>55</option>
-                                        </select>
-                                    </li>
-                                    </ul>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-gray-200">발송템플릿</th>
-                                <td>
-                                   <select class="selectpicker">
-                                            <option>카카오 알림톡 템플릿을 선택 해 주세요.</option>
-                                            <option>템플릿 01 문구</option>
-                                            <option>템플릿 02 문구</option>
-                                            <option>템플릿 03 문구</option>
-                                        </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th class="bg-gray-200">발송내용</th>
-                                <td>
-                                    <textarea id="story" name="story" style="width:100%;min-height:500px;padding:0.5rem;border: 1px solid #e9e9e9;"></textarea>
-                                </td>
-                            </tr>
-                        </table>
+                            <li>
+                                <select class="selectpicker">
+                                    <option>제목</option>
+                                    <option>작성자</option>
+                                </select>
+                            </li>
+                            <li><input type="text"></li>
+                            <li>
+                                <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                    <span class="text">검색</span>
+                                </a>
+                            </li>
+                          </ul>
+                          <table class="table table-bordered table_main board_table_list" id="dataTable" width="100%" cellspacing="0">
+                            <colgroup>
+                                <col width="5%">
+                                <col width="60%">
+                                <col width="10%" style="min-width:147px;">
+                                <col width="15%">
+                                <col width="5%">
+                                <col width="5%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="bg-gray-200">번호</th>
+                                    <th class="bg-gray-200">제목</th>
+                                    <th class="bg-gray-200">작성자</th>
+                                    <th class="bg-gray-200">이벤트기간</th>
+                                    <th class="bg-gray-200">작성일</th>
+                                    <th class="bg-gray-200">조회수</th>
+                                 </tr>
+                            </thead>
+                            <!--- 등급별 class "member_card + 1.슈퍼관리자 : member_01 / 2.운영관리자 : member_02 / 3.매장관리자 : member_03 / 4.임직원 : member_04 / 5.일반회원 : member_05" ----> 
+                            <tbody>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td><span class="padding_1rem member_card member_01">슈퍼</span> 홍길동</td>
+                                    <td class="small_font">2022.00.00 - 2022.00.00</td>
+                                    <td class="small_font">2022.00.00</td>
+                                    <td class="small_font">109</td>
+                                </tr>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td><span class="padding_1rem member_card member_01">슈퍼</span> 홍길동</td>
+                                    <td class="small_font">2022.00.00 - 2022.00.00</td>
+                                    <td class="small_font">2022.00.00</td>
+                                    <td class="small_font">109</td>
+                                </tr>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td><span class="padding_1rem member_card member_01">슈퍼</span> 홍길동</td>
+                                    <td class="small_font">2022.00.00 - 2022.00.00</td>
+                                    <td class="small_font">2022.00.00</td>
+                                    <td class="small_font">109</td>
+                                </tr>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td><span class="padding_1rem member_card member_01">슈퍼</span> 홍길동</td>
+                                    <td class="small_font">2022.00.00 - 2022.00.00</td>
+                                    <td class="small_font">2022.00.00</td>
+                                    <td class="small_font">109</td>
+                                </tr>
+                            </tbody>
+                        </table>  
                       </div>
                      
-                    </div>
-                    
-                     
                      </div>
-                        
-                        <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;">
-                            <ul class="list_inline">
-                                <li>
-                                    <a href="#" class="btn btn-secondary btn-icon-split btn-S" data-toggle="modal" data-target="#exampleModalLabel_2">
-                                        <span class="text">테스트 발송하기</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="btn btn-primary btn-icon-split btn-S">
-                                       <span class="text" style="width:133px;">발송하기</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+                 </div>
+                      
                     
                         
                 </div>
@@ -185,6 +143,22 @@
                 
             </div>
             <!-- End of Main Content -->
+            
+            <div class="container_page">
+                <div class="row row_page">
+                    <div class="col">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <!-- Footer 공통 footer-->
             <footer data-include-path="/html/include/footer.html"></footer>

@@ -37,7 +37,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
-                        <h1 class="h3 mb-0 text-gray-900">굽네뉴스 게시판</h1>
+                        <h1 class="h3 mb-0 text-gray-900">이벤트 게시판</h1>
                     </div>
                     <div class="col-xl-4 col-lg-5">
                     
@@ -51,15 +51,12 @@
                             </colgroup>
                             <tbody>
                                 <tr>
-                                    <th class="bg-gray-200">노출여부</th>
-                                    <td>
-                                    <input type="checkbox" id="check1" name="only_ch"><label for="check1">노출</label>
-                                    <input type="checkbox" id="check2" name="only_ch"><label for="check2">비노출</label>
-                                </td>
+                                    <th class="bg-gray-200">이벤트기간</th>
+                                    <td>2022.00.00 00:00:00- 2022.00.00 00:00:00</td>
                                 </tr>
                                 <tr>
                                     <th class="bg-gray-200">제목</th>
-                                    <td><input type="text"></td>
+                                    <td>굽네뉴스입니다.</td>
                                 </tr>
                                 <tr>
                                     <th class="bg-gray-200">작성자</th>
@@ -68,23 +65,27 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <th class="bg-gray-200">조회수</th>
+                                    <td>109</td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200">등록일</th>
+                                    <td>2022-00-00 00:00:00</td>
+                                </tr>
+                                <tr>
                                     <th class="bg-gray-200">리스트 썸네일<span class="small-font block_line">600X600 비율 이미지</span></th>
                                     <td>
-                                        
-                                       <div class="filebox bs3-primary preview-image">
-                                          
-                                          <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
-
-                                          <label for="input_file">업로드</label> 
-                                          <input type="file" id="input_file" class="upload-hidden"> 
-                                        </div>
-
+                                       <div id="preview" class="view">
+                                           <img src="https://www.goobne.co.kr/2021renew_img/mainbanner/bg_chicken.png">
+                                       </div>
                                     </td>
                                 </tr>
                                 <tr>
                                     <th class="bg-gray-200">내용</th>
                                     <td>
-                                        <textarea name="content" id="summernote" value=""></textarea>
+                                        <div class="contants_text">
+                                         썸머노트 텍스트 노출 
+                                        </div>
                                     </td>
                                 </tr>
                                 
@@ -98,14 +99,19 @@
                   
                   <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;">
                             <ul class="list_inline">
-                                <li>
-                                    <a href="/html/bbs/news.html" class="btn btn-secondary btn-icon-split btn-S">
-                                        <span class="text">취소</span>
+                                <li style="float:left;">
+                                    <a href="/html/bbs/event_ing.html" class="btn btn-secondary btn-icon-split btn-S">
+                                        <span class="text">목록</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#" class="btn btn-primary btn-icon-split btn-S">
-                                       <span class="text">저장</span>
+                                    <a href="#" class="btn btn-danger btn-icon-split btn-S">
+                                        <span class="text">삭제</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/html/bbs/event_write.html" class="btn btn-primary btn-icon-split btn-S">
+                                       <span class="text">수정</span>
                                     </a>
                                 </li>
                             </ul>
