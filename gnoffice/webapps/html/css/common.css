@@ -141,8 +141,15 @@ ul{list-style: none;padding-left:0;}
 .modal-backdrop{display:none;}
 
 /*tab*/
-.tab-content{height:auto;overflow:hidden;}
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{border-bottom:0;}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    border-bottom: 0;
+    color: #fdfdfd;
+    background: #4e73df;
+}
+.nav-tabs .nav-link {
+    color: #999;
+}
+
 
 /*페이징 paging*/
 .container_page{position:relative;width:95%;margin: auto;height:54px;}
