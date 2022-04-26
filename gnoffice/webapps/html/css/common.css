@@ -5,6 +5,11 @@ body {
 input[type="text"]{border:1px solid #e8e8e8;height:42px;line-height: 42px;margin-left:4px;}
 input:focus{outline:1px solid #999;}
 input[class="search_input"]{min-width:250px;}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 ul{list-style: none;padding-left:0;}
 .container_auto{width:95%;margin: auto;}
 .fade:not(.show){display:none;}
@@ -24,6 +29,17 @@ ul{list-style: none;padding-left:0;}
 .block_line{display:block;}
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{margin-bottom:2%;}
 .padding_1rem{padding:0 1rem !important;}
+.text-red{color:#E90003;}
+.button_checkbox_de:not(:disabled):not(.disabled){background: #eee;border: 2px solid #e0e0e0;color: #c5c5c5;}
+.text_div{text-align: center;margin-bottom: 2%;}
+.list_inline li .button_checkbox_de{width:100%;}
+.right_line{float:right;text-align: right;}
+.line_50{width:50%;}
+.preview_img_div{width:20%;clear: both;background:#fff;text-align: center;padding:2rem 1rem;position: relative;min-height: 383px;float:left;border: 1px solid #cfcfcf;}
+.preview_img_div .filebox .upload-thumb-wrap{width:100%;}
+.preview_img_div .filebox{position:absolute;left:50%;transform: translateX(-50%);width:90%;bottom: 10px;}
+.tab-content>.active{height:auto;overflow:hidden;}
+
 
 
 /*파일업로드*/
@@ -84,12 +100,17 @@ ul{list-style: none;padding-left:0;}
 .filebox .upload-display {
   margin-bottom: 5px;
 }
-
+.upload-display_block{min-width: 250px;
+    min-height: 250px;
+  }
 @media(min-width: 768px) {
+
   .filebox .upload-display {
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 0;
+        min-width: 250px;
+    min-height: 250px;
   }
 }
 
@@ -212,6 +233,7 @@ input[type="checkbox"] {
 .table_S_box th{vertical-align: middle;text-align: center;width: 15%;min-width: 200px;}
 .table_S_box td{vertical-align: middle;}
 .table_S_box#dataTable{width:100%;}
+.table_right_box#dataTable{width:79%;float:right;}
 .text-gray-800{width:89%;margin:auto;}
 .btn-primary {
     color: #fff;
@@ -288,6 +310,8 @@ a:hover{text-decoration: none;color:#000;}
   -webkit-appearance: none;
   margin: 0;
 }
+
+
 
 /* Firefox */
 .list_inline_calc li input[type=number] {
