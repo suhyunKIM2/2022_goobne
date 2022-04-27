@@ -99,7 +99,9 @@
                                      </td>
                                     <th class="bg-gray-200">가격</th>
                                     <td>
-                                       <input type="number" style="text-align: right;">원
+                                       <ul class="list_inline list_ul_bottom" >
+                                            <li class="position_p"><input type="number" style="text-align: right;"><span class="position_c">원</span></li> 
+                                        </ul>
                                      </td>  
                                       
                                 </tr>
@@ -138,9 +140,154 @@
                                 <tr>
                                     <th class="bg-gray-200">영양정보</th>
                                     <td>
-                                        
+                                        <ul class="block_ul">
+                                            <li><p class="list_name">당류</p><input type="text"></li>
+                                            <li><p class="list_name">지방</p><input type="text"></li>
+                                            <li><p class="list_name">포화지방</p><input type="text"></li>
+                                            <li><p class="list_name">나트륨</p><input type="text"></li>
+                                        </ul>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <th class="bg-gray-200">원산지</th>
+                                    <td><input type="text"></td>
+                                </tr>
+                            </table>
+                            <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0" style="margin-top:1%;">
+                                <tr>
+                                    <th class="bg-gray-200"><input type="checkbox" id="check1"><label for="check1">할인설정</label></th>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200">시간</th>
+                                    <td>
+                                        <ul class="list_inline" style="margin-bottom:0;">
+                                            <li>
+                                                <div class="px-3 bg-gradient-info text-white" style="float:left;height:30px;line-height: 30px;">시작</div> 
+                                                <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                    <input type="text" id="datepicker" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                                                </div>
+                                                <div class="left_line">
+                                                    <ul class="list_inline">
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                            <option>08</option>
+                                                            <option>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                        </select>
+                                                    </li>
+                                                    <li><spna>:</span></li>
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>05</option>
+                                                            <option>10</option>
+                                                            <option>15</option>
+                                                            <option>20</option>
+                                                            <option>25</option>
+                                                            <option>30</option>
+                                                            <option>35</option>
+                                                            <option>40</option>
+                                                            <option>45</option>
+                                                            <option>50</option>
+                                                            <option>55</option>
+                                                        </select>
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li style="margin-top: 1%;display: block;">
+                                                <div class="px-3 bg-gradient-danger text-white" style="float:left;height:30px;line-height: 30px;">종료</div> 
+                                                <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                    <input type="text" id="datepicker2" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                                                </div>
+                                                <div class="left_line">
+                                                    <ul class="list_inline">
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                            <option>08</option>
+                                                            <option>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                        </select>
+                                                    </li>
+                                                    <li><spna>:</span></li>
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>05</option>
+                                                            <option>10</option>
+                                                            <option>15</option>
+                                                            <option>20</option>
+                                                            <option>25</option>
+                                                            <option>30</option>
+                                                            <option>35</option>
+                                                            <option>40</option>
+                                                            <option>45</option>
+                                                            <option>50</option>
+                                                            <option>55</option>
+                                                        </select>
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200">할인가격</th>
+                                    <td>
+                                        <ul class="list_inline list_ul_bottom">
+                                            <li class="position_p"><input type="number"><span class="position_c">원</span></li> 
+                                            <li class="position_p"><input type="number"><span class="position_c">%</span></li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                
                             </table>
                      </div>
                  </div>
