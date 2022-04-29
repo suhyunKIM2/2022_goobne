@@ -53,89 +53,50 @@
                      <div class="all_ch_div_box" style="position:relative;">
                          <ul class="list_inline list_ul_bottom" id="input-form">
                          
-                         <li>메뉴 검색: <input type="text" id="keyword"></li>
+                         <li>메뉴 검색: <input type="text" id="keyword" style="width: 300px;"></li>
                         <li>
                             <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
                                 <span class="text">검색</span>
                             </a>
                         </li>
                       </ul>
-                      <div class="autoFrame" id="user-table">
+                      <!---- 검색창 리스트 박스 (자동완성 UI :  아래 style="display:none;" => "display:block;" 처리하면 보임)-----> 
+                      <div class="autoFrame" id="user-table" style="display:none;">
                           <ul class="autoFrame_ul">
-                              <li onClick="#" >굽네치킨<span class="btn_autoF btn-warning btn-icon-split">등록</span></li>
-                              <li onClick="#" >굽네치킨<span class="btn_autoF btn-warning btn-icon-split">등록</span></li>
+                              <li onClick="#" >코드 : 30001 / 굽네치킨 </li>
+                              <li onClick="#" >코드 : 30001 / 굽네치킨 </li>
                           </ul>
                       </div>
                      </div>
-                     
-                     <ul class="accodian_menu">
-                          <li class="active">
-                            <p class="ch_p"><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></p>
+                    <div class="list_box_menu">
+                    <h3>신메뉴</h3><!--신규 그룹명 네임 표기 공간-->
+                    <ul class="list_block">
+                       <li>
+                           <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
+                            <span class="code_color">( 코드 : 30001 )</span> 고추 바사삭
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
-                                <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#"> 신메뉴</a>
-                            
-                            <ul class="table_acc_menu">
-                               <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 고추 바사삭
-                                </li>
-                                <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 오리지널 
-                                </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <p class="ch_p"><input type="checkbox" name="chk" id="ch_2"><label for="ch_2"></label></p>
+                        </li>
+                        <li>
+                           <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
+                            <span class="code_color">( 코드 : 30001 )</span> 오리지널 
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
-                                <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#">치킨시리즈</a>
-                            <ul class="table_acc_menu">
-                               <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 고추 바사삭
-                                </li>
-                                <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 오리지널 
-                                </li>
-                            </ul>
-                          </li>
-                          <li>
-                            <p class="ch_p"><input type="checkbox" name="chk" id="ch_3"><label for="ch_3"></label></p>
-                            <p class="btn_p">
-                                <button type="button" class="btn btn-secondary">삭제</button>
-                                <button type="button" class="btn btn-primary">수정</button>
-                            </p>
-                            <a href="#">피자시리즈</a>
-                            <ul class="table_acc_menu">
-                               <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 고추 바사삭
-                                </li>
-                                <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 오리지널 
-                                </li>
-                            </ul>
-                          </li>
+                        </li>
                     </ul>
                   </div>
                   <div  style="text-align: center;">
                         <ul class="list_inline">
                             <li>
                                 <a href="#" class="btn btn-secondary btn-icon-split btn-S">
-                                    <span class="text">선택 삭제</span>
+                                    <span class="text">취소</span>
                                 </a>
                             </li>
                             <li>
                                 <a href="#" class="btn btn-primary btn-icon-split btn-S">
-                                   <span class="text">선택 수정</span>
+                                   <span class="text">저장</span>
                                 </a>
                             </li>
                         </ul>
@@ -143,7 +104,7 @@
              </div>
                 <!-- /.container-fluid -->
 
-                
+               </div>  
             </div>
             <!-- End of Main Content -->
             
@@ -375,17 +336,6 @@
             });
         });
     </script>
-    <script>
-$(document).ready(function() {
-            $("#keyword").keyup(function() {
-                var k = $(this).val();
-                $("#user-table ul.autoFrame_ul").hide();
-                var temp = $("#user-table ul.autoFrame_ul li:nth-child(5n+2):contains('" + k + "')");
-
-                $(temp).parent().show();
-            })
-        })
-</script>
     <script type="text/javascript">
 	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
   function maxLengthCheck(object){

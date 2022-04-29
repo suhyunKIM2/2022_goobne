@@ -249,7 +249,7 @@ ul.accodian_menu li a{
 .autoFrame{
     
     position: absolute;
-    width: 240px;
+    width: 360px;
     min-height: 300px;
     background: #fff;
     left: 104px;
@@ -275,6 +275,33 @@ ul.accodian_menu li a{
     border-radius: 10px;
     font-size: 13px;
     cursor: pointer;}
+
+.list_box_menu{border:2px solid #eee;background:#fff;margin-bottom: 2%;}
+.list_box_menu h3{    background: #f6f6f6;
+    padding: 1rem;
+    font-size: 17px;
+    font-weight: 600;
+    color: #000;}
+.list_block{padding:1.5rem;}    
+.list_block li{    clear: both;
+    height: auto;
+    overflow: hidden;
+    border-bottom: 1px dotted #999;}
+.list_block li .btn_p{margin-bottom:0.4rem;}
+.modal_ul li{clear:both;}
+.modal_ul .nice-select,.modal_ul .nice-select.open .list{min-width:84px;}
+.modal_ul .day_box input{width:120px;}
+.bg_ui_g{    background: #eee;
+    margin: 5% 0;
+    padding: 2% 2% 0;
+    color: #000;}
+    
+.table_S_box.top_100_table{width:20%;float:left;white-space:nowrap;
+  border-collapse:collapse;margin-bottom: 1%;}    
+.table_S_box.top_100_table th{width:10%;min-width:50px;}
+.table_S_box.top_100_table td input{font-size:13px;padding-left: 5px;}
+.top_50,.top_100{display:none;}
+.top_active{display:block;}
 
 
 /*체크박스*/
@@ -387,7 +414,7 @@ a:hover{text-decoration: none;color:#000;}
 .table_main td{vertical-align: middle;}
 .table_main tfoot tr th{text-align: right;}
 .sidebar .nav-item{z-index: 9999;}
-#ui-datepicker-div{z-index:999 !important;}
+#ui-datepicker-div{z-index:9999 !important;}
 .container_login{max-width: 450px !important;
     position: fixed;
     top: 50%;
