@@ -302,7 +302,11 @@ ul.accodian_menu li a{
 .table_S_box.top_100_table td input{font-size:13px;padding-left: 5px;}
 .top_50,.top_100{display:none;}
 .top_active{display:block;}
-
+.info_text_input{background: none;
+    border: 0;
+    font-size: 17px;
+    font-weight: 600;color:#000;}
+.info_text_input::placeholder{color:#000;}
 
 /*체크박스*/
 input[type="checkbox"] {

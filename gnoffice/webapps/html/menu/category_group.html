@@ -41,99 +41,41 @@
                     </div>
                     
                   <div class="col-xl-4 col-lg-5">
-                      <ul class="list_inline" style="text-align: right;    margin-top: 2%;">
-                          <li style="float:left;">
-                            <a href="#" class="btn btn-info btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
-                                        </svg>
-                                    </span>
-                                    <span class="text" onclick="location.href='/html/menu/category_group_info.html'">신규 그룹 등록</span>
-                                </a>
-                                
-                            </li>
-                         <li><input type="text"></li>
+                     <div class="all_ch_div_box">
+                         <ul class="list_inline" style="margin-top: 2%;">
+                         
+                         <li>그룹명 생성: <input type="text"></li>
                         <li>
                             <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
-                                <span class="text">검색</span>
+                                <span class="text">추가하기</span>
                             </a>
                         </li>
                       </ul>
-                     <div class="all_ch_div_box"><input type="checkbox" name="chk" id="All"><label for="All" >그룹전체선택</label></div>
+                     </div>
                      <ul class="accodian_menu">
                           <li class="active">
-                            <p class="ch_p"><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></p>
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
                                 <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#"> 신메뉴</a>
-                            
-                            <ul class="table_acc_menu">
-                               <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 고추 바사삭
-                                </li>
-                                <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 오리지널 
-                                </li>
-                            </ul>
+                            <a href="#"> <input typr="text" placeholder="신메뉴" class="info_text_input"></a>
                           </li>
                           <li>
-                            <p class="ch_p"><input type="checkbox" name="chk" id="ch_2"><label for="ch_2"></label></p>
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
                                 <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#">치킨시리즈</a>
-                            <ul class="table_acc_menu">
-                               <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 고추 바사삭
-                                </li>
-                                <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 오리지널 
-                                </li>
-                            </ul>
+                            <a href="#"><input typr="text" placeholder="치킨시리즈" class="info_text_input"></a>
                           </li>
                           <li>
-                            <p class="ch_p"><input type="checkbox" name="chk" id="ch_3"><label for="ch_3"></label></p>
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
                                 <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#">피자시리즈</a>
-                            <ul class="table_acc_menu">
-                               <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 고추 바사삭
-                                </li>
-                                <li>
-                                   <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
-                                    <span class="code_color">( 코드 : 30001 )</span> 오리지널 
-                                </li>
-                            </ul>
+                            <a href="#"><input typr="text" placeholder="피자시리즈" class="info_text_input"></a>
                           </li>
                     </ul>
                   </div>
-                  <div  style="text-align: center;">
-                        <ul class="list_inline">
-                            <li>
-                                <a href="#" class="btn btn-secondary btn-icon-split btn-S">
-                                    <span class="text">선택 삭제</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="btn btn-primary btn-icon-split btn-S">
-                                   <span class="text">선택 수정</span>
-                                </a>
-                            </li>
-                        </ul>
-                </div>
              </div>
                 <!-- /.container-fluid -->
 
@@ -355,9 +297,7 @@
     <script src="/html/js/btn_checkbox.js"></script> 
 <!-- E: 버튼식체크박스 -->
 
-<!-- S: 아코디언메뉴 -->
-<script src="/html/js/accodian_menu.js"></script> 
-<!-- E: 아코디언메뉴 -->
+
 
      <script>
          $(document).ready(function() {
