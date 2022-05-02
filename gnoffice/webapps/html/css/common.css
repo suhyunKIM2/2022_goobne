@@ -49,6 +49,8 @@ ul.list_ul_bottom{margin-bottom:0;}
 .position_c{position:absolute;right:8px;top:8px;}
 .position_p input[type="number"]{    border: 1px solid #e8e8e8;height: 42px;line-height: 42px;margin-left: 4px;}
 
+
+
 /*파일업로드*/
 .where {
   display: block;
@@ -449,6 +451,22 @@ a:hover{text-decoration: none;color:#000;}
 }
 
 .left_box_mobile_sms{width:30%;float:left;border:1px solid #000;height: 732px;}
+
+/*배너관리*/
+.list_left_line{float:left;width:20%;height:auto;overflow:hidden;}
+.list_left_line li{display: block;}
+.list_left_line li .nice-select{clear:none;}
+.list_left_line .list_inline li {
+    display: inline-block;
+    vertical-align: middle;
+}
+.list_left_line .preview_img_div{min-height:135px;width:100%;max-height: 100%;}
+.preview_img_div_table .filebox{width:100%;}
+.preview_img_div_table{width:100%;min-height: 50px;border:0;text-align: left;}
+.preview_img_div_table .filebox .upload-display{min-width: auto;min-height: auto;}
+.preview_img_div_table .filebox .upload-thumb-wrap{width:50px;}
+.table_main_banner .nice-select{min-width:auto;}
+.table_main_banner .nice-select.open .list{top:auto;bottom:-18px;left:-1px;min-width:auto;}
 
 @media (min-width: 1200px){
 .col-xl-4 {
