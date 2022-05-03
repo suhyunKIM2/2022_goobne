@@ -3,6 +3,7 @@ body {
     font-family: 'Noto Sans KR','Malgun Gothic',Nunito,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";letter-spacing: -1px;    min-width: 930px;overflow:auto;}
 .h3, h3{font-size: 1.5rem;}
 input[type="text"]{border:1px solid #e8e8e8;height:42px;line-height: 42px;margin-left:4px;}
+input[type="number"]{border:1px solid #e8e8e8;}
 input:focus{outline:1px solid #999;}
 input[class="search_input"]{min-width:250px;}
 input[type="number"]::-webkit-outer-spin-button,
@@ -118,7 +119,7 @@ ul.list_ul_bottom{margin-bottom:0;}
     display: inline-block;
     margin-right: 5px;
     margin-bottom: 0;
-    min-width: 250px;
+    min-width: auto;
     max-width:250px;
   }
 }
@@ -249,15 +250,14 @@ ul.accodian_menu li a{
 
 /*검색박스*/
 .autoFrame{
-    
-    position: absolute;
-    width: 360px;
+position: absolute;
+    width: 95%;
     min-height: 300px;
     background: #fff;
-    left: 104px;
+    left: 4px;
     border: 1px solid #eee;
     box-shadow: 3px 8px 15px -8px #b8b8b8;
-    top: 60px;
+    top: 41px;
     padding: 1rem;
     max-height: 500px;
     overflow: auto;
@@ -266,7 +266,7 @@ ul.accodian_menu li a{
     border-bottom: 1px dotted #999;
     padding: 10px 5px;
     font-size: 15px;
-    cursor: pointer;}
+    cursor: pointer;display: block;}
 .autoFrame ul li:hover{background:#f1f1f1;}
 .autoFrame ul li:hover .btn_autoF{background-color: #f6c23e;
     border-color: #f6c23e;}
@@ -435,7 +435,7 @@ a:hover{text-decoration: none;color:#000;}
 .list_inline li{display:inline-block;vertical-align: middle;}
 .display_right{float:right;}
 .list_inline_calc{text-align:center;}
-.list_inline_calc li{width:calc(100% / 3.5);}
+.list_inline_calc li{width:calc(100% / 3.5);margin:3px 0;}
 .list_inline_calc li input{width:100%;margin-left: 0;}
 /* Chrome, Safari, Edge, Opera */
 .list_inline_calc li input::-webkit-outer-spin-button,
@@ -483,6 +483,8 @@ a:hover{text-decoration: none;color:#000;}
 .table_main_banner .nice-select{min-width:auto;}
 .table_main_banner .nice-select.open .list{top:auto;bottom:-18px;left:-1px;min-width:auto;}
 
+
+
 @media (min-width: 1200px){
 .col-xl-4 {
     max-width: 96%;
@@ -502,7 +504,8 @@ a:hover{text-decoration: none;color:#000;}
 .text-gray-800{width:90%;}
 .day_box{width:98%;}
 .col-xl-4{max-width:100%;}
-.btn-GG {width:15%;}
+.mb_g.btn-GG {width:15%;}
+.container_auto{width:100%;}
 }
 @media (max-width: 1290px){
 .card-header {

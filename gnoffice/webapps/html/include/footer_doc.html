@@ -38,8 +38,6 @@
     <script src="/html/js/btn_checkbox.js"></script> 
 <!-- E: 버튼식체크박스 -->
 
-
-
      <script>
          $(document).ready(function() {
           $('select').niceSelect();
@@ -49,6 +47,29 @@
             console.log("click close");
             });
         });
+        
+          /*체크박스 별 보여지는 테이블*/     
+            $(document).ready(function(){
+                $("#check1").change(function(){
+                    if($("#check1").is(":checked")){
+                       $(".TOP_10").css('display','block');
+                       $(".TOP_10_write").css('display','none');
+                    }else{
+                       $(".TOP_10").css('display','none');
+                       $(".TOP_10_write").css('display','block');
+                    }
+                });
+                 $("#check2").change(function(){
+                    if($("#check2").is(":checked")){
+                       $(".TOP_10_write").css('display','block');
+                       $(".TOP_10").css('display','none');
+                    }else{
+                       $(".TOP_10_write").css('display','none');
+                       $(".TOP_10").css('display','block');
+                    }
+                });
+            });
+ 
     </script>
     <script type="text/javascript">
 	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 

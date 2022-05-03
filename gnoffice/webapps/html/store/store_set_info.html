@@ -1,0 +1,261 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+
+ </head>
+<body id="page-top" style="min-width:1690px; ">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">매장상세페이지</h1>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                    
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active">
+                      
+                       <div class="left_line line_50">
+                            <b style="float:left;margin-right:1%;margin-top:6px;">신규매장 :</b> 
+                            <div>
+                                <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                            </div>
+                             <b style="float:left;margin-right:1%;margin-top:6px;">금일휴무 :</b> 
+                            <div>
+                                <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                            </div>
+                        </div>
+                        <div class="left_line line_50" style="text-align: right;">
+                             <div>
+                                 <b style="margin-right:1%;margin-top:6px;">개점/폐점 :</b> 
+                                <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                            </div>
+                             
+                            <div>
+                                <b style="margin-right:1%;margin-top:6px;">사업자 번호 :</b> 
+                               <input type="number">
+                            </div>
+                        </div>
+                        
+                         <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0">
+                         
+                             <tr>
+                                 <th class="bg-gray-200">매장코드번호</th>
+                                <td>
+                                   <input type="number">
+                                 </td>
+                                <th class="bg-gray-200">매장</th>
+                                <td>
+                                   <input type="text"> 점
+                                 </td>
+                                 
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200">주소</th>
+                                      <td>
+                                          <ul class="list_inline">
+                                             <li style="width:85%"><input type="text" style="width:100%;margin-left: 0;"></li>
+                                             <li>
+                                                <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                                    <span class="text">확인</span>
+                                                </a>
+                                            </li>
+                                         </ul>
+                                      </td>
+                                    <th class="bg-gray-200">연락처</th>
+                                      <td>
+                                          <ul style="margin-bottom:0;">
+                                             <li>1. <input type="number"></li>
+                                             <li style="margin-top:5px;">2. <input type="number"></li>
+                                         </ul>
+                                      </td>
+                                   
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200">PG</th>
+                                      <td>
+                                       <input type="number" placeholder="Key값"> 
+                                      </td>
+                                    <th class="bg-gray-200">PG파일</th>
+                                  <td>
+                                      <div class="preview_img_div preview_img_div_table">
+                                            <div class="filebox bs3-primary preview-image">   
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 72%;">
+
+                                              <label for="input_file">업로드</label> 
+                                              <input type="file" id="input_file" class="upload-hidden"> 
+                                            </div>                        
+                                        </div>
+                                    </td> 
+                                      
+                                </tr>
+                                
+                            </table>
+                            <table  class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0" style="margin-top:1%;">
+                                <tr>
+                                    <th class="bg-gray-200">포장할인예약
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </th>
+                                    <th class="bg-gray-200">배달비
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </th>
+                                    <th class="bg-gray-200">드라이빙픽업
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td>d</td>
+                                    <td>d</td>
+                                    <td>d</td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                        
+                     </div>
+                 </div>
+                  
+                  <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;    clear: both;">
+                            <ul class="list_inline">
+                                <li>
+                                    <a href="/html/bbs/notice.html" class="btn btn-secondary btn-icon-split btn-S">
+                                        <span class="text">취소</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-primary btn-icon-split btn-S">
+                                       <span class="text">저장</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+       
+
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+
+
+
+   
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+<!-- S: include summernote(에디터) css/js -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="/html/js/summernote/js/summernote-lite.js"></script>
+    <script src="/html/js/summernote/js/summernote.js"></script>
+<!-- E: include summernote(에디터) css/js -->
+
+<!-- S: 파일업로드 -->
+    <script src="/html/js/file_upload.js"></script> 
+<!-- E: 파일업로드 -->
+
+<!-- S: 버튼식체크박스 -->
+    <script src="/html/js/btn_checkbox.js"></script> 
+<!-- E: 버튼식체크박스 -->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
+</body>
+
+</html>

@@ -15,7 +15,7 @@
 
 
  </head>
-<body id="page-top">
+<body id="page-top" style="min-width: 1500px;">
     <!-- Page Wrapper -->
     <div id="wrapper">
         
@@ -43,21 +43,7 @@
                     
                     <div class="tab-content">
                       <div class="tab-pane fade show active">
-                            <ul class="list_inline" style="text-align: right;    margin-top: 2%;">
-                            <li style="float:left;">
-                            <a href="#" class="btn btn-info btn-icon-split">
-                                    <span class="icon text-white-50">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
-                                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
-                                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
-                                        </svg>
-                                    </span>
-                                    <span class="text" onclick="location.href='/html/menu/menu_set_info.html'">신메뉴 등록</span>
-                                    <a href="#" class="d-sm-inline-block btn btn-GG shadow-sm mb_g" style="margin-left:5px;"><i
-                                class="fas fa-download fa-sm text-white-50"></i> 엑셀다운로드</a>
-                                </a>
-                                
-                            </li>
+                          <ul class="list_inline" style="margin-top: 2%;">
                             <li>
                                 <select class="selectpicker" >
                                     <option>전체</option>
@@ -78,6 +64,19 @@
                                 </a>
                             </li>
                           </ul>
+                          <div style="text-align: right;">
+                            <a href="#" class="btn btn-info btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="text" onclick="location.href='/html/store/store_set_info.html'">신메뉴 등록</span>
+                                    <a href="#" class="d-sm-inline-block btn btn-GG shadow-sm" style="margin-left:5px;"><i
+                                class="fas fa-download fa-sm text-white-50"></i> 엑셀다운로드</a>
+                                </a>
+                          </div>
                           <div style="margin-bottom:0.5rem;">총 456개 메뉴가 등록 되었습니다.</div>
                              <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
                                  <colgroup>
@@ -118,34 +117,33 @@
                                         <td class="text-red">N</td>
                                         <td class="text-primary">Y</td>
                                         <td>000001</td>
-                                        <td></td>
-                                        <td>16,000</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td> <a href="/html/menu/menu_set_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a></td>
+                                        <td>북변시우점</td>
+                                        <td>경기도 김포시 시우동</td>
+                                        <td>031-000-0000<br>031-0000-0001</td><!-- 연락처 1개 이상일때 <br> 후 연락처--->
+                                        <td class="text-primary">Y</td>
+                                        <td>3,000원</td>
+                                        <td>3,000원</td>
+                                        <td> <a href="/html/store/store_set_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a></td>
                                     </tr>
-                                    
+                                    <tr>
+                                        <td><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></td>
+                                        <td>N</td>
+                                        <td class="text-red">N</td>
+                                        <td class="text-primary">Y</td>
+                                        <td>000001</td>
+                                        <td>북변시우점</td>
+                                        <td>경기도 김포시 시우동</td>
+                                        <td>031-000-0000</td>
+                                        <td class="text-primary">Y</td>
+                                        <td>3,000원</td>
+                                        <td>3,000원</td>
+                                        <td> <a href="/html/store/store_set_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a></td>
+                                    </tr>
                                     
 
                                 </tbody>
                             </table>
                               <span class="btn btn-danger btn-circle btn-sm" style="border-radius: 5px;width:auto;" data-toggle="modal" data-target="#exampleModalLabel_1">선택 상태변경</span>
-                              <div  style="text-align: center;">
-                                <ul class="list_inline">
-                                    <li>
-                                        <a href="#" class="btn btn-secondary btn-icon-split btn-S">
-                                            <span class="text">선택 삭제</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="btn btn-primary btn-icon-split btn-S">
-                                           <span class="text">선택 수정</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                        </div>
                         </div>
                          
                      </div>
@@ -209,23 +207,39 @@
                 <div class="modal-body">
                     <div class="text_div">선택 된 <span class="text-info">17개 메뉴</span>의 상태값을 선택해 주세요.</div>
                     <ul class="list_inline list_inline_calc">
-                        <li>
-                        <span class="button-checkbox">
-                            <button type="button" class="btn button_checkbox_de" data-color="info">베스트 </button>
-                            <input type="checkbox" class="hidden" checked/>
+                         <li>
+                            <span class="button-checkbox">
+                            <button type="button" class="btn button_checkbox_de" data-color="info">멤버쉽쿠폰</button>
+                            <input type="checkbox" class="hidden"  />
                         </span>
-                    </li>
+                        </li>
+                        
                         <li>
-                        <span class="button-checkbox">
-                            <button type="button" class="btn button_checkbox_de" data-color="info">신메뉴 </button>
+                            <span class="button-checkbox">
+                            <button type="button" class="btn button_checkbox_de" data-color="info">e-쿠폰</button>
                             <input type="checkbox" class="hidden"  />
                         </span>
                         </li>
                         <li>
                             <span class="button-checkbox">
-                            <button type="button" class="btn button_checkbox_de" data-color="info">MD추천 </button>
+                            <button type="button" class="btn button_checkbox_de" data-color="info">금액권</button>
                             <input type="checkbox" class="hidden"  />
                         </span>
+                        </li>
+                       <li>
+                        <span class="button-checkbox">
+                            <button type="button" class="btn button_checkbox_de" data-color="info">배달</button>
+                            <input type="checkbox" class="hidden" checked/>
+                        </span>
+                    </li>
+                        <li>
+                            <span class="button-checkbox">
+                            <button type="button" class="btn button_checkbox_de" data-color="info">포장</button>
+                            <input type="checkbox" class="hidden"  id="check1"/>
+                        </span>
+                        </li>
+                        <li>
+                            <input type="number" placeholder="할인금액 입력" class="TOP_10" style="display:none;height: 40px;line-height: 40px;">
                         </li>
                     </ul>
                 </div>
@@ -290,7 +304,28 @@
             });
         });
         
-        
+          /*체크박스 별 보여지는 테이블*/     
+            $(document).ready(function(){
+                $("#check1").change(function(){
+                    if($("#check1").is(":checked")){
+                       $(".TOP_10").css('display','block');
+                       $(".TOP_10_write").css('display','none');
+                    }else{
+                       $(".TOP_10").css('display','none');
+                       $(".TOP_10_write").css('display','block');
+                    }
+                });
+                 $("#check2").change(function(){
+                    if($("#check2").is(":checked")){
+                       $(".TOP_10_write").css('display','block');
+                       $(".TOP_10").css('display','none');
+                    }else{
+                       $(".TOP_10_write").css('display','none');
+                       $(".TOP_10").css('display','block');
+                    }
+                });
+            });
+ 
     </script>
     <script type="text/javascript">
 	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
