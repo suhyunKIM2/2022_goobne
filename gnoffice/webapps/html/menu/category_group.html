@@ -42,37 +42,152 @@
                     
                   <div class="col-xl-4 col-lg-5">
                      <div class="all_ch_div_box">
-                         <ul class="list_inline" style="margin-top: 2%;">
-                         
-                         <li>그룹명 생성: <input type="text"></li>
+                     <ul class="list_inline" style="margin-top: 1%;">
+                        <li style="margin-bottom: 0.3%;">그룹명 : <input type="text" style="height: 30px;line-height: 30px;"></li>
+                        <li style="margin-bottom: 0.3%;">노출순위 : <input type="text" style="width:52px;text-align: center;height: 30px;line-height: 30px;"></li><br>
                         <li>
-                            <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
-                                <span class="text">추가하기</span>
+                           <div class="px-3 bg-gradient-info text-white" style="float:left;height:30px;line-height: 30px;">시작</div> 
+                            <div class="day_box" style="float:left;width:auto;margin:0;">
+                                <input type="text" id="datepicker" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                            </div>
+                            <div class="left_line">
+                                <ul class="list_inline">
+                                <li>
+                                    <select class="selectpicker">
+                                        <option>00</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                    </select>
+                                </li>
+                                <li><spna>:</span></li>
+                                <li>
+                                    <select class="selectpicker">
+                                        <option>00</option>
+                                        <option>05</option>
+                                        <option>10</option>
+                                        <option>15</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                        <option>30</option>
+                                        <option>35</option>
+                                        <option>40</option>
+                                        <option>45</option>
+                                        <option>50</option>
+                                        <option>55</option>
+                                    </select>
+                                </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="px-3 bg-gradient-danger text-white" style="float:left;height:30px;line-height: 30px;">종료</div> 
+                            <div class="day_box" style="float:left;width:auto;margin:0;">
+                                <input type="text" id="datepicker2" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                            </div>
+                            <div class="left_line">
+                                <ul class="list_inline">
+                                <li>
+                                    <select class="selectpicker">
+                                        <option>00</option>
+                                        <option>01</option>
+                                        <option>02</option>
+                                        <option>03</option>
+                                        <option>04</option>
+                                        <option>05</option>
+                                        <option>06</option>
+                                        <option>07</option>
+                                        <option>08</option>
+                                        <option>09</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                        <option>13</option>
+                                        <option>14</option>
+                                        <option>15</option>
+                                        <option>16</option>
+                                        <option>17</option>
+                                        <option>18</option>
+                                        <option>19</option>
+                                        <option>20</option>
+                                        <option>21</option>
+                                        <option>22</option>
+                                        <option>23</option>
+                                        <option>24</option>
+                                    </select>
+                                </li>
+                                <li><spna>:</span></li>
+                                <li>
+                                    <select class="selectpicker">
+                                        <option>00</option>
+                                        <option>05</option>
+                                        <option>10</option>
+                                        <option>15</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                        <option>30</option>
+                                        <option>35</option>
+                                        <option>40</option>
+                                        <option>45</option>
+                                        <option>50</option>
+                                        <option>55</option>
+                                    </select>
+                                </li>
+                                </ul>
+                            </div> 
+                        </li>
+                        <li>
+                            <a href="#" class="btn btn-primary btn-icon-split" style="height:30px;line-height: 1.0;">
+                                <span class="text">확인</span>
                             </a>
                         </li>
                       </ul>
                      </div>
                      <ul class="accodian_menu">
-                          <li class="active">
+                          <li>
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
                                 <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#"> <input typr="text" placeholder="신메뉴" class="info_text_input"></a>
+                            <a href="#"><div class="number_round"><span class="info_text_small">1</span></div> 그룹명 : <span class="info_text_small">신메뉴</span></a>
+                             <p style="padding:1rem;margin-bottom: 0;">기간 : <span class="info_text_small">2022-00-00 00:00</span> ~ <span class="info_text_small">2022-00-00 00:00</span></p>
                           </li>
                           <li>
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
                                 <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#"><input typr="text" placeholder="치킨시리즈" class="info_text_input"></a>
+                            <a href="#"><div class="number_round"><span class="info_text_small">2</span></div> 그룹명 : <span class="info_text_small">치킨시리즈</span></a>
+                             <p style="padding:1rem;margin-bottom: 0;">기간 : <span class="info_text_small">2022-00-00 00:00</span> ~ <span class="info_text_small">2022-00-00 00:00</span></p>
                           </li>
                           <li>
                             <p class="btn_p">
                                 <button type="button" class="btn btn-secondary">삭제</button>
                                 <button type="button" class="btn btn-primary">수정</button>
                             </p>
-                            <a href="#"><input typr="text" placeholder="피자시리즈" class="info_text_input"></a>
+                            <a href="#"><div class="number_round"><span class="info_text_small">3</span></div> 그룹명 : <span class="info_text_small">피자시리즈</span></a>
+                             <p style="padding:1rem;margin-bottom: 0;">기간 : <span class="info_text_small">2022-00-00 00:00</span> ~ <span class="info_text_small">2022-00-00 00:00</span></p>
                           </li>
                     </ul>
                   </div>
