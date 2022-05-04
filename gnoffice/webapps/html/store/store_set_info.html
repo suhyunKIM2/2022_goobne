@@ -15,7 +15,7 @@
 
 
  </head>
-<body id="page-top" style="min-width:1690px; ">
+<body id="page-top" style="min-width:1238px; ">
     <!-- Page Wrapper -->
     <div id="wrapper">
         
@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         
-                         <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0">
+                         <table class="table table-bordered table_S_box " id="dataTable" width="100%" cellspacing="0">
                          
                              <tr>
                                  <th class="bg-gray-200">매장코드번호</th>
@@ -83,7 +83,7 @@
                                     <th class="bg-gray-200">주소</th>
                                       <td>
                                           <ul class="list_inline">
-                                             <li style="width:85%"><input type="text" style="width:100%;margin-left: 0;"></li>
+                                             <li style="width:75%"><input type="text" style="width:100%;margin-left: 0;"></li>
                                              <li>
                                                 <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
                                                     <span class="text">확인</span>
@@ -120,9 +120,9 @@
                                 </tr>
                                 
                             </table>
-                            <table  class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0" style="margin-top:1%;">
+                            <table  class="table table-bordered table_S_box table_S_box_td_center" id="dataTable" width="100%" cellspacing="0" style="margin-top:1%;">
                                 <tr>
-                                    <th class="bg-gray-200">포장할인예약
+                                    <th class="bg-gray-200">포장할인 및 예약
                                         <div>
                                             <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
                                         </div>
@@ -139,9 +139,71 @@
                                     </th>
                                 </tr>
                                 <tr>
-                                    <td>d</td>
-                                    <td>d</td>
-                                    <td>d</td>
+                                    <td>
+                                        <ul class="take_out_list">
+                                            <li>포장할인 <input type="number"></li>
+                                            <li>포장예약 <input type="number"></li>
+                                            <li><span>조리시간</span> 
+                                                <select class="selectpicker" >
+                                                    <option>전체</option>
+                                                    <option>메뉴명</option>
+                                                    <option>판매여부 (N/Y)</option>
+                                                    <option>할인</option>
+                                                    <option>품절</option>
+                                                    <option>그룹별</option>
+                                                    <option>코드</option>
+                                                    <option>일반메뉴</option>
+                                                    <option>e-쿠폰</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        <ul class="take_out_list">
+                                            <li>0~1km <input type="number"></li>
+                                            <li>1~2km <input type="number"></li>
+                                            <li>2~3km <input type="number"></li>
+                                            <li>3~4km <input type="number"></li>
+                                        </ul>
+                                    </td>
+                                    <td><input type="number"></td>
+                                </tr>
+                                
+                            </table>
+                            <table  class="table table-bordered table_S_box table_S_box_td_center" id="dataTable" width="100%" cellspacing="0" style="margin-top:1%;">
+                                <tr>
+                                    <th class="bg-gray-200">e-쿠폰</th>
+                                    <th class="bg-gray-200">e-금액권</th>
+                                    <th class="bg-gray-200">카드결제</th>
+                                    <th class="bg-gray-200">BC포인트</th>
+                                    <th class="bg-gray-200">멤버십 쿠폰</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                    </td>
                                 </tr>
                                 
                             </table>
@@ -152,11 +214,17 @@
                   
                   <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;    clear: both;">
                             <ul class="list_inline">
-                                <li>
-                                    <a href="/html/bbs/notice.html" class="btn btn-secondary btn-icon-split btn-S">
-                                        <span class="text">취소</span>
+                                <li style="float: left;">
+                                    <a href="#" class="btn btn-secondary btn-icon-split btn-S">
+                                        <span class="text ">목록</span>
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="#" class="btn btn-secondary btn-icon-split btn-S">
+                                        <span class="text">삭제</span>
+                                    </a>
+                                </li>
+                                
                                 <li>
                                     <a href="#" class="btn btn-primary btn-icon-split btn-S">
                                        <span class="text">저장</span>

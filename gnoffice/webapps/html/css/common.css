@@ -482,8 +482,15 @@ a:hover{text-decoration: none;color:#000;}
 .preview_img_div_table .filebox .upload-thumb-wrap{width:50px;}
 .table_main_banner .nice-select{min-width:auto;}
 .table_main_banner .nice-select.open .list{top:auto;bottom:-18px;left:-1px;min-width:auto;}
-
-
+.take_out_list li{height:auto;overflow:hidden;height: auto;overflow:hidden;margin-bottom: 5px;}
+.take_out_list li .nice-select{    clear: none;
+    margin-left: 5px;
+    float: none;
+    display: inline-block;
+    width: 179px;}
+.take_out_list li input{margin-left: 5px;}
+.table_S_box_td_center td{text-align: center;}
+.table_S_box_td_center td input{height: 42px;line-height: 42px;}
 
 @media (min-width: 1200px){
 .col-xl-4 {
