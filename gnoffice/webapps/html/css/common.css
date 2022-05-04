@@ -153,8 +153,9 @@ ul.list_ul_bottom{margin-bottom:0;}
 /*게시판*/
 .board_table td{text-align: left;}
 .board_table input[type="text"]{width:95%;border-color:#999;height:35px;line-height: 35px;}
-.board_table_list td:nth-child(2){text-align: left;}
+.board_table_list td:nth-child(3){text-align: left;} /*체크박스 추가 되어 nth-child(2) > (3)으로 변경*/
 .board_table_list tr{cursor: pointer;}
+.ima_icon_svg{color:#4e73df;margin-left: 3px;}
 
 /*썸머노트- 에디터*/
 .note-editor .note-editing-area .note-editable{height:600px !important;background: #fff;}
@@ -491,6 +492,16 @@ a:hover{text-decoration: none;color:#000;}
 .take_out_list li input{margin-left: 5px;}
 .table_S_box_td_center td{text-align: center;}
 .table_S_box_td_center td input{height: 42px;line-height: 42px;}
+
+/*할인관리*/
+.line_through{text-decoration: line-through;color:#cfcfcf;font-weight:500;}
+.per_sale{    background: #c31113;
+    font-style: normal;
+    color: #fff;
+    padding: 0 0.3rem;}
+.sale_font{font-weight:600;} 
+.text_left{text-align:left;}
+
 
 @media (min-width: 1200px){
 .col-xl-4 {
