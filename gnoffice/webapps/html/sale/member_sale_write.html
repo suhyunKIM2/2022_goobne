@@ -37,40 +37,277 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
-                        <h1 class="h3 mb-0 text-gray-900">멤버십 할인 상세</h1>
+                        <h1 class="h3 mb-0 text-gray-900">멤버십 할인 발송 등록</h1>
                     </div>
                     <div class="col-xl-4 col-lg-5">
                     <div class="tab-content">
                       <div class="tab-pane fade show active">
-                        <div style="margin-top:2%;text-align: right;">
-                            <ul class="list_inline">
-                                <li>
-                                    <a href="#" class="btn btn-success btn-icon-split">
-                                        <span class="text">+ 엑셀 연락처 업로드</span>
-                                    </a>
-                                </li>
-                                <li>
-                                <a href="#" class="btn btn-info btn-icon-split" data-toggle="modal" data-target="#exampleModalLabel_1">
-                                    <span class="text">+ 연락처 추가하기</span>
-                                </a>
-                            </li>
-                                </ul>
-                            </div>
                             <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0">
                             <tr>
-                                <th class="bg-gray-200">발송대상</th>
+                                <th class="bg-gray-200">타겟설정</th>
                                 <td>
-                                    <textarea id="phone_number" name="phone_number" style="width:100%;min-height:50px;padding:0.5rem;    border: 1px solid #e9e9e9;overflow: auto;"></textarea>
+                                    <div>
+                                       <input type="checkbox" id="check1" name="only_ch"><label for="check1">전체</label>
+                                   </div>
+                                   <div>
+                                       <input type="checkbox" id="check2" name="only_ch"><label for="check2">신규 회원 대상 쿠폰</label>
+                                   </div>
+                                   <div style="float:left;">
+                                        <input type="checkbox" id="check3" name="only_ch"><label for="check3"></label>
+                                    </div>
+                                    <div class ="day_box" style="float:left;width:auto;margin:0;">
+                                        <ul class="list_inline list_ul_bottom" >
+                                            <li class="position_p"><input type="number" style="text-align: right;"><span class="position_c">명</span></li> 
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>등급</option>
+                                                    <option>마케팅에서 등급 정책 정해줘야 함</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>연령</option>
+                                                    <option>10대</option>
+                                                    <option>20대</option>
+                                                    <option>30대</option>
+                                                    <option>40대</option>
+                                                    <option>50대</option>
+                                                    <option>60대 ~ 100</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>성별</option>
+                                                    <option>남</option>
+                                                    <option>여</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>지역</option>
+                                                    <option>서울</option>
+                                                    <option>부산</option>
+                                                    <option>대구</option>
+                                                    <option>인천</option>
+                                                    <option>광주</option>
+                                                    <option>대전</option>
+                                                    <option>울산</option>
+                                                    <option>세종</option>
+                                                    <option>경기</option>
+                                                    <option>강원</option>
+                                                    <option>충북</option>
+                                                    <option>전북</option>
+                                                    <option>전남</option>
+                                                    <option>경북</option>
+                                                    <option>경남</option>
+                                                    <option>제주</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>주문이력</option>
+                                                    <option>마케팅에 물어봐야함</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>주문메뉴</option>
+                                                    <option>굽네오리지널</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">발송쿠폰</th>
+                                <td>
+                                    <ul class="list_inline list_ul_bottom" >
+                                        <li>
+                                            <select class="selectpicker">
+                                                <option>교환권&금액권선택</option>
+                                                <option>교환권</option>
+                                                <option>금액권</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select class="selectpicker">
+                                                <option>교환메뉴명</option>
+                                                <option>굽네고추바사삭+콜라 세트</option>
+                                            </select>
+                                        </li>
+                                        <li>
+                                            <select class="selectpicker">
+                                                <option>금액권 금액</option>
+                                                <option>10,000원</option>
+                                                <option>20,000원</option>
+                                                <option>30,000원</option>
+                                                <option>50,000원</option>
+                                                <option>100,000원</option>
+                                            </select>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">쿠폰 유효기간</th>
+                                <td>
+                                   <ul class="list_inline" style="margin-bottom:0;text-align: left;">
+                                        <li>
+                                            <div class="px-3 bg-gradient-info text-white" style="float:left;height:30px;line-height: 30px;">시작</div> 
+                                            <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                <input type="text" id="datepicker" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                                            </div>
+                                            <div class="left_line">
+                                                <ul class="list_inline">
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                            <option>08</option>
+                                                            <option>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                        </select>
+                                                    </li>
+                                                    <li><spna>:</span></li>
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>05</option>
+                                                            <option>10</option>
+                                                            <option>15</option>
+                                                            <option>20</option>
+                                                            <option>25</option>
+                                                            <option>30</option>
+                                                            <option>35</option>
+                                                            <option>40</option>
+                                                            <option>45</option>
+                                                            <option>50</option>
+                                                            <option>55</option>
+                                                        </select>
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li style="margin-top: 1%;display: block;">
+                                                <div class="px-3 bg-gradient-danger text-white" style="float:left;height:30px;line-height: 30px;">종료</div> 
+                                                <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                    <input type="text" id="datepicker2" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                                                </div>
+                                                <div class="left_line">
+                                                    <ul class="list_inline">
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                            <option>08</option>
+                                                            <option>09</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                        </select>
+                                                    </li>
+                                                    <li><spna>:</span></li>
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>00</option>
+                                                            <option>05</option>
+                                                            <option>10</option>
+                                                            <option>15</option>
+                                                            <option>20</option>
+                                                            <option>25</option>
+                                                            <option>30</option>
+                                                            <option>35</option>
+                                                            <option>40</option>
+                                                            <option>45</option>
+                                                            <option>50</option>
+                                                            <option>55</option>
+                                                        </select>
+                                                    </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">발송방식</th>
+                                <td>
+                                    <ul class="list_inline">
+                                        <li>
+                                            <div>
+                                               <input type="checkbox" id="check4" name="only_ch"><label for="check4">App 푸시</label>
+                                           </div>
+                                       </li>
+                                       <li>
+                                           <div>
+                                               <input type="checkbox" id="check5" name="only_ch"><label for="check5">SMS</label>
+                                           </div>
+                                       </li>
+                                       <li style="line-height:42px;">
+                                           <div style="float:left;">
+                                                <input type="checkbox" id="check6" name="only_ch"><label for="check6">알림톡</label>
+                                            </div>
+                                            <div class ="day_box" style="float:left;width:auto;margin:0 0 0 5px;">
+                                                <ul class="list_inline" >
+                                                    <li>
+                                                        <select class="selectpicker">
+                                                            <option>템플릿 설정</option>
+                                                        </select>
+                                                    </li> 
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
                                 </td>
                             </tr>
                             <tr>
                                 <th class="bg-gray-200">발송타입</th>
                                 <td>
                                     <div>
-                                   <input type="checkbox" id="check1" name="only_ch"><label for="check1">지금발송</label>
+                                   <input type="checkbox" id="check7" name="only_ch"><label for="check7">지금발송</label>
                                    </div>
                                    <div style="float:left;">
-                                    <input type="checkbox" id="check2" name="only_ch"><label for="check2">예약 발송</label>
+                                    <input type="checkbox" id="check8" name="only_ch"><label for="check8">예약 발송</label>
                                     </div>
                                     <div class ="day_box" style="float:left;width:auto;margin:0;">
                                         <input type="text" id="datepicker" placeholder="0000-00-00" style="height:30px;line-height: 30px;">
@@ -130,7 +367,6 @@
                             <tr>
                                 <th class="bg-gray-200">발송내용</th>
                                 <td>
-                                    <div><input type="checkbox" id="check1"><label for="check1">앞단 광고 넣기 (정보 통신망법 50조의거)</label></div>
                                     <textarea id="story" name="story" style="width:100%;min-height:500px;padding:0.5rem;border: 1px solid #e9e9e9;"></textarea>
                                 </td>
                             </tr>
