@@ -31,6 +31,7 @@ ul.list_ul_bottom{margin-bottom:0;}
 .hasDatepicker{text-align:center;}
 .small-font{font-size:13px;font-weight:500;}
 .block_line{display:block;}
+.text_left{text-align: left;}
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl{margin-bottom:2%;}
 .padding_1rem{padding:0 1rem !important;}
 .text-red{color:#E90003;}
@@ -156,6 +157,7 @@ ul.list_ul_bottom{margin-bottom:0;}
 .board_table_list td:nth-child(3){text-align: left;} /*체크박스 추가 되어 nth-child(2) > (3)으로 변경*/
 .board_table_list tr{cursor: pointer;}
 .ima_icon_svg{color:#4e73df;margin-left: 3px;}
+.board_table_list td:nth-child(3).hasDatepicker{text-align: center;}
 
 /*썸머노트- 에디터*/
 .note-editor .note-editing-area .note-editable{height:600px !important;background: #fff;}
@@ -356,10 +358,13 @@ input[type="checkbox"] {
 .left_line .nice-select.open .list{min-width: auto;}
 
 
-.table_S_box {width:95%;margin: auto;background:#fff;}
+.table_S_box{width:95%;margin: auto;background:#fff;}
 .table_S_box th{vertical-align: middle;text-align: center;width: 15%;min-width: 200px;}
 .table_S_box td{vertical-align: middle;}
+.table_S_box.table_S_box_95.table_S_box_95_td_left#dataTable td{text-align:left;}
 .table_S_box#dataTable{width:100%;}
+.table_S_box.table_S_box_95#dataTable{width:95%;margin: auto;background:#fff;table-layout: fixed;}
+.table_S_box.table_S_box_95#dataTable td{text-align: center;}
 .table_right_box#dataTable{width:79%;float:right;}
 .text-gray-800{width:89%;margin:auto;}
 .btn-primary {
@@ -524,6 +529,7 @@ a:hover{text-decoration: none;color:#000;}
 .col-xl-4{max-width:100%;}
 .mb_g.btn-GG {width:15%;}
 .container_auto{width:100%;}
+.table_S_box.table_S_box_95#dataTable{width:100%;}
 }
 @media (max-width: 1290px){
 .card-header {
