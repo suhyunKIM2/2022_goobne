@@ -497,7 +497,7 @@ a:hover{text-decoration: none;color:#000;}
 .take_out_list li input{margin-left: 5px;}
 .table_S_box_td_center td{text-align: center;}
 .table_S_box_td_center td input{height: 42px;line-height: 42px;}
-.table_main_banner .banner_s_01 .nice-select{min-width:450px;}
+.table_main_banner .banner_s_01 .nice-select{min-width:450px;margin-left:4px;}
 .table_main_banner .banner_s_01 .nice-select.open .list,.table_main_banner .banner_s_03 .nice-select.open .list{min-width: 100%;bottom: auto;top: 37px;}
 .table_main_banner .banner_s_03 .nice-select{height:40px;line-height: 40px;}
 
