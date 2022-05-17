@@ -261,20 +261,14 @@
                                 </ul>
                             </div>
                             <h3>배너 리스트 현황</h3>
+                       <!---S: 20220518 추가--->
                             <table class="table table-bordered table_main table_main_banner" id="dataTable" width="100%" cellspacing="0">
                              <colgroup>
-                                 <col style="width:20%;">
-                                 <col style="width:80%;">
+                                 <col style="width:15%;">
+                                 <col style="width:85%;">
                              </colgroup>
                                 <tr>
                                     <th class="bg-gray-200" rowspan="2">검색조회</th>
-                                    <th class="bg-gray-200">
-                                        <ul class="list_inline" style="margin-top: 2%;text-align: left;">
-                                           <li><div style="float:left;"><input type="checkbox" id="check1"  name="only_ch" checked><label for="check1" >배너유형 검색</label></div></li>
-                                           <li><div style="float:left;"><input type="checkbox" id="check2"  name="only_ch"><label for="check2">배너명 검색</label></div></li>
-                                           <li><div style="float:left;"><input type="checkbox" id="check3"  name="only_ch"><label for="check3">게시기간 검색</label></div></li>
-                                       </ul>
-                                    </th>
                                 </tr>
                                 <tr>
                                     <td style="text-align: left;">
@@ -288,17 +282,11 @@
                                                 <option>로그인</option>
                                                 <option>인스타그램</option>
                                             </select> 
-                                            <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;margin-left: 5px;">
-                                                <span class="text">조회</span>
-                                            </a>
                                         </div>
-                                       <div class="banner_s_02"  style="display:none;">
-                                           <input type="text" style="min-width: 450px;vertical-align: middle;">
-                                           <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
-                                                <span class="text">조회</span>
-                                            </a>
+                                       <div class="banner_s_02" >
+                                           <input type="text" placeholder="배너명" style="vertical-align: middle;padding-left: 2%;">
                                        </div>
-                                       <div class="banner_s_03"  style="display:none;text-align: left;">
+                                       <div class="banner_s_03" >
                                            <ul class="list_inline" style="margin-bottom:0;">
                                             <li>
                                                 <div class="day_box" style="float:left;width:auto;margin:0;">
@@ -422,6 +410,8 @@
                                     </td>
                                 </tr>
                             </table>
+                   <!---E: 20220518 추가--->
+                             
                             <table class="table table-bordered table_main table_main_banner" id="dataTable" width="100%" cellspacing="0">
                                  <colgroup>
                                     <col width="5%">
@@ -611,39 +601,7 @@
             console.log("click close");
             });
         });
-
-
-/*체크박스 별 보여지는 테이블*/     
-$(document).ready(function(){
-    $("#check1").change(function(){
-        if($("#check1").is(":checked")){
-           $(".banner_s_01").css('display','block');
-           $(".banner_s_02").css('display','none');
-           $(".banner_s_03").css('display','none');
-        }else{
-           $(".banner_s_01").css('display','none');
-        }
-    });
-     $("#check2").change(function(){
-        if($("#check2").is(":checked")){
-           $(".banner_s_02").css('display','block');
-           $(".banner_s_01").css('display','none');
-           $(".banner_s_03").css('display','none');
-        }else{
-           $(".banner_s_02").css('display','none');
-        }
-    });
-    $("#check3").change(function(){
-        if($("#check3").is(":checked")){
-           $(".banner_s_03").css('display','block');
-           $(".banner_s_01").css('display','none');
-           $(".banner_s_02").css('display','none');
-        }else{
-           $(".banner_s_03").css('display','none');
-        }
-    });
-});
-        
+    
     </script>
     <script type="text/javascript">
 	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 

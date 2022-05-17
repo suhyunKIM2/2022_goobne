@@ -497,9 +497,12 @@ a:hover{text-decoration: none;color:#000;}
 .take_out_list li input{margin-left: 5px;}
 .table_S_box_td_center td{text-align: center;}
 .table_S_box_td_center td input{height: 42px;line-height: 42px;}
-.table_main_banner .banner_s_01 .nice-select{min-width:450px;margin-left:4px;}
+/*---S: 20220518 추가---*/
+.table_main_banner .banner_s_01 .nice-select{margin-left:4px;float:none;line-height: 40px;height: 45px;}
 .table_main_banner .banner_s_01 .nice-select.open .list,.table_main_banner .banner_s_03 .nice-select.open .list{min-width: 100%;bottom: auto;top: 37px;}
 .table_main_banner .banner_s_03 .nice-select{height:40px;line-height: 40px;}
+.banner_s_01,.banner_s_02,.banner_s_03{display: inline-block;}
+/*---E: 20220518 추가---*/
 
 /*할인관리*/
 .line_through{text-decoration: line-through;color:#cfcfcf;font-weight:500;}
