@@ -59,7 +59,7 @@
     pointer-events: auto;
     -webkit-transform: scale(1) translateY(0);
         -ms-transform: scale(1) translateY(0);
-            transform: scale(1) translateY(0); min-width:135px;    max-height: 200px;
+            transform: scale(1) translateY(0); min-width:100%;    max-height: 174px;
     overflow: auto;}
   .nice-select.disabled {
     border-color: #ededed;

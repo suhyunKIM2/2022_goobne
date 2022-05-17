@@ -262,6 +262,167 @@
                             </div>
                             <h3>배너 리스트 현황</h3>
                             <table class="table table-bordered table_main table_main_banner" id="dataTable" width="100%" cellspacing="0">
+                             <colgroup>
+                                 <col style="width:20%;">
+                                 <col style="width:80%;">
+                             </colgroup>
+                                <tr>
+                                    <th class="bg-gray-200" rowspan="2">검색필터</th>
+                                    <th class="bg-gray-200">
+                                        <ul class="list_inline" style="margin-top: 2%;text-align: left;">
+                                           <li><div style="float:left;"><input type="checkbox" id="check1"  name="only_ch" checked><label for="check1" >배너유형 검색</label></div></li>
+                                           <li><div style="float:left;"><input type="checkbox" id="check2"  name="only_ch"><label for="check2">배너명 검색</label></div></li>
+                                           <li><div style="float:left;"><input type="checkbox" id="check3"  name="only_ch"><label for="check3">게시기간 검색</label></div></li>
+                                       </ul>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <div class="banner_s_01">
+                                           <select class="selectpicker" >
+                                                <option>배너유형 선택</option>   
+                                                <option>팝업</option>
+                                                <option>상세 메뉴소개</option>
+                                                <option>메인 메뉴소개</option>
+                                                <option>회원가입</option>
+                                                <option>로그인</option>
+                                                <option>인스타그램</option>
+                                            </select> 
+                                            <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;margin-left: 5px;">
+                                                <span class="text">조회</span>
+                                            </a>
+                                        </div>
+                                       <div class="banner_s_02"  style="display:none;">
+                                           <input type="text" style="min-width: 450px;vertical-align: middle;">
+                                           <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                                <span class="text">조회</span>
+                                            </a>
+                                       </div>
+                                       <div class="banner_s_03"  style="display:none;text-align: left;">
+                                           <ul class="list_inline" style="margin-bottom:0;">
+                                            <li>
+                                                <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                    <input type="text" id="datepicker3" placeholder="0000-00-00" style="height:40px;line-height: 40px;border-color:#e8e8e8;">
+                                                </div>
+                                                <div class="left_line">
+                                                    <ul class="list_inline">
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                            </select>
+                                                        </li>
+                                                        <li><spna>:</span></li>
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>05</option>
+                                                                <option>10</option>
+                                                                <option>15</option>
+                                                                <option>20</option>
+                                                                <option>25</option>
+                                                                <option>30</option>
+                                                                <option>35</option>
+                                                                <option>40</option>
+                                                                <option>45</option>
+                                                                <option>50</option>
+                                                                <option>55</option>
+                                                            </select>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li> ~ </li>
+                                                <li>
+                                                   <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                        <input type="text" id="datepicker4" placeholder="0000-00-00" style="height:40px;line-height: 40px;border-color:#e8e8e8;">
+                                                    </div>
+                                                    <div class="left_line">
+                                                        <ul class="list_inline">
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                            </select>
+                                                        </li>
+                                                        <li><spna>:</span></li>
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>05</option>
+                                                                <option>10</option>
+                                                                <option>15</option>
+                                                                <option>20</option>
+                                                                <option>25</option>
+                                                                <option>30</option>
+                                                                <option>35</option>
+                                                                <option>40</option>
+                                                                <option>45</option>
+                                                                <option>50</option>
+                                                                <option>55</option>
+                                                            </select>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                                        <span class="text">조회</span>
+                                                    </a>
+                                                </li>
+                                            </li>
+                                        </ul>
+                                       </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table table-bordered table_main table_main_banner" id="dataTable" width="100%" cellspacing="0">
                                  <colgroup>
                                     <col width="5%">
                                     <col width="5%">
@@ -450,7 +611,38 @@
             console.log("click close");
             });
         });
-        
+
+
+/*체크박스 별 보여지는 테이블*/     
+$(document).ready(function(){
+    $("#check1").change(function(){
+        if($("#check1").is(":checked")){
+           $(".banner_s_01").css('display','block');
+           $(".banner_s_02").css('display','none');
+           $(".banner_s_03").css('display','none');
+        }else{
+           $(".banner_s_01").css('display','none');
+        }
+    });
+     $("#check2").change(function(){
+        if($("#check2").is(":checked")){
+           $(".banner_s_02").css('display','block');
+           $(".banner_s_01").css('display','none');
+           $(".banner_s_03").css('display','none');
+        }else{
+           $(".banner_s_02").css('display','none');
+        }
+    });
+    $("#check3").change(function(){
+        if($("#check3").is(":checked")){
+           $(".banner_s_03").css('display','block');
+           $(".banner_s_01").css('display','none');
+           $(".banner_s_02").css('display','none');
+        }else{
+           $(".banner_s_03").css('display','none');
+        }
+    });
+});
         
     </script>
     <script type="text/javascript">
