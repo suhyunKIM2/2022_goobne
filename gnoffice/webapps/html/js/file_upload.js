@@ -69,7 +69,7 @@ function addFileForm() {
                 '<label style="margin-left: 5px;" for="input_file_'+ fileIndex +'" class="upload">업로드</label><input type="file" id="input_file_'+ fileIndex +'" class="upload-hidden input_file"></div> ');
    }
 
-$(document).off().on("click",".upload-hidden" ,".input_file",function(){
+$(document).on("click",".upload-hidden" ,".input_file",function(){
 
    var fileTarget = $('.filebox .upload-hidden');
     fileTarget.off().on('change', function(){
