@@ -1,4 +1,20 @@
-﻿$(document).ready(function(){
+﻿/*파일첨부 추가하기*/
+$(function(){
+	$('#addItemBtn').click(addFileForm);
+	
+});
+
+
+function addFileForm() {
+   var btn = $('#addItemBtn');
+        var fileIndex = $('.table_main td .filebox').length;
+        $('.table_main tr .file_td:last').append(
+                '<div class="filebox bs3-primary preview-image" style="margin-top:5px;">'+
+                '   <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">'+
+                '<label style="margin-left: 5px;" for="input_file_'+ fileIndex +'">업로드</label><input type="file" id="input_file_'+ fileIndex +'" class="upload-hidden input_file"></div> ');
+   }
+
+$(document).one("click",".input_file",function(){
    var fileTarget = $('.filebox .upload-hidden');
 
     fileTarget.on('change', function(){
@@ -20,17 +36,21 @@
     imgTarget.on('change', function(){
         var parent = $(this).parent();
         parent.children('.upload-display').remove();
-
+     
+        
         if(window.FileReader){
             //image 파일만
             if (!$(this)[0].files[0].type.match(/image\//)) return;
-            
             var reader = new FileReader();
             reader.onload = function(e){
+                
                 var src = e.target.result;
                 parent.prepend('<div class="upload-display"><div class="upload-thumb-wrap"><img src="'+src+'" class="upload-thumb"></div></div>');
+                
             }
             reader.readAsDataURL($(this)[0].files[0]);
+            //e.preventDefault(); 
+           
         }
 
         else {
@@ -41,6 +61,13 @@
 
             var img = $(this).siblings('.upload-display').find('img');
             img[0].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enable='true',sizingMethod='scale',src=\""+imgSrc+"\")";        
-        }
-    });
-});
+        } 
+  });
+  
+  });  
+
+
+
+
+
+
