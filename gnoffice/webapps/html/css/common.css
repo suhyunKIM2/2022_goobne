@@ -26,7 +26,11 @@ ul.list_ul_bottom{margin-bottom:0;}
 .table {
     color: #46474c;
 }
-
+.margin-bottom_7{margin-bottom:7px;}
+.btn-circle.btn-lg{height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1rem;}
+.key_input input{height:42px;line-height:42px;margin-bottom: 5px;padding-left:5px;}    
 
 .hasDatepicker{text-align:center;}
 .small-font{font-size:13px;font-weight:500;}

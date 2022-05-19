@@ -45,57 +45,53 @@
                       <div class="tab-pane fade show active">
                       
                        <div class="left_line line_50">
-                            <b style="float:left;margin-right:1%;margin-top:6px;">신규매장 :</b> 
-                            <div>
-                                <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
-                            </div>
-                             <b style="float:left;margin-right:1%;margin-top:6px;">금일휴무 :</b> 
+                             <div  class="margin-bottom_7"><b style="float:left;margin-right:1%;">개점일 :</b> <b>2022.00.00</b></div>
+                             <div><b style="float:left;margin-right:1%;margin-top:6px;">금일휴무 :</b></div> 
                             <div>
                                 <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
                             </div>
                         </div>
                         <div class="left_line line_50" style="text-align: right;">
-                             <div>
+                             <div class="margin-bottom_7">
                                  <b style="margin-right:1%;margin-top:6px;">개점/폐점 :</b> 
-                                <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                 <span class="btn-circle btn-lg btn-lg_round btn-danger">ON</span> <!--- on 일때 class : btn-danger , off일때 class : btn-secondary  아래 태그 참고--->
+                                 <span class="btn-circle btn-lg btn-lg_round btn-secondary" style="display: none;">OFF</span>
                             </div>
                              
-                            <div>
+                            <div  class="margin-bottom_7"> 
                                 <b style="margin-right:1%;margin-top:6px;">사업자 번호 :</b> 
-                               <input type="number">
+                                <span>000-00-00000</span>
                             </div>
                         </div>
                         
                          <table class="table table-bordered table_S_box dataTable" id="dataTable" width="100%" cellspacing="0">
-                         
+                             <colgroup>
+                                 <col style="width:15%;">
+                                 <col style="width:35%;">
+                                 <col style="width:15%;">
+                                 <col style="width:35%;">
+                             </colgroup>
                              <tr>
                                  <th class="bg-gray-200">매장코드번호</th>
                                 <td>
-                                   <input type="number">
+                                   000001
                                  </td>
                                 <th class="bg-gray-200">매장</th>
                                 <td>
-                                   <input type="text"> 점
+                                    발산역점
                                  </td>
                                  
                                 </tr>
                                 <tr>
                                     <th class="bg-gray-200">주소</th>
                                       <td>
-                                          <ul class="list_inline">
-                                             <li style="width:75%"><input type="text" style="width:100%;margin-left: 0;"></li>
-                                             <li>
-                                                <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
-                                                    <span class="text">확인</span>
-                                                </a>
-                                            </li>
-                                         </ul>
+                                         서울특별시 땡떙구 땡땡동 땡땡땡 00-00
                                       </td>
                                     <th class="bg-gray-200">연락처</th>
                                       <td>
                                           <ul style="margin-bottom:0;">
-                                             <li>1. <input type="number"></li>
-                                             <li style="margin-top:5px;">2. <input type="number"></li>
+                                             <li>010-000-0000</li>
+                                             <li style="margin-top:5px;">010-000-0000</li>
                                          </ul>
                                       </td>
                                    
@@ -103,7 +99,9 @@
                                 <tr>
                                     <th class="bg-gray-200">PG</th>
                                       <td>
-                                       <input type="number" placeholder="Key값"> 
+                                          <div class="key_input"><input type="number" placeholder="MID값"></div> 
+                                           <div class="key_input"><input type="number" placeholder="SignKey값"></div>
+                                           <div class="key_input"><input type="number" placeholder="PassWord값"></div> 
                                       </td>
                                     <th class="bg-gray-200">PG파일</th>
                                   <td>
@@ -120,6 +118,174 @@
                                 </tr>
                                 
                             </table>
+                            
+                            <table class="table table-bordered table_S_box dataTable" id="dataTable" width="100%" cellspacing="0" style="margin-top:1%;">
+                                 <colgroup>
+                                     <col style="width:15%;">
+                                     <col style="width:35%;">
+                                     <col style="width:15%;">
+                                     <col style="width:35%;">
+                                 </colgroup>
+                                 <tr>
+                                     <th class="bg-gray-200">주문 오픈시간</th>
+                                     <td>
+                                        <ul class="list_inline">
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                    <option>14</option>
+                                                    <option>15</option>
+                                                    <option>16</option>
+                                                    <option>17</option>
+                                                    <option>18</option>
+                                                    <option>19</option>
+                                                    <option>20</option>
+                                                    <option>21</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                    <option>24</option>
+                                                </select>
+                                            </li>
+                                            <li><spna>:</span></li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>05</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                    <option>30</option>
+                                                    <option>35</option>
+                                                    <option>40</option>
+                                                    <option>45</option>
+                                                    <option>50</option>
+                                                    <option>55</option>
+                                                </select>
+                                            </li>
+                                        </ul> 
+                                     </td>
+                                     <th class="bg-gray-200">주문 마감시간</th>
+                                     <td>
+                                        <ul class="list_inline">
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                    <option>14</option>
+                                                    <option>15</option>
+                                                    <option>16</option>
+                                                    <option>17</option>
+                                                    <option>18</option>
+                                                    <option>19</option>
+                                                    <option>20</option>
+                                                    <option>21</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                    <option>24</option>
+                                                </select>
+                                            </li>
+                                            <li><spna>:</span></li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>05</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                    <option>30</option>
+                                                    <option>35</option>
+                                                    <option>40</option>
+                                                    <option>45</option>
+                                                    <option>50</option>
+                                                    <option>55</option>
+                                                </select>
+                                            </li>
+                                        </ul> 
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <th class="bg-gray-200">온라인주문 가능여부</th>
+                                     <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                     </td>
+                                     <th class="bg-gray-200">홈페이지 노출여부</th>
+                                     <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                     </td>
+                                </tr>
+                                <script>
+                                    $(document).ready(function() {
+                                          
+                                        }); 
+                                </script>
+                                <tr>
+                                     <th class="bg-gray-200">포장주문</th>
+                                     <td>
+                                        <ul class="list_inline">
+                                          <li>
+                                              <b style="display:block;margin-bottom: 5px; ">포장결제</b>
+                                              <select class="selectpicker">
+                                                <option>불가능</option>
+                                                <option>후불결제만 가능</option>
+                                                <option>선결제만 가능</option>
+                                                <option>모두가능</option>
+                                            </select>
+                                          </li>
+                                          <li class="hidden_option"><b style="display:block;margin-bottom: 5px; ">포장할인</b> <input type="number" style="height:42px;line-height: 42px;"></li>
+                                          <li class="hidden_option"><b style="display:block;margin-bottom: 5px; ">준비시간</b> 
+                                              <select class="selectpicker" id="selectBox" name="selectBox">
+                                                <option>15분</option>
+                                                <option>25분</option>
+                                                <option>35분</option>
+                                                <option>45분</option>
+                                                <option>65분</option>
+                                                <option>75분</option>
+                                                <option>85분</option>
+                                                <option>90분</option>
+                                            </select>
+                                          </li>
+                                        </ul>
+                                     </td>
+                                     <th class="bg-gray-200">배달주문</th>
+                                     <td>
+                                        
+                                     </td>
+                                </tr>
+                            </table>
+                             
+                           
+                            
                             <table  class="table table-bordered table_S_box table_S_box_td_center" id="dataTable" width="100%" cellspacing="0" style="margin-top:1%;">
                                 <tr>
                                     <th class="bg-gray-200">포장할인 및 예약
