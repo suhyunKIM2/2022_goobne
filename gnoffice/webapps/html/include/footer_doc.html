@@ -39,13 +39,28 @@
 <!-- E: 버튼식체크박스 -->
 
      <script>
-         $(document).ready(function() {
+       $(document).ready(function() {
           $('select').niceSelect();
           // 팝업 닫기 추가 
           $('.close').on('click', function(){
             $('.modal').modal('hide');
             console.log("click close");
             });
+        /*selected hidden 추가*/
+         $('.selected_hidden .nice-select .list li').attr('id','selected');
+          $('.selected_hidden .nice-select .list li:nth-child(1)').attr('id','selected_on');
+             $(".selected_hidden .nice-select .list li#selected_on").click(function(){
+                 //$(".list_inline .hidden_option").hide();
+             $(this).parent().parent().parent('.selected_hidden li').nextAll('.hidden_option').hide();   
+            });
+             $(".selected_hidden .nice-select .list li#selected").click(function(){
+                    //$(".list_inline .hidden_option").show();
+                $(this).parent().parent().parent('.selected_hidden li').nextAll('.hidden_option').show();    
+            });
+           if($(".selected_hidden .nice-select .list li:nth-child(1)").hasClass("selected") === true) {
+             $('.hidden_option').css('display','none');
+
+            } 
         });
         
           /*체크박스 별 보여지는 테이블*/     

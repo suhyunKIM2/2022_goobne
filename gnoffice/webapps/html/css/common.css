@@ -501,6 +501,21 @@ a:hover{text-decoration: none;color:#000;}
 .take_out_list li input{margin-left: 5px;}
 .table_S_box_td_center td{text-align: center;}
 .table_S_box_td_center td input{height: 42px;line-height: 42px;}
+
+/*-----S: 20220520 추가-----*/
+.take_out_list_option li{display: block;}
+.list_inline.selected_hidden li{vertical-align: text-top;}
+
+.margin-top_80{margin-top:105px;}
+.padding_s_5{padding:0 2%;}
+.text-top-padding-top{vertical-align: text-top !important;padding-top:25px !important;}
+.time_select .nice-select{min-width: auto;}
+.list_inline.selected_hidden li input[type="number"]{padding-left:10px;}
+.list_inline_pay {margin-bottom:0;    padding: 2% 0;}
+.list_inline_pay li {margin:0 2%;}
+.api_div {border:1px solid #eee; width:100%;min-height:600px;}
+/*-----E: 20220520 추가-----*/
+
 /*---S: 20220518 추가---*/
 .table_main_banner .banner_s_01 .nice-select{margin-left:4px;float:none;line-height: 40px;height: 45px;}
 .table_main_banner .banner_s_01 .nice-select.open .list,.table_main_banner .banner_s_03 .nice-select.open .list{min-width: 100%;bottom: auto;top: 37px;}
@@ -517,6 +532,15 @@ a:hover{text-decoration: none;color:#000;}
 .sale_font{font-weight:600;} 
 .text_left{text-align:left;}
 
+@media (max-width: 1677px){
+.margin-top_80{margin-top:0px;display: block !important;}
+.padding_s_5{padding:0;}
+
+}
+
+@media (max-width: 1462px){
+.list_inline.selected_hidden li input[type="number"]{width:80px;}
+}
 
 @media (min-width: 1200px){
 .col-xl-4 {
