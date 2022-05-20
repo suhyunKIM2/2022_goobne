@@ -512,8 +512,12 @@ a:hover{text-decoration: none;color:#000;}
 .time_select .nice-select{min-width: auto;}
 .list_inline.selected_hidden li input[type="number"]{padding-left:10px;}
 .list_inline_pay {margin-bottom:0;    padding: 2% 0;}
-.list_inline_pay li {margin:0 2%;}
+.list_inline_pay li {margin:0 2%;text-align: center;}
+.list_inline_pay li b{display: block;    margin-bottom: 5px;}
 .api_div {border:1px solid #eee; width:100%;min-height:600px;}
+.api_input_box{margin-top:1rem;}
+.api_input_box li{width:230px;}
+.api_input_box input{height:42px;line-height: 42px;padding:0 2%;width:100%;}
 /*-----E: 20220520 추가-----*/
 
 /*---S: 20220518 추가---*/
