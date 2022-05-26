@@ -84,17 +84,63 @@
     font-size: 2.2rem;
     margin:2%  auto;}   
 .coupon_list{text-align:center;}    
-.coupon_list li{background: url(../assets/images/icon/icon_coupon_bg.svg) center no-repeat;    width: 300px;height: 181px;text-align: center;    display: inline-block;}
+.coupon_list li{width:300px;text-align: center;    display: inline-block;    margin:1rem;vertical-align: middle;}
+.coupon_list li .coupon_list_bg{background: url(../assets/images/icon/icon_coupon_bg.svg) center no-repeat;    width: 300px;height: 181px;display: inline-block;position: relative;}
+.coupon_ch {position:absolute;top:1rem;left:1rem;}
+.coupon_ch input[type="checkbox"] + label{cursor: pointer;}
 .coupon_number{margin:4%; text-align: right;font-size:1rem;}
 .coupon_title{ font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;font-size: 1.4rem;font-weight: 800;}
-.coupon_dl dt{font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;font-size: 2.2rem;font-weight: 800;}
-.coupon_dl dd{font-size:1.5rem;}
+.coupon_dl{line-height: 1.5;}
+.coupon_dl dt{font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;font-size: 2.5rem;font-weight: 800;}
+.coupon_dl dd{font-size:1.8rem;    padding: 0 20px;font-weight: 500;font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;overflow: hidden;line-height: normal;
+    margin-top: 0.7rem;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;}
+.coupon_dl dd:last-child{font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;}
+.coupon_pro .black_btn {
+    background: #0c0c0c;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    border: 1px solid #000;
+    font-size: 1.3rem;
+    margin:1rem auto 2rem;
+    cursor: pointer;
+    width: 270px;
+    text-align: center;
+}
+
 @media (max-width: 650px){
 .e_coupon_div,.e_coupon_div_btn{width:100%;}
 .e_coupon_div {margin: 9% auto 1%;}
 .search-area .e_coupon-search::placeholder,.search-area .e_coupon-search{font-size:1.6rem;}
-.e_coupon__page-tab-tit {
+.e_coupon__page-tab-tit,.coupon_text_div {
     font-size: 1.6rem;}
+
+}
+@media (max-width: 320px){
+.l-inner {
+    width: 100%;
+}
+.coupon_list li{width:auto;margin: 0;margin-bottom: 1rem;}
+.coupon_list li .coupon_list_bg{width:250px;height:151px;background-size:250px auto;}
+.coupon_pro .black_btn{width:80%;}
+.e_coupon_div, .e_coupon_div_btn{width:90%;}
+.coupon_pro{width:95%;margin: auto;}
+.div_box_border_top{width:90%;margin: auto;}
+.coupon_dl dd{font-size: 1.2rem;}    
+.coupon_h3{padding:1.4rem;font-size:1.4rem;}
+.coupon_number {
+    margin: 0.7rem;}
 }
 </style>
 <body>
@@ -121,21 +167,66 @@
                             <button class="black_btn">쿠폰 이미지 등록</button>
                         </div>
                         <!--- S: 쿠폰 리스트----->
-                        <div class="l-c-pt sys-pro">
+                        <div class="l-c-pt sys-pro coupon_pro">
                             <h3 class="coupon_h3">Resister Coupon</h3>
                             <div class="coupon_text_div">등록하신 e-쿠폰을 사용하여 주세요.</div>
                             <ul class="coupon_list">
                                 <li>
-                                    <div class="coupon_number">5555555555</div>
-                                    <div class="coupon_title">Coupon</div>
-                                    <dl class="coupon_dl">
-                                        <dt>20,000</dt>
-                                        <dd>굽네 불금치킨 + 콜라 1.25L</dd>
-                                        <dd>2022-00-00 ~ 2022-00-00</dd>
-                                    </di>
+                                    <div class="coupon_list_bg">
+                                        <div class="coupon_ch">
+                                           <div class="l-chk">
+                                                <input type="checkbox" id="chk_1" class="chk-type">
+                                                <label for="chk_1"></label>
+                                            </div>
+                                        </div>
+                                        <div class="coupon_number">123456789000</div>
+                                        <div class="coupon_title">Coupon</div>
+                                        <dl class="coupon_dl">
+                                            <dt>20,000</dt>
+                                            <dd>굽네 불금치킨 + 콜라 1.25L</dd>
+                                            <dd>2022-00-00 ~ 2022-00-00</dd>
+                                        </di>
+                                    </div>
                                 </li>
-                                
+                                <li>
+                                    <div class="coupon_list_bg">
+                                        <div class="coupon_ch">
+                                           <div class="l-chk">
+                                                <input type="checkbox" id="chk_2" class="chk-type">
+                                                <label for="chk_2"></label>
+                                            </div>
+                                        </div>
+                                        <div class="coupon_number">123456789000</div>
+                                        <div class="coupon_title">Coupon</div>
+                                        <dl class="coupon_dl">
+                                            <dt>20,000</dt>
+                                            <dd>굽네 불금치킨 + 콜라 1.25L</dd>
+                                            <dd>2022-00-00 ~ 2022-00-00</dd>
+                                        </di>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="coupon_list_bg">
+                                        <div class="coupon_list_bg">
+                                        <div class="coupon_ch">
+                                           <div class="l-chk">
+                                                <input type="checkbox" id="chk_3" class="chk-type">
+                                                <label for="chk_3"></label>
+                                            </div>
+                                        </div>
+                                        <div class="coupon_number">123456789000</div>
+                                        <div class="coupon_title">Coupon</div>
+                                        <dl class="coupon_dl">
+                                            <dt>20,000</dt>
+                                            <dd>굽네치킨 불금치킨+바비큐 시카고 피자+콜라1.25L</dd>
+                                            <dd>2022-00-00 ~ 2022-00-00</dd>
+                                        </di>
+                                    </div>
+                                    
+                                </li>
+                                <li></li>
                             </ul>
+                            <div class="black_btn" onClick="">사용하기</div>
                         </div>
                         <!--- E: 쿠폰 리스트----->
                         <div class="div_box_border_top">
