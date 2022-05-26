@@ -207,7 +207,7 @@ ul.list_ul_bottom{margin-bottom:0;}
 }
 .login_tab li{width: 49%;
     margin: 0 0.5%;}
-.login_tab-content>.active{padding:0 0.5rem 0;}
+.login_tab-content>.active{padding:0.5rem 0.5rem 0;}
 .login_tab-content form.user .form-control-user{margin-left:0;}
 
 

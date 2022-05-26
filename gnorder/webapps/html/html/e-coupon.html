@@ -17,7 +17,7 @@
 
     <link rel="stylesheet" href="../assets/css/common_layout.css" type="text/css" />
     <link rel="stylesheet" href="../assets/css/layout.css" type="text/css" />
-
+    <link rel="stylesheet" href="../assets/css/common_v1.css" type="text/css" /><!---- cns제작추가---->
 
 
     <script src="../assets/js/common/jquery-3.5.1.min.js"></script>
@@ -28,121 +28,7 @@
     <script src="assets/js/main/main.js"></script>
 
 </head>
-<style>
-.search-area .e_coupon-search{font-weight: 800;width:100% !important;margin: auto;    border-bottom: 2px solid #21293B;padding:4% 30px 4% 0;font-size:2.2rem;}
-.search-area .e_coupon-search::placeholder {
-    color: #999;font-weight: 800;font-size:2.2rem;
-}
 
-.e_coupon_div{    margin: 4% auto 1%;
-    width: 60%;
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: translateX(0);}
-.e_coupon_div_btn{width:60%; margin: 0 auto 3%;text-align: right;}
-.e_coupon_div_btn .black_btn{background:#0c0c0c;color:#fff;border-radius: 10px;padding:1rem;border:1px solid #000;font-size:1.3rem;}
-.sys-pro {
-    border-radius: 10px;
-    background-color: #F5ECE4;
-}
-.e_coupon_div .e_coupon_s_btn{
-    width: 30px;
-    height: 30px;
-    background: url(../assets/images/icon/icon_search.svg) center no-repeat;
-    position:absolute;
-    right:0;
-    bottom:25%;
-}
-.e_coupon__page-tab-tit {
-    font-size: 2rem;
-    font-weight: 800;
-    color: #000;
-    padding-bottom: 2.2rem;
-}
-.div_box_border_top {padding:4.2rem 0;border-top:1px solid #212121;margin-top:7%;}
-.div_box_border_bottom{border-bottom:1px solid #212121;margin-top:0;}
-.div_box_border_top .inside_ul li{font-size: 1.2rem;line-height: 1.4;    clear: both;    margin-bottom:1rem;
-    height: auto;
-    overflow: hidden;
-    vertical-align: middle;}
-.icon_nu{font-size:3rem;float: left;line-height: 0;}
-.text_span{margin-left: 15px;float: left;}
-.coupon_h3{    font-weight: 800;
-    font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;
-    border: 1px solid #212121;
-    border-radius: 25px;
-    width: 182px;
-    text-align: center;
-    padding:1.6rem;
-    font-size: 1.6rem;
-    margin: auto; }
-.coupon_text_div{font-weight: 600;
-    font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;
-    width: 100%;
-    text-align: center;
-    font-size: 2.2rem;
-    margin:2%  auto;}   
-.coupon_list{text-align:center;}    
-.coupon_list li{width:300px;text-align: center;    display: inline-block;    margin:1rem;vertical-align: middle;}
-.coupon_list li .coupon_list_bg{background: url(../assets/images/icon/icon_coupon_bg.svg) center no-repeat;    width: 300px;height: 181px;display: inline-block;position: relative;}
-.coupon_ch {position:absolute;top:1rem;left:1rem;}
-.coupon_ch input[type="checkbox"] + label{cursor: pointer;}
-.coupon_number{margin:4%; text-align: right;font-size:1rem;}
-.coupon_title{ font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;font-size: 1.4rem;font-weight: 800;}
-.coupon_dl{line-height: 1.5;}
-.coupon_dl dt{font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;font-size: 2.5rem;font-weight: 800;}
-.coupon_dl dd{font-size:1.8rem;    padding: 0 20px;font-weight: 500;font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;overflow: hidden;line-height: normal;
-    margin-top: 0.7rem;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;}
-.coupon_dl dd:last-child{font-size: 1rem;
-    margin-top: 1rem;
-    font-weight: 500;
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;}
-.coupon_pro .black_btn {
-    background: #0c0c0c;
-    color: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-    border: 1px solid #000;
-    font-size: 1.3rem;
-    margin:1rem auto 2rem;
-    cursor: pointer;
-    width: 270px;
-    text-align: center;
-}
-
-@media (max-width: 650px){
-.e_coupon_div,.e_coupon_div_btn{width:100%;}
-.e_coupon_div {margin: 9% auto 1%;}
-.search-area .e_coupon-search::placeholder,.search-area .e_coupon-search{font-size:1.6rem;}
-.e_coupon__page-tab-tit,.coupon_text_div {
-    font-size: 1.6rem;}
-
-}
-@media (max-width: 320px){
-.l-inner {
-    width: 100%;
-}
-.coupon_list li{width:auto;margin: 0;margin-bottom: 1rem;}
-.coupon_list li .coupon_list_bg{width:250px;height:151px;background-size:250px auto;}
-.coupon_pro .black_btn{width:80%;}
-.e_coupon_div, .e_coupon_div_btn{width:90%;}
-.coupon_pro{width:95%;margin: auto;}
-.div_box_border_top{width:90%;margin: auto;}
-.coupon_dl dd{font-size: 1.2rem;}    
-.coupon_h3{padding:1.4rem;font-size:1.4rem;}
-.coupon_number {
-    margin: 0.7rem;}
-}
-</style>
 <body>
     <!-- start of :: wrap -->
     <div id="wrap">
