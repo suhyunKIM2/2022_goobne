@@ -1,5 +1,7 @@
 @charset "UTF-8";
 a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
+.s_text_G{color:#999;}
+.text_center{text-align: center;    font-size: 1.2rem;}
 .search-area .e_coupon-search{font-weight: 800;width:100% !important;margin: auto;    border-bottom: 2px solid #21293B;padding:4% 30px 4% 0;font-size:2.2rem;}
 .search-area .e_coupon-search::placeholder {
     color: #999;font-weight: 800;font-size:2.2rem;
@@ -90,6 +92,28 @@ a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
     text-align: center;
 }
 
+/*마이페이지*/
+.box_bg_b{background:#FBF5F0;}
+.list_inline_block {text-align:center;margin-top: 2rem;}
+.list_inline_block li{display:inline-block;width:calc(100% /5.1);margin: 0 0.5rem;padding:2.5rem;text-align: left;border-radius: 10px;min-height: 172px;vertical-align: middle;}
+.list_inline_block li dl{font-size:1.6rem;}
+.list_inline_block li dt{height:42px;line-height: 42px;}
+.list_inline_block li dd{margin:2rem 0;}
+.text_name{font-size:2rem;font-weight: 800;}
+.my_icon_svg{width:auto;margin-right: 1rem;}
+.text_color_G{font-weight:800;color:#999;}
+.text_color_B{font-weight:800;color:#000;margin: 0 0.5rem;}
+.text_color_R{font-weight:600;color:#d60018;font-size: 2rem;}
+.btn_B{font-weight:800; border:1px solid #000;border-radius:5px;padding: 0.7rem;width: 50%; text-align: center;cursor: pointer;font-size:1.5rem;}
+.btn_B:hover{background:#000;color:#fff;}
+.text_left{text-align:left;}
+.text_size_m{font-size:1.6rem;line-height: 1.4;font-weight: 600;}
+
+@media (max-width: 1300px){
+
+.list_inline_block li{width:49%;}
+}
+
 @media (max-width: 650px){
 .e_coupon_div,.e_coupon_div_btn{width:100%;}
 .e_coupon_div {margin: 9% auto 1%;}
@@ -113,3 +137,6 @@ a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
 .coupon_number {
     margin: 0.7rem;}
 }
+
+
+
