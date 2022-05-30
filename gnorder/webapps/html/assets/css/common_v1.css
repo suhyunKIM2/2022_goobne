@@ -94,7 +94,7 @@ a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
 
 /*마이페이지*/
 .box_bg_b{background:#FBF5F0;}
-.list_inline_block {text-align:center;margin-top: 2rem;}
+.list_inline_block {text-align:center;margin-top: 2rem;clear: both;}
 .list_inline_block li{display:inline-block;width:calc(100% /5.1);margin: 0 0.5rem;padding:2.5rem;text-align: left;border-radius: 10px;min-height: 172px;vertical-align: middle;}
 .list_inline_block li dl{font-size:1.6rem;}
 .list_inline_block li dt{height:42px;line-height: 42px;}
@@ -108,6 +108,31 @@ a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
 .btn_B:hover{background:#000;color:#fff;}
 .text_left{text-align:left;}
 .text_size_m{font-size:1.6rem;line-height: 1.4;font-weight: 600;}
+.date_div{position:relative;}
+.date_pop{position: absolute;right:1rem;top:32px;background:#fff;padding:3rem;width: 130px;}
+.date_btn{cursor: pointer;margin-right: 1rem;width:118px;float:right;margin-bottom:1rem;}
+.date_btn:hover .date_hover,.date_btn:active .date_hover,.date_btn:not(:disabled):active:focus .date_hover,.date_btn:focus .date_hover{background: #000;fill:#fff;border-radius: 5px;}
+.date_btn .nice-select{min-width:100%;}
+.float_left{float:left;    margin: 0;}
+.text_right{text:right;}
+.float_right{float:right;    margin: 0;}
+.btn_inline_block li{display:inline-block;}
+.btn_inline_block li .btn_B{width:auto;padding: 0.85rem 4rem;}
+.my_pag_width{margin:1rem 1rem 0;height: auto;overflow: hidden;}
+.tab_list{padding:3rem 0;margin:2rem 0; border:2px solid #000;border-left: 0; border-right: 0;}
+.tab_list li{display:inline-block;width:49%;text-align: center;font-size:2rem;font-weight: 800;cursor: pointer;}
+.list_info_line li{display:inline-block;width:49%;}
+.list_info_order li{display:block;width:100%;font-size: 1.5rem;margin: 1rem 0;}
+.list_info_order li b{font-weight:800;}
+.list_info_order li .btn_B{padding:1.5rem;}
+.list_info_order{border-right: 1px solid #000;}
+.order_list_div{position:relative;}
+.order_list_icon li{    width: calc(100%/5.5);
+    text-align: center;    font-size: 1.5rem;}
+.order_list_icon{position:relative;z-index: 1;}    
+.order_list_icon li div img{height:65px;    margin-bottom: 1rem;}
+.line_center{position:absolute;width:73%;border-top:1px solid #000;    top: 39%;left: 64px;}
+.on_text{font-weight: 800;}
 
 @media (max-width: 1300px){
 
