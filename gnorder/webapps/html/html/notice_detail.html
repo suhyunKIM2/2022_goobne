@@ -86,18 +86,65 @@
                                 </dl>
                             </a>
                         </div>
-                        <!-----S: 댓글창------>
+                <!-----S: 댓글창------>
                         <div class="chat_form_control">
                             <div class="chat_header"><img src="/html/assets/images/icon/chat-dots.svg" class="my_icon_svg icon_box chat_box" id="my_icon_svg">댓글</div>
                             <div class="chat_text_box member_table">
-                                <ul class="list_info_line">
-                                    <li><input type="text" placeholder="아이디" class="input_style"></li>
-                                    <li><input type="text" placeholder="비밀번호" class="input_style"></li>
-                                </ul>
                                 <textarea class="textarea_style"></textarea>
+                                <div class="l-btn chat_btn">등록하기</div>
                             </div>
+                            <div class="s_text_G text_size_m">총 <b class="text_color_B">0</b>건의 댓글이 있습니다.</div>
                         </div>
-                        <!-----E: 댓글창------>
+                        <!------S: 댓글 리스트------->
+                        <div class="chat_form_list">
+                            <ul class="chat_form_list_ul_box">
+                                <li><!--- 내가 쓴 댓글 리스트--->
+                                    <dl>
+                                        <dt>홍 * 동 <span class="date_text">2022.00.00 00:00</span></dt>
+                                        <dd class="btn_box_dd">
+                                            <ul class="list_info_line">
+                                                <li class="delete_btn">삭제</li><!---내가 쓴 댓글 노출버튼--->
+                                                <li class="correction_btn">수정</li><!---내가 쓴 댓글 노출버튼--->
+                                                <li class="reply_btn">답글</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="text_box_view">이런저런 댓글 상세내용 상세내용 11</dd>
+                                    </dl>
+                                </li>
+                                <li><!--- 다른 사람 댓글 리스트---->
+                                    <dl>
+                                        <dt>홍 * 동 <span class="date_text">2022.00.00 00:00</span></dt>
+                                        <dd class="btn_box_dd">
+                                            <ul class="list_info_line">
+                                                <li class="reply_btn">답글</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="text_box_view">이런저런 댓글 상세내용 상세내용</dd>
+                                    </dl>
+                                    <dl class="chat_chat_dl">
+                                        <dt>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.5 1.5A.5.5 0 0 0 1 2v4.8a2.5 2.5 0 0 0 2.5 2.5h9.793l-3.347 3.346a.5.5 0 0 0 .708.708l4.2-4.2a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 8.3H3.5A1.5 1.5 0 0 1 2 6.8V2a.5.5 0 0 0-.5-.5z"/>
+</svg>
+                                        홍 * 동 <span class="date_text">2022.00.00 00:00</span>
+                                        </dt>
+                                        <dd class="btn_box_dd">
+                                            <ul class="list_info_line">
+                                                <li class="reply_btn">답글</li>
+                                            </ul>
+                                        </dd>
+                                        <dd class="text_box_view">이런저런 댓글 상세내용 상세내용</dd>
+                                    </dl>
+                                    
+                                </li>
+                                
+                            </ul>
+                            
+                        </div>
+                        <!------E: 댓글 리스트------->
+                        
+                        
+                <!-----E: 댓글창------>
                     </section>
                     <!-- // 공지사항 상세영역 영역  -->
                     <button type="button" class="l-btn notice-list-btn">목록으로</button>
@@ -123,9 +170,42 @@
             $('#footer').load("../include/footer.html");
             $('.aside').load("../include/aside.html");
             $('#mobile-nav').load("../include/mobile-nav.html");
-
+        
         });
-    </script>
+        
+        
+ /* 댓글 수정버튼 클릭시*/
+$(document).on('click', '.correction_btn', function(){
+           $(this).next().css('display','none');
+            $(this).text('수정취소').removeClass('correction_btn').addClass('correction_delete');
+          var a = $(this).parent().parent().next().html();
+          var t = $(this).parent().parent().next().html('<textarea class="textarea_style">'+ a +'</textarea><div class="l-btn chat_btn">등록하기</div>');   
+ });
+$(document).on('click', '.correction_delete', function(){
+          var a = $(this).parent().parent().next().children('.textarea_style').html();
+         $(this).next().css('display','inline-block');
+         $(this).prev().css('display','inline-block');
+         $(this).text('수정').addClass('correction_btn').removeClass('correction_delete');
+         $(this).parent().parent().next().empty();
+         $(this).parent().parent().next().html(a);
+
+    }); 
+$(document).on('click', '.delete_btn', function(){
+  $(this).parent().parent().parent().parent().hide();
+});
+$(document).on('click', '.reply_btn', function(){
+var a = $(this).parent().parent().next().html();
+$(this).prev().css('display','none');
+ $(this).prev().prev().css('display','none');
+    $(this).text('취소').removeClass('reply_btn').addClass('reply_btn_delete');
+    $(this).parent().parent().next().after().html(a + '<textarea class="textarea_style" style="margin-top:1rem;"></textarea><div class="l-btn chat_btn" style="margin-top:1rem;">등록하기</div>'); 
+});
+$(document).on('click', '.reply_btn_delete', function(){
+         $(this).prevAll().css('display','inline-block');
+         $(this).text('답글').addClass('reply_btn').removeClass('reply_btn_delete');
+         $(this).parent().parent().next().children().remove();
+    });         
+</script>
 </body>
 
 </html>

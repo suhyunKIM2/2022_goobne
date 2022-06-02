@@ -136,20 +136,40 @@ a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
 .border_bottom{border-bottom: 1px solid #000;
     padding-bottom: 1rem;
     margin-top: 4rem;}
-.member_table{width:100%;margin:2rem 0;    font-size: 1.5rem;}  
+.member_table{width:100%;margin:2rem 0;    font-size: 1.5rem;height:auto;overflow:hidden;}  
 .member_table .list_info_line li{width:auto;}
 .member_table .nice-select{float:none;}
 input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-radius: 5px;padding-left:1rem;}
 .icon_box{margin-right:0;    background: #fff;    border-radius: 50%;padding: 0.5rem;}
 .text_icon_right{margin-left:1rem;}
 .textarea_style{border: 1px solid #000;
-    width:98%;
+    width:84%;
     min-height: 55px;
-    margin: 1rem 0;
-    overflow: auto;padding: 1%;}
+    overflow: auto;padding: 1%;float:left;border-radius: 5px;}
 .chat_box{margin-right: 1rem;}    
 .chat_header{font-size: 2rem; font-weight: 800;margin: 1rem 0;}
-.chat_form_control{padding:2%;border-bottom:1px solid #000;}
+.chat_form_control{padding:2% 2% 1%;border-bottom:1px solid #000;}
+.chat_btn{float:right;width:13%;height:80px;line-height: 80px;}
+.notice .notice-list-btn{clear: both;}
+.chat_form_list_ul_box dl{font-size:1.2rem;}
+.chat_form_list_ul_box dl dt{font-weight: 800;float: left;width:50%;}
+.btn_box_dd{width:50%;float:right;    }
+.text_box_view{clear: both;height: auto;overflow:hidden;}
+.btn_box_dd .list_info_line{text-align: right;margin-bottom: 1rem;}
+.btn_box_dd .list_info_line li{    width: auto;
+    border-bottom: 0;
+    background: #000;
+    color: #fff;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;cursor: pointer;}
+.chat_form_list_ul_box li{padding:1% 2% 2%;border-bottom:1px solid #d3c6bb;}
+.btn_box_dd .list_info_line li.delete_btn{background: #847c76;}
+.btn_box_dd .list_info_line li.correction_btn,.btn_box_dd .list_info_line li.correction_delete{background: #4f2808;}
+.chat_form_list_ul_box dl.chat_chat_dl{    margin-top: 3rem;
+    padding:1%;
+    border-top: 1px dotted #999;}
+.chat_form_list_ul_box dl.chat_chat_dl .text_box_view{padding-left:16px;}
 
 @media (max-width: 1300px){
 
