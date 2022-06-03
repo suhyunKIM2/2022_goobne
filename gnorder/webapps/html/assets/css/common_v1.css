@@ -144,8 +144,8 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .text_icon_right{margin-left:1rem;}
 .textarea_style{border: 1px solid #000;
     width:84%;
-    min-height: 55px;
-    overflow: auto;padding: 1%;float:left;border-radius: 5px;}
+    height: 55px;
+    overflow: auto;padding:11px;float:left;border-radius: 5px;}
 .chat_box{margin-right: 1rem;}    
 .chat_header{font-size: 2rem; font-weight: 800;margin: 1rem 0;}
 .chat_form_control{padding:2% 2% 1%;border-bottom:1px solid #000;}
@@ -170,6 +170,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     padding:1%;
     border-top: 1px dotted #999;}
 .chat_form_list_ul_box dl.chat_chat_dl .text_box_view{padding-left:16px;}
+.date_text{font-weight: 500;color: #3a3a3a;}
 
 @media (max-width: 1300px){
 
@@ -179,6 +180,17 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 }
 @media (max-width: 1135px){
 .list_inline_block li.box_bg_b{width:42%;margin: 1%;    padding: 2.5%;}
+}
+@media (max-width: 1024px){
+.textarea_style{width:83%;}
+}
+@media (max-width: 950px){
+.textarea_style{width:73%;    height: 30px;}
+.chat_btn{width:22%;font-size:1.2rem;height: 54px;
+    line-height: 54px;}
+}
+@media (max-width: 600px){
+.textarea_style{width:71%;}
 }
 @media (max-width: 880px){
 .list_info_line li{width:100%;}
@@ -217,6 +229,14 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .text_size_m{font-size: 1.4rem;}  
 .btn_B{font-size:1.3rem;}
 .date_btn .nice-select{height:36px;line-height: 36px;}
+.btn_box_dd .list_info_line li{padding: 0 9px;
+    height: 20px;
+    line-height: 20px;}
+.date_text{font-size:0.5rem;}   
+.bi.bi-arrow-return-right{width:10px !important;height:10px !important;}
+.textarea_style {
+    width: 69%;
+}
 }
 @media (max-width: 320px){
 .l-inner {
@@ -249,6 +269,11 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .btn_inline_block li .btn_B{font-size: 1.1rem;}
 .list_inline_block li.box_bg_b {
     width: 87%;}
+.chat_btn {
+    width: 24%;}
+.textarea_style {
+    width: 65%;}
+    
 }
 
 
