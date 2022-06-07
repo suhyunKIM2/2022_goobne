@@ -126,8 +126,9 @@ ul.list_ul_bottom{margin-bottom:0;}
 .upload-display_block{min-width: 250px;
     min-height: 250px;
   }
+  .board_table .filebox .upload-display {max-width:54px;    max-height: 54px;}
 @media(min-width: 768px) {
-
+.board_table .filebox .upload-display {max-width:54px;    max-height: 54px;}
   .filebox .upload-display {
     display: inline-block;
     margin-right: 5px;

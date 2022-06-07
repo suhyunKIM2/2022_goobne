@@ -40,6 +40,9 @@ a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
     overflow: hidden;
     vertical-align: middle;}
 .icon_nu{font-size:3rem;float: left;line-height: 0;}
+.cscenter_inside .icon_nu{font-size:1rem;line-height: normal;width:auto;}
+.cscenter_inside .text_span{width:96%;margin-left: 0.5%;}
+.cscenter_inside{width:50%;margin:2% auto 0;}
 .text_span{margin-left: 15px;float: left;}
 .coupon_h3{    font-weight: 800;
     font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serifsans-serif;
@@ -140,12 +143,14 @@ a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
 .member_table .list_info_line li{width:auto;}
 .member_table .nice-select{float:none;}
 input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-radius: 5px;padding-left:1rem;}
+
 .icon_box{margin-right:0;    background: #fff;    border-radius: 50%;padding: 0.5rem;}
 .text_icon_right{margin-left:1rem;}
 .textarea_style{border: 1px solid #000;
     width:84%;
     height: 55px;
     overflow: auto;padding:11px;float:left;border-radius: 5px;}
+   
 .chat_box{margin-right: 1rem;}    
 .chat_header{font-size: 2rem; font-weight: 800;margin: 1rem 0;}
 .chat_form_control{padding:2% 2% 1%;border-bottom:1px solid #000;}
@@ -171,9 +176,148 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     border-top: 1px dotted #999;}
 .chat_form_list_ul_box dl.chat_chat_dl .text_box_view{padding-left:16px;}
 .date_text{font-weight: 500;color: #3a3a3a;}
+.cscenter_table{width:64%;margin:3% auto 0;}
+.cscenter_table .nice-select{min-width: 240px;}
+.cscenter_table .textarea_style{width:89%;height:260px;min-width: 600px;}
+.cscenter_table .input_cs{width:91%;min-width: 612px;}
+.cscenter_table .input_css{width:80%;min-width: 229px;}
+.list_info_line_btn{text-align: center;}
+.list_info_line_btn button{display: inline-block;}
+.list_info_line_btn li{width:auto !important;}
+.icon_name{border:1px solid #000;padding:0.5rem 1rem;border-radius: 9px;background:#000;color:#fff;}
+.payment .join__input .input-area .sec-line .right .text_color_G{display:inline-block !important;}
+
+/*파일업로드*/
+.where {
+  display: block;
+  margin: 25px 15px;
+  font-size: 11px;
+  color: #000;
+  text-decoration: none;
+  font-family: verdana;
+  font-style: italic;
+} 
+
+.filebox input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+
+.filebox label {
+  display: inline-block;
+  padding: .5em .75em;
+  color: #999;
+  font-size: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #fdfdfd;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+  border-bottom-color: #e2e2e2;
+  border-radius: .25em;
+  margin-bottom: 0;
+}
+
+/* named upload */
+.filebox .upload-name {
+  display: inline-block;
+  padding: .5em .75em;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: normal;
+  vertical-align: middle;
+  background-color: #e3d7cd;
+  border: 1px solid #ccbdb0;
+  border-bottom-color: #ccbdb0;
+  border-radius: .25em;
+  -webkit-appearance: none; /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* imaged preview */
+ .filebox .upload-display {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+    min-width: auto;
+    max-width:250px;
+    max-height: 250px;
+    position: relative;
+    width:100%;
+    height:600px;
+  }
+.upload-display_block{min-width: 250px;
+    min-height: 250px;
+  }
+.member_table .filebox .upload-display {max-width:60px;    max-height: 60px;}  
+.notice__detail .member_table td{padding:1rem;}
+.notice__detail .member_table .nice-select{float:left;}
+.padding_10{padding:4%;}
+.padding_bottom_1{padding-bottom:1rem;height: auto;overflow: hidden;}
+.store__map{min-height: 58.5rem;}
+.store__search-tab .tab-desc .search-list-area .result-list {
+    max-height: 30rem;}
+.l-cart {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(../images/icon/I_Quick_1.svg) center no-repeat;
+    background-size: contain;
+}    
+.franchise_map{min-height: 350px;
+    background: #fff;
+    }    
+.map_box{width: 50%;
+    margin: 2rem auto;}
+
+@media(min-width: 768px) {
+.member_table .filebox .upload-display {max-width:60px;    max-height: 60px;}
+  .filebox .upload-display {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 0;
+    min-width: auto;
+    max-width:250px;
+  }
+}
+
+.filebox .upload-thumb-wrap {
+  display: inline-block;
+  width: 54px;
+  padding: 2px;
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.filebox .upload-display img {
+  display: block;
+  max-width: 100%;
+  width: 100% \9;
+  height: auto;
+}
+
+.filebox.bs3-primary label {
+  color: #fff;
+  background-color: #d4000b;
+  border-color: #a10012;
+}
+
+.view{width:150px;height:auto;overflow:hidden;}
+.view img{width:100%;height:auto;overflow:hidden;}
+
+
 
 @media (max-width: 1300px){
-
+.cscenter_table{width:773px;}
+.cscenter_inside{width:773px;}
 .list_inline_block li{width:49%;}
 .list_inline_block li.box_bg_b{width:19.3%;}
 .my-inner{width:97%;}
@@ -203,6 +347,17 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .order_list_icon li div img{height:60px;}
 .order_list_icon li{font-size:1rem;}
 .btn_B{width:91%;margin: auto;}
+.cscenter_table {
+    width: 100%;
+}
+.cscenter_table .textarea_style{min-width: auto;width:92%;}
+.cscenter_table .input_cs {
+    width: 94%;
+    min-width: auto;
+}
+.cscenter_inside{width:92%;}
+.cscenter_table .input_css{min-width: auto;    width: 86%;}
+.cscenter_table .nice-select{min-width: auto;    width: 92%;}
 }
 @media (max-width: 650px){
 .e_coupon_div,.e_coupon_div_btn{width:100%;}
@@ -237,6 +392,12 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .textarea_style {
     width: 69%;
 }
+.cscenter_table{font-size: 1.2rem;}
+.cscenter_table .nice-select{font-size:1.2rem;}
+}
+@media (max-width: 375px){
+.th_col{width:20%;}
+.td_col{width:30%;}
 }
 @media (max-width: 320px){
 .l-inner {
@@ -273,8 +434,18 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     width: 24%;}
 .textarea_style {
     width: 65%;}
-    
+.cscenter_table .filebox .upload-name{width:180px !important;}
+ .cscenter_table {
+    font-size: 1rem;
 }
+.l-btn {
+    width: 12rem;}
+.cscenter_table .textarea_style{width:89%;}    
+}
+@media (max-width: 280px){
+.cscenter_table th{display: none;}    
+.cscenter_table td{width:100%;}
 
+}
 
 
