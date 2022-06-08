@@ -275,6 +275,23 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     }    
 .map_box{width: 50%;
     margin: 2rem auto;}
+    
+/*찾아오시는길*/
+.map_ul{width:80%;font-size:1.5rem;line-height: 2.5;margin: auto;}
+.map_ul li{height:auto;overflow:hidden;line-height: 1.5;margin: 3rem 0;}
+.map_icon i{margin-right:1rem;}
+.map_icon{float:left;clear: both;}
+.subway_05{background: #8f3de4;
+    color: #fff;
+    padding: 0 0.4rem;
+    border-radius: 50%;}
+.bus_back{background:#4a972e;color:#fff;padding: 0 0.4rem;}
+.bus_back_1{background:#3556a7;color:#fff;padding: 0 0.4rem;}
+.bus_back_2{background:#4a972e;color:#fff;padding: 0 0.4rem;}
+.map_ul .text_span{margin-left:0;}
+.map_ul li br{display:none;}
+.map_ul .text_span.left_rem{margin-left:0.5rem;}
+
 
 @media(min-width: 768px) {
 .member_table .filebox .upload-display {max-width:60px;    max-height: 60px;}
@@ -333,6 +350,12 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .chat_btn{width:22%;font-size:1.2rem;height: 54px;
     line-height: 54px;}
 }
+@media (max-width: 765px){
+.map_ul li br{display:block;}
+.map_ul .text_span.left_rem{margin-left:2.5rem;}
+.map_box{width:90%;}
+.map_page{padding-bottom:3rem;}
+}
 @media (max-width: 600px){
 .textarea_style{width:71%;}
 }
@@ -366,6 +389,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .e_coupon__page-tab-tit,.coupon_text_div {
     font-size: 1.6rem;}
 .coupon_h3{padding:1.2rem;}
+.map_ul{width:100%;}
 }
 @media (max-width: 500px){
 .text_color_G{display: block;}
@@ -394,6 +418,9 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 }
 .cscenter_table{font-size: 1.2rem;}
 .cscenter_table .nice-select{font-size:1.2rem;}
+.franchise_map {
+    min-height: 250px;}
+.map_ul{font-size:1.3rem;}    
 }
 @media (max-width: 375px){
 .th_col{width:20%;}
@@ -441,10 +468,16 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .l-btn {
     width: 12rem;}
 .cscenter_table .textarea_style{width:89%;}    
+.map_ul {
+    width: 90%;font-size:1.25rem;
+}
 }
 @media (max-width: 280px){
 .cscenter_table th{display: none;}    
 .cscenter_table td{width:100%;}
+.map_ul {
+    width: 98%;font-size:1.2rem;
+}
 
 }
 
