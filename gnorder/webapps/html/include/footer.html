@@ -5,10 +5,10 @@
            <p class="tel">1661-9494</p>
        </div>
        <div class="info-btn">
-           <a href="#none">이용약관</a>
-           <a href="#none">개인정보처리방침</a>
-           <a href="#none">이메일무단수집거부</a>
-           <a href="#none">찾아오시는길</a>
+           <a href="#noen" class="terms">이용약관</a>
+           <a href="#noen" class="privacy">개인정보처리방침</a>
+           <a href="#noen" class="e_mail">이메일무단수집거부</a>
+           <a href="../html/map.html">찾아오시는길</a>
        </div>
        <div class="sns-box">
            <a href="#none" class="instar"></a>
@@ -29,3 +29,51 @@
        <p class="copyright">© 2009-2016 GOOBNE.CO.ALL RIGHT RESERVED</p>
    </div>
 </div>
+<div id="popup_01">
+    <!-- 참고: 스크립트로 load 됩니다. include 폴더 popup_01.html 이용약관 -->
+</div>
+<div id="popup_02">
+    <!-- 참고: 스크립트로 load 됩니다. include 폴더 popup_02.html  개인정보수집/이용-->
+</div>
+<div id="popup_03">
+    <!-- 참고: 스크립트로 load 됩니다. include 폴더 popup_03.html  이메일무단수집거부-->
+</div>
+
+<script>
+        $(document).ready(function () {
+            $('#popup_01').load("../html/popup/popup_01.html");
+            $('#popup_02').load("../html/popup/popup_02.html");
+            $('#popup_03').load("../html/popup/popup_03.html");
+
+
+            // 이용약관 내용보기 버튼 
+            $('.terms').click(function () {
+                $(".dimmed-bg").removeClass("l-hidden");
+                $(".terms-moadl").removeClass("l-hidden");
+            });
+
+            // 개인정보 관련 내용보기 버튼 
+            $('.privacy').click(function () {
+                $(".dimmed-bg").removeClass("l-hidden");
+                $(".privacy-moadl").removeClass("l-hidden");
+            });
+            
+            // 이메일무단수집거부 내용보기 버튼 
+            $('.e_mail').click(function () {
+                $(".dimmed-bg").removeClass("l-hidden");
+                $(".e_mail-moadl").removeClass("l-hidden");
+            });
+
+            
+            // 팝업 닫기 버튼 구현
+            function closePopupFunc() {
+                $(".dimmed-bg").addClass("l-hidden");
+                $(".terms-moadl").addClass("l-hidden");
+                $(".privacy-moadl").addClass("l-hidden");
+                $(".e_mail-moadl").addClass("l-hidden");
+            }
+            const closeBtnElem = document.querySelectorAll(".closeBtn");
+            closeBtnElem.forEach(e => e.addEventListener('click', closePopupFunc));
+
+        });
+    </script>

@@ -56,7 +56,30 @@
                             <div class="left">
                                 <div class="l-sub-title">실시간 급상승 메뉴</div>
                                 <div class="bar"></div>
-                                <div class="word">굽네 오븐 바사삭</div>
+                                <div class="roll-cont">
+                                    <div class="swiper rollSwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <p class="word">굽네 오븐 바사삭</p>  
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <p class="word">굽네 고추바사삭</p>  
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <p class="word">굽네 시카고 딥디쉬 피자</p>  
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <p class="word">굽네 치즈바사삭</p>  
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <p class="word">굽네 바비큐 시카고 딥디쉬 피자</p>  
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <p class="word">굽네 찍먹커리(치킨마크니)</p>  
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="right">
                                 <div class="l-map-icon bk"></div>
@@ -77,7 +100,7 @@
                                                     특별한 오븐레시피를<br>
                                                     소개합니다
                                                 </div>
-                                                <div class="sub">
+                                                <div class="sub" style="display: none;">
                                                     믿고 먹는 치킨은 물론 바삭한 딥디쉬 도우의 맛을 즐길 수 잇는<br>
                                                     굽네 피자 시리즈, 메인메뉴의 맛을 더욱 풍성하게 채워주는 디저트 메뉴까지.<br>
                                                     이모든 고품질 오븐 메뉴들을 굽네에서 한번에 즐겨보세요.
@@ -94,7 +117,7 @@
                                                     특별한 오븐레시피를<br>
                                                     소개합니다2
                                                 </div>
-                                                <div class="sub">
+                                                <div class="sub" style="display: none;">
                                                     믿고 먹는 치킨은 물론 바삭한 딥디쉬 도우의 맛을 즐길 수 잇는<br>
                                                     굽네 피자 시리즈, 메인메뉴의 맛을 더욱 풍성하게 채워주는 디저트 메뉴까지.<br>
                                                     이모든 고품질 오븐 메뉴들을 굽네에서 한번에 즐겨보세요.
@@ -111,7 +134,7 @@
                                                     특별한 오븐레시피를<br>
                                                     소개합니다3
                                                 </div>
-                                                <div class="sub">
+                                                <div class="sub" style="display: none;">
                                                     믿고 먹는 치킨은 물론 바삭한 딥디쉬 도우의 맛을 즐길 수 잇는<br>
                                                     굽네 피자 시리즈, 메인메뉴의 맛을 더욱 풍성하게 채워주는 디저트 메뉴까지.<br>
                                                     이모든 고품질 오븐 메뉴들을 굽네에서 한번에 즐겨보세요.
@@ -155,7 +178,7 @@
                                 <div class="menu-img">
                                     <img src="../assets/images/main/goobne_menu_03.png" alt="Dessert">
                                 </div>
-                                <p class="menu-name">사이드</p>
+                                <p class="menu-name">디저트</p>
                             </a>
                             <a href="#none" class="list">
                                 <div class="menu-img">
@@ -177,7 +200,7 @@
                             <button type="button" class="is-active">전체</button>
                             <button type="button" class="">치킨</button>
                             <button type="button" class="">피자</button>
-                            <button type="button" class="">사이드</button>
+                            <button type="button" class="">디저트</button>
                             <button type="button" class="">치PD</button>
                         </div>
                         <div class="menu__popular-slide">
@@ -320,10 +343,12 @@
                     <div class="search-cnt-group">
                         <div class="input-btn-area">
                             <input type="text" placeholder="배송지를 설정하고 매장을 선택해주세요.">
-                            <button type="button" class="search-btn"><img src="../assets/images/icon/c-store-search.png" alt="검색이미지"></button>
+                            <button type="button" class="search-btn"><img src="../assets/images/icon/c-store-search.png"
+                                    alt="검색이미지"></button>
                         </div>
                         <div class="local-cnt-area">
-                            <button type="button" class="search-btn"><img src="../assets/images/icon/l-m-setting.svg" alt="아이콘이미지"></button>
+                            <button type="button" class="search-btn"><img src="../assets/images/icon/l-m-setting.svg"
+                                    alt="아이콘이미지"></button>
                             <input type="text" placeholder="현 위치로 위치 설정">
                         </div>
                     </div>
@@ -439,7 +464,7 @@
     <!-- end of :: wrap -->
     <script>
         $(document).ready(function () {
-              $('#header').load("../include/header.html");
+            $('#header').load("../include/header.html");
             $('#footer').load("../include/footer.html");
             $('.aside').load("../include/aside.html");
             $('#mobile-nav').load("../include/mobile-nav.html");
@@ -454,6 +479,16 @@
                 pagination: {
                     el: ".swiper-pagination",
                 },
+            });
+
+            // 실시간 메뉴 롤링 
+            let rollswiper = new Swiper(".rollSwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+                direction: "vertical"
             });
 
             // 지금 인기있는 메뉴 btn
@@ -490,8 +525,8 @@
                 $('.dimmed-bg').removeClass('l-hidden');
             });
 
-             // 팝업 닫기 버튼 구현
-            function closePopupFunc () {
+            // 팝업 닫기 버튼 구현
+            function closePopupFunc() {
                 document.querySelector(".dimmed-bg").classList.add("l-hidden");
                 document.querySelector(".modal-cnt-wrapper").classList.add("l-hidden");
             }

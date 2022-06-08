@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>굽네치킨</title>
+
+    <link rel="stylesheet" href="../assets/css/common/slick.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/base.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/header.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/footer.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/jquery-ui.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/animate.css" type="text/css" />
+
+
+    <link rel="stylesheet" href="../assets/css/common_layout.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/modal.css" type="text/css" />
+
+
+
+    <script src="../assets/js/common/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/common/jquery.js"></script>
+    <script src="../assets/js/common/jquery-ui.js"></script>
+    <script src="../assets/js/common/slick.js"></script>
+    <script src="../assets/js/common/wow.min.js"></script>
+    <script src="assets/js/main/main.js"></script>
+
+</head>
+
+<body>
+    <!-- start of :: wrap -->
+    <div id="wrap">
+        <!-- start of :: header -->
+        <div id="header">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 header.html  -->
+        </div>
+        <!-- end of :: header -->
+        <aside class="aside">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 aside.html  -->
+        </aside>
+        <!-- start of :: contents -->
+        <div id="content">
+
+            <article class="l-layout join payment order">
+                <div class="l-inner">
+                    <div class="l-title">비회원 주문하기</div>
+
+                    <form action="#">
+
+                        <!-- 비회원 구매 약관 동의 -->
+                        <section class="join__input">
+
+                            <!-- 타이틀 영역  -->
+                            <div class="tit-area">
+                                <p class="tit">비회원 구매 약관 동의</p>
+                            </div>
+                            <div class="input-area">
+
+                                <div class="sec-line">
+                                    <div class="order__login">
+                                        <div class="order__login-msg">
+                                            비회원으로 구매하시면 굽네치킨에서 드리는 모든 할인/쿠폰과 이벤트 등의 혜택을 받으실 수 없습니다.<br>
+                                            또한 비회원 주문 시에는 적립금이 지급되지 않습니다.
+                                        </div>
+                                        <div class="order__login-btn">
+                                            <button type="button" class="l-btn line">회원가입</button>
+                                            <button type="button" class="l-btn">로그인</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <!-- //비회원 구매 약관 동의 -->
+
+                        <!-- 약관동의 -->
+                        <section class="join__input">
+                            <!-- 타이틀 영역  -->
+                            <div class="tit-area">
+                                <p class="tit">약관동의</p>
+                            </div>
+                            <div class="agree-cnt-wrapper">
+                                <div class="l-chk">
+                                    <input type="checkbox" id="chk-001" class="all-chk">
+                                    <label for="chk-001">전체 약관에 동의합니다. (선택 항목도 포함합니다.)</label>
+                                </div>
+                                <div class="chk-line">
+                                    <div class="l-chk">
+                                        <input type="checkbox" id="chk-002" class="all-chk-type">
+                                        <label for="chk-002">(필수) 이용약관에 모두 동의합니다.</label>
+                                    </div>
+                                    <ul class="list">
+                                        <li>
+                                            <span>굽네치킨 이용약관</span>
+                                            <a href="#noen" class="view terms">내용보기</a>
+                                        </li>
+                                        <li>
+                                            <span>개인정보 수집/이용</span>
+                                            <a href="#noen" class="view privacy">내용보기</a>
+                                        </li>
+                                        <li>
+                                            <span>개인정보취급 위탁안내</span>
+                                            <a href="#noen" class="view privacy">내용보기</a>
+                                        </li>
+                                        <li>
+                                            <span>개인정보 제 3자 제공안내</span>
+                                            <a href="#noen" class="view privacy">내용보기</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chk-line">
+                                    <div class="l-chk l-pt">
+                                        <input type="checkbox" id="chk-003" class="all-chk-type">
+                                        <label for="chk-003">(필수) 본인은 만 14세 이상입니다.</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- //약관동의 -->
+
+                        <!-- 기본정보 -->
+                        <section class="join__input">
+
+                            <!-- 타이틀 영역  -->
+                            <div class="tit-area">
+                                <p class="tit">주문자 정보</p>
+                            </div>
+
+                            <div class="input-area">
+
+                                <div class="sec-line">
+                                    <div class="order__login">
+                                        <div class="order__login-msg">
+                                            비회원으로 상품 구매 시 반드시 본인 인증을 해야 합니다.
+                                        </div>
+                                        <div class="order__login-btn">
+                                            <button type="button" class="l-btn line">카카오 인증</button>
+                                            <button type="button" class="l-btn line">PASS 인증</button>
+                                            <button type="button" class="l-btn line">휴대폰 인증</button>
+                                            <button type="button" class="l-btn line">아이핀인증</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="input-area">
+                                <!-- 이름  -->
+                                <div class="sec-line">
+                                    <label for="user-name" class="title">이름</label>
+                                    <input id="user-name" type="text" placeholder="이름을 입력해주세요"
+                                        class="l-input long-input">
+                                </div>
+
+                                <!-- 휴대폰번호  -->
+                                <div class="sec-line">
+                                    <label for="user-phone" class="title">휴대폰번호</label>
+                                    <div class="right">
+                                        <div class="input-btn">
+                                            <input type="number" placeholder="- 없이 입력하세요." class="l-input short-input">
+                                            <button type="button" class="l-btn">인증번호 발송</button>
+                                        </div>
+                                        <div class="input-btn l-hidden">
+                                            <input type="number" placeholder="인증번호를 입력해주세요."
+                                                class="l-input short-input">
+                                            <button type="button" class="l-btn">인증하기</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 이메일  -->
+                                <div class="sec-line">
+                                    <label for="user-email" class="title">이메일</label>
+                                    <div class="right">
+                                        <div class="email-box">
+                                            <input id="user-email" type="text" placeholder="이메일을 입력해주세요"
+                                                class="l-input short-input">
+                                            <span>@</span>
+                                            <div class="l-select">
+                                                <div class="type">직접입력</div>
+                                                <ul class="type-list">
+                                                    <li>직접입력</li>
+                                                    <li class="is-chk">naver.com</li>
+                                                    <li>hamail.net</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                                <!-- 주소  -->
+                                <div class="sec-line address-line">
+                                    <label for="user-phone" class="title">주소</label>
+                                    <div class="right">
+                                        <div class="input-btn">
+                                            <input type="text" placeholder="우편번호" class="l-input short-input">
+                                            <button type="button" class="l-btn line">우편번호검색</button>
+                                        </div>
+                                        <div class="input-btn">
+                                            <input type="text" placeholder="주소" class="l-input long-input">
+                                        </div>
+                                        <div class="input-btn">
+                                            <input type="text" placeholder="상세주소" class="l-input long-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 배송시 요청사항 -->
+                                <div class="sec-line">
+                                    <label for="user-del" class="title">배송시 요청사항</label>
+                                    <input id="user-del" type="text" placeholder="배송시 요청사항을 입력하세요"
+                                        class="l-input long-input">
+                                </div>
+                            </div>
+                        </section>
+                        <!-- //기본정보 -->
+
+
+
+                        <!-- 결제방법 -->
+                        <section class="join__input">
+                            <!-- 타이틀 영역  -->
+                            <div class="tit-area">
+                                <p class="tit">결제방법</p>
+                            </div>
+                            <div class="input-area">
+
+                                <!--  결제방법 -->
+                                <div class="sec-line">
+                                    <label for="user-gender" class="title">결제방법</label>
+                                    <div class="right radio-area">
+                                        <div class="l-radio">
+                                            <input type="radio" id="radio-01" name="payment" checked>
+                                            <label for="radio-01">네이버페이</label>
+                                        </div>
+                                        <div class="l-radio">
+                                            <input type="radio" id="radio-02" name="payment">
+                                            <label for="radio-02">카카오페이</label>
+                                        </div>
+                                        <div class="l-radio">
+                                            <input type="radio" id="radio-03" name="payment">
+                                            <label for="radio-03">신용카드</label>
+                                        </div>
+                                        <div class="l-radio">
+                                            <input type="radio" id="radio-04" name="payment">
+                                            <label for="radio-04">통신사 포인트</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <!-- //결제방법 -->
+
+
+                        <!-- 주문내역  -->
+                        <section class="join__input">
+                            <!-- 타이틀 영역  -->
+                            <div class="tit-area">
+                                <p class="tit">주문내역</p>
+                            </div>
+                            <div class="payment__price-list">
+                                <dl class="list">
+                                    <dt>주문금액</dt>
+                                    <dd><span class="l-num">30,000</span>원</dd>
+                                </dl>
+                                <dl class="list">
+                                    <dt>배달비</dt>
+                                    <dd><span class="l-num">3,000</span>원</dd>
+                                </dl>
+                                <dl class="list">
+                                    <dt>할인 <span class="l-num">or</span> 쿠폰</dt>
+                                    <dd><span class="l-num">-2,000</span>원</dd>
+                                </dl>
+                                <dl class="total">
+                                    <dt>총 결제금액</dt>
+                                    <dd><span class="l-num">31,000</span>원</dd>
+                                </dl>
+                            </div>
+                        </section>
+                        <!-- //주문내역  -->
+
+                        <div class="l-btn-area">
+                            <button type="button" class="l-btn line">뒤로가기</button>
+                            <button type="submit" class="l-btn">결제하기</button>
+                        </div>
+                    </form>
+                </div>
+
+            </article>
+
+        </div>
+        <!-- end of :: contents -->
+        <!-- start of :: footer -->
+        <div id="footer" class="sub-footer">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 footer.html  -->
+        </div>
+        <!-- end of :: footer -->
+        <div id="mobile-nav">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 mobile-nav.html  -->
+        </div>
+
+       
+    </div>
+    <!-- end of :: wrap -->
+    <script>
+        $(document).ready(function () {
+            $('#header').load("../include/header.html");
+            $('#footer').load("../include/footer.html");
+            $('.aside').load("../include/aside.html");
+            $('#mobile-nav').load("../include/mobile-nav.html");
+            $('#popup_01').load("../html/popup/popup_01.html");
+            $('#popup_02').load("../html/popup/popup_02.html");
+            $('#popup_03').load("../html/popup/popup_03.html");
+
+            // select box
+            $('.l-select .type').click(function () {
+                $(this).siblings('.type-list').toggleClass('is-show');
+            })
+            $('.l-select .type-list li').click(function () {
+                $(this).parent().removeClass('is-show');
+            })
+
+            // 체크박스 전체동의 
+            $('.all-chk').click(function () {
+                $('.all-chk-type').prop('checked', this.checked);
+            });
+
+            // 이용약관 내용보기 버튼 
+            $('.terms').click(function () {
+                $(".dimmed-bg").removeClass("l-hidden");
+                $(".terms-moadl").removeClass("l-hidden");
+            });
+
+            // 개인정보 관련 내용보기 버튼 
+            $('.privacy').click(function () {
+                $(".dimmed-bg").removeClass("l-hidden");
+                $(".privacy-moadl").removeClass("l-hidden");
+            });
+            
+            // 이메일무단수집거부 내용보기 버튼 
+            $('.e_mail').click(function () {
+                $(".dimmed-bg").removeClass("l-hidden");
+                $(".e_mail-moadl").removeClass("l-hidden");
+            });
+
+            // 팝업 닫기 버튼 구현
+            function closePopupFunc() {
+                $(".dimmed-bg").addClass("l-hidden");
+                $(".terms-moadl").addClass("l-hidden");
+                $(".privacy-moadl").addClass("l-hidden");
+                $(".e_mail-moadl").addClass("l-hidden");
+            }
+            const closeBtnElem = document.querySelectorAll(".closeBtn");
+            closeBtnElem.forEach(e => e.addEventListener('click', closePopupFunc));
+
+        });
+    </script>
+</body>
+
+</html>
