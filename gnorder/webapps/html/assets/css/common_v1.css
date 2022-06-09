@@ -265,9 +265,9 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .store__search-tab .tab-desc .search-list-area .result-list {
     max-height: 30rem;}
 .l-cart {
-    width: 2.5rem;
-    height: 2.5rem;
-    background: url(../images/icon/I_Quick_1.svg) center no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(../images/icon/I_Quick_0_1.svg) center no-repeat;
     background-size: contain;
 }    
 .franchise_map{min-height: 350px;
@@ -291,6 +291,22 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .map_ul .text_span{margin-left:0;}
 .map_ul li br{display:none;}
 .map_ul .text_span.left_rem{margin-left:0.5rem;}
+.weight_80{font-weight:800;}
+.journal_box{margin: 1rem auto;height: auto;overflow: hidden;}
+.journal_box .l-title{margin-bottom:4rem;}
+.contants_journal{clear:both;margin: 4rem auto;     white-space: pre-line;text-align: center;padding: 0 10rem;}
+.quote_icon_img{width:2.5rem;height:2.5rem;margin-top:-18px;}
+.rotate{transform: rotate(182deg);}
+.journal_box .text_size_m{line-height: 1.8;font-size:1.7rem;}
+.back_icon_G{margin: 0;
+    background: #d4000b;
+    text-align: center;color: #fff;}
+.journal_box .back_icon_G{width:130px;}
+.journal_box .text_size_L{font-size:2.3rem;}
+.contants_img{white-space: normal;}
+.contants_img_left,.contants_img_right{display:inline-block;width:49%;}
+.journal #footer{margin-top:0;}
+.title_box_div{height:auto;overflow:hidden;border-bottom: 1px solid #d4000b;padding:1rem;}
 
 
 @media(min-width: 768px) {
@@ -342,6 +358,9 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 @media (max-width: 1135px){
 .list_inline_block li.box_bg_b{width:42%;margin: 1%;    padding: 2.5%;}
 }
+@media (max-width: 1070px){
+.contants_journal{padding:0;}
+}
 @media (max-width: 1024px){
 .textarea_style{width:83%;}
 }
@@ -381,6 +400,13 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .cscenter_inside{width:92%;}
 .cscenter_table .input_css{min-width: auto;    width: 86%;}
 .cscenter_table .nice-select{min-width: auto;    width: 92%;}
+.journal_box .text_size_m{font-size:1.5rem;}
+.journal_box .text_size_L {
+    font-size: 2rem;
+}
+.journal_box .back_icon_G {
+    width: 110px;
+}
 }
 @media (max-width: 650px){
 .e_coupon_div,.e_coupon_div_btn{width:100%;}
@@ -420,7 +446,18 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .cscenter_table .nice-select{font-size:1.2rem;}
 .franchise_map {
     min-height: 250px;}
-.map_ul{font-size:1.3rem;}    
+.map_ul{font-size:1.3rem;} 
+.journal_box .text_size_m {
+    font-size: 1.4rem;
+}
+.journal_box .text_size_L {
+    font-size: 1.8rem;
+}
+.quote_icon_img{margin-top:-9px;}
+.journal_box .back_icon_G {
+    width: 100px;
+}
+.title_box_div{padding:1rem 0;}
 }
 @media (max-width: 375px){
 .th_col{width:20%;}
@@ -471,6 +508,14 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .map_ul {
     width: 90%;font-size:1.25rem;
 }
+.journal_box{padding:0 5%;}
+.journal_box .text_size_m {
+    font-size: 1.3rem;
+}
+.journal_box .text_size_L {
+    font-size: 1.6rem;
+}
+
 }
 @media (max-width: 280px){
 .cscenter_table th{display: none;}    
@@ -478,7 +523,9 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .map_ul {
     width: 98%;font-size:1.2rem;
 }
-
+.journal_box .text_size_L {
+    font-size: 1.4rem;
+}
 }
 
 
