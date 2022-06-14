@@ -464,6 +464,13 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     width: 100px;
 }
 .title_box_div{padding:1rem 0;}
+.menu .l-title-area{margin-bottom: 1rem;}
+.l-sub-title {
+    font-size: 1.7rem;
+}
+.menu .l-title-area .left .rollSwiper{height:25px;}
+.menu .l-title-area .left{display: block;}
+.menu__time .l-title-area .left .bar{display:none;}
 }
 @media (max-width: 375px){
 .th_col{width:20%;}
@@ -528,7 +535,8 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .journal_box .text_size_L {
     font-size: 1.2rem;
 }
-
+.l-btn-list button {
+    font-size: 1rem;}
 }
 @media (max-width: 280px){
 .cscenter_table th{display: none;}    
@@ -538,6 +546,9 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 }
 .journal_box .text_size_L {
     font-size: 1.1rem;
+}
+.l-inner {
+    width: 95%;
 }
 }
 
