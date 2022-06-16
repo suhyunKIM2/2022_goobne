@@ -347,6 +347,22 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .view{width:150px;height:auto;overflow:hidden;}
 .view img{width:100%;height:auto;overflow:hidden;}
 
+/*메인롤링배너*/
+.main-box{height:100%;padding:0;margin-top:-4px;}
+.main-box .main-txt-area{margin-top:11rem;}
+.main-box .goobne-img.goobne-img_office{max-width:1200px;width:90%;    margin: auto;    position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);margin-top: 1rem;}
+.main-vi-wrap .slick-slide img.main_banner_MO{display:none;}
+.goobne-bg02{width:100% !important;}
+#header{background-color: transparent;}
+#header.drop{background-color: #FBF5F0;animation: dropHeader 0.4s;}
+@keyframes dropHeader {
+  0% {
+    top: -5rem;
+  }
+  100% {
+    top: 0;
+  }
+}
 
 
 @media (max-width: 1300px){
@@ -370,7 +386,18 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .chat_btn{width:22%;font-size:1.2rem;height: 54px;
     line-height: 54px;}
 }
-
+@media (max-width: 900px){
+.main-box{margin-bottom:1rem;}
+}
+@media (max-width: 768px){
+.main-vi-wrap .slick-slide img.main_banner_MO{display:block;height:100%;}
+.main-vi-wrap .slick-slide img.main_banner_PC{display:none;}
+.main-vi-wrap .slick-dots{bottom:40px;}
+.main-box .goobne-img.goobne-img_office{width:auto;height:75%;padding-top: 0;min-width: 100%;    margin-top: 1rem;}
+.main-box .goobne-text {
+    margin-bottom: 3rem;
+}
+}
 @media (max-width: 765px){
 .map_ul li br{display:block;}
 .map_ul .text_span.left_rem{margin-left:2.5rem;}
@@ -471,6 +498,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .menu .l-title-area .left .rollSwiper{height:25px;}
 .menu .l-title-area .left{display: block;}
 .menu__time .l-title-area .left .bar{display:none;}
+
 }
 @media (max-width: 375px){
 .th_col{width:20%;}
@@ -481,7 +509,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .journal_box .text_size_L {
     font-size: 1.4rem;
 }
-
+.main-box .goobne-img.goobne-img_office{height:70%;}
 }
 @media (max-width: 320px){
 .l-inner {
@@ -537,6 +565,8 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 }
 .l-btn-list button {
     font-size: 1rem;}
+.main-box .goobne-img.goobne-img_office{height:62%;}
+.l-info-area .info-num{padding:1rem;}
 }
 @media (max-width: 280px){
 .cscenter_table th{display: none;}    

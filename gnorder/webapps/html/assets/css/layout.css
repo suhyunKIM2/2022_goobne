@@ -118,6 +118,7 @@ section {
   font-weight: 700;
   color: rgba(255, 255, 255, 0.6);
 }
+.l-menu-item{cursor: pointer;}
 
 @media (max-width: 1024px) {
   .event__tab button {

@@ -22,4 +22,8 @@
 <file name="menu_03.html" server="218.145.161.78//data/gncns/" local="132991402151696285" remote="132991402020000000" Dst="0" />
 <file name="journal_oven.html" server="218.145.161.78//data/gncns/" local="132995729169918014" remote="132995728950000000" Dst="0" />
 <file name="global.html" server="218.145.161.78//data/gncns/" local="132986931340000000" remote="132986931340000000" Dst="0" />
+<file name="menu_add.html" server="218.145.161.78//data/gncns/" local="132996558412421201" remote="132996558150000000" Dst="0" />
+<file name="find_id.html" server="218.145.161.78//data/gncns/" local="132996562751740347" remote="132996562520000000" Dst="0" />
+<file name="find_pw.html" server="218.145.161.78//data/gncns/" local="132986931340000000" remote="132986931340000000" Dst="0" />
+<file name="index_local.html" server="218.145.161.78//data/gncns/" local="132996564438677859" remote="132996564260000000" Dst="0" />
 </dwsync>
