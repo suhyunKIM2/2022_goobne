@@ -365,6 +365,21 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 }
 .main-box .goobne-img_office_bg{background: url("https://www.goobne.co.kr/resources/images/main/220527_micro_ovbss/bg_pc.jpg");}
 
+/*고객소리 1:1 게시판*/
+.cscenter_regi_list_table{margin-top:4rem;}
+.answer_list{background:#fcefe4;}
+.answer_list ul{margin-bottom:0;padding-left:1rem;text-align: left;}
+.cscenter_regi_detail .notice__detail-desc{white-space: pre-line;padding:3rem 3rem 7rem;}
+.cscenter_regi_detail_img{width:250px;margin-bottom:1rem;}
+.icon_round{background:#000;color:#fff;border-radius: 50%;padding: 0.1rem 0.4rem;font-size: 1rem;margin-right: 0.5rem;}
+.cscenter_regi_detail_answer{ 
+    padding:3rem;
+    font-size: 1.5rem;
+    background: #f1e8e0;
+    line-height: 1.4;}
+.cscenter_regi_text{padding:0rem 2rem 1rem; white-space: pre-line;}    
+    
+
 @media (max-width: 1300px){
 .cscenter_table{width:773px;}
 .cscenter_inside{width:773px;}
