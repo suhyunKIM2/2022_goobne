@@ -127,6 +127,8 @@ ul.list_ul_bottom{margin-bottom:0;}
     min-height: 250px;
   }
   .board_table .filebox .upload-display {max-width:54px;    max-height: 54px;}
+  
+  
 @media(min-width: 768px) {
 .board_table .filebox .upload-display {max-width:54px;    max-height: 54px;}
   .filebox .upload-display {
@@ -524,6 +526,9 @@ a:hover{text-decoration: none;color:#000;}
 .take_out_list li input{margin-left: 5px;}
 .table_S_box_td_center td{text-align: center;}
 .table_S_box_td_center td input{height: 42px;line-height: 42px;}
+.preview_img_div_banner .filebox .upload-display{max-width:50px;max-height:50px;height:50px;    vertical-align: middle;}
+.preview_img_div_banner .filebox .upload-thumb-wrap{top:0px;}
+.preview_img_div_banner{padding:1rem;}
 
 /*-----S: 20220520 추가-----*/
 .take_out_list_option li{display: block;}

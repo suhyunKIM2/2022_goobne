@@ -49,11 +49,10 @@
                                     <th class="bg-gray-200">배너등록</th>
                                       <td>
                                        <select class="selectpicker" >
-                                            <option>등록하실 배너 선택 해주세요.</option>   
+                                            <option>등록하실 배너 선택 해주세요.</option>  
+                                            <option>메인롤링배너</option>
                                             <option>팝업</option>
-                                            <option>상세 메뉴소개</option>
                                             <option>메인 메뉴소개</option>
-                                            <option>회원가입</option>
                                             <option>로그인</option>
                                             <option>인스타그램</option>
                                         </select>
@@ -80,14 +79,30 @@
                                  </tr>
                                  <tr>
                                     <th class="bg-gray-200" rowspan="2">PC 배너</th>
-                                    <td colspan="5" style="padding: 0 0.75rem;">
-                                        <div class="preview_img_div preview_img_div_table" >
-                                            <div class="filebox bs3-primary preview-image">        
+                                    <td colspan="2" style="padding: 1rem 0.75rem;">
+                                        <div style="color: #999;" class="size_info_back_pc"> Background Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
+                                            <div class="filebox bs3-primary preview-image"> 
+                                               
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+
+                                              <label for="input_file_background">업로드</label> 
+                                              <input type="file" id="input_file_background" class="upload-hidden"> 
+                                            </div>      
+                                            
+                                        </div>
+                                     </td>
+                                     <td colspan="3" style="padding: 1rem 0.75rem;">
+                                         <div style="color: #999;" class="size_info_back_pc_center">img Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
+                                            <div class="filebox bs3-primary preview-image"> 
+                                                
                                               <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
 
                                               <label for="input_file">업로드</label> 
                                               <input type="file" id="input_file" class="upload-hidden"> 
-                                            </div>                        
+                                            </div>      
+                                            
                                         </div>
                                      </td>
                                  </tr>
@@ -102,8 +117,20 @@
                                  </tr>
                                  <tr>
                                     <th class="bg-gray-200" rowspan="2">mobile 배너</th>
-                                    <td colspan="5" style="padding: 0 0.75rem;">
-                                        <div class="preview_img_div preview_img_div_table" >
+                                    <td colspan="2" style="padding: 1rem 0.75rem;">
+                                    <div style="color: #999;" class="size_info_back_mo">Background Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
+                                            <div class="filebox bs3-primary preview-image"> 
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+
+                                              <label for="input_file_02_background">업로드</label> 
+                                              <input type="file" id="input_file_02_background" class="upload-hidden"> 
+                                            </div>                        
+                                        </div>
+                                     </td>
+                                     <td colspan="3" style="padding: 1rem 0.75rem;">
+                                    <div style="color: #999;"  class="size_info_back_mo_center">img Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
                                             <div class="filebox bs3-primary preview-image"> 
                                               <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
 
@@ -603,6 +630,48 @@
         });
     
     </script>
+    
+    <script>
+    $(document).ready(function(){
+        $('[data-value="메인롤링배너"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 1920px X 940px</span>").css('color','#c31113');
+        $(".size_info_back_mo").html("Background Size : <span> 642px X 876px</span>").css('color','#c31113');
+        $(".size_info_back_pc_center").html("img Size : <span> 1200px X 750px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 509px X 956px</span>").css('color','#c31113');
+        });
+        
+         $('[data-value="팝업"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+        
+        
+        $('[data-value="메인 메뉴소개"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 1200px X 500px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+        
+        
+        $('[data-value="로그인"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 1000px X 166px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+        
+        $('[data-value="인스타그램"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 1080px X 1080px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+    });
+</script>
+    
     <script type="text/javascript">
 	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
   function maxLengthCheck(object){

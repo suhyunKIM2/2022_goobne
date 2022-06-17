@@ -363,7 +363,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     top: 0;
   }
 }
-
+.main-box .goobne-img_office_bg{background: url("https://www.goobne.co.kr/resources/images/main/220527_micro_ovbss/bg_pc.jpg");}
 
 @media (max-width: 1300px){
 .cscenter_table{width:773px;}
@@ -397,6 +397,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .main-box .goobne-text {
     margin-bottom: 3rem;
 }
+.main-box .goobne-img_office_bg{background: url(../../assets/images/main/bg_MO.png)no-repeat;background-size:cover;}
 }
 @media (max-width: 765px){
 .map_ul li br{display:block;}
