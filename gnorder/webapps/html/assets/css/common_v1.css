@@ -377,7 +377,8 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     font-size: 1.5rem;
     background: #f1e8e0;
     line-height: 1.4;}
-.cscenter_regi_text{padding:0rem 2rem 1rem; white-space: pre-line;}    
+.cscenter_regi_text{padding:0rem 2rem 1rem; white-space: pre-line;}  
+
     
 
 @media (max-width: 1300px){
@@ -465,6 +466,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     font-size: 1.6rem;}
 .coupon_h3{padding:1.2rem;}
 .map_ul{width:100%;}
+.img_center{text-align: center;}
 }
 @media (max-width: 500px){
 .text_color_G{display: block;}
@@ -514,7 +516,8 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .menu .l-title-area .left .rollSwiper{height:25px;}
 .menu .l-title-area .left{display: block;}
 .menu__time .l-title-area .left .bar{display:none;}
-
+.cscenter_regi_detail .notice__detail-desc{padding:3rem 0;}
+.cscenter_regi_detail_answer{padding:1.5rem;font-size:1.1rem;}
 }
 @media (max-width: 375px){
 .th_col{width:20%;}
@@ -583,6 +586,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     font-size: 1rem;}
 .main-box .goobne-img.goobne-img_office{height:62%;}
 .l-info-area .info-num{padding:1rem;}
+.cscenter_regi_detail{width:95%;margin:4rem auto 0;}
 }
 @media (max-width: 280px){
 .cscenter_table th{display: none;}    
