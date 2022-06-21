@@ -380,7 +380,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .cscenter_regi_text{padding:0rem 2rem 1rem; white-space: pre-line;}  
 
 /*이벤트*/ 
-.chat{text-align: right;vertical-align: middle;}
+.chat_event{text-align: right;vertical-align: middle;}
 .number_chat{vertical-align: middle;color:#fff;font-size:2rem;margin-left: 0.5rem;}
 .event__list .list .desc{min-height:152px;bottom:-26px;}
 .end_mask{position: absolute;border-radius: 4px;
