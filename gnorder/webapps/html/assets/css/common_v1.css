@@ -379,7 +379,22 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     line-height: 1.4;}
 .cscenter_regi_text{padding:0rem 2rem 1rem; white-space: pre-line;}  
 
-    
+/*이벤트*/ 
+.chat{text-align: right;vertical-align: middle;}
+.number_chat{vertical-align: middle;color:#fff;font-size:2rem;margin-left: 0.5rem;}
+.event__list .list .desc{min-height:152px;bottom:-26px;}
+.end_mask{position: absolute;border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 9;
+    padding-bottom: 26px;}
+.end_text{color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;}    
 
 @media (max-width: 1300px){
 .cscenter_table{width:773px;}
@@ -518,6 +533,11 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .menu__time .l-title-area .left .bar{display:none;}
 .cscenter_regi_detail .notice__detail-desc{padding:3rem 0;}
 .cscenter_regi_detail_answer{padding:1.5rem;font-size:1.1rem;}
+.event__list .list .desc {
+    min-height: 138px;
+    bottom: -14px;
+}
+.end_mask{padding-bottom: 14px;}
 }
 @media (max-width: 375px){
 .th_col{width:20%;}
