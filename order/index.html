@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/common_layout.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/modal.css" type="text/css" />
      <link rel="stylesheet" href="assets/css/common_v1.css" type="text/css" /><!----cns 추가 -------->
+	 <link rel="stylesheet" href="assets/css/main/popup_main.css" type="text/css" /><!----cns 추가 -------->
 
     <script src="assets/js/common/jquery-3.5.1.min.js"></script>
     <script src="assets/js/common/jquery.js"></script>
@@ -24,11 +25,101 @@
     <script src="assets/js/common/wow.min.js"></script>
     <script src="assets/js/main/main.js"></script>
     <script src="assets/js/main/main_banner_header.js"></script><!----cns 추가 -------->
+	<script src="assets/js/main/popup_main.js"></script><!----cns 추가 -------->
     <script>
         new WOW().init();
 
     </script>
+	
+  <script>
+$(document).ready(function(){
 
+  // 이벤트종료시점 기록
+  var countDownDate = new Date("06/24/2022 23:59:59").getTime();//팝업 노출 시간 설정
+  
+  var x = setInterval(function() {
+  
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+      
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    if ( hours < 10 ){hours = "0" + hours; } 
+    else if ( hours > 9 ){ hours = hours; } 
+
+    if ( minutes < 10 ){minutes = "0" + minutes; } 
+    else if ( minutes > 9 ){ minutes = minutes; } 
+
+    if ( seconds < 10 ){seconds = "0" + seconds; } 
+    else if ( seconds > 9 ){ seconds = seconds; }  
+    
+
+
+
+// 타임이벤트 진행 타이머    
+    document.getElementById("newcountdown").innerHTML = days + " : " + hours + " : "
+    + minutes + " : " + seconds;
+    document.getElementById("ori").style.display="block";
+    document.getElementById("ori").style.visibility="visible";
+    document.getElementById("new").style.display="none";
+    document.getElementById("new").style.visibility="hidden";
+    //document.getElementById("new").className =" display_none";
+// 이벤트 마감시 보여질 문구    
+    if (distance < 0) {
+      clearInterval(x);
+      //document.getElementById("timesale").innerHTML = "<div class='endtxt'>이벤트가 마감되었습니다.</div>";
+      document.getElementById("ori").style.display="none";
+      document.getElementById("ori").style.visibility="hidden";
+    document.getElementById("new").style.display="block";
+    document.getElementById("new").style.visibility="visible";
+    }
+  }, 0);
+ });
+  </script>	
+<!---S: 메인팝업--->
+
+<div id="mask_popup"></div>
+<span id="newcountdown" style="font-size:0;display:none;"></span>
+<!----S: 설정 시간 이전 바뀐 팝업 리스트---->
+<div class="window" id="window">
+<div id="ori">
+    <div class="slider single-item04">
+		<div class="list_slider">
+            <a href="https://www.goobne.co.kr/event/event_view_bg.jsp"><img src="2021renew_img/popup/220531_popup_bgchicken.jpg" style="image-rendering:auto;"></a>
+        </div>
+        <div class="list_slider">
+            <a href="https://www.goobne.co.kr/event/event_view.jsp?dt=60905"><img src="2021renew_img/popup/220502_popup_dhuman.jpg" ></a>
+        </div>
+    </div>
+    <div class="btn_wrap btn_blk">
+        <ul class="popup_btn_ul ori">
+            <li id="todayPopChk" class="web_order" onClick="javascript:todaycloseWin();" style="background:#36176e;">오늘 하루 보지 않기</li>
+            <li id="closePopChk" class="main_pop_close close" onClick="javascript:closeWin();" style="background:#36176e;">닫기</li>
+        </ul>
+    </div>
+
+</div>
+<!----E: 설정 시간 이전 바뀐 팝업 리스트---->
+
+<!----S: 설정 시간 이후 바뀐 팝업 리스트---->
+<div id="new">
+    <div class="slider single-item04">
+        <div class="list_slider">
+            <a href="https://www.goobne.co.kr/event/event_view.jsp?dt=60905"><img src="https://www.goobne.co.kr/2021renew_img/popup/220623_popup_tday.jpg" ></a>
+        </div>
+    </div>
+    <div class="btn_wrap btn_blk">
+        <ul class="popup_btn_ul ori">
+            <li id="todayPopChk" class="web_order" onClick="javascript:todaycloseWin();" style="background:#3218c2;">오늘 하루 보지 않기</li>
+            <li id="closePopChk" class="main_pop_close close" onClick="javascript:closeWin();" style="background:#3218c2;">닫기</li>
+        </ul>
+    </div>
+</div>
+</div>
+<!----E: 설정 시간 이후 바뀐 팝업 리스트---->
 
 </head>
 

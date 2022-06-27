@@ -45,6 +45,25 @@
 <script src="/resources/assets/js/common/file_upload.js"></script>
 <script src="/resources/js/jquery.form.js"></script>
 
+
+<!-- 약관 영역  -->
+<article class="modal-cnt-wrapper terms-moadl l-hidden">
+   <jsp:include page="/WEB-INF/views/include/terms_pop.jsp"></jsp:include>
+</article>
+<article class="modal-cnt-wrapper privacy-moadl l-hidden">
+   <jsp:include page="/WEB-INF/views/include/privacy_pop.jsp"></jsp:include>
+</article>
+<article class="modal-cnt-wrapper e_mail-moadl l-hidden">
+   <jsp:include page="/WEB-INF/views/include/email_pop.jsp"></jsp:include>
+</article>
+<!-- // 약관 영역  -->
+
+<!-- 프로모션 팝업 영역  -->
+<article id="promo" class="modal-cnt-wrapper promo-moadl l-hidden"> 
+    <jsp:include page="/WEB-INF/views/include/prom_map.jsp"></jsp:include>
+</article>
+<!-- // 프로모션 팝업 영역  --> 
+
 <!-- 공통 커스텀 js -->
 <script type="text/javascript">
 	function logout() {

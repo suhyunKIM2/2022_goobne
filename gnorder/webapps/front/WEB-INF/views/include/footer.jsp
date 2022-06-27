@@ -1,4 +1,6 @@
 <%@ page contentType="text/html; charset=utf8" %>
+<%@ page import="com.gncns.goobne.config.SystemConstant" %>
+<% String sysMode = (String)request.getAttribute("sysMode"); %>
 <div class="inner">
     <div class="info-box">
         <div class="number">
@@ -32,7 +34,6 @@
 </div>
 <jsp:include page="/WEB-INF/views/include/common_script.jsp"></jsp:include>
 
-
     
 <script type="text/javascript">  
 /*gps 전역변수 */
@@ -40,11 +41,14 @@ var lat;
 var lon; 
 $(document).ready(function() {   
 	//메인화면 위치 표시
-	//geoloc.init(); 
-    //geolocation https 에서만 사용가능 보안문제, 강제 위치값 지정해줌
-    lat = '37.554071';
-    lon = '126.8370592';
-    findLocation(lat, lon);
+	//geolocation https 에서만 사용가능 보안문제, 개발서버에서는 강제 위치값 지정해줌
+    <% if( sysMode.equals("D") ) { %>
+	    lat = '37.554071';
+	    lon = '126.8370592';
+	    findLocation(lat, lon);
+	<% } else { %>
+	    geoloc.init();	    
+    <% } %>
     
 	$(".selectpicker").niceSelect();
 	
