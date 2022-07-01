@@ -9,7 +9,7 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags" %>
-<%
+<% 
     SessionFactoryFront sessFtr = new SessionFactoryFront(request);
     GnMember user = sessFtr.getGnMember();  
     GnLocation loc = sessFtr.getGnLocation();
@@ -20,7 +20,23 @@
     <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
     <script>
 	    new WOW().init();
-	</script>   
+	</script>  
+	<%-- 메인배너 배경처리 --%>
+	<style>       
+      <c:forEach var="banner" items="${banner}" varStatus="status"> 
+        <c:if test="${banner.bnnr_type eq '10' && banner.ord1 > 1 }">
+		.main-box .goobne-img_office_bg_${banner.bnnr_id }{background: url("<%=SystemConstant.getStaticUrl()%>${banner.pc_img_bg }");}
+	    </c:if>
+      </c:forEach> 
+      @media (max-width: 768px){
+	  <c:forEach var="banner" items="${banner}" varStatus="status"> 
+	     <c:if test="${banner.bnnr_type eq '10' && banner.ord1 > 1 }"> 
+		 .main-box .goobne-img_office_bg_${banner.bnnr_id }{background: url(<%=SystemConstant.getStaticUrl()%>${banner.mobile_img_bg })no-repeat;background-size:cover;}
+	     </c:if>
+      </c:forEach>
+	  }
+	</style>
+	<%-- 메인배너 배경처리 --%>
 <meta charset="utf-8">
 </head>
 
@@ -42,6 +58,8 @@
             <div class="inner">
                 <div class="main-slick-wrap">
                     <div class="main-vi-wrap">
+                    
+                        <%-- 메인배너 롤링 1번 영역 s--%>
                         <div class="main-box main-box_hight">
                             <div class="main-txt-area wow fadeInUp">
                                 <div class="goobne-text">
@@ -77,36 +95,46 @@
                                 <button class="goobne-menu-btn btn2">
                                     Basasak
                                 </button>
-                            </div>
-                            
+                            </div> 
                         </div>
-                        <div class="main-box">
-                            <div class="goobne-bg goobne-bg02 wow fadeInUp goobne-img_office_bg"><!---해상도 768일때 모바일 배경,이미지 변경---->
-                                <div class="goobne-img goobne-img_office">
-                                    <a href="http://www.xn--9i1b89owjy5lfa431as3k.com/" target="_blank">
-                                    <img src="/resources/assets/images/main/220527_micro_ovbss_4.svg" alt="" class="main_banner_PC">
-                                    <img src="/resources/assets/images/main/220527_micro_ovbss_4_MO_2.svg" alt="" class="main_banner_MO"> 
-                                    </a>
-                                </div>
-                                <!--<div class="goobne-img goobne-img_office_bg"></div>-->
-                             </div>
-                        </div>
+                        <%-- 메인배너 롤링 1번 영역 e--%>
+                         
+                        <%-- 메인배너 롤링 2번부터 s --%> 
+                        <c:forEach var="banner" items="${banner}" varStatus="status"> 
+	                        <c:if test="${banner.bnnr_type eq '10' && banner.ord1 > 1 }">            
+		                        <div class="main-box">
+		                            <div class="goobne-bg goobne-bg02 wow fadeInUp goobne-img_office_bg goobne-img_office_bg_${banner.bnnr_id }"><!---해상도 768일때 모바일 배경,이미지 변경---->
+		                                <div class="goobne-img goobne-img_office">
+		                                    <a href="${banner.pc_lnk_url }" target="${banner.pc_win_gb }">
+		                                    <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="" class="main_banner_PC">
+		                                    <img src="<%=SystemConstant.getStaticUrl()%>${banner.mobile_img_pth }" alt="" class="main_banner_MO"> 
+		                                    </a>
+		                                </div>
+		                             </div>
+		                        </div>
+	                        </c:if>
+                        </c:forEach> 
+                        <%-- 메인배너 롤링 2번부터  e --%>
                         
                     </div>
                     <div class="main-box">
+                    <%-- 메인 플로팅 배너 order, e-coupon s --%>
                     <div class="goobne-btn-box wow fadeInUp">
-                            <button class="order">
-                                <span>Order</span>
+                            <button class="order">                            
+                                <a href="<%=SystemConstant.ORDER%>"><span>Order</span></a>
                             </button>
-                            <button class="coupon">
+                            <%--<button class="coupon">
                                 <span>E-coupon</span>
-                            </button>
+                            </button> --%>
                         </div>
                     </div>
+                    <%-- 메인 플로팅 배너 order, e-coupon e --%>
                 </div>
+                <%-- 로그인시 보여지는 영역 --%>
+                <% if( sessFtr.isLogin() ) { %>
                 <div class="mo-login-cnt">
                     <div class="aside__lnb-login mo-login">
-                        <a href="#none" class="arrow-link"><span>구울레옹</span>님 환영합니다.</a>
+                        <a href="#none" class="arrow-link"><span><%=user.getUser_name()%></span>님 환영합니다.</a>
                     </div>
                     <div class="l-info-area mo-info-area">
                         <div class="info-num">
@@ -124,67 +152,33 @@
                             </dl>
                         </div>
                         <div class="info-grade">
-                            <span>구울레옹</span>님의 등급은 <span class="eng">SILVER</span>입니다.
+                            <span><%=user.getUser_name()%></span>님의 등급은 <span class="eng">SILVER</span>입니다.
                         </div>
                     </div>
                 </div>
+               <% } %>
+<%-- 로그인시 보여지는 영역 --%>
 
                 <div class="con-box menu-box">
                     <div class="inner">
                         <p class="l-main-title wow fadeInUp">Oven menu</p>
                         <div class="menu-list-wrap wow fadeInUp">
-                            <a href="/menu/menu_list?class_id=10" class="menu-list">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_chicken.jpg" alt="CHICKEN">
-                                </div>
-                                <p class="menu-name">CHICKEN</p>
-                            </a>
-                            <a href="/menu/menu_list?class_id=11" class="menu-list top">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_pizza.jpg" alt="PIZZA">
-                                </div>
-                                <p class="menu-name">PIZZA</p>
-                            </a>
-                            <a href="/menu/menu_list?class_id=12" class="menu-list">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_dessert.jpg" alt="Dessert">
-                                </div>
-                                <p class="menu-name">DESSERT</p>
-                            </a>
-                            <a href="/menu/menu_list?class_id=12" class="menu-list top">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_chipd.jpg" alt="Dessert">
-                                </div>
-                                <p class="menu-name">DESSERT</p>
-                            </a>
-                            <a href="/menu/menu_list?class_id=10" class="menu-list">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_chicken.jpg" alt="CHICKEN">
-                                </div>
-                                <p class="menu-name">CHICKEN</p>
-                            </a>
-                            <a href="/menu/menu_list?class_id=11" class="menu-list top">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_pizza.jpg" alt="PIZZA">
-                                </div>
-                                <p class="menu-name">PIZZA</p>
-                            </a>
-                            <a href="/menu/menu_list?class_id=12" class="menu-list">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_dessert.jpg" alt="Dessert">
-                                </div>
-                                <p class="menu-name">DESSERT</p>
-                            </a>
-                            <a href="/menu/menu_list?class_id=12" class="menu-list top">
-                                <div class="menu-img">
-                                    <img src="/resources/assets/images/contents/recipe_chipd.jpg" alt="Dessert">
-                                </div>
-                                <p class="menu-name">DESSERT</p>
-                            </a>
+                            <%-- Oven Ment 롤링  s --%> 
+                            <c:forEach var="banner" items="${banner}" varStatus="status"> 
+	                          <c:if test="${banner.bnnr_type eq '20' }">
+	                            <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }">
+	                                <div class="menu-img">
+	                                    <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }">
+	                                </div>
+	                                <p class="menu-name">${banner.bnnr_nm }</p>
+	                            </a>
+                              </c:if>
+                            </c:forEach> 
+                            <%-- Oven Ment 롤링  e--%>                             
                         </div>
                     </div>
                 </div>
-
+                
                 <div class="con-box">
                     <div class="con_wrap">
                         <p class="l-main-title wow fadeInUp">Goobne News</p>
@@ -266,61 +260,17 @@
                         </p>
                         <div class="goobster-box-wrap wow fadeInUp">
                             <div class="goobster-box">
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img1.png" alt="">
+                                <%-- Goobster 롤링 s--%> 
+                                <c:forEach var="banner" items="${banner}" varStatus="status"> 
+	                            <c:if test="${banner.bnnr_type eq '30' }">
+	                            <div class="img">
+                                    <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }">
+                                        <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }">
                                     </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img2.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img3.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img4.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img5.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img6.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img7.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img8.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img9.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img10.png" alt="">
-                                    </a>
-                                </div>
-                                <div class="img">
-                                    <a href="https://www.instagram.com/the___goobster/" target="_blank">
-                                        <img src="/resources/assets/images/main/goobster/img11.png" alt="">
-                                    </a>
-                                </div>
+                                 </div>
+                                 </c:if>
+                                 </c:forEach> 
+                                <%-- Goobster 롤링  e--%>  
                             </div>
                         </div>
                     </div>
@@ -352,36 +302,17 @@
                     </div>
                     <div class="goobne-tv-box wow fadeInUp">
                         <div class="goobne-tv-wrap">
-                             <div class="img-box">
-                                <a href="https://www.youtube.com/watch?v=c99aYibEys4" target="_blank">
-                                    <img src="/resources/assets/images/main/goobtube_01.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="img-box center">
-                                <a href="https://www.youtube.com/watch?v=JnkTJmI9xsM" target="_blank">
-                                    <img src="/resources/assets/images/main/goobtube_02.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="img-box">
-                                <a href="https://www.youtube.com/watch?v=UtvDMHJ1tKs" target="_blank">
-                                    <img src="/resources/assets/images/main/goobtube_03.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="img-box">
-                                <a href="https://www.youtube.com/watch?v=c99aYibEys4" target="_blank">
-                                    <img src="/resources/assets/images/main/goobtube_01.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="img-box center">
-                                <a href="https://www.youtube.com/watch?v=JnkTJmI9xsM" target="_blank">
-                                    <img src="/resources/assets/images/main/goobtube_02.jpg" alt="">
-                                </a>
-                            </div>
-                            <div class="img-box">
-                                <a href="https://www.youtube.com/watch?v=UtvDMHJ1tKs" target="_blank">
-                                    <img src="/resources/assets/images/main/goobtube_03.jpg" alt="">
-                                </a>
-                            </div>
+                            <%-- Goobtube 롤링 s 3개 이상 업로드 --%> 
+                            <c:forEach var="banner" items="${banner}" varStatus="status"> 
+                              <c:if test="${banner.bnnr_type eq '40' }">
+                              <div class="img-box">
+                                  <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }">
+                                      <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }">
+                                  </a>
+                              </div>
+                              </c:if>
+                            </c:forEach>
+                            <%-- Goobtube 롤링 e--%>
                         </div>
                     </div>
                 </div>
