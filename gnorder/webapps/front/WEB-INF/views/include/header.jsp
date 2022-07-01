@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="/resources/assets/css/common/footer.css" type="text/css" />
 <link rel="stylesheet" href="/resources/assets/css/common/jquery-ui.css" type="text/css" />
 <link rel="stylesheet" href="/resources/assets/css/common/animate.css" type="text/css" />
+
 <!-- main  -->
 <link rel="stylesheet" href="/resources/assets/css/main/main.css" type="text/css" />
 <link rel="stylesheet" href="/resources/assets/css/modal.css" type="text/css" />
@@ -25,7 +26,7 @@
 <link rel="stylesheet" href="/resources/assets/css/layout.css" type="text/css" />
 <link rel="stylesheet" href="/resources/assets/css/common/nice-select.css" type="text/css" />
 <link rel="stylesheet" href="/resources/assets/css/common_v1.css" type="text/css" />
-<link rel="stylesheet" href="/resources/assets/css/logout.css" type="text/css" />
+<link rel="stylesheet" href="/resources/assets/css/login_out.css" type="text/css" />
  
 <script src="/resources/assets/js/common/jquery-3.5.1.min.js"></script>
 <script src="/resources/assets/js/common/swiper-bundle.min.js"></script>
@@ -44,7 +45,6 @@
 <script src="/resources/js/file_common.js"></script>
 <script src="/resources/assets/js/common/file_upload.js"></script>
 <script src="/resources/js/jquery.form.js"></script>
-
 
 <!-- 약관 영역  -->
 <article class="modal-cnt-wrapper terms-moadl l-hidden">
@@ -66,6 +66,7 @@
 
 <!-- 공통 커스텀 js -->
 <script type="text/javascript">
+	var CONTEXT_PATH = "<%=SystemConstant.getStaticUrl()%>";
 	function logout() {
 		if( confirm('로그아웃 하시겠습니까?') ){		
 			var url = '<%=SystemConstant.LOGOUT_URI %>';
