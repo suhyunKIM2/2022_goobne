@@ -7,28 +7,8 @@ section {
 }
 
 /* ============ 이벤트 영역 ==============*/
-.event .color-1 {
-  background-color: #7338DB;
-}
-
-.event .color-2 {
-  background-color: #6C3110;
-}
-
-.event .color-3 {
-  background-color: #F09D38;
-}
-
-.event .color-4 {
-  background-color: #2680EB;
-}
-
-.event .color-5 {
-  background-color: #101758;
-}
-
-.event .color-6 {
-  background-color: #F16554;
+.event .color-1,.event .color-2,.event .color-3,.event .color-4,.event .color-5,.event .color-6 {
+  background:rgba(143,78,78,0.5)
 }
 
 .event__tab {
@@ -124,11 +104,12 @@ section {
 
 @media (max-width: 1024px) {
   .event__tab button {
-    width: 50%;
+    width: 49%;
   }
   .event__list {
     margin: 0 3rem;
   }
+  .event__tab{display: inline-block;width:100%;}
 }
 
 @media (max-width: 900px) {
@@ -667,7 +648,7 @@ section {
 }
 
 .join__input .input-area .l-input.short-input {
-  width: 30rem;
+  width: 100%;
 }
 
 .join__input .input-area label.title {
@@ -1340,7 +1321,7 @@ section {
   width: 100%;
   line-height: 5.6rem;
   background: rgba(33, 33, 33, 0.76);
-  font-size: 1.6rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
@@ -1544,6 +1525,7 @@ section {
     color: #D4000B;
     margin-top: 1.6rem;
   }
+  .menu__recipe .recipe-list .list .menu-name{font-size:1.6rem;}
 }
 
 .menu-time-wrapper .menu-time-list .area__slide-list-wrap {

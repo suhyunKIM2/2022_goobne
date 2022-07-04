@@ -52,6 +52,7 @@ $(document).ready(function() {
     
 	$(".selectpicker").niceSelect();
 	
+	
 	// 이용약관 내용보기 버튼 
     $('.terms').click(function () {
         $(".dimmed-bg").removeClass("l-hidden");

@@ -28,65 +28,7 @@
     
     <link rel="stylesheet" href="/resources/assets/css/layout.css" type="text/css" />
     <link rel="stylesheet" href="/resources/assets/css/common_v1.css" type="text/css" /><!---- cns제작추가---->
-   
-</head>
-<body>
-    <!-- start of :: wrap -->
-    <div id="wrap">
-        <!-- start of :: header -->
-        <div id="header">
-        	 <jsp:include page="/WEB-INF/views/include/top.jsp"></jsp:include>
-            <!-- 참고: 스크립트로 load 됩니다. include 폴더 header.html  -->
-        </div>
-        <!-- end of :: header -->
-        <aside class="aside">
-        	<jsp:include page="/WEB-INF/views/include/nav_right.jsp"></jsp:include>
-            <!-- 참고: 스크립트로 load 됩니다. include 폴더 aside.html  -->
-        </aside>
-        
-         <!-- start of :: contents -->
-        <div id="content">
-        <form id="brdForm" name="brdForm"  method="post">
-    		<input type="hidden" id="seq" name="seq"/>
-        </form> 
-            <article class="l-layout event">
-                <div class="l-inner">
-                    <div class="l-title">이벤트</div>
-                    <div class="event__tab">
-                    	<a href="javascript:toggleClass('now');">
-                    		<button type="button" id="nowEvent" class="is-active">진행중 이벤트</button>
-                    	</a>
-                    	<a href="javascript:toggleClass('end');">
-                        	<button type="button" id="endEvent">종료된 이벤트</button>
-                        </a>
-                    </div>
-                    <div class="event__list-wrap">
-                        <!-- 진행중 이벤트 -->
-                        <div class="event__list">
-                        </div>
-                    </div>
-                    
-                    <!-- 페이징 영역  -->
-                     <section class="l-paging-num">
-                     </section>
-                     <!-- //페이징 영역  -->
-                </div>
-            </article>
-        </div>
-        <!-- end of :: contents -->
-       <!-- start of :: footer -->
-        <div id="footer" class="sub-footer">
-            <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
-        </div>
-            <!-- 참고: 스크립트로 load 됩니다. include 폴더 footer.html  -->
-        <!-- end of :: footer -->
-        <div id="mobile-nav">
-      	  <jsp:include page="/WEB-INF/views/include/tab_bar.jsp"></jsp:include>
-            <!-- 참고: 스크립트로 load 됩니다. include 폴더 mobile-nav.html  -->
-        </div>
-    </div>
-    <!-- end of :: wrap -->
-    <script>
+   <script>
     $(document).ready(function () {
     	srchBrdList(1);
     	
@@ -164,7 +106,6 @@
                         	
                         	if(brdList[i].file01 != null){
                         		brdHtml += "<img src='<%=staticUrl %>"+ brdList[i].file01 +"' alt='이벤트이미지'>";
-                        		//brdHtml += 'alt="이벤트이미지">';
                         	} else {
                         		brdHtml += '<img src="/resources/assets/images/contents/event-list-01.png" alt="이벤트이미지">';
                         	}
@@ -210,7 +151,7 @@
 					$('.event__list').empty();
 					console.log(brdHtml);
 					$('.event__list').html(brdHtml);
-					var pagingHTML = createPagingHTML(obj.result.pageNum, total_cnt ,obj.result.listCnt, 'srchBrdList');
+					var pagingHTML = createPagingHTML(obj.result.pageNum, total_cnt ,obj.result.listCnt, 'srchBrdList', obj.listCnt);
 					$(".l-paging-num").html(pagingHTML);
 				},error : function(obj) {
 					alert("error");
@@ -224,5 +165,63 @@
 	    document.brdForm.submit();
     }
     </script>
+</head>
+<body>
+    <!-- start of :: wrap -->
+    <div id="wrap">
+        <!-- start of :: header -->
+        <div id="header">
+        	 <jsp:include page="/WEB-INF/views/include/top.jsp"></jsp:include>
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 header.html  -->
+        </div>
+        <!-- end of :: header -->
+        <aside class="aside">
+        	<jsp:include page="/WEB-INF/views/include/nav_right.jsp"></jsp:include>
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 aside.html  -->
+        </aside>
+        
+         <!-- start of :: contents -->
+        <div id="content">
+        <form id="brdForm" name="brdForm"  method="post">
+    		<input type="hidden" id="seq" name="seq"/>
+        </form> 
+            <article class="l-layout event">
+                <div class="l-inner">
+                    <div class="l-title">이벤트</div>
+                    <div class="event__tab">
+                    	<a href="javascript:toggleClass('now');">
+                    		<button type="button" id="nowEvent" class="is-active">진행중 이벤트</button>
+                    	</a>
+                    	<a href="javascript:toggleClass('end');">
+                        	<button type="button" id="endEvent">종료된 이벤트</button>
+                        </a>
+                    </div>
+                    <div class="event__list-wrap">
+                        <!-- 진행중 이벤트 -->
+                        <div class="event__list">
+                        </div>
+                    </div>
+                    
+                    <!-- 페이징 영역  -->
+                     <section class="l-paging-num">
+                     </section>
+                     <!-- //페이징 영역  -->
+                </div>
+            </article>
+        </div>
+        <!-- end of :: contents -->
+       <!-- start of :: footer -->
+        <div id="footer" class="sub-footer">
+            <jsp:include page="/WEB-INF/views/include/footer.jsp"></jsp:include>
+        </div>
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 footer.html  -->
+        <!-- end of :: footer -->
+        <div id="mobile-nav">
+      	  <jsp:include page="/WEB-INF/views/include/tab_bar.jsp"></jsp:include>
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 mobile-nav.html  -->
+        </div>
+    </div>
+    <!-- end of :: wrap -->
+    
 </body>
 </html>

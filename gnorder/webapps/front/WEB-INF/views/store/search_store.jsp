@@ -101,7 +101,7 @@
                                  <select class="selectpicker" id="gugun">
                                  	<option value="">선택</option>
                                  </select>
-                                    <button type="button" class="search-btn" onclick="srchStoreInfo(1,'sigun')"><img src="/resources/assets/images/icon/c-store-search.png" alt="검색이미지"></button>
+                                    <button type="button" class="search-btn" onclick="goSearch('S')"><img src="/resources/assets/images/icon/c-store-search.png" alt="검색이미지"></button>
                                 </div>
                                 <div class="search-list-area">
                                     <div class="result-num">
@@ -116,7 +116,7 @@
                             <div class="tab-desc l-hidden">
                                 <div class="input-btn-area">
                                     <input type="text" placeholder="매장명을 입력해주세요." id="br_name">
-                                    <button type="button" class="search-btn" onclick="srchStoreInfo(1,'name')"><img
+                                    <button type="button" class="search-btn" onclick="goSearch('N')"><img
                                             src="/resources/assets/images/icon/c-store-search.png" alt="검색이미지"></button>
                                 </div>
                                 <!-- 참고 : class l-hidden 제거시 활성화   -->
@@ -125,67 +125,6 @@
                                         내 주변 검색결과 <span>10</span>개
                                     </div>
                                     <div class="result-list l-scroll-style" id="srchNameList">
-                                        <div class="list">
-                                            <div class="icon bk"></div>
-                                            <div class="desc">
-                                                <dl>
-                                                    <dt class="name">행당점</dt>
-                                                    <dd class="local">서울특별시 성동구 행당로 79 해당텍스트 2
-                                                        줄 까지 노출됩니다.
-                                                    </dd>
-                                                    <dd class="num">02-2294-9294</dd>
-                                                </dl>
-                                            </div>
-                                            <div class="img">
-                                                <img src="/resources/assets/images/contents/ex-store-01.png" alt="이미지영역">
-                                            </div>
-                                        </div>
-                                        <div class="list">
-                                            <div class="icon red"></div>
-                                            <div class="desc">
-                                                <dl>
-                                                    <dt class="name">성수 1호점</dt>
-                                                    <dd class="local">서울특별시 성동구 행당로 79 해당텍스트 2
-                                                        줄 까지 노출됩니다.
-                                                    </dd>
-                                                    <dd class="num">02-2294-9294</dd>
-                                                </dl>
-                                            </div>
-                                            <div class="img">
-                                                <img src="/resources/assets/images/contents/ex-store-02.png" alt="이미지영역">
-                                            </div>
-                                        </div>
-                                        <div class="list">
-                                            <div class="icon bk"></div>
-                                            <div class="desc">
-                                                <dl>
-                                                    <dt class="name">상왕십리역점</dt>
-                                                    <dd class="local">서울특별시 성동구 행당로 79 해당텍스트 2
-                                                        줄 까지 노출됩니다.
-                                                    </dd>
-                                                    <dd class="num">02-2294-9294</dd>
-                                                </dl>
-                                            </div>
-                                            <div class="img">
-                                                <img src="/resources/assets/images/contents/ex-store-01.png" alt="이미지영역">
-                                            </div>
-                                        </div>
-                                        <div class="list">
-                                            <div class="icon bk"></div>
-                                            <div class="desc">
-                                                <dl>
-                                                    <dt class="name">상왕십리역점</dt>
-                                                    <dd class="local">서울특별시 성동구 행당로 79 해당텍스트 2
-                                                        줄 까지 노출됩니다.
-                                                    </dd>
-                                                    <dd class="num">02-2294-9294</dd>
-                                                </dl>
-                                            </div>
-                                            <div class="img">
-                                                <img src="/resources/assets/images/contents/ex-store-01.png" alt="이미지영역">
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
                             </div>
@@ -203,26 +142,26 @@
                                 <table id="storeInfo">
                                     <colgroup>
                                         <col>
+                                        <%-- <col> --%>
+                                        <col>
+                                        <col>
+                                       <%--  <col> --%>
                                         <col>
                                         <col>
                                         <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
-                                        <col>
+                                        <%-- <col> --%>
                                     </colgroup>
                                     <thead>
                                         <tr>
                                             <th>매장명</th>
-                                            <th>열림</th>
+                                        <!--     <th>열림</th> -->
                                             <th>연락처</th>
                                             <th>포장할인</th>
-                                            <th>소요시간<br/>(배달/포장)</th>
+                                            <!-- <th>소요시간<br/>(배달/포장)</th> -->
                                             <th>e-쿠폰</th>
                                             <th>금액권</th>
                                             <th>선결제<br/>(배달/포장)</th>
-                                            <th>퀵포장</th>
+                                            <!-- <th>퀵포장</th> -->
                                         </tr>
                                         <tr>
                                         </tr>
@@ -237,12 +176,6 @@
 
                     <!-- 페이징 영역  -->
                     <section class="l-paging-num">
-                        <button type="button">1</button>
-                        <button type="button" class="is-active">2</button>
-                        <button type="button">3</button>
-                        <button type="button">4</button>
-                        <button type="button">5</button>
-                        <button type="button">6</button>
                     </section>
                     <!-- //페이징 영역  -->
                 </div>
@@ -260,9 +193,12 @@
         </div>
     </div>
     <!-- end of :: wrap -->
-    
+     
     <script>
-    
+    	var searchGb = "L";
+    	var sido ="";
+    	var gugun= "";
+    	var branch_nm ="";
     	// 지도
 	 	var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 	    mapOption = { 
@@ -272,6 +208,7 @@
 	    // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
 	    var map = new kakao.maps.Map(mapContainer, mapOption);
 	    var markers = [];
+	    var positions=[];
         $(document).ready(function () {
 
             // select box
@@ -295,13 +232,18 @@
 		    param.use_yn ='Y';
 		    getCodeListSelBox($("#sido"), param, "선택", ""); 
 	      
-	      	srchStoreInfo(1,'storeInfoCallBack');
 	     
         });
         
         $(window).load(function(){
-        	searchStore_loc();
+        	searchStore('L');
+        	searchStorePaging(1);
         });
+        
+        function goSearch(gubun){
+        	searchStore(gubun);
+        	searchStorePaging(1);
+        }
         // select박스 외부영역 클릭시 닫기
         $(document).mouseup(function (e){
             var select_box = $(".type-list");
@@ -309,250 +251,50 @@
                 select_box.removeClass("is-show");
             }
         });
-        
-        /* 매장정보*/
-        function srchStoreInfo(pageNum,callbackNm){
-        	
-        	var obj = new Object();  
-        	if (pageNum == '' || pageNum == "undefined") {
-        		obj.pageNum = "1";
-        	} else {
-        		obj.pageNum = pageNum;
-        	}   
-        	obj.listCnt = 5;
-        	
-        	if(replaceNull(callbackNm,'') =='' ){
-        		callbackNm='storeInfoCallBack';
-        	}
-        	if(callbackNm =='storeInfoCallBack'){
-        		/*하단*/
-        		obj.paging_yn ='Y';
-        	}else if (callbackNm =='sigun'){
-        		/*시군구*/
-        		obj.paging_yn ='N';
-        		obj.sido = $("#sido").val();
-        		obj.gugun = $("#gugun").val();
-        	}else{
-        		/*매장명*/
-        		obj.paging_yn ='N';
-        		obj.br_name = $("#br_name").val();
-        	}
-        	
-        	var url = "/store/srch_storeInfo";
-        	var data = JSON.stringify(obj); 
-        	
-        	if(callbackNm =='storeInfoCallBack'){
-        		/*하단*/
-        		ajaxCall(url, data, storeInfoCallBack, errorCallBack, '매장안내');
-        	}else {
-        		/*시군구 매장명*/
-        		ajaxCall(url, data, valSrchCallBack, errorCallBack, '매장안내');
-        	}
-        	
-        }
-        
-        /*하단 정보*/
-        function storeInfoCallBack(obj){
-        	
-        	var storeList = obj.body.store_list.store_list;
-        	var listTxt ="";
-    		var total_cnt = 0;
-    		if(storeList.length>0){
-    			total_cnt = storeList[0].total_cnt;
-    			for (var i in storeList) {
-    				listTxt+='<tr>';
-                    listTxt+='<td>'+storeList[i].br_name+'</td>';
-                    offClass ='l-map-icon red';
-                    if(storeList[i].off_day =='Y'){
-                    	offClass ='l-map-icon bk';
-                    }
-                    listTxt+='<td><button class="'+offClass+'"></button></td>';
-                    listTxt+='<td class="l-num">'+storeList[i].tel1+'</td>';
-                    listTxt+='<td class="l-num">-'+storeList[i].pack_amt+'</td>';
-                    var dlvTime = '-';
-                    if(replaceNull(storeList[i].dlv_time,'')!=""){
-                    	dlvTime=storeList[i].dlv_time+'min';
-                    }
-                    var packTime = '-';
-                    if(replaceNull(storeList[i].pack_time,'')!=""){
-                    	packTime=storeList[i].pack_time+'min';
-                    }
-                    listTxt+='<td class="l-num">'+dlvTime+'/'+packTime+'</td>';
-                    
-                    var ecouponClass="disabled";
-                    if(storeList[i].ecoupon_yn =='Y'){
-                    	ecouponClass=""
-                    }
-                    listTxt+='<td><button class="l-coupon '+ecouponClass+'"></button></td>';
-                    
-                    var ecashClass="disabled";
-                    if(storeList[i].cashecoupon_yn =='Y'){
-                    	ecashClass=""
-                    }
-                    listTxt+='<td><button class="l-receipt '+ecashClass+'"></button></td>';
-                    
-                    var dlvPaytype = 'X';
-                    var dlv_paytype=replaceNull(storeList[i].dlv_paytype,'10');
-                    
-                    if(dlv_paytype!="10" && dlv_paytype!="30"){
-                    	dlvPaytype='O';
-                    }
-                    var packPaytype = 'X';
-                    var pack_paytype=replaceNull(storeList[i].pack_paytype,'10');
-                    if(pack_paytype!="10" && pack_paytype!="30"){
-                    	packPaytype='O';
-                    }
-                    listTxt+='<td class="l-num">'+dlvPaytype+'/'+packPaytype+'</td>';
-                    var quick_paytype =replaceNull(storeList[i].quick_paytype,'10');
-                    var quickPaytype = "";
-                    if(quick_paytype =='10' ||quick_paytype =='30' ){
-                    	quickPaytype = "disabled";
-                    }
-                    
-                    listTxt+='<td><button class="l-cart '+quickPaytype+'"></button></td>';
-                	listTxt+='</tr>';
-    			}
-    		}else{
-    			listTxt += '<tr><td colspan="9">조회된 메뉴가 존재하지 않습니다.</td></tr>'
-    		}
-    		$('#storeInfo > tbody').empty();
-    		$('#storeInfo > tbody').html(listTxt);
-    		var pagingHTML = createPagingHTML(obj.body.store_list.pageNum, total_cnt ,obj.body.store_list.listCnt, 'srchStoreInfo');
-    		$(".l-paging-num").html(pagingHTML);
-        }
-        /*시군구 / 매장명*/
-        function valSrchCallBack(obj) {  
-        	var  positions=[];
-        	if ( obj.result == common._trans_success_code ) { 
-        		var storeList = obj.body.store_list.store_list;
-        		var listTxt = "";
-        		if(storeList.length>0){
-        			for (var i = 0; i < storeList.length; i++) {	
-        				var promoObj = storeList[i];	 
-        				listTxt+='<div class="list">';
-        				var offclass= 'red';
-        				if(promoObj.off_day =="Y"){
-        					offclass= 'bk';
-        				}
-        				listTxt+='<div class="icon '+offclass+'"></div>';
-        				listTxt+='<div class="desc">';
-        				listTxt+='<dl>';
-        				listTxt+='<dt class="name">'+promoObj.br_name+'</dt>';
-        				listTxt+='<dd class="local">'+promoObj.address+'</dd>';
-        				listTxt+='<dd class="num">'+promoObj.tel1+'</dd>';
-        				listTxt+='</dl>';
-        				listTxt+='</div>';
-        				listTxt+='<div class="img">';
-        				/* listTxt+='<img src="/resources/assets/images/contents/ex-store-02.png" alt="이미지영역">'; */
-        				listTxt+='</div>';
-        				listTxt+='</div>';
-        				
-        				if(i==0){
-	        				 // 이동할 위도 경도 위치를 생성합니다 
-	                	    var moveLatLon = new kakao.maps.LatLng(promoObj.xloc, promoObj.yloc);
-	                	    // 지도 중심을 부드럽게 이동시킵니다
-	                	    // 만약 이동할 거리가 지도 화면보다 크면 부드러운 효과 없이 이동합니다
-	                	    map.panTo(moveLatLon);
-        				}
-        				var iwPosition ='<div class="map-icon-item">';
-        				iwPosition +='<div class="desc">';
-        				iwPosition +='<dl class="info">';
-        				iwPosition +='<dt class="name">'+promoObj.br_name+'</dt>';
-        				iwPosition +='<dd class="local">'+promoObj.address+'</dd>';
-        				iwPosition +='<dd class="num">'+promoObj.tel1+'</dd>';
-        				iwPosition +='</dl>';
-        				iwPosition +='<div class="delivery">';
-        				iwPosition +='<p>포장 <span>'+promoObj.pack_amt+'</span>원 할인</p>';
-        				
-        				if(replaceNull(promoObj.quick_paytype,'10') != '10'){
-        					iwPosition +='<p>퀵포장</p>';
-        				}
-        				iwPosition +='</div>';
-        				iwPosition +='</div>';
-        				iwPosition +='</div>';
-        				 positions.push({
-         				   title: promoObj.br_name 
-         				,  latlng: new kakao.maps.LatLng(promoObj.xloc, promoObj.yloc )
-        				,  off_day : promoObj.off_day
-        				,  content : iwPosition
-         				});
-        			} 
-        		} 
-        		$(".result-num").hide();
-        		if($("#loc_btn").hasClass("disabled") === true) {
-	        		$("#srchNameDiv").removeClass('l-hidden');
-	        		$('#srchNameList').empty();
-            		$('#srchNameList').html(listTxt);
-           		}else{
-           			$('#srchLocList').empty();
-            		$('#srchLocList').html(listTxt);
-           		}
-        		setMarkers(null);
-        		// 마커 이미지의 이미지 주소입니다
-        		 
-        		for (var i = 0; i < positions.length; i ++) {
-        		    
-        		    // 마커 이미지의 이미지 크기 입니다
-        		    var imageSize = new kakao.maps.Size(24, 35); 
-        		    
-        		    
-        		    var imageSrc = "/resources/assets/images/icon/l-map-on.svg"; 
-        		    if(positions[i].off_day =='Y'){
-        		    	imageSrc = "/resources/assets/images/icon/l-map-off.svg";
-        		    }
-        		    // 마커 이미지를 생성합니다    
-        		    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
-        		    
-        		    // 마커를 생성합니다
-        		   var marker = new kakao.maps.Marker({
-        		        map: map, // 마커를 표시할 지도
-        		        position: positions[i].latlng, // 마커를 표시할 위치
-        		        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-        		        image : markerImage // 마커 이미지 
-        		    });
-        			// 마커에 표시할 인포윈도우를 생성합니다 
-	       		    var infowindow = new kakao.maps.InfoWindow({
-	       		        content: positions[i].content // 인포윈도우에 표시할 내용
-	       		    });
-	       		    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-	       		    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-        		   markers.push(marker);
-        		}
-            	
-        		
-        	}
-        } 
         function chgSido(sido){
-   		 var param = new Object();
-            param.define_id = 'AREA'; // 지역(검색select)
-            param.use_yn ='Y';
-            param.value2= sido ;
-            param.value3 = 'Y';
-            param.ord = 'value1';
-            getCodeListSelBox($("#gugun"), param, "선택",''); 
-            $("#gugun").niceSelect("update");
-   		}
-        //초기진입시 본인위치로 검색
-        function searchStore_loc(){
-        	var url = "/promo/Store";
+      		 var param = new Object();
+               param.define_id = 'AREA'; // 지역(검색select)
+               param.use_yn ='Y';
+               param.value2= sido;
+               param.value3 = 'Y';
+               param.ord = 'value1';
+               getCodeListSelBox($("#gugun"), param, "선택",''); 
+               $("#gugun").niceSelect("update");
+      	}
+        
+        /*상단조회*/
+        function searchStore(gb){
+        	searchGb=gb;
+        	var url = "/store/srch_storeInfo";
         	var obj = new Object();
-        	var longitude=lon;
-        	var latitude=lat;
-        	if(replaceNull(longitude,"") =="" || replaceNull(latitude,"") =="" ){
-        		longitude=37.5666805;
-        		latitude=126.9784147;
+        	if(searchGb =='L'){ //위치
+	        	var longitude=lon;
+	        	var latitude=lat;
+	        	if(replaceNull(longitude,"") =="" || replaceNull(latitude,"") =="" ){
+	        		longitude=37.5666805;
+	        		latitude=126.9784147;
+	        	}
+	        	obj.yloc = longitude;
+	        	obj.xloc = latitude;
+        	}else if(searchGb =='S'){ //시도 시군구
+        		sido =$("#sido").val();
+            	gugun= $("#gugun").val();
+            	obj.paging_yn ='N';
+        		obj.sido = sido;
+        		obj.gugun = gugun;
+        	}else{ //가맹점명
+        		branch_nm =$("#br_name").val();
+        		obj.paging_yn ='N';
+        		obj.br_name = branch_nm;
         	}
-        	obj.yloc = longitude;
-        	obj.xloc = latitude;
-        	
         	var jsonData = JSON.stringify(obj);	
-        	ajaxCall(url, jsonData, searchStoreLocCallBack, errorCallBack, '프로모션매장호출');	//alert */
+        	ajaxCall(url, jsonData, searchStoreTopCallBack, errorCallBack, '프로모션매장호출');	//alert */
         }
-        function searchStoreLocCallBack(obj) {  
+        function searchStoreTopCallBack(obj){
         	if ( obj.result == common._trans_success_code ) { 
-        		var promList = obj.body.promostore.promolist; 
+        		var promList = obj.body.store_list.store_list;
         		var listTxt = "";
-        		var positions=[];
+        		
         		if(promList.length>0){
         			for (var i = 0; i < promList.length; i++) {	
         				var promoObj = promList[i];	 
@@ -600,22 +342,29 @@
         				,  latlng: new kakao.maps.LatLng(promoObj.xloc, promoObj.yloc )
        				 	,  off_day : promoObj.off_day
        				 	,  content : iwPosition
+       				 	,  click_open : 'close'
         				});
         			} 
         		} 
-        		$("#loc_cnt").html(promList.length);
-        		$('#srchLocList').empty();
-        		$('#srchLocList').html(listTxt);
+        		if($("#loc_btn").hasClass("disabled") === true) {
+	        		$("#srchNameDiv").removeClass('l-hidden');
+	        		$('#srchNameList').empty();
+            		$('#srchNameList').html(listTxt);
+           		}else{
+           			$('#srchLocList').empty();
+            		$('#srchLocList').html(listTxt);
+           		}
         		setMarkers(null);
         		// 마커 이미지의 이미지 주소입니다
         		for (var i = 0; i < positions.length; i ++) {
         		    
         		    // 마커 이미지의 이미지 크기 입니다
-        		    var imageSize = new kakao.maps.Size(40, 40);
-        		    var imageSrc = "/resources/assets/images/icon/l-map-on.svg"; 
-        		    if(positions[i].off_day =='Y'){
+        		    var imageSize = new kakao.maps.Size(24, 35);
+        		    var imageSrc = "/resources/assets/images/icon/l-map-on.svg";
+        		    //2차오픈
+        		    /* if(positions[i].off_day =='Y'){
         		    	imageSrc = "/resources/assets/images/icon/l-map-off.svg";
-        		    }
+        		    } */
         		    // 마커 이미지를 생성합니다    
         		    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize); 
         		    
@@ -631,14 +380,18 @@
         		    var infowindow = new kakao.maps.InfoWindow({
         		        content: positions[i].content // 인포윈도우에 표시할 내용
         		    });
-        		    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-        		    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
-        		    kakao.maps.event.addListener(marker, 'click', makeOutListener(infowindow));
+        		    if(getDevice()==4){
+	        		    kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+	        		    kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+        		    }else{
+        		    	kakao.maps.event.addListener(marker, 'click', makeClickListener(map, marker, infowindow,i));
+        			}
         		    marker.setMap(map);
         		    markers.push(marker);
         		}
         	}
-        }  
+        	
+        }
         
         function setMarkers(map) {
             for (var i = 0; i < markers.length; i++) {
@@ -657,6 +410,123 @@
             return function() {
                 infowindow.close();
             };
+        }
+        function makeClickListener(map, marker, infowindow, idx) {
+            return function() {
+            	if(positions[idx].click_open =='close'){
+                	infowindow.open(map, marker);
+                	positions[idx].click_open = 'open';
+            	}else{
+            		infowindow.close();
+            		positions[idx].click_open = 'close';
+            	}
+            };
+        }
+        
+        
+        function searchStorePaging(pageNum){
+
+        	var obj = new Object();  
+        	if (pageNum == '' || pageNum == "undefined") {
+        		obj.pageNum = "1";
+        	} else {
+        		obj.pageNum = pageNum;
+        	}   
+        	obj.listCnt = 5;
+        	obj.paging_yn ='Y';
+        	
+        	if(searchGb =='L'){
+        		var longitude=lon;
+	        	var latitude=lat;
+	        	if(replaceNull(longitude,"") =="" || replaceNull(latitude,"") =="" ){
+	        		longitude=37.5666805;
+	        		latitude=126.9784147;
+	        	}
+	        	obj.yloc = longitude;
+	        	obj.xloc = latitude;
+        		
+        	}else if(searchGb =='S'){ //시도 시군구
+        		obj.sido = sido;
+        		obj.gugun = gugun;
+        	}else{ //가맹점명
+        		obj.br_name = branch_nm;
+        	}
+        	var url = "/store/srch_storeInfo";
+        	var data = JSON.stringify(obj); 
+        	
+        	ajaxCall(url, data, storeInfoCallBack, errorCallBack, '매장안내');
+        }
+        function storeInfoCallBack(obj){
+
+        	var storeList = obj.body.store_list.store_list;
+        	var listTxt ="";
+    		var total_cnt = 0;
+    		if(storeList.length>0){
+    			total_cnt = storeList[0].total_cnt;
+    			for (var i in storeList) {
+    				listTxt+='<tr>';
+                    listTxt+='<td>'+storeList[i].br_name+'</td>';
+                  /*   offClass ='l-map-icon red';
+                    if(storeList[i].off_day =='Y'){
+                    	offClass ='l-map-icon bk';
+                    }
+                    listTxt+='<td><button class="'+offClass+'"></button></td>'; */
+                    listTxt+='<td class="l-num">'+storeList[i].tel1+'</td>';
+                    var disCount= "";
+                    if(storeList[i].pack_amt !=0){
+                    	disCount="-";
+                    }
+                    listTxt+='<td class="l-num">'+disCount+storeList[i].pack_amt+'</td>';
+                   /*  var dlvTime = '-';
+                    if(replaceNull(storeList[i].dlv_time,'')!=""){
+                    	dlvTime=storeList[i].dlv_time+'min';
+                    }
+                    var packTime = '-';
+                    if(replaceNull(storeList[i].pack_time,'')!=""){
+                    	packTime=storeList[i].pack_time+'min';
+                    }
+                    listTxt+='<td class="l-num">'+dlvTime+'/'+packTime+'</td>'; */
+                    
+                    var ecouponClass="disabled";
+                    if(storeList[i].ecoupon_yn =='Y'){
+                    	ecouponClass=""
+                    }
+                    listTxt+='<td><button class="l-coupon '+ecouponClass+'"></button></td>';
+                    
+                    var ecashClass="disabled";
+                    if(storeList[i].cashecoupon_yn =='Y'){
+                    	ecashClass=""
+                    }
+                    listTxt+='<td><button class="l-receipt '+ecashClass+'"></button></td>';
+                    
+                    var dlvPaytype = 'X';
+                    var dlv_paytype=replaceNull(storeList[i].dlv_paytype,'10');
+                    
+                    if(dlv_paytype!="10" && dlv_paytype!="30"){
+                    	dlvPaytype='O';
+                    }
+                    var packPaytype = 'X';
+                    var pack_paytype=replaceNull(storeList[i].pack_paytype,'10');
+                    if(pack_paytype!="10" && pack_paytype!="30"){
+                    	packPaytype='O';
+                    }
+                    listTxt+='<td class="l-num">'+dlvPaytype+'/'+packPaytype+'</td>';
+                   /*  var quick_paytype =replaceNull(storeList[i].quick_paytype,'10');
+                    var quickPaytype = "";
+                    if(quick_paytype =='10' ||quick_paytype =='30' ){
+                    	quickPaytype = "disabled";
+                    }
+                    
+                    listTxt+='<td><button class="l-cart '+quickPaytype+'"></button></td>'; */
+                	listTxt+='</tr>';
+    			}
+    		}else{
+    			listTxt += '<tr><td colspan="9">조회된 메뉴가 존재하지 않습니다.</td></tr>'
+    		}
+    		$('#storeInfo > tbody').empty();
+    		$('#storeInfo > tbody').html(listTxt);
+    		var pagingHTML = createPagingHTML(obj.body.store_list.pageNum, total_cnt ,obj.body.store_list.listCnt, 'searchStorePaging');
+    		$(".l-paging-num").html(pagingHTML);
         }
     </script>
 </body>

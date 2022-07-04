@@ -5,7 +5,7 @@
 (function($) {
 
   $.fn.niceSelect = function(method) {
-    
+
     // Methods
     if (typeof method == 'string') {      
       if (method == 'update') {

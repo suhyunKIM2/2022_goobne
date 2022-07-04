@@ -1,5 +1,24 @@
 @charset "UTF-8";
 a,input + label{ -webkit-tap-highlight-color:rgba(0,0,0,0); }
+select {
+  /*padding: .8em .5em;*/
+  height:42px;
+  font-family: inherit;
+  background: url(/resources/assets/images/icon/chevron-down.svg) no-repeat 95% 50%;  
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #999;
+  border-radius: 5px;
+      padding-left: 18px;
+    padding-right: 30px;
+	min-width: 135px;
+}
+
+select::-ms-expand { /* for IE 11 */
+    display: none;
+}
+#footer a{color:#fff;}
 .s_text_G{color:#999;}
 .text_center{text-align: center;    font-size: 1.2rem;}
 .search-area .e_coupon-search{font-weight: 800;width:100% !important;margin: auto;    border-bottom: 2px solid #21293B;padding:4% 30px 4% 0;font-size:2.2rem;}
@@ -308,6 +327,11 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .journal #footer{margin-top:0;}
 .title_box_div{height:auto;overflow:hidden;border-bottom: 1px solid #d4000b;padding:1rem;}
 .journal_box .text_size_L br{display:none;}
+.inline_li{display:flex;    width: 100%; }
+.inline_li li{   vertical-align: middle;margin: 0 0.3rem;width:calc(100% / 3);}
+.inline_li .selectpicker{min-width:100%;}
+.inline_li li .list li{width:100%;}
+.email_inline li{width:auto;line-height: 42px;}
 
 
 @media(min-width: 768px) {
@@ -383,7 +407,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 /*이벤트*/ 
 .chat_event{text-align: right;vertical-align: middle;}
 .number_chat{vertical-align: middle;color:#fff;font-size:2rem;margin-left: 0.5rem;}
-.event__list .list .desc{min-height:152px;bottom:-26px;}
+.event__list .list .desc{min-height:152px;bottom:0;}
 .end_mask{position: absolute;border-radius: 4px;
     width: 100%;
     height: 100%;
@@ -395,7 +419,9 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;}    
+    font-size: 1.5rem;}   
+.call_btn{ margin-top: 1rem;display: block;margin: 1rem auto;text-align: center;}	
+.call_btn .l-btn{width:97%;max-width: 36.6rem;}
 
 @media (max-width: 1300px){
 .cscenter_table{width:773px;}
@@ -419,7 +445,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     line-height: 54px;}
 }
 @media (max-width: 900px){
-.main-box{margin-bottom:1rem;}
+.main-box{margin-bottom:0;}
 }
 @media (max-width: 768px){
 .main-vi-wrap .slick-slide img.main_banner_MO{display:block;height:100%;}
@@ -608,6 +634,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
     font-size: 1rem;}
 .l-info-area .info-num{padding:1rem;}
 .cscenter_regi_detail{width:95%;margin:4rem auto 0;}
+.const_div{width:95%;}
 }
 @media (max-width: 280px){
 .cscenter_table th{display: none;}    

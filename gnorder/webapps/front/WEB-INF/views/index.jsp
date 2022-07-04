@@ -22,7 +22,7 @@
 	    new WOW().init();
 	</script>  
 	<%-- 메인배너 배경처리 --%>
-	<style>       
+<style>       
       <c:forEach var="banner" items="${banner}" varStatus="status"> 
         <c:if test="${banner.bnnr_type eq '10' && banner.ord1 > 1 }">
 		.main-box .goobne-img_office_bg_${banner.bnnr_id }{background: url("<%=SystemConstant.getStaticUrl()%>${banner.pc_img_bg }");}
@@ -38,9 +38,19 @@
 	</style>
 	<%-- 메인배너 배경처리 --%>
 <meta charset="utf-8">
+<script>
+ $( document ).ready( function() {
+$('.no-js').addClass('visible');
+});
+</script>
+<style>
+.no-js{visibility: hidden;opacity: 0;}
+.visible{visibility: visible;opacity: 1;}
+.main-box{height:calc(100% - 85px);}/*2차 오픈시 빼기*/
+</style>
 </head>
 
-<body>
+<body class="no-js">
     <!-- start of :: wrap -->
     <div id="wrap">
         <!-- start of :: header -->
@@ -65,12 +75,12 @@
                                 <div class="goobne-text">
                                     <p>Welcome</p>
                                     <p class="mid">to the</p>
-                                    <p class="last">oven <span class="mid">universe</span></p>
+                                    <p class="last">oven <span class="mid">Universe</span></p>
                                 </div>
                                 <div class="goobne-text line">
                                     <p>Welcome</p>
                                     <p class="mid">to the</p>
-                                    <p class="last">oven <span class="mid">universe</span></p>
+                                    <p class="last">oven <span class="mid">Universe</span></p>
                                 </div>
                             </div>
                             <div class="goobne-bg wow fadeInUp">
@@ -99,8 +109,8 @@
                         </div>
                         <%-- 메인배너 롤링 1번 영역 e--%>
                          
-                        <%-- 메인배너 롤링 2번부터 s --%> 
-                        <c:forEach var="banner" items="${banner}" varStatus="status"> 
+                        <%-- 메인배너 롤링 2번부터 s --%>
+<c:forEach var="banner" items="${banner}" varStatus="status"> 
 	                        <c:if test="${banner.bnnr_type eq '10' && banner.ord1 > 1 }">            
 		                        <div class="main-box">
 		                            <div class="goobne-bg goobne-bg02 wow fadeInUp goobne-img_office_bg goobne-img_office_bg_${banner.bnnr_id }"><!---해상도 768일때 모바일 배경,이미지 변경---->
@@ -130,7 +140,9 @@
                     </div>
                     <%-- 메인 플로팅 배너 order, e-coupon e --%>
                 </div>
+                
                 <%-- 로그인시 보여지는 영역 --%>
+<%-- 1차에서는 숨긴다.  
                 <% if( sessFtr.isLogin() ) { %>
                 <div class="mo-login-cnt">
                     <div class="aside__lnb-login mo-login">
@@ -157,100 +169,60 @@
                     </div>
                 </div>
                <% } %>
-<%-- 로그인시 보여지는 영역 --%>
+               <%-- 로그인시 보여지는 영역 --%>
+                 
 
                 <div class="con-box menu-box">
                     <div class="inner">
                         <p class="l-main-title wow fadeInUp">Oven menu</p>
                         <div class="menu-list-wrap wow fadeInUp">
-                            <%-- Oven Ment 롤링  s --%> 
-                            <c:forEach var="banner" items="${banner}" varStatus="status"> 
-	                          <c:if test="${banner.bnnr_type eq '20' }">
-	                            <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }">
-	                                <div class="menu-img">
-	                                    <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }">
-	                                </div>
-	                                <p class="menu-name">${banner.bnnr_nm }</p>
-	                            </a>
-                              </c:if>
-                            </c:forEach> 
-                            <%-- Oven Ment 롤링  e--%>                             
+                            <%-- Oven Ment 롤링  s --%>
+<c:forEach var="banner" items="${banner}" varStatus="status">
+<c:if test="${banner.bnnr_type eq '20' }"> <a href="${banner.pc_lnk_url }" class="menu-list <c:if test="${status.index%2>0}"> top</c:if>" target="${banner.pc_win_gb }">
+<div class="menu-img"> <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }"> </div>
+<p class="menu-name">${banner.bnnr_nm }</p>
+</a> </c:if>
+</c:forEach>
+<%-- 카테고리 4개, 8개가 되어야 롤링이 정상적으로 적용되어서 for 두번  --%>
+<c:forEach var="banner" items="${banner}" varStatus="status">
+<c:if test="${banner.bnnr_type eq '20' }"> <a href="${banner.pc_lnk_url }" class="menu-list <c:if test="${status.index%2==0}"> top</c:if>" target="${banner.pc_win_gb }">
+<div class="menu-img"> <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }"> </div>
+<p class="menu-name">${banner.bnnr_nm }</p>
+</a> </c:if>
+</c:forEach>
+<%-- 카테고리 4개, 8개가 되어야 롤링이 정상적으로 적용되어서 for 두번  --%>
+<%-- Oven Ment 롤링  e--%>                             
                         </div>
                     </div>
                 </div>
                 
                 <div class="con-box">
-                    <div class="con_wrap">
-                        <p class="l-main-title wow fadeInUp">Goobne News</p>
-                        <div class="event-list-wrap">
-                            <a href="http://www.xn--9i1b89owjy5lfa431as3k.com/" target="_blank">
-                                <div class="event-list on wow fadeInUp">
-                                    <div class="mo-thum">
-                                        <img src="/resources/assets/images/main/event_bss-univ_mo.jpg" alt="썸네일이미지">
-                                    </div>
-                                    <div class="status half">
-                                        <p class="sub">[바사삭 유니버스]</p>
-                                    </div>
-                                    <div class="event-title half">
-                                        <p class="main-text">구울레옹의 오븐구이 대서사시</p>
-                                    </div>
-                                    <div class="event-img">
-                                        <img src="/resources/assets/images/main/event_bss-univ_pc.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="event-list wow fadeInUp">
-                                <a href="" target="_top">
-                                    <div class="mo-thum">
-                                        <img src="/resources/assets/images/main/event_friday_mo.jpg" alt="썸네일이미지">
-                                    </div>
-                                    <div class="status half">
-                                        <p class="sub">[불금치킨 이벤트]</p>
-                                    </div>
-                                    <div class="event-title half">
-                                        <p class="main-text">불금엔 불금치킨! 불금 파격 할인</p>
-                                    </div>
-                                    <div class="event-img">
-                                        <img src="/resources/assets/images/main/event_friday_pc.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="event-list wow fadeInUp">
-                                <a href="" target="_top">
-                                    <div class="mo-thum">
-                                        <img src="/resources/assets/images/main/event_bss-univ-popup_mo.jpg" alt="썸네일이미지">
-                                    </div>
-                                    <div class="status half">
-                                        <p class="sub">[팝업 스토어]</p>
-                                    </div>
-                                    <div class="event-title half">
-                                        <p class="main-text">바사삭 유니버스, 팝업스토어 오픈!</p>
-                                    </div>
-                                    <div class="event-img">
-                                        <img src="/resources/assets/images/main/event_bss-univ-popup_pc.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <%-- [저널]굽네오븐썰 220707 오픈 굽뉴스  s --%>
-                            <div class="event-list wow fadeInUp">
-                                <a href="/journal" target="_top">
-                                    <div class="mo-thum">
-                                        <img src="/resources/assets/images/main/event_goob-tech-rab_mo.jpg" alt="썸네일이미지">
-                                    </div>
-                                    <div class="status half">
-                                        <p class="sub">[굽네 오븐썰]</p>
-                                    </div>
-                                    <div class="event-title half">
-                                        <p class="main-text">굽네만의 오븐 레시피가 탄생하는 '굽테크 랩'</p>
-                                    </div>
-                                    <div class="event-img">
-                                        <img src="/resources/assets/images/main/event_goob-tech-rab_pc.jpg" alt="">
-                                    </div>
-                                </a>
-                            </div>
-                            <%-- [저널]굽네오븐썰 220707 오픈 굽뉴스 e --%>
-                        </div>
-                    </div>
+                   <div class="con_wrap">
+                       <p class="l-main-title wow fadeInUp">Goobne News</p>
+                         <div class="event-list-wrap"> 
+                          <c:forEach var="banner" items="${banner}" varStatus="status"> 
+	                          <c:if test="${banner.bnnr_type eq '50' }"> 
+		                            <a href="${banner.pc_lnk_url }" target="${banner.pc_win_gb }">
+	                                <div class="event-list on wow fadeInUp">
+	                                    <div class="mo-thum">
+	                                        <img src="<%=SystemConstant.getStaticUrl()%>${banner.mobile_img_pth }" alt="">
+	                                    </div>
+	                                    <div class="status half">
+	                                        <p class="sub">[${banner.sub_bnnr_nm }]</p>
+	                                    </div>
+	                                    <div class="event-title half">
+	                                        <p class="main-text">${banner.bnnr_nm }</p>
+	                                    </div>
+	                                    <div class="event-img">
+	                                        <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="">
+	                                    </div>
+	                                 </div>    
+	                                </a>
+	                            </c:if>
+                            </c:forEach>
+                           </div> 
+                       </div>
+                   </div>
      
 
                 <div class="con-box">
@@ -260,17 +232,13 @@
                         </p>
                         <div class="goobster-box-wrap wow fadeInUp">
                             <div class="goobster-box">
-                                <%-- Goobster 롤링 s--%> 
-                                <c:forEach var="banner" items="${banner}" varStatus="status"> 
-	                            <c:if test="${banner.bnnr_type eq '30' }">
-	                            <div class="img">
-                                    <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }">
-                                        <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }">
-                                    </a>
-                                 </div>
-                                 </c:if>
-                                 </c:forEach> 
-                                <%-- Goobster 롤링  e--%>  
+                                <%-- Goobster 롤링 s--%>
+<c:forEach var="banner" items="${banner}" varStatus="status">
+<c:if test="${banner.bnnr_type eq '30' }">
+<div class="img"> <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }"> <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }"> </a> </div>
+</c:if>
+</c:forEach>
+<%-- Goobster 롤링  e--%>  
                             </div>
                         </div>
                     </div>
@@ -302,17 +270,13 @@
                     </div>
                     <div class="goobne-tv-box wow fadeInUp">
                         <div class="goobne-tv-wrap">
-                            <%-- Goobtube 롤링 s 3개 이상 업로드 --%> 
-                            <c:forEach var="banner" items="${banner}" varStatus="status"> 
-                              <c:if test="${banner.bnnr_type eq '40' }">
-                              <div class="img-box">
-                                  <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }">
-                                      <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }">
-                                  </a>
-                              </div>
-                              </c:if>
-                            </c:forEach>
-                            <%-- Goobtube 롤링 e--%>
+                            <%-- Goobtube 롤링 s 3개 이상 업로드 --%>
+<c:forEach var="banner" items="${banner}" varStatus="status">
+<c:if test="${banner.bnnr_type eq '40' }">
+<div class="img-box"> <a href="${banner.pc_lnk_url }" class="menu-list" target="${banner.pc_win_gb }"> <img src="<%=SystemConstant.getStaticUrl()%>${banner.pc_img_pth }" alt="${banner.bnnr_nm }"> </a> </div>
+</c:if>
+</c:forEach>
+<%-- Goobtube 롤링 e--%>
                         </div>
                     </div>
                 </div>
