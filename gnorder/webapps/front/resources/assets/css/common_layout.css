@@ -1226,7 +1226,7 @@
   font-weight: 400;
   color: #6B6B6B;
 }
-
+.aside__lnb-list > li .dept > li > a.active{font-weight:800;color:#a74c00;}
 .aside__num {
   padding-bottom: 3rem;
 }

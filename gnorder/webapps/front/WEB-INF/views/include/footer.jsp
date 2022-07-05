@@ -4,7 +4,7 @@
 <div class="inner">
     <div class="info-box">
         <div class="number">
-            <p class="sub-text">주문상담</p>
+            <p class="sub-text">전화주문</p>
             <p class="tel">1661-9494</p>
         </div>
         <div class="info-btn">
@@ -32,8 +32,10 @@
         <p class="copyright">© 2009-2016 GOOBNE.CO.ALL RIGHT RESERVED</p>
     </div>
 </div>
+<form name="goBrdFrom" id="goBrdFrom" method="post">
+	<input type="hidden" name="seq">
+</form>
 <jsp:include page="/WEB-INF/views/include/common_script.jsp"></jsp:include>
-
     
 <script type="text/javascript">  
 /*gps 전역변수 */
@@ -51,7 +53,6 @@ $(document).ready(function() {
     <% } %>
     
 	$(".selectpicker").niceSelect();
-	
 	
 	// 이용약관 내용보기 버튼 
     $('.terms').click(function () {
@@ -87,8 +88,12 @@ $(document).ready(function() {
         $(".e_mail-moadl").addClass("l-hidden");
         $(".promo-moadl").addClass("l-hidden");
     }
-    const closeBtnElem = document.querySelectorAll(".closeBtn");
-    closeBtnElem.forEach(e => e.addEventListener('click', closePopupFunc));
+    var closeBtnElem = document.querySelectorAll(".closeBtn");
+    
+    $(closeBtnElem).each(function(){
+    	this.addEventListener('click', closePopupFunc);
+    });
+    		
     
 }); 
 
@@ -183,9 +188,9 @@ function promoCallBack(obj) {
 				promoHtml += "</div>\n";
 				
 				promoHtml += "<div class='icon-list'>\n";  //이쿠폰, 금액권, 온라인주문 가능 표시
-				if( promoObj.ecoupon_yn == 'Y' ) promoHtml += "<button type='button' class='l-coupon' alt='e-coupon가능'></button>\n";
-				if( promoObj.cashecoupon_yn == 'Y' ) promoHtml += "<button type='button' class='l-receipt' alt='금액권가능'></button>\n";
-				if( promoObj.online_yn == 'Y' ) promoHtml += "<button type='button' class='l-cart' alt='온라인주문가능'></button>\n";
+				if( promoObj.ecoupon_yn == 'Y' ) promoHtml += "<button type='button' class='l-coupon' alt='e-coupon가능' title='e-coupon'></button>\n";
+				if( promoObj.cashecoupon_yn == 'Y' ) promoHtml += "<button type='button' class='l-receipt' alt='금액권가능' title='금액권'></button>\n";
+				/* if( promoObj.online_yn == 'Y' ) promoHtml += "<button type='button' class='l-cart' alt='온라인주문가능' title='퀵포장'></button>\n"; */
 				promoHtml += "</div>\n";
 				promoHtml += "</div>\n"; 
 				if( promoObj.online_yn == 'Y' ) {   //온라인주문이 가능한 매장일때만 노출
@@ -218,9 +223,16 @@ function selStoreCallBack(obj) {
 	if ( obj.result == common._trans_success_code ) { 
 		var br_id = obj.body.br_id; 
 		console.log("매장선택 session 생성완료,선택매장 =>"+br_id);
-		
 		$('#promo_bg').addClass('l-hidden');
-		$('#promo').addClass('l-hidden'); 
+		$('#promo').addClass('l-hidden');
+		<%-- 1차 오픈에는 메뉴 메인으로 넘긴다. 2차  각 매장별 메뉴 페이지로 이동한다 --%>
+		location.href="/menu/menu_main";
 	}
 } 
+// 게시판 상세링크
+function goBrdView(brd_id, seq){
+	document.goBrdFrom.seq.value=seq;
+	document.goBrdFrom.action='/brd/'+brd_id+'/view'; 
+    document.goBrdFrom.submit();
+}
 </script> 

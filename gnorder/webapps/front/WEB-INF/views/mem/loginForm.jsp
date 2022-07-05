@@ -6,72 +6,7 @@
 <head>
    <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
 </head>
- <script>
-        $(document).ready(function () {
-            new WOW().init();
-        });
-    </script>
-<script type="text/javascript">
-$(document).ready(function(){
-	errorMsg('', error_msg);
-	$('input[type=password]').on("keyup", function(e){
-	    if (e.which == 13) {
-	        e.preventDefault();
-	        loginFn();
-	    }
-	});
 
-
-function goEventEnter(evt) {
-	var keyCode = evt.which?evt.which:event.keyCode;
-	if(keyCode == 13){
-		loginFn();
-	}
-}
-function goEventEnter(evt) {
-	var keyCode = evt.which?evt.which:event.keyCode;
-	if(keyCode == 13){
-		loginFn();
-	}
-}
-
-function loginFn() {
-	var id  = $('#login_id').val().trim();
-	var pwd = $('#login_pwd').val().trim();  
- 	if ( id == null || id == "" ) {
-        errorMsg('아이디를 입력하세요.', error_msg);
-		$('#login_id').focus();
-		return;
-	}
-	if ( pwd == null || pwd == "" ) {
-		errorMsg('비밀번호를 입력하세요.', error_msg);
-		$('#login_pwd').focus();
-		return;
-	}
-	var url = "<%=SystemConstant.LOGIN_URI%>";
-	var obj = new Object();
-	obj.login_id = id;
-	obj.login_pwd = pwd; 
-	var jsonData = JSON.stringify(obj);	
-	ajaxCall(url, jsonData, goLoginChkCallBack, errorCallBackMsgView, '로그인');	//alert  
-}
-/*
- * 로그인 성공 콜백(로그인 성공시, 메인 화면으로 이동 처리)
- */
-function goLoginChkCallBack(obj) {
-	errorMsg('', error_msg);
-	// 로그인 성공인 경우에 메인화면으로 포워딩 처리
-	if ( obj.result == common._trans_success_code ) {  
-		location.href = "<%=(String)request.getHeader("REFERER")%>";
-	}
-}  
-//div msg
-function errorMsg(msg, id) { 
-	const element = id;
-	element.innerHTML = "<div class='error_msg'>"+msg+"</div>"; 
-} 
-}); 
-</script> 
 <body>
     <!-- start of :: wrap -->
     <div id="wrap">
@@ -121,7 +56,7 @@ function errorMsg(msg, id) {
                                     <input type="checkbox" id="chk" class="chk-type">
                                     <label for="chk">아이디 저장</label>
                                 </div>
-                                <button class="l-btn" type="button" onclick="javascript:loginFn();" style="cursor: pointer;">로그인</button>
+                                <button class="l-btn" type="button" onclick="loginFn()">로그인</button>
                                 <div id="error_msg"></div>
                             </form>
                             <div class="login__link">
@@ -178,7 +113,7 @@ function errorMsg(msg, id) {
                 <!-- 로그인 배너 영역  -->
                 <section class="login__banner">
                     <a href="#none">
-                        <img src="/resources/assets/images/contents/login-banner.png" alt="로그인배너이미지">
+                        <img src="/resources/assets/images/contents/login-banner_220705_dhuman.jpg" alt="로그인배너이미지">
                     </a>
                 </section>
                 <!-- //로그인 배너 영역  -->
@@ -199,6 +134,74 @@ function errorMsg(msg, id) {
     <!-- end of :: wrap -->
      
     
-   
+    <script>
+        $(document).ready(function () {
+            new WOW().init();
+        });
+    </script>
+<script type="text/javascript">
+$(document).ready(function(){
+	errorMsg('', error_msg);
+	$('input[type=password]').on("keyup", function(e){
+	    if (e.which == 13) {
+	        e.preventDefault();
+	        loginFn();
+	    }
+	});
+});  
+function goEventEnter(evt) {
+	var keyCode = evt.which?evt.which:event.keyCode;
+	if(keyCode == 13){
+		loginFn();
+	}
+}
+function goEventEnter(evt) {
+	var keyCode = evt.which?evt.which:event.keyCode;
+	if(keyCode == 13){
+		loginFn();
+	}
+}
+function loginFn() {
+	var id  = $('#login_id').val().trim();
+	var pwd = $('#login_pwd').val().trim();  
+ 	if ( id == null || id == "" ) {
+        errorMsg('아이디를 입력하세요.', error_msg);
+		$('#login_id').focus();
+		return;
+	}
+	if ( pwd == null || pwd == "" ) {
+		errorMsg('비밀번호를 입력하세요.', error_msg);
+		$('#login_pwd').focus();
+		return;
+	}
+	var url = "<%=SystemConstant.LOGIN_URI%>";
+	var obj = new Object();
+	obj.login_id = id;
+	obj.login_pwd = pwd; 
+	var jsonData = JSON.stringify(obj);	
+	ajaxCall(url, jsonData, goLoginChkCallBack, errorCallBackMsgView, '로그인');	//alert  
+}
+/*
+ * 로그인 성공 콜백(로그인 성공시, 메인 화면으로 이동 처리)
+ */
+function goLoginChkCallBack(obj) {
+	errorMsg('', error_msg);
+	// 로그인 성공인 경우에 메인화면으로 포워딩 처리
+	if ( obj.result == common._trans_success_code ) {
+		var returnUrl = "<%=(String)request.getHeader("REFERER")%>";
+		
+		if(returnUrl == null || returnUrl =='' || returnUrl =="null"){
+			returnUrl ='/';
+		}
+		console.log(returnUrl);
+		location.href = returnUrl;
+	}
+}  
+//div msg
+function errorMsg(msg, id) { 
+	const element = id;
+	element.innerHTML = "<div class='error_msg'>"+msg+"</div>"; 
+} 
+</script> 
 </body>
 </html>

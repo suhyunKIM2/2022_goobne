@@ -3977,7 +3977,7 @@ section {
 }
 
 .brand .l-comm dd {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #000;
   line-height: 1.6;
@@ -5731,7 +5731,6 @@ section {
 .notice__detail-tit dd:last-of-type::after {
   display: none;
 }
-
 .notice__detail-desc {
   border-top: 1px solid #BEBEBE;
   border-bottom: 1px solid #6B6B6B;

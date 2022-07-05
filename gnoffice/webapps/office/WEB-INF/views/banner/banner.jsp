@@ -675,7 +675,7 @@ function regBanner(){
 				bnnrObj.pc_img_pth = file_nm;
 				bnnrObj.pc_tmp_pth = tmp_file_pth;
 			} 
-			if( $('#bnnr_type').val() == '10' || $('#bnnr_type').val() == '50' ) {  //메인배너, 굽뉴스는 모바일 이미지 추가 필요
+			//if( $('#bnnr_type').val() == '10' || $('#bnnr_type').val() == '50' ) {  //메인배너, 굽뉴스는 모바일 이미지 추가 필요
 				if( i == 2 ) { 			
 					if( file_nm == "" && bnnr_id == "" ) {
 						alert("mobile배너 이미지를 첨부해주세요.");
@@ -684,7 +684,7 @@ function regBanner(){
 					bnnrObj.mobile_img_pth = file_nm;
 					bnnrObj.mobile_tmp_pth = tmp_file_pth;
 				}   
-			}	
+			//}	
 			if( $('#bnnr_type').val() == '10' ) {
 				//배너 bgimg PC
 				if( i == 1 ) {

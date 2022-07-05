@@ -146,7 +146,7 @@
                         	brdHtml += '</div>';
 						}
 					}else{
-						brdHtml += '<dd>조회된 이벤트가 존재하지 않습니다.</dd>'
+						brdHtml += '<dd class="data_null">조회된 이벤트가 존재하지 않습니다.</dd>'
 					}
 					$('.event__list').empty();
 					console.log(brdHtml);

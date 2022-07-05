@@ -59,8 +59,9 @@
                             <dd class="l-num">${view.i_time }</dd>
                         </dl>
                         <c:forEach items="${fileList }" var="fileList" varStatus="status">
-	                        <ul>
-	                        	<li><a href="/rest/file/download?file_nm=${fileList.file_name }&org_file_nm=${fileList.r_file_name}">${fileList.r_file_name}</a></li>
+	                        <ul class="file_list_line">
+								<li><b>첨부파일 리스트</b></li>
+	                        	<li><a href="/rest/file/download?file_nm=${fileList.file_name }&org_file_nm=${fileList.r_file_name}">${fileList.r_file_name}<img src="/resources/assets/images/icon/save.svg" style="width:15px;margin-left:0.5rem;"></a></li>
 				            </ul>
 			            </c:forEach>
                         <div class="notice__detail-desc" id="contentTxt">
