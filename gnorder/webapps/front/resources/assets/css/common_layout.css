@@ -483,10 +483,9 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden !important;
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.2rem;
   background-color: #fff;
 }
-
 .l-menu-item .img .left-badge-area {
   position: absolute;
   top: 1rem;
@@ -826,7 +825,7 @@
 }
 
 .l-badge-wrap {
-  margin-bottom: 9px;
+  /*margin-bottom: 9px;*/
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -835,6 +834,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height:22px;
 }
 
 .l-badge-wrap .l-num {

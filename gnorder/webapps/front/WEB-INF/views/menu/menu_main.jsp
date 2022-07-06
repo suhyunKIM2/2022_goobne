@@ -10,6 +10,119 @@
 <html lang="kor" dir="ltr">
 <head>
    <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
+   <script>
+    
+        $(document).ready(function () {
+            new WOW().init();
+            // 배너 슬라이드 
+            let bannerSwiper = new Swiper(".bannerSwiper", {
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+
+            // 실시간 메뉴 롤링 
+            let rollswiper = new Swiper(".rollSwiper", {
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+                direction: "vertical"
+            });
+
+            // 지금 인기있는 메뉴 btn
+            $('.menu__popular .l-btn-list button').click(function () {
+                $(this).addClass('is-active').siblings().removeClass('is-active');
+            });
+
+            let popularSwiper = new Swiper(".popularSwiper", {
+                // slidesPerView: 3,
+                // spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                    },
+                    500: {
+                        slidesPerView: 2,
+                        spaceBetween: 30,
+                    },
+                    761: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                },
+            });
+
+            // 배송지 설정 버튼 구현 
+            $('.setting-btn').click(function () {
+                $('.modal-cnt-wrapper').removeClass('l-hidden');
+                $('.dimmed-bg').removeClass('l-hidden');
+            });
+
+           
+			
+        });
+        
+        function menu_list(class_id){
+        	$('#class_id').val(class_id);
+    	    document.menuListForm.action='/menu/menu_list' 
+    		document.menuListForm.submit();
+        }
+        
+        function chgNowPop(class_id){
+        	var obj = new Object();  
+        	obj.class_id = class_id;
+        	var url = "/menu/chgNowPop";
+        	var data = JSON.stringify(obj); 
+        	ajaxCall(url, data, nowPopCallBack, errorCallBack, '지금인기있는메뉴검색');
+        }
+        function nowPopCallBack(obj){
+        	var htmlTxt ="";
+        	var popList = obj.body.pop_list.menu_list;
+    		if(popList.length>0){
+    			for (var i in popList) {
+    				htmlTxt +='<div class="swiper-slide">';
+    	        	htmlTxt +='<div class="l-menu-item">';
+    	        	htmlTxt +='<div class="img">';
+    	        	var imgUrl = "<%=staticUrl %>"+popList[i].img_name;
+    	        	htmlTxt +='<img src="'+imgUrl+'" alt="인기메뉴">';
+    	        	htmlTxt +='</div>';
+    	        	htmlTxt +='<dl class="desc">';
+    	        	htmlTxt +='<dt class="title">'+popList[i].item_name+'</dt>';
+    	        	htmlTxt +='<dd class="dis-price"><span class="l-num">'+numberFormatComma(popList[i].price1)+'</span>원</dd>';
+    	        	htmlTxt +='</dl></div></div>';
+    			}
+    		}
+    		$('#nowpopDiv').empty();
+    		$('#nowpopDiv').html(htmlTxt);
+        	
+        }
+        
+        
+        function selStoreCallBack(obj) {  
+        	if ( obj.result == common._trans_success_code ) { 
+        		var br_id = obj.body.br_id; 
+        		console.log("매장선택 session 생성완료,선택매장 =>"+br_id);
+        		
+        		$('#promo_bg').addClass('l-hidden');
+        		$('#promo').addClass('l-hidden'); 
+        		menu_list('');
+        	}
+        } 
+        function menu_view(item_id){
+        	window.location.href = "/menu/menu_view?class_id=&item_id="+item_id;
+        }
+    </script>
 </head>
 
 <body>
@@ -209,118 +322,6 @@
     </div>
     <!-- end of :: wrap -->
      
-    <script>
     
-        $(document).ready(function () {
-            new WOW().init();
-            // 배너 슬라이드 
-            let bannerSwiper = new Swiper(".bannerSwiper", {
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                },
-            });
-
-            // 실시간 메뉴 롤링 
-            let rollswiper = new Swiper(".rollSwiper", {
-                loop: true,
-                autoplay: {
-                    delay: 1500,
-                    disableOnInteraction: false,
-                },
-                direction: "vertical"
-            });
-
-            // 지금 인기있는 메뉴 btn
-            $('.menu__popular .l-btn-list button').click(function () {
-                $(this).addClass('is-active').siblings().removeClass('is-active');
-            });
-
-            let popularSwiper = new Swiper(".popularSwiper", {
-                // slidesPerView: 3,
-                // spaceBetween: 30,
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                breakpoints: {
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 30,
-                    },
-                    500: {
-                        slidesPerView: 2,
-                        spaceBetween: 30,
-                    },
-                    761: {
-                        slidesPerView: 3,
-                        spaceBetween: 30,
-                    },
-                },
-            });
-
-            // 배송지 설정 버튼 구현 
-            $('.setting-btn').click(function () {
-                $('.modal-cnt-wrapper').removeClass('l-hidden');
-                $('.dimmed-bg').removeClass('l-hidden');
-            });
-
-           
-			
-        });
-        
-        function menu_list(class_id){
-        	$('#class_id').val(class_id);
-    	    document.menuListForm.action='/menu/menu_list' 
-    		document.menuListForm.submit();
-        }
-        
-        function chgNowPop(class_id){
-        	var obj = new Object();  
-        	obj.class_id = class_id;
-        	var url = "/menu/chgNowPop";
-        	var data = JSON.stringify(obj); 
-        	ajaxCall(url, data, nowPopCallBack, errorCallBack, '지금인기있는메뉴검색');
-        }
-        function nowPopCallBack(obj){
-        	var htmlTxt ="";
-        	var popList = obj.body.pop_list.menu_list;
-    		if(popList.length>0){
-    			for (var i in popList) {
-    				htmlTxt +='<div class="swiper-slide">';
-    	        	htmlTxt +='<div class="l-menu-item">';
-    	        	htmlTxt +='<div class="img">';
-    	        	var imgUrl = "<%=staticUrl %>"+popList[i].img_name;
-    	        	htmlTxt +='<img src="'+imgUrl+'" alt="인기메뉴">';
-    	        	htmlTxt +='</div>';
-    	        	htmlTxt +='<dl class="desc">';
-    	        	htmlTxt +='<dt class="title">'+popList[i].item_name+'</dt>';
-    	        	htmlTxt +='<dd class="dis-price"><span class="l-num">'+numberFormatComma(popList[i].price1)+'</span>원</dd>';
-    	        	htmlTxt +='</dl></div></div>';
-    			}
-    		}
-    		$('#nowpopDiv').empty();
-    		$('#nowpopDiv').html(htmlTxt);
-        	
-        }
-        
-        
-        function selStoreCallBack(obj) {  
-        	if ( obj.result == common._trans_success_code ) { 
-        		var br_id = obj.body.br_id; 
-        		console.log("매장선택 session 생성완료,선택매장 =>"+br_id);
-        		
-        		$('#promo_bg').addClass('l-hidden');
-        		$('#promo').addClass('l-hidden'); 
-        		menu_list('');
-        	}
-        } 
-        function menu_view(item_id){
-        	window.location.href = "/menu/menu_view?class_id=&item_id="+item_id;
-        }
-    </script>
 </body>
 </html>
