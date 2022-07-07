@@ -33,14 +33,14 @@
             <span class="bar"></span>
             <a href="<%=SystemConstant.JOIN%>" class="link">Join</a>
           </div>
-        <% } %> 
+        <% } %>
         <div class="aside__scroll">
             <ul class="aside__lnb-list">
                 <li><a href="<%=SystemConstant.ORDER%>">주문하기</a></li>
                 <li class="list-arrow">
                     <a href="#none">메뉴소개</a>
 					<ul class="dept <% if( request.getServletPath().contains("/WEB-INF/views/menu/menu_main.jsp") || request.getServletPath().contains("/WEB-INF/views/menu/menu_list.jsp") ) { %>is-show<% } %>">
-                        <li><a href="/menu/menu_main"<% if( class_id.equals("") ) { %> class="active"<%}%>>전체</a></li>
+                        <li><a href="/menu/menu_main"<% if( request.getServletPath().contains("/WEB-INF/views/menu/menu_main.jsp") && class_id.equals("") ) { %> class="active"<%}%>>전체</a></li>
                         <li><a href="/menu/menu_list?class_id=10"<% if( class_id.equals("10") ) { %> class="active"<%}%>>치킨</a></li>
                         <li><a href="/menu/menu_list?class_id=11"<% if( class_id.equals("11") ) { %> class="active"<%}%>>피자</a></li>
                         <li><a href="/menu/menu_list?class_id=12"<% if( class_id.equals("12") ) { %> class="active"<%}%>>디저트</a></li>
@@ -75,7 +75,7 @@
                         <li><a href="/brd/const/write"<% if( request.getServletPath().contains("/WEB-INF/views/const/write.jsp") ) { %> class="active"<%}%>>온라인 창업상담</a></li>
                     </ul>
                 </li>
-                <li class="list-arrow"><%=request.getServletPath()%>//
+                <li class="list-arrow">
                     <a href="#none">브랜드</a>
                     <ul class="dept <% if( request.getServletPath().contains("/WEB-INF/views/content/brand.jsp") ) { %>is-show<% } %>">
                         <li><a href="/brand"<% if( request.getServletPath().contains("/WEB-INF/views/content/brand.jsp") ) { %> class="active"<%}%>>브랜드스토리</a></li> 

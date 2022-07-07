@@ -110,6 +110,7 @@ section {
     margin: 0 3rem;
   }
   .event__tab{display: inline-block;width:100%;}
+  
 }
 
 @media (max-width: 900px) {
@@ -5731,6 +5732,7 @@ section {
 .notice__detail-tit dd:last-of-type::after {
   display: none;
 }
+
 .notice__detail-desc {
   border-top: 1px solid #BEBEBE;
   border-bottom: 1px solid #6B6B6B;

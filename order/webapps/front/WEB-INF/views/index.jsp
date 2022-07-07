@@ -18,7 +18,9 @@
 <html lang="kor" dir="ltr"> 
 <head>
     <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
-    
+    <script>
+	    new WOW().init();
+	</script>  
 	<%-- 메인배너 배경처리 --%>
 	<style>       
       <c:forEach var="banner" items="${banner}" varStatus="status"> 
@@ -36,14 +38,17 @@
 	</style>
 	<%-- 메인배너 배경처리 --%>
 <meta charset="utf-8">
-
-
+<script>
+ $( window ).ready( function() {
+$('.no-js').addClass('visible');
+});
+</script>
 <style>
 .main-box{height:calc(100% - 85px);}/*2차 오픈시 빼기*/
 </style>
 </head>
 
-<body>
+<body class="no-js">
     <!-- start of :: wrap -->
     <div id="wrap">
         <!-- start of :: header -->
@@ -60,7 +65,7 @@
         <div id="content">
             <div class="inner">
                 <div class="main-slick-wrap">
-                    <div class="main-vi-wrap no-js">
+                    <div class="main-vi-wrap">
                     
                         <%-- 메인배너 롤링 1번 영역 s--%>
                         <div class="main-box main-box_hight">
@@ -309,11 +314,5 @@
         
     </div>
     <!-- end of :: wrap --> 
-	<script>
- $( window ).ready( function() {
-	$('.no-js').addClass('visible');
-	new WOW().init();
-});
-</script>
 </body> 
 </html>

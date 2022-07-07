@@ -29,25 +29,23 @@
 <link rel="stylesheet" href="/resources/assets/css/login_out.css" type="text/css" />
  
 <script src="/resources/assets/js/common/jquery-3.5.1.min.js"></script>
+<script src="/resources/assets/js/common/swiper-bundle.min.js"></script>
 <script src="/resources/assets/js/common/jquery.js"></script>
 <script src="/resources/assets/js/common/jquery-ui.js"></script>
-<script src="/resources/assets/js/common/swiper-bundle.min.js"></script>
 <script src="/resources/assets/js/common/slick.js"></script>
 <script src="/resources/assets/js/common/wow.min.js"></script>
 <script src="/resources/assets/js/main/main.js"></script>
 <script src="/resources/assets/js/main/main_banner_header.js"></script>
 
 <script src="/resources/assets/js/common/jquery.nice-select.js"></script>
- 
+ <jsp:include page="/WEB-INF/views/include/common_script.jsp"></jsp:include>
 <!--  dev 커스텀 -->
 <link rel="stylesheet" href="/resources/css/style.css" type="text/css" />
-
+<script src="/resources/js/common.js"></script>
 <script src="/resources/js/file_common.js"></script>
 <script src="/resources/assets/js/common/file_upload.js"></script>
 <script src="/resources/js/jquery.form.js"></script>
 
-<script src="/resources/js/common.js"></script>
-<jsp:include page="/WEB-INF/views/include/common_script.jsp"></jsp:include>
 <!-- 약관 영역  -->
 <article class="modal-cnt-wrapper terms-moadl l-hidden">
    <jsp:include page="/WEB-INF/views/include/terms_pop.jsp"></jsp:include>

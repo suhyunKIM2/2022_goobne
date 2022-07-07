@@ -13,18 +13,6 @@
 <meta property="og:type"  content="website" />
 <meta property="og:image" content="https://www.goobne.co.kr/2021renew_img/red_bg_logo.png">
 <link rel="stylesheet" type="text/css" href="/onepage_fullscreen/full-page-scroll.css">
-<script type="application/ld+json">
-{
- "@context": "http://schema.org",
- "name": "굽네치킨",
- "url": "https://www.goobne.co.kr",
- "sameAs": [
-   "https://www.instagram.com/the___goobster/",
-   "https://www.youtube.com/channel/UCwx2AFi2Zg8_SYzjaJ7Hfmg",
-   "https://www.facebook.com/goobne"
- ]
-}
-</script>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -71,7 +59,7 @@ src="https://www.facebook.com/tr?id=3005723823073377&ev=PageView&noscript=1"
 .btn_container li{display:inline-block;}
 .btn_container li img{width:100%;}
 .mobile_img{display:none;}
-body, html,.scroll-container section{min-height: 800px;overflow-y:hidden;overflow-x: hidden;}
+body, html,.scroll-container section{min-height:100vh;overflow-y:hidden;overflow-x: hidden;}
 .mobile_img_01{display: none;}
 
 /*S: T-Day 말풍선 추가*/
@@ -168,6 +156,7 @@ border-top: 10px solid #3617ce;
 .mobile_img img{width: 65%!important;}
 .btn_container{bottom:10%;}
 }
+
 @media only screen and (min-device-width: 512px) and (max-device-height: 717px){
 .container .container_position .mobile_img{top:41%!important;}
 .container .container_position .mobile_img img{width: 75%!important;}
@@ -179,11 +168,11 @@ border-top: 10px solid #3617ce;
 .container .btn_container{bottom:39%!important;}
 }	
 @media only screen and (min-device-width: 1024px) and (max-device-height: 600px){
-.pc_img {top:35%!important;}
-.pc_img img {width:55%!important;}
+.pc_img {top:53%!important;}
+.pc_img img {width:71%!important;}
 .container .container_position .mobile_img{top:2%!important;}
 .container_position .mobile_img img{width: 47.5%!important;}
-.container .btn_container{bottom:29%!important;width:95%;}
+.container .btn_container{bottom:0%!important;width:73%;}
 }
 @media only screen and (max-width:700px){
 .section1 {background:url(/resources/assets/images/main/bg_mo.jpg);position:relative; background-size: cover; background-repeat: no-repeat; cursor: pointer;position:relative;background-position: right;}
@@ -201,11 +190,7 @@ border-top: 10px solid #3617ce;
 .container .container_position .mobile_img img{width: 75%;}
 .btn_container{bottom:21%!important;width:115%;}
 }
-@media only screen and (min-device-width: 720px) and (max-device-height: 720px){
-.container .container_position .mobile_img{top:33%!important;}
-.container .container_position .mobile_img img{width: 75%;}
-.container .btn_container{bottom:35%!important;width:115%;}
-}
+
 @media only screen and (max-width:500px){
 .container_position .bi_goobne {width:19%;}
 .mobile_img{top:21.5%;}
@@ -215,46 +200,39 @@ border-top: 10px solid #3617ce;
 @media only screen and (max-width:414px){
 .mobile_img{top:43%!important;}
 .mobile_img img{width: 93%!important;}
-.btn_container{bottom:20%!important;}
+.container_position .mobile_img{margin-top:0;}
 }
 @media only screen and (max-width:412px){
-.mobile_img{top:47%!important;}
-.btn_container{bottom:20%!important;}
+.btn_container {
+    bottom: 24%;}
 }
-@media only screen and (max-width:411px){
-.mobile_img{top:45%!important;}
-.btn_container{bottom:19%!important;}
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px){
+.btn_container {
+    bottom: 14%;
 }
-@media only screen and (max-width:375px){
-.mobile_img{top:39%!important;}
-.btn_container{bottom:27%!important;}
 }
 @media only screen and (max-width:360px){
-.mobile_img{top:39%!important;}
-.btn_container{bottom:29%!important;}
+.btn_container {
+    bottom: 19%;}
 }
 @media only screen and (max-width:320px){
-.mobile_img{top:33%!important;}
-.btn_container{bottom:37%!important;}
+.btn_container {
+    bottom: 12%;}
 }
-@media only screen and (max-width: 280px){
-.container_position .mobile_img{top:37%!important;}
-.btn_container{bottom:37%!important;width: 120%;}  
+@media only screen and (max-width:280px){
+.btn_container {
+    bottom: 24%;}
 }
-}
+
 </style>
 </head>
 <script>
 function lnk(){
-	var link = 'https://www.goobne.co.kr/index_1.jsp';
-//    window.location.href = link;        
- //   window.location.replace(link);     
+	var link = '/index'; 
     window.open(link);  
 }
 function lnk1(){
-    var link = 'https://order.goobne.co.kr:8481/login/login.aspx';
- //   window.location.href = link;        
- //   window.location.replace(link);     
+    var link = 'https://order.goobne.co.kr:8481/login/login.aspx'; 
     window.open(link);  
 }
 
@@ -347,31 +325,31 @@ timer = setInterval(showRemaining, 100);
 </div>
    
 <!---E: 메인팝업--->
-	 <div id="main" class="scroll-container">
-         <a href="https://www.goobne.co.kr/index_1.jsp">
-		<section class="section1" id="section1" style="cursor: pointer;">
-			<div class="container">
-				<ul class="container_position">
-					<li class="pc_img"><img src="/resources/assets/images/main/img_pc.png"></li>
-                    <li class="mobile_img"><img src="/resources/assets/images/main/img_mo_2.png"></li>
-					<li class="bi_goobne"><img src="/resources/assets/images/main/bi_goobne.png"></li>
-                </ul>
-				<ul class="btn_container">
-					<li><a href="http://www.xn--9i1b89owjy5lfa431as3k.com/" target="_blank"><img src="/resources/assets/images/main/btn_menu.jpg"></a></li>
-					<li><a href="https://order.goobne.co.kr:8481/login/login.aspx" target="_blank"><img src="/resources/assets/images/main/btn_order.jpg"></a></li>
-					<li style="position:relative;">
-					<span id="newcountdown"></span>
-					<a href="https://www.goobne.co.kr/index_1.jsp"><img src="/resources/assets/images/main/btn_homepage.jpg"></a>
-					</li>
-				</ul>
-			</div>
-		</section>
-        </a>
-	</div>
+ <div id="main" class="scroll-container">
+	 <a href="/index">
+	 <section class="section1" id="section1" style="cursor: pointer;">
+		<div class="container">
+			<ul class="container_position">
+				<li class="pc_img"><img src="/resources/assets/images/main/220527_micro_ovbss/img_pc.png"></li>
+				<li class="mobile_img"><img src="/resources/assets/images/main/220527_micro_ovbss/img_mo_2.png"></li>
+				<li class="bi_goobne"><img src="/resources/assets/images/main/220527_micro_ovbss/bi_goobne.png"></li>
+			</ul>
+			<ul class="btn_container">
+				<li><a href="http://www.xn--9i1b89owjy5lfa431as3k.com/" target="_blank"><img src="/resources/assets/images/main/220527_micro_ovbss/btn_menu.jpg"></a></li>
+				<li><a href="https://order.goobne.co.kr:8481/login/login.aspx" target="_blank"><img src="/resources/assets/images/main/220429_micro/btn_order.jpg"></a></li>
+				<li style="position:relative;">
+				<span id="newcountdown"></span>
+				<a href="/index"><img src="/resources/assets/images/main/220429_micro/btn_homepage.jpg"></a>
+				</li>
+			</ul>
+		</div>
+	</section>
+	</a>
+</div>
 
 
 <link href='/resources/assets/css/main/popup_main.css' rel='stylesheet' type='text/css'>
-    <script src="/resources/assets/css/main/popup_main.js"></script>
+<script src="/resources/assets/css/main/popup_main.js"></script>
 <style>
 #window{    max-width: 400px;
 left: 50%;
@@ -392,17 +370,12 @@ border-radius: 20px;
 </style>
 
 <script src="/onepage_fullscreen/full-page-scroll.js"></script>
-	<script type="text/javascript">
-		new fullScroll({
-			displayDots: false,
-			dotsPosition: 'left',
-			animateTime: 0.7,
-			animateFunction: 'ease'
-		});
-	</script>
-    
-
+<script type="text/javascript">
+	new fullScroll({
+		displayDots: false,
+		dotsPosition: 'left',
+		animateTime: 0.7,
+		animateFunction: 'ease'
+	});
+</script>
 </body>
-
-
-    
