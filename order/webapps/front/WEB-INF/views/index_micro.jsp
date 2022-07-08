@@ -1,5 +1,4 @@
-﻿<%@ page contentType="text/html; charset=utf-8" %>
-<head>
+﻿<%@ page contentType="text/html; charset=utf-8" %><head>
 <title>굽네치킨</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -33,6 +32,7 @@ src="https://www.facebook.com/tr?id=3005723823073377&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 
 <!-- 네이버 봇 정보 -->
+
 <style>
 * {padding:0;margin:0;list-style: none;text-decoration: none;}<br>
 @font-face {
@@ -193,7 +193,10 @@ border-top: 10px solid #3617ce;
 @media only screen and (min-device-width: 720px) and (max-device-height: 720px){
 .container .container_position .mobile_img{top:33%!important;}
 .container .container_position .mobile_img img{width: 75%;}
-.container .btn_container{bottom:35%!important;width:115%;}
+.container .btn_container{bottom:0%!important;}
+.pc_img img {
+    width: 72%!important;
+}
 }
 @media only screen and (max-width:500px){
 .container_position .bi_goobne {width:19%;}
