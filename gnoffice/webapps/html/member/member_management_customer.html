@@ -1,0 +1,252 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+
+ </head>
+<body id="page-top" style="min-width:1500px;">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">회원정보 주문이력 조회</h1>
+                    </div>
+                    <div class="col-xl-4 col-lg-5" style="margin-bottom:2%;">
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_info.html">기본정보</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_coupon.html">쿠폰</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_order.html">주문</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_bookmark.html">즐겨찾기</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_address.html">배송지</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link active" href="/html/member/member_management_customer.html">고객소리</a>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                     <div class="tab-content">
+                      <div class="tab-pane fade show active">
+                     <table class="table table-bordered table_main board_table_list" id="dataTable" width="100%" cellspacing="0">
+                            <colgroup>
+                                <col width="10%">
+                                <col width="60%">
+                                <col width="15%">
+                                <col width="10%">
+                                <col width="5%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="bg-gray-200">답변상태</th>
+                                    <th class="bg-gray-200">제목</th>
+                                    <th class="bg-gray-200">작성자</th>
+                                    <th class="bg-gray-200">작성일</th>
+                                    <th class="bg-gray-200">조회수</th>
+                                 </tr>
+                            </thead>
+                            <!--- 등급별 class "member_card + 1.슈퍼관리자 : member_01 / 2.운영관리자 : member_02 / 3.매장관리자 : member_03 / 4.임직원 : member_04 / 5.일반회원 : member_05" ----> 
+                            <tbody>
+                                <tr>
+                                    <td>답변완료</td>
+                                    <td class="text_left">굽네치킨 광고 대상 수상</td>
+                                    <td class="hasDatepicker"><span class="padding_1rem member_card member_01">슈퍼</span> 홍길동</td>
+                                    <td class="small_font">2022.00.00</td>
+                                    <td class="small_font">109</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: 0;"></td>
+                                    <td colspan="4" align="left" style="border-left: 0;">
+                                        <ul style="margin-bottom:0;">
+                                            <li>
+                                                <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
+                                                <span class="badge btn btn-secondary" style="cursor:pointer;color:#fff;">
+                                                <a onclick="#">답변</a>
+                                                </span> 
+                                                굽네치킨 광고 대상 수상
+                                            </li>
+                                            <li class="small_font" style="text-align: right;"><span class="badge btn btn-secondary" style="cursor:pointer;color:#fff;">관리자</span>  2022.00.00</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>답변완료</td>
+                                    <td class="text_left">굽네치킨 광고 대상 수상</td>
+                                    <td class="hasDatepicker"><span class="padding_1rem member_card member_01">슈퍼</span> 홍길동</td>
+                                    <td class="small_font">2022.00.00</td>
+                                    <td class="small_font">109</td>
+                                </tr>
+                                <tr>
+                                    <td style="border-right: 0;"></td>
+                                    <td colspan="4" align="left" style="border-left: 0;">
+                                        <ul style="margin-bottom:0;">
+                                            <li>
+                                                <i class="mt-3 fa fa-reply fa fa-rotate-180" aria-hidden="true"></i>
+                                                <span class="badge btn btn-secondary" style="cursor:pointer;color:#fff;">
+                                                <a onclick="#">답변</a>
+                                                </span> 
+                                                굽네치킨 광고 대상 수상
+                                            </li>
+                                            <li class="small_font" style="text-align: right;"><span class="badge btn btn-secondary" style="cursor:pointer;color:#fff;">관리자</span>  2022.00.00</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <!-- /.container-fluid -->
+    </div>
+            <!-- End of Main Content -->
+    <div class="container_page">
+                <div class="row row_page">
+                    <div class="col">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+    <!-- Footer 공통 footer-->
+    <footer data-include-path="/html/include/footer.html"></footer>
+
+    <!-- End of Footer -->
+
+</div>
+<!-- End of Content Wrapper -->
+
+</div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    
+ <!-- modal_popup -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">탈퇴신청</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table width="100%">
+                        <tr>
+                            <th>탈퇴사유</th>
+                            <td>
+                               <textarea id="story" name="story" style="width:100%;min-height:200px;padding:0.5rem;"></textarea> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-danger">탈퇴신청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
+</body>
+
+</html>

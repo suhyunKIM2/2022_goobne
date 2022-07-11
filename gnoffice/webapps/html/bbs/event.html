@@ -1,0 +1,378 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+
+ </head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">이벤트 게시판</h1>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                    <ul class="nav nav-tabs">
+                      <li class="nav-item">
+                        <a class="nav-link" href="/html/report/event_ing.html">진행중인 이벤트</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active"  href="/html/report/event_end.html">종료된 이벤트</a>
+                      </li>
+                    </ul>
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active">
+                      <ul class="list_inline" style="text-align: right;">
+                            <li style="float:left;">
+                            <a href="#" class="btn btn-info btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                                          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                          <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                                        </svg>
+                                    </span>
+                                    <span class="text" onClick="location.href='/html/bbs/event_write.html'">등록</span>
+                                </a>
+                            </li>
+                            <li>
+                                <select class="selectpicker">
+                                    <option>제목</option>
+                                    <option>작성자</option>
+                                </select>
+                            </li>
+                            <li><input type="text"></li>
+                            <li>
+                                <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                    <span class="text">검색</span>
+                                </a>
+                            </li>
+                          </ul>
+                          <table class="table table-bordered table_main board_table_list" id="dataTable" width="100%" cellspacing="0">
+                            <colgroup>
+                                <col width="10%">
+                                <col width="60%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th class="bg-gray-200">번호</th>
+                                    <th class="bg-gray-200">제목</th>
+                                    <th class="bg-gray-200">작성자</th>
+                                    <th class="bg-gray-200">작성일</th>
+                                    <th class="bg-gray-200">조회수</th>
+                                 </tr>
+                            </thead>
+                            <!--- 등급별 class "member_card + 1.슈퍼관리자 : member_01 / 2.운영관리자 : member_02 / 3.매장관리자 : member_03 / 4.임직원 : member_04 / 5.일반회원 : member_05" ----> 
+                            <tbody>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td>홍길동</td>
+                                    <td>2022.00.00</td>
+                                    <td>109</td>
+                                </tr>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td>홍길동</td>
+                                    <td>2022.00.00</td>
+                                    <td>109</td>
+                                </tr>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td>홍길동</td>
+                                    <td>2022.00.00</td>
+                                    <td>109</td>
+                                </tr>
+                                <tr onClick="location.href='/html/bbs/event_view.html'">
+                                    <td>N</td>
+                                    <td>굽네치킨 광고 대상 수상 </td>
+                                    <td>홍길동</td>
+                                    <td>2022.00.00</td>
+                                    <td>109</td>
+                                </tr>
+                            </tbody>
+                        </table>  
+                      </div>
+                     
+                     </div>
+                 </div>
+                      
+                    
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+            
+            <div class="container_page">
+                <div class="row row_page">
+                    <div class="col">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+ <!-- modal_popup 연락처 추가하기-->
+    <div class="modal fade" id="exampleModalLabel_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">주소록 검색</h5>
+                    <button type="button" class="close" data-dismiss="modal_2" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                     <ul class="list_inline" style="text-align: center;">
+                        <li>
+                            <select class="selectpicker">
+                                <option>전체</option>
+                                <option>등급</option>
+                                <option>아이디</option>
+                                <option>이름</option>
+                                <option>휴대전화</option>
+                                <option>주문수</option>
+                                <option>생년월일</option>
+                                <option>e-쿠폰</option>
+                            </select>
+                        </li>
+                        <li><input type="text"></li>
+                        <li>
+                            <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                <span class="text">검색</span>
+                            </a>
+                        </li>
+                      </ul>
+                      <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="chk" id="All"><label for="All"></label></th>
+                                    <th>성명</th>
+                                    <th>아이디</th>
+                                    <th>휴대폰</th>
+                                    <th>등급</th>
+                                 </tr>
+                            </thead>
+                            <!--- 등급별 class "member_card + 1.슈퍼관리자 : member_01 / 2.운영관리자 : member_02 / 3.매장관리자 : member_03 / 4.임직원 : member_04 / 5.일반회원 : member_05" ----> 
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></td>
+                                    <td>홍길동동</td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>010-0000-0000</td>
+                                    <td>
+                                       <div class="member_01" style="border:0;">
+                                            슈퍼
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></td>
+                                    <td>홍길동동</td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>010-0000-0000</td>
+                                    <td>
+                                       <div class="member_02" style="border:0;">
+                                            운영
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></td>
+                                    <td>홍길동동</td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>010-0000-0000</td>
+                                    <td>
+                                       <div class="member_03" style="border:0;">
+                                            매장
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></td>
+                                    <td>홍길동동</td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>010-0000-0000</td>
+                                    <td>
+                                       <div class="member_04" style="border:0;">
+                                            직원
+                                        </div>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></td>
+                                    <td>홍길동동</td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>010-0000-0000</td>
+                                    <td>
+                                       <div class="member_05" style="border:0;">
+                                            일반
+                                        </div>
+                                    </td>
+                                </tr>   
+
+                            </tbody>
+                        </table>
+                        <div class="container_page">
+                        <div class="row row_page">
+                            <div class="col">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-danger">추가하기</button>
+                </div>
+            </div>
+        </div>
+    </div>    
+    
+    
+ <!-- modal_popup 테스트발송 번호-->
+    <div class="modal fade" id="exampleModalLabel_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_2" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">테스트 발송 번호 입력</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list_inline list_inline_calc">
+                        <li><input type="number" name="phone_n1" maxlength="3" oninput="maxLengthCheck(this);"></li>
+                        <li><input type="number" name="phone_n2" maxlength="4" oninput="maxLengthCheck(this);"></li>
+                        <li><input type="number" name="phone_n3" maxlength="4" oninput="maxLengthCheck(this);"></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-danger">보내기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+   
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
+</body>
+
+</html>

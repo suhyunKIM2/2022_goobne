@@ -1,0 +1,264 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+
+ </head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">회원정보 수정</h1>
+                    </div>
+                    <div class="col-xl-4 col-lg-5" style="margin-bottom:2%;">
+                        <ul class="nav nav-tabs">
+                          <li class="nav-item">
+                            <a class="nav-link active" href="/html/member/member_management_info.html">기본정보</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_coupon.html">쿠폰</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_order.html">주문</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_bookmark.html">즐겨찾기</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_address.html">배송지</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/html/member/member_management_customer.html">고객소리</a>
+                          </li>
+                        </ul>
+                    </div>
+                     <table class="table table-bordered table_S_box table_S_box_95 table_S_box_95_td_left" id="dataTable" width="100%" cellspacing="0">
+                            
+                            <tr>
+                                <th class="bg-gray-200">회원구분</th>
+                                <td colspan="3">
+                                    <ul class="ch_ul">
+                                        <li><input type="checkbox" name='only_ch' id="check1"><label for="check1">일반회원</label></li>
+                                        <li><input type="checkbox" name='only_ch' id="check2"><label for="check2">임직원</label></li>
+                                        <li><input type="checkbox" name='only_ch' id="check3"><label for="check3">슈퍼</label></li>
+                                        <li><input type="checkbox" name='only_ch' id="check4"><label for="check4">운영</label></li>
+                                        <li style="display: block;">
+                                            <div class="left_line"><input type="checkbox" name='only_ch' id="check5"  checked ><label for="check5">매장</label></div>
+                                            <div class="left_line">
+                                                <select class="selectpicker">
+                                                    <option>매장지점선택</option>
+                                                    <option selected>염창점</option>
+                                                    <option>발산점</option>
+                                                </select>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <th class="bg-gray-200">아이디</th>
+                                <td>djshdakhdfjhhggj</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">고객이름</th>
+                                <td colspan="3">홍길동</td>
+                                <th class="bg-gray-200">성별</th>
+                                <td>남</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">이메일</th>
+                                <td colspan="3">skdalkjsdlkajd2@naver.com</td>
+                                <th class="bg-gray-200">핸드폰번호</th>
+                                <td>010-0000-0000</td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">가입일</th>
+                                <td> 2022-00-00 </td>
+                                <th class="bg-gray-200">주문수</th>
+                                <td>00건</td>
+                                <th class="bg-gray-200">최근방문일</th>
+                                <td> 2022-00-00 </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">생년월일</th>
+                                <td> 0000-00-00 </td>
+                                <th class="bg-gray-200">등급</th>
+                                <td> 구울레옹 </td>
+                                <th class="bg-gray-200">부가서비스</th>
+                                <td> 
+                                    <input type="checkbox" id="check1" checked><label for="check1">SMS수신</label>
+                                    <input type="checkbox" id="check2" checked><label for="check2">APP푸쉬 동의</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">주소</th>
+                                <td colspan="5">
+                                  서울특별시 땡땡구 땡땡동 땡땡아파트 00동 0000호
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">비밀번호 초기화</th>
+                                <td colspan="5">
+                                   <input type="text" class="search_input">
+                                     <a href="#" class="btn btn-secondary btn-icon-split">
+                                    <span class="text">비밀번호초기화</span>
+                                </a>
+                                </td>
+                            </tr>
+                        </table>
+                        <div class="col-xl-4 col-lg-5" style="text-align:right;margin: 2% auto 5%;">
+                            <a href="#" class="btn btn-light btn-icon-split" id="modal_show">
+                                <span class="icon text-gray-600">
+                                    <i class="fas fa-arrow-right"></i>
+                                </span>
+                                <span class="text">탈퇴하기</span>
+                            </a>
+                        </div>
+                        
+                        <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;">
+                            <ul class="list_inline">
+                                <li>
+                                    <a href="/html/member/member_management.html" class="btn btn-secondary btn-icon-split btn-S">
+                                        <span class="text">취소</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-primary btn-icon-split btn-S">
+                                       <span class="text">저장</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+    
+ <!-- modal_popup -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">탈퇴신청</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table width="100%">
+                        <tr>
+                            <th>탈퇴사유</th>
+                            <td>
+                               <textarea id="story" name="story" style="width:100%;min-height:200px;padding:0.5rem;"></textarea> 
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                    <button type="button" class="btn btn-danger">탈퇴신청</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
+</body>
+
+</html>

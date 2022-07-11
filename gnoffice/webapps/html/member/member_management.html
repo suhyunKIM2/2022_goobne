@@ -1,0 +1,362 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+
+ </head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">회원 관리</h1>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                     <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0">
+                            <tr>
+                                <th class="bg-gray-200">검색어</th>
+                                <td colspan="3">
+                                   <select class="selectpicker">
+                                        <option>전체검색</option>
+                                        <option>슈퍼</option>
+                                        <option>운영</option>
+                                        <option>매장</option>
+                                        <option>직원</option>
+                                        <option>일반</option>
+                                        <option>아이디</option>
+                                        <option>성명</option>
+                                        <option>이메일</option>
+                                        <option>전화번호</option>
+                                        <option>휴대폰번호</option>
+                                        <option>카카오/네이버</option>
+                                        <option>멤버쉽 등급별</option>
+                                    </select>
+                                    <input type="text" class="search_input">
+                                     
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">이메일 수신여부</th>
+                                <td>
+                                    <input type="checkbox" id="check1"><label for="check1">전체</label>
+                                    <input type="checkbox" id="check2"><label for="check2">수신허용</label>
+                                    <input type="checkbox" id="check3"><label for="check3">수신거부</label>
+                                </td>
+                                <th class="bg-gray-200">문자(SMS) 수신여부</th>
+                                <td>
+                                    <input type="checkbox" id="check1"><label for="check1">전체</label>
+                                    <input type="checkbox" id="check2"><label for="check2">수신허용</label>
+                                    <input type="checkbox" id="check3"><label for="check3">수신거부</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="bg-gray-200">회원등급</th>
+                                <td>
+                                    <select class="selectpicker">
+                                        <option>선택</option>
+                                        <option>슈퍼</option>
+                                        <option>운영</option>
+                                        <option>매장</option>
+                                        <option>직원</option>
+                                        <option>일반</option>
+                                    </select>
+                                </td>
+                                <th class="bg-gray-200">가입기간</th>
+                                <td>
+                                    <div class ="day_box">
+                                        <input type="text" id="datepicker" placeholder="0000-00-00"> ~ <input type="text" id="datepicker2" placeholder="0000-00-00">
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                        <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;">
+                            <a href="#" class="btn btn-primary btn-icon-split btn-S">
+                               <span class="text">조회하기</span>
+                            </a>
+                        </div>
+                         
+                    
+                    <!-- Pie Chart -->
+                     
+                        
+                        
+                    <div class="col-xl-4 col-lg-5">
+                        <ul class="list_inline">
+                            <li>
+                                <a href="/html/report/app_push.html" class="btn btn-info btn-icon-split">
+                                    <span class="text">선택회원 App푸쉬</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/html/report/sms.html" class="btn btn-warning btn-icon-split">
+                                    <span class="text">선택회원 SMS</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/html/report/inform_talk.html" class="btn btn-danger btn-icon-split">
+                                    <span class="text">선택회원 알림톡</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-success btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-download fa-sm text-white-50"></i>
+                                    </span>
+                                    <span class="text">선택회원 엑셀다운로드</span>
+                                </a>
+                            </li>
+                            <li class="display_right">
+                                <select class="selectpicker">
+                                    <option>50개씩</option>
+                                    <option>100개씩</option>
+                                    <option>150개씩</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" name="chk" id="All"><label for="All" ></label></th>
+                                    <th>번호</th>
+                                    <th>등급</th>
+                                    <th>아이디</th>
+                                    <th>성명</th>
+                                    <th>이메일</th>
+                                    <th>휴대폰</th>
+                                    <th>가입일</th>
+                                    <th>관리</th>
+                                 </tr>
+                            </thead>
+                            <!--- 등급별 class "member_card + 1.슈퍼관리자 : member_01 / 2.운영관리자 : member_02 / 3.매장관리자 : member_03 / 4.임직원 : member_04 / 5.일반회원 : member_05" ----> 
+                            <tbody>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_1"><label for="ch_1"></label></td>
+                                    <td>N</td>
+                                    <td>
+                                       <div class="member_card member_01">
+                                            슈퍼
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>홍길동동</td>
+                                    <td>qwerttgf2233@naver.com</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <a href="/html/member/member_management_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_2"><label for="ch_2"></label></td>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_02">
+                                            운영
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>뽀로로</td>
+                                    <td>qwerttgf2233@naver.com</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <a href="/html/member/member_management_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_3"><label for="ch_3"></label></td>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_03">
+                                            매장
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>루피</td>
+                                    <td>qwerttgf2233@naver.com</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <a href="/html/member/member_management_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_2"><label for="ch_2"></label></td>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_04">
+                                            임직원
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>크롱</td>
+                                    <td>qwerttgf2233@naver.com</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <a href="/html/member/member_management_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox" name="chk" id="ch_3"><label for="ch_3"></label></td>
+                                    <td>N</td>
+                                    <td>
+                                        <div class="member_card member_05">
+                                             일반
+                                        </div>
+                                    </td>
+                                    <td>djahsdkjhasj123</td>
+                                    <td>라이언</td>
+                                    <td>qwerttgf2233@naver.com</td>
+                                    <td>010-0000-0000</td>
+                                    <td>2022-00-00</td>
+                                    <td>
+                                        <a href="/html/member/member_management_info.html" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g">수정</a>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        
+                        
+                    </div>
+                     <div class="container_page">
+                        <div class="row row_page">
+                            <div class="col">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+   
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
+</body>
+
+</html>

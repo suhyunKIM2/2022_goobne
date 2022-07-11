@@ -1,0 +1,687 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+
+ </head>
+<body id="page-top" style="min-width:1500px; ">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">배너관리</h1>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                    
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active">
+                          <table class="table table-bordered table_S_box" id="dataTable" width="100%" cellspacing="0">
+                                
+                                <tr>
+                                    <th class="bg-gray-200">배너등록</th>
+                                      <td>
+                                       <select class="selectpicker" >
+                                            <option>등록하실 배너 선택 해주세요.</option>  
+                                            <option>메인롤링배너</option>
+                                            <option>팝업</option>
+                                            <option>메인 메뉴소개</option>
+                                            <option>로그인</option>
+                                            <option>인스타그램</option>
+                                        </select>
+                                      </td>
+                                    <th class="bg-gray-200">배너명</th>
+                                    <td >
+                                       <input type="text" style="width:90%;">
+                                     </td>
+                                     <th class="bg-gray-200">순서</th>
+                                    <td>
+                                       <select>
+                                            <option>1</option>  
+                                            <option>2</option>
+                                            <option>3</option>  
+                                            <option>4</option>
+                                            <option>5</option>  
+                                            <option>6</option>
+                                            <option>7</option>  
+                                            <option>8</option>
+                                            <option>9</option>  
+                                            <option>10</option>
+                                        </select>  
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <th class="bg-gray-200" rowspan="2">PC 배너</th>
+                                    <td colspan="2" style="padding: 1rem 0.75rem;">
+                                        <div style="color: #999;" class="size_info_back_pc"> Background Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
+                                            <div class="filebox bs3-primary preview-image"> 
+                                               
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+
+                                              <label for="input_file_background">업로드</label> 
+                                              <input type="file" id="input_file_background" class="upload-hidden"> 
+                                            </div>      
+                                            
+                                        </div>
+                                     </td>
+                                     <td colspan="3" style="padding: 1rem 0.75rem;">
+                                         <div style="color: #999;" class="size_info_back_pc_center">img Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
+                                            <div class="filebox bs3-primary preview-image"> 
+                                                
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+
+                                              <label for="input_file">업로드</label> 
+                                              <input type="file" id="input_file" class="upload-hidden"> 
+                                            </div>      
+                                            
+                                        </div>
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <td colspan="5">
+                                        <input type="text" style="width:84.6%;" placeholder=" url주소를 입력 해 주세요.">
+                                        <select class="selectpicker" >
+                                            <option>현재창열기</option>
+                                            <option>새창열기</option>
+                                        </select>   
+                                     </td>
+                                 </tr>
+                                 <tr>
+                                    <th class="bg-gray-200" rowspan="2">mobile 배너</th>
+                                    <td colspan="2" style="padding: 1rem 0.75rem;">
+                                    <div style="color: #999;" class="size_info_back_mo">Background Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
+                                            <div class="filebox bs3-primary preview-image"> 
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+
+                                              <label for="input_file_02_background">업로드</label> 
+                                              <input type="file" id="input_file_02_background" class="upload-hidden"> 
+                                            </div>                        
+                                        </div>
+                                     </td>
+                                     <td colspan="3" style="padding: 1rem 0.75rem;">
+                                    <div style="color: #999;"  class="size_info_back_mo_center">img Size : <span> 0px X 0px</span></div>
+                                        <div class="preview_img_div preview_img_div_table preview_img_div_banner" >
+                                            <div class="filebox bs3-primary preview-image"> 
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 200px;">
+
+                                              <label for="input_file_02">업로드</label> 
+                                              <input type="file" id="input_file_02" class="upload-hidden"> 
+                                            </div>                        
+                                        </div>
+                                     </td>
+                                 </tr>
+                                 
+                                 <tr>
+                                    <td colspan="5">
+                                        <input type="text" style="width:84.6%;" placeholder=" url주소를 입력 해 주세요.">
+                                        <select class="selectpicker" >
+                                            <option>현재창열기</option>
+                                            <option>새창열기</option>
+                                        </select>   
+                                     </td>
+                                 </tr>
+                                <tr>
+                                    <th class="bg-gray-200">기간설정</th>
+                                    <td colspan="3">
+                                        <ul class="list_inline" style="margin-bottom:0;">
+                                            <li>
+                                                <div class="px-3 bg-gradient-info text-white" style="float:left;height:30px;line-height: 30px;">시작</div> 
+                                                <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                    <input type="text" id="datepicker" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                                                </div>
+                                                <div class="left_line">
+                                                    <ul class="list_inline">
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                            </select>
+                                                        </li>
+                                                        <li><spna>:</span></li>
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>05</option>
+                                                                <option>10</option>
+                                                                <option>15</option>
+                                                                <option>20</option>
+                                                                <option>25</option>
+                                                                <option>30</option>
+                                                                <option>35</option>
+                                                                <option>40</option>
+                                                                <option>45</option>
+                                                                <option>50</option>
+                                                                <option>55</option>
+                                                            </select>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li style="margin-top: 1%;display: block;">
+                                                    <div class="px-3 bg-gradient-danger text-white" style="float:left;height:30px;line-height: 30px;">종료</div> 
+                                                    <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                        <input type="text" id="datepicker2" placeholder="0000-00-00" style="height:30px;line-height: 30px;border-color:#e8e8e8;">
+                                                    </div>
+                                                    <div class="left_line">
+                                                        <ul class="list_inline">
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                            </select>
+                                                        </li>
+                                                        <li><spna>:</span></li>
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>05</option>
+                                                                <option>10</option>
+                                                                <option>15</option>
+                                                                <option>20</option>
+                                                                <option>25</option>
+                                                                <option>30</option>
+                                                                <option>35</option>
+                                                                <option>40</option>
+                                                                <option>45</option>
+                                                                <option>50</option>
+                                                                <option>55</option>
+                                                            </select>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </li>
+                                        </ul>
+                                     </td>
+                                     <th class="bg-gray-200">노출</th>
+                                    <td>
+                                       <select>
+                                            <option>Y</option><!---노출--->   
+                                            <option>N</option><!---비노출--->
+                                        </select> 
+                                     </td>
+                                 </tr>
+                            </table>
+                            <div class="col-xl-4 col-lg-5" style="text-align: center;margin-top: 2%;">
+                                <ul class="list_inline">
+                                    <li>
+                                        <a href="#" class="btn btn-primary btn-icon-split btn-S">
+                                           <span class="text">등록</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h3>배너 리스트 현황</h3>
+                       <!---S: 20220518 추가--->
+                            <table class="table table-bordered table_main table_main_banner" id="dataTable" width="100%" cellspacing="0">
+                             <colgroup>
+                                 <col style="width:15%;">
+                                 <col style="width:85%;">
+                             </colgroup>
+                                <tr>
+                                    <th class="bg-gray-200" rowspan="2">검색조회</th>
+                                </tr>
+                                <tr>
+                                    <td style="text-align: left;">
+                                        <div class="banner_s_01">
+                                           <select class="selectpicker" >
+                                                <option>배너유형 선택</option>   
+                                                <option>팝업</option>
+                                                <option>상세 메뉴소개</option>
+                                                <option>메인 메뉴소개</option>
+                                                <option>회원가입</option>
+                                                <option>로그인</option>
+                                                <option>인스타그램</option>
+                                            </select> 
+                                        </div>
+                                       <div class="banner_s_02" >
+                                           <input type="text" placeholder="배너명" style="vertical-align: middle;padding-left: 2%;">
+                                       </div>
+                                       <div class="banner_s_03" >
+                                           <ul class="list_inline" style="margin-bottom:0;">
+                                            <li>
+                                                <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                    <input type="text" id="datepicker3" placeholder="0000-00-00" style="height:40px;line-height: 40px;border-color:#e8e8e8;">
+                                                </div>
+                                                <div class="left_line">
+                                                    <ul class="list_inline">
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                            </select>
+                                                        </li>
+                                                        <li><spna>:</span></li>
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>05</option>
+                                                                <option>10</option>
+                                                                <option>15</option>
+                                                                <option>20</option>
+                                                                <option>25</option>
+                                                                <option>30</option>
+                                                                <option>35</option>
+                                                                <option>40</option>
+                                                                <option>45</option>
+                                                                <option>50</option>
+                                                                <option>55</option>
+                                                            </select>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li> ~ </li>
+                                                <li>
+                                                   <div class="day_box" style="float:left;width:auto;margin:0;">
+                                                        <input type="text" id="datepicker4" placeholder="0000-00-00" style="height:40px;line-height: 40px;border-color:#e8e8e8;">
+                                                    </div>
+                                                    <div class="left_line">
+                                                        <ul class="list_inline">
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>01</option>
+                                                                <option>02</option>
+                                                                <option>03</option>
+                                                                <option>04</option>
+                                                                <option>05</option>
+                                                                <option>06</option>
+                                                                <option>07</option>
+                                                                <option>08</option>
+                                                                <option>09</option>
+                                                                <option>10</option>
+                                                                <option>11</option>
+                                                                <option>12</option>
+                                                                <option>13</option>
+                                                                <option>14</option>
+                                                                <option>15</option>
+                                                                <option>16</option>
+                                                                <option>17</option>
+                                                                <option>18</option>
+                                                                <option>19</option>
+                                                                <option>20</option>
+                                                                <option>21</option>
+                                                                <option>22</option>
+                                                                <option>23</option>
+                                                                <option>24</option>
+                                                            </select>
+                                                        </li>
+                                                        <li><spna>:</span></li>
+                                                        <li>
+                                                            <select class="selectpicker">
+                                                                <option>00</option>
+                                                                <option>05</option>
+                                                                <option>10</option>
+                                                                <option>15</option>
+                                                                <option>20</option>
+                                                                <option>25</option>
+                                                                <option>30</option>
+                                                                <option>35</option>
+                                                                <option>40</option>
+                                                                <option>45</option>
+                                                                <option>50</option>
+                                                                <option>55</option>
+                                                            </select>
+                                                        </li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="btn btn-primary btn-icon-split" style="height:42px;line-height: 1.6;">
+                                                        <span class="text">조회</span>
+                                                    </a>
+                                                </li>
+                                            </li>
+                                        </ul>
+                                       </div>
+                                    </td>
+                                </tr>
+                            </table>
+                   <!---E: 20220518 추가--->
+                             
+                            <table class="table table-bordered table_main table_main_banner" id="dataTable" width="100%" cellspacing="0">
+                                 <colgroup>
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="">
+                                    <col width="" style="min-width:147px;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th class="bg-gray-200">노출</th>
+                                        <th class="bg-gray-200">순서</th>
+                                        <th class="bg-gray-200">등록위치</th>
+                                        <th class="bg-gray-200">등록일</th>
+                                        <th class="bg-gray-200">배너이름</th>
+                                        <th class="bg-gray-200">url</th>
+                                        <th class="bg-gray-200">게시기간</th>
+                                        <th class="bg-gray-200">관리</th>
+                                     </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>N</td>
+                                        <td>1</td>
+                                        <td>팝업</td>
+                                        <td>2022-00-00</td>
+                                        <td>듀먼 & 굽네 콜라보 이벤트</td>
+                                        <td>(새창) https://www.goobne.co.kr/</td>
+                                        <td>2022-00-00 ~ 2022-00-00</td>
+                                        <td> <a href="" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g" style="margin-right:5px;">삭제</a><a href="" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm mb_g">수정</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Y</td>
+                                        <td>2</td>
+                                        <td>팝업</td>
+                                        <td>2022-00-00</td>
+                                        <td>듀먼 & 굽네 콜라보 이벤트</td>
+                                        <td>(새창) https://www.goobne.co.kr/</td>
+                                        <td>2022-00-00 ~ 2022-00-00</td>
+                                        <td> <a href="" class="d-sm-inline-block btn btn-sm btn-secondary shadow-sm mb_g" style="margin-right:5px;">삭제</a><a href="" class="d-sm-inline-block btn btn-sm btn-primary shadow-sm mb_g">수정</a></td>
+                                    </tr>
+                                 </tbody>
+                            </table>
+                        </div>
+                         
+                     </div>
+                     
+                 </div>
+                
+                    
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                 
+            </div>
+            <!-- End of Main Content -->
+                <div class="container_page">
+                        <div class="row row_page">
+                            <div class="col">
+                                <ul class="pagination">
+                                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                
+               
+                     
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+
+
+ <!-- 선택메뉴 상태변경 : 레이어팝업-->
+    <div class="modal fade" id="exampleModalLabel_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel_1" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-gray-800" id="exampleModalLabel">메뉴 상태 변경</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="text_div">선택 된 <span class="text-info">17개 메뉴</span>의 상태값을 선택해 주세요.</div>
+                    <ul class="list_inline list_inline_calc">
+                        <li>
+                        <span class="button-checkbox">
+                            <button type="button" class="btn button_checkbox_de" data-color="info">베스트 </button>
+                            <input type="checkbox" class="hidden" checked/>
+                        </span>
+                    </li>
+                        <li>
+                        <span class="button-checkbox">
+                            <button type="button" class="btn button_checkbox_de" data-color="info">신메뉴 </button>
+                            <input type="checkbox" class="hidden"  />
+                        </span>
+                        </li>
+                        <li>
+                            <span class="button-checkbox">
+                            <button type="button" class="btn button_checkbox_de" data-color="info">MD추천 </button>
+                            <input type="checkbox" class="hidden"  />
+                        </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-danger">변경완료</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+<!-- S: include summernote(에디터) css/js -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="/html/js/summernote/js/summernote-lite.js"></script>
+    <script src="/html/js/summernote/js/summernote.js"></script>
+<!-- E: include summernote(에디터) css/js -->
+
+<!-- S: 파일업로드 -->
+    <script src="/html/js/file_upload.js"></script> 
+<!-- E: 파일업로드 -->
+
+<!-- S: 버튼식체크박스 -->
+    <script src="/html/js/btn_checkbox.js"></script> 
+<!-- E: 버튼식체크박스 -->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+        $('[data-value="메인롤링배너"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 1920px X 940px</span>").css('color','#c31113');
+        $(".size_info_back_mo").html("Background Size : <span> 642px X 876px</span>").css('color','#c31113');
+        $(".size_info_back_pc_center").html("img Size : <span> 1200px X 750px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 509px X 956px</span>").css('color','#c31113');
+        });
+        
+         $('[data-value="팝업"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+        
+        
+        $('[data-value="메인 메뉴소개"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 1200px X 500px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+        
+        
+        $('[data-value="로그인"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 1000px X 166px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+        
+        $('[data-value="인스타그램"]').click(function(){
+        $(".size_info_back_pc").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_mo").html("Background Size : <span> 0px X 0px</span>").css('color','#999');
+        $(".size_info_back_pc_center").html("img Size : <span> 1080px X 1080px</span>").css('color','#c31113');
+        $(".size_info_back_mo_center").html("img Size : <span> 0px X 0px</span>").css('color','#999');
+        });
+    });
+</script>
+    
+    <script type="text/javascript">
+	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
+</body>
+
+</html>
