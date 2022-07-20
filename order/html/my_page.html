@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="../assets/css/layout.css" type="text/css" />
     <link rel="stylesheet" href="../assets/css/common_v1.css" type="text/css" /><!---- cns제작추가---->
     <link rel="stylesheet" href="../assets/css/common/nice-select.css" type="text/css" /><!---- cns제작추가---->
+	<link rel="stylesheet" href="../assets/css/level.css" type="text/css" /><!----20220714 cns 추가 -------->
+	<link rel="stylesheet" href="../assets/css/my_page.css" type="text/css" /><!----20220718 cns 추가 -------->
 
 
     <script src="../assets/js/common/jquery-3.5.1.min.js"></script>
@@ -29,7 +31,7 @@
     <script src="../assets/js/main/main.js"></script>
     <script src="../assets/js/common/jquery.nice-select.js"></script><!---- cns제작추가---->
     <script src="../assets/js/main/main_banner_header.js"></script><!----cns 추가 -------->
-    
+
 </head>
 
 <body>
@@ -61,8 +63,37 @@
                                 </select>
                           </div>
                       </div>
-                      <ul class="list_inline_block">
+					  <section class="flex_sid_main">
+					  <section class="level_section flex_side"><!--- 오븐온도 ui PC---->
+					  		 <div class="img">
+								<img src="../assets/images/common/main_bg_icon_05.svg" alt="">
+							</div>
+							<div class="test_a">
+								<img src="../assets/images/icon/scale_2.svg">
+								<div class="test_b"><div id="magnifying-glass"></div><div id="magnifying-glass_G" class="graph stack1"><span style="height:calc(75% - 69px);"></span></div></div>
+
+							</div>
+
+							<div class="room-list-empty-room">
+							<div class="parent"><div class="child">홍길동 고객님</div></div>
+								<div class="parent"><div class="child">오븐 온도는 <span class="color_Y">193º</span></div></div>
+							</div>
+                                   
+						</section>
+                      <ul class="list_inline_block flex_side">
                           <li class="box_bg_b">
+						  	  <div class="level_mobile"><!--- 오븐온도 ui mobile---->
+								  <div class="img">
+									<img src="../assets/images/common/main_bg_icon_05.svg" alt="">
+								</div>
+								  <div class="test_a">
+									<img src="../assets/images/icon/scale_2.svg">
+									<div class="test_b"><div id="magnifying-glass"></div><div id="magnifying-glass_G" class="graph stack1"><span style="height:calc(75% - 36px);"></span></div></div>
+								</div>
+								<div class="room-list-empty-room">
+									<div class="parent"><div class="child">오븐 온도는 <span class="color_Y">193º</span></div></div>
+								</div>
+							</div>	
                               <dl>
                                   <dt><img src="../assets/images/icon/my_icon.svg" class="my_icon_svg" id="my_icon_svg"><span class="text_name">홍길동</span>님</dt>
                                   <dd><span class="text_color_G">회원등급</span><span class="text_color_B">구울레옹,</span><span class="text_color_R">94940</span>Point</dd>
@@ -70,6 +101,7 @@
                                       <div class="btn_B"  onClick="">혜택 알아보기</div>
                                   </dd>
                               </dl>
+							  
                           </li>
                           <li class="box_bg_b">
                               <dl>
@@ -96,14 +128,15 @@
                                   <dt><span class="text_name">e-쿠폰</span></dt>
                                   <dd><span class="text_color_R">4</span>개</dd>
                                   <dd>
-                                      <div class="btn_B" onClick="">쿠폰확인하기</div>
+                                      <div class="btn_B" onClick="location.href='/order/html/e-coupon.html'">쿠폰확인하기</div>
                                   </dd>
                               </dl>
                           </li>
                       </ul>
+					  </section>
                       <div class="my_pag_width">
                           <ul>
-                              <li class="date_btn float_left" onClick="">
+                              <li class="date_btn float_left" onClick="location.href='/order/html/my_correction.html'">
                               <svg xmlns="http://www.w3.org/2000/svg" width="128" height="36" viewBox="0 0 128 36" class="date_hover">
                                   <g id="그룹_474047" data-name="그룹 474047" transform="translate(-360 -473)">
                                     <g id="bt_정보수정" transform="translate(-1017 -1023)">
@@ -134,9 +167,9 @@
                     </div> 
                 </div>
                 <div class="l-inner">
-                     <ul class="tab_list">
-                         <li>현재주문</li>
-                         <li>주문내역</li>
+                     <ul class="tab_list order_tab_list">
+                         <li class="tab_on" onclick="location.href='/order/html/my_page.html'">현재주문</li>
+                         <li onclick="location.href='/order/html/my_page_order_list.html'">주문내역</li>
                      </ul>
                      <ul class="list_info_line">
                          <li>
@@ -145,7 +178,7 @@
                                      <li>2022-00-00 00:00에 주문하신</li>
                                      <li><b>[온라인주문] 불금치킨 + 콜라 1.25L</b> 주문현황입니다.</li>
                                      <li>네이버페이(선결제)</li>
-                                     <li><div class="btn_B" onclick="">주문상세보기</div></li>
+                                     <li><div class="btn_B" onclick="location.href='/order/html/my_page_order.html'">주문상세보기</div></li>
                                  </ul>
                              </div>
                          </li>

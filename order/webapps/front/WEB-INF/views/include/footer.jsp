@@ -1,11 +1,25 @@
 <%@ page contentType="text/html; charset=utf8" %>
-<%@ page import="com.gncns.goobne.config.SystemConstant" %>
-<% String sysMode = (String)request.getAttribute("sysMode"); %>
+<%@ page import="com.gncns.goobne.config.SystemConstant
+             , com.gncns.goobne.common.session.SessionFactoryFront
+             , com.gncns.goobne.common.session.GnMember" %>
+<% String sysMode = (String)request.getAttribute("sysMode");
+   SessionFactoryFront sessFtr = new SessionFactoryFront(request);
+   GnMember user = sessFtr.getGnMember();     
+%>
+
 <div class="inner">
     <div class="info-box">
         <div class="number">
-            <p class="sub-text">전화주문</p>
-            <p class="tel">1661-9494</p>
+			<ul class="inline_block">
+				<li>
+					<p class="sub-text">전화주문 </p>
+					<p class="tel">1661-9494</p>
+				</li>
+				<li>
+					<p class="sub-text">창업문의</p>
+					<p class="tel">1899-9458</p>
+				</li>
+			</ul>
         </div>
         <div class="info-btn">
             <a href="#none" class="terms">이용약관</a>
@@ -35,6 +49,14 @@
 <form name="goBrdFrom" id="goBrdFrom" method="post">
 	<input type="hidden" name="seq">
 </form>
+
+<form name="loginnet" target="gnordernet" method="post">
+	<input type="hidden" name="useridxnet" id="useridxnet" value="<%=user.getIdx() %>" />
+	<input type="hidden" name="useridnet" id="useridnet" value="<%=user.getUser_id() %>" />
+	<input type="hidden" name="userlevelnet" id="userleveldnet" value="<%=user.getLevel() %>" />
+	<input type="hidden" name="userbranchnet" id="userbranchdnet" value="" />
+	<input type="hidden" name="userurl" id="userurl" value="/order/delivery.aspx" />
+</form>
 <jsp:include page="/WEB-INF/views/include/common_script.jsp"></jsp:include>
     
 <script type="text/javascript">  
@@ -44,10 +66,10 @@ var lon;
 $(document).ready(function() {   
 	//메인화면 위치 표시
 	//geolocation https 에서만 사용가능 보안문제, 개발서버에서는 강제 위치값 지정해줌
-    <% if( sysMode.equals("D") || sysMode.equals("P") ) { %>
-	    lat = '37.554071';
-	    lon = '126.8370592';
-	    findLocation(lat, lon);
+    <% if( sysMode.equals("D") || sysMode.equals("M") ) { %>
+	     lat = '37.554071';
+	     lon = '126.8370592';
+	     findLocation(lat, lon);
 	<% } else { %>
 	    geoloc.init();	    
     <% } %>
@@ -119,8 +141,15 @@ var geoloc = {
 	error : function(err) {			
 		var userAgent = navigator.userAgent.toString();
 		if(/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream){ // iOS
-			alert('아이폰 > 설정 > 개인정보보호 > 위치서비스 > 굽네치킨의 위치접근허용을 체크해주세요.');
-			return;
+		
+			
+			//alert('아이폰 > 설정 > 개인정보보호 > 위치서비스 > 굽네치킨의 위치접근허용을 체크해주세요.');
+			//return;
+		   lat = '37.554071';
+	       lon = '126.8370592';
+	       findLocation(lat, lon);
+
+
 		} else {
 			//alert('위치접근허용을 승인해주세요.'); 
 			$('#myloc').attr('placeholder','주변 매장의 프로모션을 확인해보세요!');    //pc
@@ -234,5 +263,16 @@ function goBrdView(brd_id, seq){
 	document.goBrdFrom.seq.value=seq;
 	document.goBrdFrom.action='/brd/'+brd_id+'/view'; 
     document.goBrdFrom.submit();
+}
+
+
+function loginnet(urlstr){
+	if (urlstr == "") {
+		urlstr = "/order/delivery.aspx";
+	}
+	$("#userurl").val(urlstr);
+	var ofrm = document.loginnet;
+	ofrm.action = "<%=SystemConstant.AUTHDT%>";
+	ofrm.submit();
 }
 </script> 

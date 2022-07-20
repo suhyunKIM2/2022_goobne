@@ -26,7 +26,7 @@
 	<style>       
       <c:forEach var="banner" items="${banner}" varStatus="status"> 
         <c:if test="${banner.bnnr_type eq '10' && banner.ord1 > 1 }">
-		.main-box .goobne-img_office_bg_${banner.bnnr_id }{background: url("<%=SystemConstant.getStaticUrl()%>${banner.pc_img_bg }");}
+		.main-box .goobne-img_office_bg_${banner.bnnr_id }{background: url("<%=SystemConstant.getStaticUrl()%>${banner.pc_img_bg }");background-size: cover;}
 	    </c:if>
       </c:forEach> 
       @media (max-width: 768px){
@@ -43,6 +43,9 @@
  $( window ).ready( function() {
 $('.no-js').addClass('visible');
 });
+ $(window).load(function(){
+	 $('.goobne-tv-wrap').slick('refresh');
+ });
 </script>
 <style>
 .main-box{height:calc(100% - 85px);}/*2차 오픈시 빼기*/
@@ -53,6 +56,7 @@ $('.no-js').addClass('visible');
 #window .single-item04 .slick-dots li a{font-size:1.5em;    text-decoration: none;    color: #fff;    line-height: 23px;    cursor: pointer;}
 #window .single-item04 .slick-dots li.slick-active a{font-size:3em;}
 #window .single-item04 .slick-dots li a:hover{border-bottom:0; }
+#ori,#new{display:none;}
 </style>
 <script>
 $(document).ready(function(){
@@ -80,7 +84,7 @@ $(document).ready(function(){
 
 
   // 이벤트종료시점 기록
-  var countDownDate = new Date("07/08/2022 23:59:59").getTime();//팝업 노출 시간 설정
+  var countDownDate = new Date("07/15/2022 23:59:59").getTime();//팝업 노출 시간 설정
   
   var x = setInterval(function() {
   
@@ -118,10 +122,10 @@ $(document).ready(function(){
       //document.getElementById("timesale").innerHTML = "<div class='endtxt'>이벤트가 마감되었습니다.</div>";
       document.getElementById("ori").style.display="none";
       document.getElementById("ori").style.visibility="hidden";
-    document.getElementById("new").style.display="none";// 임시 반대처리
-    document.getElementById("new").style.visibility="hidden";// 임시 반대처리
-	document.getElementById("mask_popup").style.display="none";// 임시 반대처리
-    document.getElementById("mask_popup").style.visibility="hidden";// 임시 반대처리
+    document.getElementById("new").style.display="block";// 임시 반대처리
+    document.getElementById("new").style.visibility="visible";// 임시 반대처리
+	document.getElementById("mask_popup").style.display="blcok";// 임시 반대처리
+    document.getElementById("mask_popup").style.visibility="visible";// 임시 반대처리
     }
   }, 0);
  });
@@ -139,10 +143,10 @@ $(document).ready(function(){
 <div id="ori">
     <div class="slider single-item04">
 		<div class="list_slider">
-            <a href="/brd/event/get_view?seq=30092"><img src="/resources/assets/images/popup/bgchicken.jpg" style="image-rendering:auto;"></a>
+            <a href="https://www.goobne.co.kr/brd/event/view?seq=30092"><img src="/resources/assets/images/popup/220713_collabo_everland.jpg" style="image-rendering:auto;"></a>
         </div>
 		<div class="list_slider">
-            <a href="/brd/event/get_view?seq=30133"><img src="/resources/assets/images/popup/T-day.jpg" ></a>
+            <a href="https://www.goobne.co.kr/brd/event/view?seq=65048"><img src="/resources/assets/images/popup/220713_popup_event_kt.jpg" style="image-rendering:auto;"></a>
         </div>
     </div>
     <div class="btn_wrap btn_blk">
@@ -158,15 +162,14 @@ $(document).ready(function(){
 <!----S: 설정 시간 이후 바뀐 팝업 리스트---->
 <div id="new">
     <div class="slider single-item04">
-        
 		<div class="list_slider">
-            <a href=""><img src="/resources/assets/images/popup/220502_popup_dhuman.jpg" ></a>
+            <a href="https://www.goobne.co.kr/brd/event/view?seq=65048"><img src="/resources/assets/images/popup/220713_popup_event_kt.jpg" style="image-rendering:auto;"></a>
         </div>
     </div>
     <div class="btn_wrap btn_blk">
         <ul class="popup_btn_ul ori">
-            <li id="todayPopChk" class="web_order" onClick="javascript:todaycloseWin();" style="background:#0ca9ba;">오늘 하루 보지 않기</li>
-            <li id="closePopChk" class="main_pop_close close" onClick="javascript:closeWin();" style="background:#0ca9ba;">닫기</li>
+            <li id="todayPopChk" class="web_order" onClick="javascript:todaycloseWin();" style="background:#3f3f40;">오늘 하루 보지 않기</li>
+            <li id="closePopChk" class="main_pop_close close" onClick="javascript:closeWin();" style="background:#3f3f40;">닫기</li>
         </ul>
     </div>
 </div>
@@ -436,6 +439,17 @@ $(document).ready(function(){
         </div>
         
     </div>
-    <!-- end of :: wrap --> 
+    <!-- end of :: wrap -->
+    
+     <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-44521541-5', 'anijs.github.io');
+      ga('send', 'pageview');
+
+    </script> 
 </body> 
 </html>

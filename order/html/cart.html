@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>굽네치킨</title>
+
+    <link rel="stylesheet" href="../assets/css/common/slick.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/swiper-bundle.min.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/base.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/header.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/footer.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/jquery-ui.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/animate.css" type="text/css" />
+
+
+
+    <link rel="stylesheet" href="../assets/css/common_layout.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" type="text/css" />
+
+
+
+    <script src="../assets/js/common/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/common/swiper-bundle.min.js"></script>
+    <script src="../assets/js/common/jquery.js"></script>
+    <script src="../assets/js/common/jquery-ui.js"></script>
+    <script src="../assets/js/common/slick.js"></script>
+    <script src="../assets/js/common/wow.min.js"></script>
+    <script src="assets/js/main/main.js"></script>
+
+</head>
+
+<body>
+    <!-- start of :: wrap -->
+    <div id="wrap">
+        <!-- start of :: header -->
+        <div id="header">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 header.html  -->
+        </div>
+        <!-- end of :: header -->
+        <aside class="aside">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 aside.html  -->
+        </aside>
+        <!-- start of :: contents -->
+        <div id="content">
+            <article class="l-layout cart">
+                <div class="l-inner">
+                    <div class="l-title">장바구니</div>
+
+                    <!-- 배달주문 -->
+                    <section class="cart__order">
+                        <p class="s-tit">배달주문</p>
+                        <div class="cart__order-desc">
+                            <dl class="list">
+                                <dt>주문매장</dt>
+                                <dd>염창점</dd>
+                            </dl>
+                            <dl class="list">
+                                <dt>매장번호</dt>
+                                <dd>02-1234-5678</dd>
+                            </dl>
+                            <dl class="list">
+                                <dt>배달받을 주소</dt>
+                                <dd>서울특별시 강서구 강서로 318 (내발산동 677) 지앤빌딩</dd>
+                            </dl>
+                        </div>
+                    </section>
+
+                    <!-- 주문내역 -->
+                    <section class="cart__order">
+                        <p class="s-tit">주문내역</p>
+                        <div class="cart__order-table">
+                            <table class="list-table">
+                                <colgroup>
+                                    <col style="width:5%;">
+                                    <col style="width:20%;">
+                                    <col style="width:20%;">
+                                    <col style="width:10%;">
+                                    <col style="width:10%;">
+                                    <col style="width:5%;">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="l-chk">
+                                                <input type="checkbox" id="chk-all" class="chk-all-type">
+                                                <label for="chk-all"></label>
+                                            </div>
+                                        </th>
+                                        <th>메뉴</th>
+                                        <th>추가옵션</th>
+                                        <th>수량</th>
+                                        <th>금액</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="l-chk">
+                                                <input type="checkbox" id="chk-01" class="chk-type">
+                                                <label for="chk-01"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <dl class="item-desc">
+                                                <dt class="img">
+                                                    <img src="../assets/images/contents/ex-menu-01.png" alt="제품이미지">
+                                                </dt>
+                                                <dd class="name">굽네 오리지널 (한마리)</dd>
+                                            </dl>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <div class="amount-select">
+                                                <button class="btn-minus" aira-label="빼기" disabled ></button>
+                                                <span class="amount">1</span>
+                                                <button class="btn-plus" aria-label="더하기"></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="l-num">15,000</span>원
+                                        </td>
+                                        <td>
+                                            <button type="button" class="cancle-btn"></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="l-chk">
+                                                <input type="checkbox" id="chk-02" class="chk-type">
+                                                <label for="chk-02"></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <dl class="item-desc">
+                                                <dt class="img">
+                                                    <img src="../assets/images/contents/ex-menu-03.png" alt="제품이미지">
+                                                </dt>
+                                                <dd class="name">굽네 치즈 (한마리)</dd>
+                                            </dl>
+                                        </td>
+                                        <td></td>
+                                        <td>
+                                            <div class="amount-select">
+                                                <button class="btn-minus" aira-label="빼기" ></button>
+                                                <span class="amount">1</span>
+                                                <button class="btn-plus" aria-label="더하기"></button>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span class="l-num">15,000</span>원
+                                        </td>
+                                        <td>
+                                            <button type="button" class="cancle-btn"></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <dl class="cart__order-total">
+                                <dt>
+                                    총 상품 금액
+                                </dt>
+                                <dd><span class="l-num">30,000</span>원</dd>
+                            </dl>
+                        </div>
+                        <div class="cart__order-btn">
+                            <button type="button" class="l-btn line">+ 메뉴 추가하기</button>
+                            <button type="button" class="l-btn line">로그인 +5 경험치 획득</button>
+                            <button type="button" class="l-btn"ㄴ>주문하기</button>
+                        </div>
+                    </section>
+
+                </div>
+                <section class="recom-cnt-wrapper">
+                    <p class="l-title">이 제품을 구매하신 고객님이 같이 찾는 메뉴 (추천메뉴)</p>
+                    <div class="swiper popularSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-01.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 볼케이노</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-02.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 갈비천왕</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-03.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 오리지널</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-04.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 허니멜로</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-01.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 볼케이노</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-02.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 갈비천왕</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-03.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 오리지널</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="l-recomm-item">
+                                    <div class="img">
+                                        <img src="../assets/images/contents/ex-recomm-04.png" alt="메뉴이미지">
+                                    </div>
+                                    <p class="item-menu">굽네 허니멜로</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <!-- end of :: contents -->
+        <!-- start of :: footer -->
+        <div id="footer" class="sub-footer">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 footer.html  -->
+        </div>
+        <!-- end of :: footer -->
+        <div id="mobile-nav">
+            <!-- 참고: 스크립트로 load 됩니다. include 폴더 mobile-nav.html  -->
+        </div>
+    </div>
+    <!-- end of :: wrap -->
+    <script>
+        $(document).ready(function () {
+            $('#header').load("../include/header.html");
+            $('#footer').load("../include/footer.html");
+            $('.aside').load("../include/aside.html");
+            $('#mobile-nav').load("../include/mobile-nav.html");
+
+            let popularSwiper = new Swiper(".popularSwiper", {
+                // slidesPerView: 3,
+                // spaceBetween: 30,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                    },
+                    600: {
+                        slidesPerView: 2,
+                        spaceBetween: 0,
+                    },
+                    900: {
+                        slidesPerView: 3,
+                        spaceBetween:0,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                        spaceBetween:0,
+                    },
+                },
+            });
+
+        });
+    </script>
+</body>
+
+</html>

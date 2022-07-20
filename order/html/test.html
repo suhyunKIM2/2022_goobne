@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+
+
+<head>
+<link rel="stylesheet" href="../assets/css/common/slick.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/base.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/header.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/footer.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/jquery-ui.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/common/animate.css" type="text/css" />
+
+
+    <link rel="stylesheet" href="../assets/css/common_layout.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="../assets/css/modal.css" type="text/css" />
+
+
+
+
+    <script src="../assets/js/common/jquery-3.5.1.min.js"></script>
+    <script src="../assets/js/common/jquery.js"></script>
+    <script src="../assets/js/common/jquery-ui.js"></script>
+    <script src="../assets/js/common/slick.js"></script>
+    <script src="../assets/js/common/wow.min.js"></script>
+    <script src="../assets/js/main/main.js"></script>
+ 
+<style>
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #dedede;
+  font-weight: 600;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+.progress-bar2,
+.progress-bar3 {
+  width: 100%;
+  height: 30px;
+  font-weight: 600;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+.progress-bar .progress {
+  width: 0;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  background-color: #4F98FF;
+  color: #111;
+}
+
+.donut {
+  width: calc(100% - 16px);
+  padding-bottom: calc(100% - 16px);
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+}
+
+.donut::before {
+  color: #264057;
+  width: 70%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: block;
+  content: attr(data-percent)'º';
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-weight: 800;
+  font-size: 2vw;
+  padding: calc(35% - 1.3vw) 0;
+}
+
+.donut-container {
+  margin: 0 40vw 1rem 40vw;
+}
+.test{position:absolute;width:68%;height:68%;left:50%;top:50%;transform: translate(-50%,-50%);border-radius: 50%;}
+.test_a{width:50%;max-width: 130px;margin: auto;position:relative;}
+#magnifying-glass {
+        font-size: 10em;
+    display: inline-block;
+    width: 64px;
+    box-sizing: content-box;
+    height: 64px;
+    border: 0.1em solid #ba0707;
+    position: absolute;
+    border-radius: 50%;
+    background: rgb(192 8 8);
+    bottom: 3px;
+    left: 49%;
+    z-index: 9;
+    transform: translate(-50%, 0);
+    }
+	
+    #magnifying-glass_G {
+      
+    
+    }
+
+.test_b	{position: absolute;
+    bottom: 18px;
+    left: 49%;
+    transform: translate(-50%, 0);height: 92%;
+    width: 68%;}
+	
+/* statistics start */
+/*.graph{
+  background-color:#ccc;
+  height: 100vh;
+  border-radius: 40px;
+  margin:50px;
+}*/
+@keyframes stack{
+  0%{ height: 0; opacity:0;}
+  100%{opacity:1;}
+}
+@keyframes stack2{
+  0%{ height: 0; opacity:0;}
+  100%{ height: 60%; opacity:1;}
+}
+@keyframes stack3{
+  0%{ height: 0; opacity:0;}
+  100%{ height: 25%; opacity:1;}
+}
+section{
+  display:flex;  
+/*   flex-direction:column;   */
+  justify-content:center;
+  height: 500px;
+  /*transform:rotate(180deg);*/
+  position:relative;
+}
+
+/*
+.graph {
+  height:400px;
+}
+*/
+
+.graph span{
+  display:flex;
+  height:40px;
+  line-height:40px;
+  text-align:right;
+  /*   width: 75%; */
+  /*   background-color:pink; */
+  border-radius: 40px;
+  padding: 0 10px;
+  box-sizing: border-box;
+  color:white;
+  transform:rotate(0deg);
+  
+}
+.graph.stack1 span{
+      animation: stack 2s 1;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 49%;
+    bottom: 84px;
+    border-width: 0;
+    background:rgba(255,0,0,0.5);
+    width: 38%;
+    transform: translate(-50%, 0%);
+    border-radius: 50% 50% 50% 50% / 15px 15px 0px 0px;
+    margin: 0;
+}
+.graph.stack2 span{
+  background-color:violet;
+  height:60%;
+  animation:stack2 2s 1;
+}
+.graph.stack3 span{
+  background-color:violet;
+  height:25%;
+  animation:stack3 2s 1;
+}
+/* statistics end */	
+.parent {
+    overflow-y: hidden;
+    display: block;
+	margin-bottom: 0.5rem;
+}
+.parent .child {
+    font-size: 1.2em;/* 애니메이션 높이 */
+    font-weight: bold;
+    line-height:1;
+    animation-name: grow;
+    animation-duration: 2s;/* 애니메이션 시간 */
+	color:#fff;
+}
+/* 키프레임 애니메이션 */
+@keyframes grow {
+    from { transform: translateY(1.2em) }/* 애니메이션 높이 */
+    to { transform: translateY(0) }
+}
+.room-list-empty-room{
+	 animation-name: grow;
+    animation-duration: 2s;/* 애니메이션 시간 */
+    position: absolute;
+    background: #000;
+    padding: 1rem 2rem;
+    border-radius: 20rem;
+    top: 39%;
+    left:51.3%;
+    font-size: 11pt;
+    box-shadow: 2px 2px 3px #d1d1d1;
+    z-index: 9;
+}
+.room-list-empty-room:after{
+        bottom: 100%;
+    
+    left: 0px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(56, 77, 157, 0);
+    border-bottom-color: #000;
+    border-width: 11px;
+    margin-left: -9px;
+    top: 50%;
+}
+.color_Y{color:#fff000;}
+</style>
+
+</head>
+
+<body>
+<!-- <div id="minwon-bar" class="progress-bar">
+    <div class="progress"> </div>
+</div>
+<div class="progress-bar2"></div>
+<div class="progress-bar3"></div>
+<div class="donut-container">
+    <div class="donut"> 
+		<div class="test"><img src="../assets/images/icon/scale.svg"></div>
+	</div>
+</div>
+<div class="donut-container">
+    <div class="donut">
+		
+	</div>
+</div>-->
+<section>
+<div class="test_a">
+	<img src="../assets/images/icon/scale_2.svg">
+	<div class="test_b"><div id="magnifying-glass"></div><div id="magnifying-glass_G" class="graph stack1"><span style="height:calc(75% - 87px);">75%</span></div></div>
+	
+</div>
+
+<div class="room-list-empty-room">
+<div class="parent"><div class="child">홍길동 고객님</div></div>
+    <div class="parent"><div class="child">등급 온도는 <span class="color_Y">193º</span></div></div>
+</div>	
+</section>
+
+<!--<section>
+  <div class="graph stack1">
+    <span>75%</span>    
+  </div>
+  <div class="graph stack2">
+    <span>60%</span>    
+  </div>
+  <div class="graph stack3">
+    <span>25%</span>    
+  </div>
+</section>-->
+</body>
+<script src="../assets/js/common/test.js"></script>
+</html>

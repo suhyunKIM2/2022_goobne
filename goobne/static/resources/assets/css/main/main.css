@@ -576,6 +576,7 @@
     font-size: 3.2rem;
     font-family: 'Rubik', 'NanumSquareRound', 'Noto Sans KR', sans-serif;
     font-weight: 600;
+	line-height: normal;width:100%;
 }
 
 @keyframes translatestf {
