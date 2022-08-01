@@ -34,6 +34,37 @@
     <script src="../assets/js/common/jquery.nice-select.js"></script><!---- cns제작추가---->
     <script src="../assets/js/main/main_banner_header.js"></script><!----cns 추가 -------->
 
+<script>
+$(function(){
+	$('.delivery_list_ul li').each(function(){
+		var i=1
+		$( '.l-radio input[type="radio"]' ).each( function() {
+		  $( this ).attr({ 
+				'id': "radio_0" + i
+				});
+			i = i + 1;
+		});
+	});
+	
+	$('.delivery_list_ul li').each(function(){
+		var i=1
+		$( '.l-radio input[type="radio"] + label' ).each( function() {
+		  $( this ).attr({ 
+				'for': "radio_0" + i
+				});
+			i = i + 1;
+		});
+	});
+	
+	 $('.delivery_list_ul li .inline_block .delete_icon_btn').each(function(){
+		$(this).click(function(e){
+			var stat = $(this).parent().parent().parent();
+			$(stat).remove();
+		});	
+	 });
+});
+</script>
+
 </head>
 
 <body>
@@ -51,91 +82,72 @@
         <div id="content">
             <article class="l-layout">
                 <div class="my_page my_correction_main my_page_order_main">
-                <div class="l-title">마이페이지</div>
-                   <div class="l-inner">
-                     <ul class="tab_list order_tab_list">
-                         <li onclick="location.href='/order/html/my_page.html'">현재주문</li>
-                         <li class="tab_on" onclick="location.href='/order/html/my_page_order.html'">주문내역</li>
-                     </ul>
-                     <ul class="order_tab_list_small">
-					 	<li class="tab_on">온라인 주문내역</li>
-						<li>e-쿠폰 주문내역</li>
+                <div class="l-title">주문방법선택</div>
+                   <div class="l-inner ">
+					  <ul class="order_tab_list_small">
+					 	<li class="tab_on" onClick="location.href='../html/my_page_order_delivery_list.html'">배달주문</li>
+						<li onClick="location.href='../html/my_page_order_package_list.html'">포장주문</li>
 					 </ul>
 					 <section class="cart__order my_page_order_main tab_content">
 						<div class="cart__order-table tab_content_list tab_content_on">
 							<div class="order_list_table">
-								<div class="order_list_table_tr">
-									<ul class="order_list_table_th_left">
-										<li><b class="receipt">배달</b></li>
-										<li>주문일시 <b>2022-04-25 16:52</b></li>
-										<li>주문번호 <b>20220425863558990002</b></li>
-									</ul>
-									<ul class="order_list_table_th_right">
-										<li onClick="">+재주문하기</li>
-										<li onClick="" class="bookmark_btn">즐겨찾기등록</li>
-									</ul>
-									
-								</div>
-								<ul class="order_list_table_td">
-										<li><div class="request">수령완료</div><div class="G_font_S"><a href="tel:02-859-3082" class="mobile_tel">구로점 02-859-3082</a></div></li>
-										<li class="order_menu_name">고추바사삭 19,000원</li>
-										<li><div>경험치 +150</div> <div class="btn_detail" onClick="location.href='../html/my_page_order.html'">상세보기</div></li>
-									</ul>
-							</div>
-							<div class="order_list_table">
-								<div class="order_list_table_tr">
-									<ul class="order_list_table_th_left">
-										<li><b class="receipt">배달</b></li>
-										<li>주문일시 <b>2022-04-25 16:52</b></li>
-										<li>주문번호 <b>20220425863558990002</b></li>
-									</ul>
-									<ul class="order_list_table_th_right">
-										<li onClick="">+재주문하기</li>
-										<li onClick="" class="bookmark_btn">즐겨찾기등록</li>
-									</ul>
-									
-								</div>
-								<ul class="order_list_table_td">
-										<li><div class="request">수령완료</div><div class="G_font_S"><a href="tel:02-859-3082" class="mobile_tel">구로점 02-859-3082</a></div></li>
-										<li class="order_menu_name">고추바사삭 19,000원</li>
-										<li><div>경험치 +150</div> <div class="btn_detail" onClick="location.href='../html/my_page_order.html'">상세보기</div></li>
-									</ul>
-							</div>
-						</div>
-						
-						<div class="cart__order-table tab_content_list">
-							<div class="order_list_table">
-								<div class="order_list_table_tr">
-									<ul class="order_list_table_th_left">
-										<li><b class="receipt">배달</b></li>
-										<li>주문일시 <b>2022-04-25 16:52</b></li>
-										<li>주문번호 <b>20220425863558990002</b></li>
-									</ul>
-									<ul class="order_list_table_th_right">
-										<li onClick="">+재주문하기</li>
-										<li onClick="" class="bookmark_btn">즐겨찾기등록</li>
-									</ul>
-									
-								</div>
-								<ul class="order_list_table_td">
-										<li><div class="request">수령완료</div> <div class="G_font_S"><a href="tel:02-859-3082" class="mobile_tel">구로점 02-859-3082</a></div></li>
-										<li class="order_menu_name"><span class="e_coupon_icon">e-쿠폰</span> 고추바사삭 19,000원</li>
-										<li><div>경험치 +150</div> <div class="btn_detail" onClick="location.href='../html/my_page_order.html'">상세보기</div></li>
-									</ul>
+								<ul class="delivery_list_ul">
+									<li>
+										<div class="l-radio">
+											<input type="radio" id="radio-01" name="payment" checked="">
+											<label for="radio-01"></label>
+										</div>
+										<ul class="inline_block">
+											<li>서울특별시 강서구 강서로 318</li>
+											<li><span class="store_name">내발산점</span><a href="tel:00-000-0000">00-000-0000</a></li>
+											<li><span class="time_info_icon"><img src="https://www.goobne.co.kr/resources/assets/images/icon/alarm.svg" class="alarm_icon">30분 소요</span></li>
+											<li class="store_info_icon">#배달할인#포장할인</li>
+											<li><div class="delete_icon_btn">X</div></li>
+										</ul>
+									</li>
+									<li>
+										<div class="l-radio">
+											<input type="radio" id="radio-01" name="payment">
+											<label for="radio-01"></label>
+										</div>
+										<ul class="inline_block">
+											<li>서울특별시 강서구 강서로 318</li>
+											<li><span class="store_name">내발산점</span><a href="tel:00-000-0000">00-000-0000</a></li>
+											<li><span class="time_info_icon"><img src="https://www.goobne.co.kr/resources/assets/images/icon/alarm.svg" class="alarm_icon">불금특가 진행</span></li>
+											<li class="store_info_icon">#포장할인</li>
+											<li><div class="delete_icon_btn">X</div></li>
+										</ul>
+									</li>
+								</ul>
+								
 							</div>
 						</div>
 					
+						<div class="delivery_list_footer_box">
+							<ul class="delivery_list_footer_ul">
+								<li class="delivery_list_btn">+ 배달주소 등록</li>
+								<li>* 배달주소는 최대 10개까지만 등록 가능합니다.</li>
+							</ul>
+
+						</div>
+						<div class="delivery_list_footer_box_check">
+							<ul class="delivery_list_footer_ul">
+								<li>
+									개인정보 수집 이용 동의 (필수)
+									- 수집정보: 배달지 주소
+									- 수집목적: 제품 배달서비스 제공
+									- 보유기간: 관련 법령에 따라 보관 후 파기
+									(전자상거래 등에서의 소비자보호에 관한 법률 5년)
+								</li>
+								<li>
+									<span>해당 배달 주소로 주문을 진행하시겠습니까?</span>
+									<div class="delivery_list_ch_btn">선택</div>
+								</li>
+							</ul>
+						</div>
 
 					</section>
-					<!---페이징 영역---->
-					<section class="l-paging-num">
-						<button type="button"><img src="https://www.goobne.co.kr/resources/assets/images/icon/chevron-double-left.svg" style="width:20px;"></button>
-						<button type="button" class="is-active">1</button>
-						<button type="button" onclick="searchStorePaging('2');">2</button>
-						<button type="button"><img src="https://www.goobne.co.kr/resources/assets/images/icon/chevron-double-right.svg" style="width:20px;"></button>
-					</section>
-					<!---//페이징 영역---->
-                </div>
+                    </div> 
                 </div>
                
             </article>
@@ -193,17 +205,8 @@
             const closeBtnElem = document.querySelectorAll(".closeBtn");
             closeBtnElem.forEach(e => e.addEventListener('click', closePopupFunc));
 			
-			//tab 탭
-			var $tabblink = $(".order_tab_list_small li").click(function() {
-			var idx = $tabblink.index(this);
-			$(".order_tab_list_small li").removeClass("tab_on");
-			$(".order_tab_list_small li").eq(idx).addClass("tab_on");
-			$(".tab_content > .tab_content_list").removeClass("tab_content_on")
-			$(".tab_content > .tab_content_list").eq(idx).addClass("tab_content_on");
-		  });
-        });
-		
-		
+			
+        })
     </script>
 </body>
 

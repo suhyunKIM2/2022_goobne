@@ -210,7 +210,10 @@
                                  </div>    
                             <dl class="name">
                                 <dt class="tit" id="itemNm">${menu_view.item_name }</dt>
-                                <dd class="desc" id="description">${menu_view.description }</dd>
+                                <jsp:scriptlet> pageContext.setAttribute("newline", "\n"); </jsp:scriptlet>
+                                <dd class="desc" id="description">
+                                	<c:out value="${fn:replace(menu_view.description, newline, '<br>')}" escapeXml="false"/>
+                                </dd>
                             </dl>
                             <p class="price"><span class="l-num" id="price"><fmt:formatNumber value="${menu_view.price1 }" pattern="#,###" /></span>원</p>
                             <div class="select-btn">
@@ -751,7 +754,7 @@
                             </div> -->
 							
 							<div class="result-btn" style="display: block;margin: 4rem auto;text-align: center;">
-                                <button type="button" class="l-btn" style="border-color:#D4000B;background:#D4000B;" onClick="location.href='<%=SystemConstant.ORDER%>'">온라인주문</button>
+                                <a href="javascript:loginnet('');"><button type="button" class="l-btn" style="border-color:#D4000B;background:#D4000B;">온라인주문</button></a>
                             </div>
 							
                         </div>
@@ -862,7 +865,8 @@
      		
     		$("#food").html(foodTxt);
     		$("#itemNm").html(menuView.item_name);
-    		$("#description").html(menuView.description);
+    		var description = menuView.description.replace(/\r\n|\n|\r/g, '<br />');
+    		$("#description").html(description);
     		$("#price").html(numberFormatComma(menuView.price1));
         }
         function chgCnt(gb){

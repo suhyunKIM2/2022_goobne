@@ -51,16 +51,8 @@
         <div id="content">
             <article class="l-layout">
                 <div class="my_page my_correction_main my_page_order_main">
-                <div class="l-title">마이페이지</div>
+                <div class="l-title">주문상세</div>
                    <div class="l-inner">
-                     <ul class="tab_list order_tab_list">
-                         <li onclick="location.href='/order/html/my_page.html'">현재주문</li>
-                         <li class="tab_on" onclick="location.href='/order/html/my_page_order.html'">주문내역</li>
-                     </ul>
-                     <ul class="order_tab_list_small">
-					 	<li class="tab_on">온라인 주문내역</li>
-						<li>e-쿠폰 주문내역</li>
-					 </ul>
 					 <section class="cart__order my_page_order_main tab_content">
 						<div class="cart__order-table tab_content_list tab_content_on">
 							<div class="order_list_table">
@@ -70,71 +62,84 @@
 										<li>주문일시 <b>2022-04-25 16:52</b></li>
 										<li>주문번호 <b>20220425863558990002</b></li>
 									</ul>
-									<ul class="order_list_table_th_right">
-										<li onClick="">+재주문하기</li>
-										<li onClick="" class="bookmark_btn">즐겨찾기등록</li>
-									</ul>
 									
 								</div>
-								<ul class="order_list_table_td">
-										<li><div class="request">수령완료</div><div class="G_font_S"><a href="tel:02-859-3082" class="mobile_tel">구로점 02-859-3082</a></div></li>
-										<li class="order_menu_name">고추바사삭 19,000원</li>
-										<li><div>경험치 +150</div> <div class="btn_detail" onClick="location.href='../html/my_page_order.html'">상세보기</div></li>
+								<div class="request request_detail">수령완료</div>
+								<div class="sys-pro detail_sys-pro">
+									<ul class="order_detail_receipt">
+										<li><b>주문내역</b></li>
+										<li>고추바사삭 X 1 / 19,000원</li>
+										<li>콜라 500ml X 1 / 3,000원</li>
 									</ul>
-							</div>
-							<div class="order_list_table">
-								<div class="order_list_table_tr">
-									<ul class="order_list_table_th_left">
-										<li><b class="receipt">배달</b></li>
-										<li>주문일시 <b>2022-04-25 16:52</b></li>
-										<li>주문번호 <b>20220425863558990002</b></li>
+									<ul class="receipt_table_detail_ul">
+										<li>
+											<table class="receipt_table receipt_table_detail ">
+											<tr>
+												<th>주문금액</th>
+												<td><b>39,900원</b></td>
+											</tr>
+											<tr>
+												<th>할인금액 <span class="G_font_S">(SET 30%)</span></th>
+												<td class="sale_font_color"><b>-11,970원</b></td>
+											</tr>
+											<tr>
+												<th>배달비</th>
+												<td>3,000원</td>
+											</tr>
+											<tr>
+												<th>결제금액</th>
+												<td>30,930원</td>
+											</tr>
+										</table>
+										</li>
 									</ul>
-									<ul class="order_list_table_th_right">
-										<li onClick="">+재주문하기</li>
-										<li onClick="" class="bookmark_btn">즐겨찾기등록</li>
-									</ul>
-									
 								</div>
-								<ul class="order_list_table_td">
-										<li><div class="request">수령완료</div><div class="G_font_S"><a href="tel:02-859-3082" class="mobile_tel">구로점 02-859-3082</a></div></li>
-										<li class="order_menu_name">고추바사삭 19,000원</li>
-										<li><div>경험치 +150</div> <div class="btn_detail" onClick="location.href='../html/my_page_order.html'">상세보기</div></li>
-									</ul>
+								<section class="my_page_order_main">
+									<div class="tit-area">
+										<p class="tit">주문정보</p>
+									</div>
+									<table class="order_list_info_table">
+										<tr>
+											<th>결제방법</th>
+											<td><b>네이버페이(선결제)</b>27,930원<br>
+											<span class="G_font_S">* 간편결제 영수증은 해당 결제 서비스에서 확인해주세요.</span>
+											</td>
+										</tr>
+										<tr>
+											<th>수령인</th>
+											<td><b>홍길동</b></td>
+										</tr>
+										<tr>
+											<th>수령인 연락처</th>
+											<td>010-1234-5678</td>
+										</tr>
+										<tr>
+											<th>배달주소</th>
+											<td><b>서울특별시 양천구 공항대로 644</b></td>
+										</tr>
+										<tr>
+											<th>매장정보</th>
+											<td><b>염창점</b>(02-1234-5678)</td>
+										</tr>
+										<tr>
+											<th>요청사항</th>
+											<td>
+												벨 누르지말고 문앞에 놔주세요.
+											</td>
+										</tr>
+									</table>
+								</section>
+								<div class="l-btn-area l-btn-area_detail">
+									<button type="button" class="l-btn line">목록</button>
+									<button type="submit" class="l-btn">즐겨찾기등록</button>
+									<button type="button" class="l-btn line">+ 재주문</button>
+								</div>
 							</div>
 						</div>
 						
-						<div class="cart__order-table tab_content_list">
-							<div class="order_list_table">
-								<div class="order_list_table_tr">
-									<ul class="order_list_table_th_left">
-										<li><b class="receipt">배달</b></li>
-										<li>주문일시 <b>2022-04-25 16:52</b></li>
-										<li>주문번호 <b>20220425863558990002</b></li>
-									</ul>
-									<ul class="order_list_table_th_right">
-										<li onClick="">+재주문하기</li>
-										<li onClick="" class="bookmark_btn">즐겨찾기등록</li>
-									</ul>
-									
-								</div>
-								<ul class="order_list_table_td">
-										<li><div class="request">수령완료</div> <div class="G_font_S"><a href="tel:02-859-3082" class="mobile_tel">구로점 02-859-3082</a></div></li>
-										<li class="order_menu_name"><span class="e_coupon_icon">e-쿠폰</span> 고추바사삭 19,000원</li>
-										<li><div>경험치 +150</div> <div class="btn_detail" onClick="location.href='../html/my_page_order.html'">상세보기</div></li>
-									</ul>
-							</div>
-						</div>
 					
 
 					</section>
-					<!---페이징 영역---->
-					<section class="l-paging-num">
-						<button type="button"><img src="https://www.goobne.co.kr/resources/assets/images/icon/chevron-double-left.svg" style="width:20px;"></button>
-						<button type="button" class="is-active">1</button>
-						<button type="button" onclick="searchStorePaging('2');">2</button>
-						<button type="button"><img src="https://www.goobne.co.kr/resources/assets/images/icon/chevron-double-right.svg" style="width:20px;"></button>
-					</section>
-					<!---//페이징 영역---->
                 </div>
                 </div>
                

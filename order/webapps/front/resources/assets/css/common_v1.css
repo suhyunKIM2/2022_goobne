@@ -652,6 +652,11 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .main-box .goobne-img.goobne-img_office{min-width:85%;}
 .inline_block li p{display:block;}
 
+.l-menu-item-list .l-menu-item:nth-child(3n){margin-right: auto;}	
+.menu-view__main .list-menu-area .l-menu-item,.l-menu-item-list .l-menu-item {
+    width: calc((100% - 0.5rem)/2);
+    margin-right: 0.5rem;}	
+.l-badge-wrap .badge{margin-right:3px;}	
 }
 @media (max-width: 375px){
 .th_col{width:20%;}
@@ -664,6 +669,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 }
 .event__list .list .desc {
     min-height: 128px;}
+.menu-view .l-inner{width:95%;}		
 }
 @media (max-width: 360px){
 .event__list .list .desc {
@@ -674,6 +680,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .l-inner {
     width: 100%;
 }
+.menu-view .l-inner{width:95%;}	
 .coupon_list li{width:auto;margin: 0;margin-bottom: 1rem;}
 .coupon_list li .coupon_list_bg{width:250px;height:151px;background-size:250px auto;}
 .coupon_pro .black_btn{width:80%;}

@@ -4,7 +4,7 @@
 <file name="notice_detail.html" server="218.145.161.78//data/goobne/" local="133004128410663123" remote="133004127930000000" Dst="0" />
 <file name="cscenter_regi_list.html" server="218.145.161.78//data/goobne/" local="133004129393705154" remote="133004128920000000" Dst="0" />
 <file name="cscenter_regi_detail.html" server="218.145.161.78//data/goobne/" local="133004129682770553" remote="133004129200000000" Dst="0" />
-<file name="my_page.html" server="218.145.161.78//data/goobne/" local="133027693495336740" remote="133027692400000000" Dst="0" />
+<file name="my_page.html" server="218.145.161.78//data/goobne/" local="133034392020525449" remote="133034390770000000" Dst="0" />
 <file name="event.html" server="218.145.161.78//data/goobne/" local="133004186166085483" remote="133004185700000000" Dst="0" />
 <file name="non_order.html" server="218.145.161.78//data/goobne/" local="133003262820000000" remote="133003262820000000" Dst="0" />
 <file name="event_detail_Pop_up_Store.html" server="218.145.161.78//data/goobne/" local="133007666208031780" remote="133007665640000000" Dst="0" />
@@ -14,9 +14,16 @@
 <file name="find_id.html" server="218.145.161.78//data/goobne/" local="133003262820000000" remote="133003262820000000" Dst="0" />
 <file name="founded_online.html" server="218.145.161.78//data/goobne/" local="133023302477307861" remote="133023301490000000" Dst="0" />
 <file name="my_correction.html" server="218.145.161.78//data/goobne/" local="133026724345364649" remote="133026723370000000" Dst="0" />
-<file name="join.html" server="218.145.161.78//data/goobne/" local="133003262820000000" remote="133003262820000000" Dst="0" />
+<file name="join.html" server="218.145.161.78//data/goobne/" local="133033784066947738" remote="133033782830000000" Dst="0" />
 <file name="menu_add.html" server="218.145.161.78//data/goobne/" local="133003262820000000" remote="133003262820000000" Dst="0" />
-<file name="my_page_order.html" server="218.145.161.78//data/goobne/" local="133027583970043631" remote="133027582920000000" Dst="0" />
+<file name="my_page_order.html" server="218.145.161.78//data/goobne/" local="133029314245812901" remote="133029313100000000" Dst="0" />
 <file name="cart.html" server="218.145.161.78//data/goobne/" local="133003262820000000" remote="133003262820000000" Dst="0" />
-<file name="my_page_order_list.html" server="218.145.161.78//data/goobne/" local="133027771595566914" remote="133027770520000000" Dst="0" />
+<file name="my_page_order_list.html" server="218.145.161.78//data/goobne/" local="133028639580695567" remote="133028638480000000" Dst="0" />
+<file name="my_page_order_list_detail.html" server="218.145.161.78//data/goobne/" local="133028630955329492" remote="133028629860000000" Dst="0" />
+<file name="my_page_order_bookmark.html" server="218.145.161.78//data/goobne/" local="133034481838691220" remote="133034480570000000" Dst="0" />
+<file name="menu_detail.html" server="218.145.161.78//data/goobne/" local="133037915710118462" remote="133037914340000000" Dst="0" />
+<file name="menu_03.html" server="218.145.161.78//data/goobne/" local="133035536529229823" remote="133035535260000000" Dst="0" />
+<file name="my_page_order_delivery_list.html" server="218.145.161.78//data/goobne/" local="133035424963541914" remote="133035423730000000" Dst="0" />
+<file name="find_pw.html" server="218.145.161.78//data/goobne/" local="133034600351535781" remote="133034599100000000" Dst="0" />
+<file name="my_page_order_package_list.html" server="218.145.161.78//data/goobne/" local="133035354581475605" remote="133035353330000000" Dst="0" />
 </dwsync>

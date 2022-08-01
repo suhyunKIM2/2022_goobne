@@ -76,12 +76,12 @@
                                          <div>
                                             <img src="../assets/images/icon/order_icon_02.svg" class="" id=""> 
                                          </div>
-                                     배달중</li>
+                                     배달중</li> <!--- 포장일 때 : 픽업대기(text 변경) 이미지도 변경 off: order_icon_01.svg on:order_icon_01_on.svg----->
                                      <li>
                                          <div>
                                             <img src="../assets/images/icon/order_icon_01.svg" class="" id=""> 
                                          </div>
-                                     배달완료</li>
+                                     배달완료</li><!--- 포장일 때 : 픽업완료(text 변경) 이미지도 변경 off: order_icon_06.svg on:order_icon_06_on.svg  ----->
                                  </ul>
                                  <div class="line_center"></div>
                              </div>
@@ -153,7 +153,6 @@
 												<td>30,930원</td>
 											</tr>
 										</table>
-										</table>
 									</div>
 									</div>
 								</div>
@@ -195,7 +194,7 @@
 										<tr>
 											<th>요청사항</th>
 											<td>
-												<input type="text"  value="벨 누르지말고 문앞에 놔주세요."><!--- 주문확정으로 넘어 갈 시 수정 못함----->
+												<input type="text"  value="벨 누르지말고 문앞에 놔주세요."><!--- 주문확정으로 넘어 갈 시 수정 못함 inputX , text로 표기----->
 											</td>
 										</tr>
 									</table>
@@ -205,7 +204,7 @@
 								</div>
 								
 							</section>
-							<div class="l-btn-area">
+							<div class="l-btn-area"> <!--- 주문확정 후 : 목록,확인 주문완료 후 : 목록, 재주문 -->
 								<button type="button" class="l-btn line">취소</button>
 								<button type="submit" class="l-btn">저장</button>
 							</div>

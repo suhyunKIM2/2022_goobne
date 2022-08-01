@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../assets/css/common_layout.css" type="text/css" />
     <link rel="stylesheet" href="../assets/css/layout.css" type="text/css" />
     <link rel="stylesheet" href="../assets/css/modal.css" type="text/css" />
+	<link rel="stylesheet" href="../assets/css/verification_code.css" type="text/css" /><!--인증번호 추가--->
 
 
 
@@ -26,8 +27,10 @@
     <script src="../assets/js/common/jquery-ui.js"></script>
     <script src="../assets/js/common/slick.js"></script>
     <script src="../assets/js/common/wow.min.js"></script>
-    <script src="assets/js/main/main.js"></script>
+    <script src="../assets/js/main/main.js"></script>
+	<script src="../assets/js/common/verification_code.js"></script><!--인증번호 추가--->
 
+	
 </head>
 
 <body>
@@ -117,15 +120,19 @@
                                     <div class="right">
                                         <div class="input-btn">
                                             <input type="number" placeholder="- 없이 입력하세요." class="l-input short-input">
-                                            <button type="button" class="l-btn">인증번호 발송</button>
+                                            <button type="button" class="l-btn code_btn">인증번호 발송</button>
                                         </div>
                                         <div class="l-chk sns">
                                             <input type="checkbox" id="chk-02" class="chk-type">
                                             <label for="chk-02">정보/이벤트 SMS 수신에 동의합니다.</label>
                                         </div>
-                                        <div class="input-btn">
-                                            <input type="number" placeholder="인증번호를 입력해주세요."
-                                                class="l-input short-input">
+                                        <div class="input-btn"><!--S: 인증번호 추가--->
+											<div class="code_input_div">
+											<div class="code_time"></div>
+                                            <input type="number" placeholder="인증번호를 입력해주세요." disabled
+                                                class="l-input short-input btn_chk_input">
+											</div><!--E: 인증번호 추가--->
+												
                                             <button type="button" class="l-btn">인증하기</button>
                                         </div>
                                     </div>

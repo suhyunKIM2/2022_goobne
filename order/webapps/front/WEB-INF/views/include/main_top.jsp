@@ -14,6 +14,10 @@
     GnMember user = sessFtr.getGnMember();  
     GnLocation loc = sessFtr.getGnLocation();
 %> 
+<head>
+<meta name="robots" content="index,nofollow">
+</head>
+
 <div class="loading-bar on"></div>
 <div class="inner">
     <div class="logo">
@@ -34,13 +38,11 @@
 	--%> 
     <div class="menu">
         <ul>
-            <li><a href="<%=SystemConstant.ORDER%>">주문하기</a></li>
+            <li><a href="javascript:loginnet('')">주문하기</a></li>
             <li><a href="/menu/menu_main">메뉴소개</a></li>
             <li><a href="/store/search_store">매장찾기</a></li>
             <li><a href="/brd/const/franchise">창업안내</a></li>
             <li><a href="/brd/event/list">이벤트</a></li>
-			<li style="display:none;"><a href="/brand">브랜드</a></li>
-			<li style="display:none;"><a href="https://talk.naver.com/ct/wccao5?frm=pgoobne1#nafullscreen">네이버톡톡주문</a></li>
         </ul>
     </div> 
     <div class="btn-cnt-area">

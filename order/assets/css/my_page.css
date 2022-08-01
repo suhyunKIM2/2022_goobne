@@ -75,13 +75,139 @@
 .order_tab_list_small li.tab_on:hover{color:#fff;}
 .order_tab_list_small li:hover{color:#000;font-weight: 800;}
 .order_list_table{border-top:1px solid #000;font-size:1.5rem;}
-.order_list_table_tr,.order_list_table_td{display: flex;justify-content: space-between;padding:2rem 0;border-bottom: 1px solid #999;}
+.order_list_table_tr,.order_list_table_td{display: flex;justify-content: space-between;padding:2rem 0;border-bottom: 1px solid #dbdbdb;}
 .order_list_table_th_left li,.order_list_table_th_right li{display:inline-block;margin:0 1rem;}
+.order_list_table_th_left li b,.order_list_table_th_right li b{font-weight:800;}
+.order_list_table_th_right li {cursor:pointer;}
+.tab_content_list{display: none;}
+.tab_content_list.tab_content_on{display:block;}
+.request{    font-size: 1.8rem;
+    font-weight: 800;}
+.receipt{font-size:1.8rem;}	
+.order_list_table_td li .request{margin-bottom:0.5rem;}
+.order_list_table_td li {vertical-align: middle;    width: calc(100% / 3);}
+.order_menu_name{    align-self: center;line-height: 1.8;
+/*overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 2; 
+-webkit-box-orient: vertical;   */ text-align: left;}
+.order_list_table_td li:last-child{text-align:end;}
+.bookmark_btn{color:#EB080C;}
+.btn_detail{    background: #212121;
+    color: #fff;
+    width: 83px;
+    text-align: center;
+    float: right;
+    padding: 0.5rem 0;
+    border-radius: 5px;
+    margin-top: 0.3rem;cursor: pointer;}
+.mobile_tel{color:#999;}	
+.e_coupon_icon{background:#999;color:#fff;border-radius: 20px;padding:0.5rem;}
+.request_detail{margin:2rem 0;}
+.receipt_table_detail{position:relative;transform: translateY(0);padding:0;width: 100%;}
+.detail_sys-pro{display:flex;justify-content: space-between;    margin-bottom: 4rem;}
+.order_detail_receipt,.receipt_table_detail_ul{padding:4rem;    width: calc(100% /2 );}
+.order_detail_receipt li:first-child b{font-size:1.8rem;}
+.order_detail_receipt li:first-child{margin-bottom:1rem;}
+.receipt_table_detail_ul .receipt_table td{font-size:1.8rem;}
+.receipt_table_detail_ul .receipt_table tr:last-child th, .receipt_table_detail_ul .receipt_table tr:last-child td{font-size:2.5rem;}
+.sale_font_color{color:#E00104;}
+.order_detail_receipt li{margin-bottom:0.5rem;}
+.l-btn-area_detail{margin:4rem 0;    display: inline-block;width:100%;}
+.l-btn-area_detail button{float:right;}
+.l-btn-area_detail button:first-child{float:left;}
+.l-btn-area_detail button:last-child{background: #d60018;color: #fff;border-color: #d60018;}
+.bookmark_list_ul li{padding:4rem;font-size:1.5rem;position:relative;    border-radius: 10px; background-color: #F5ECE4;box-shadow: 9px 9px 15px rgb(227 209 193);margin-bottom: 3rem;}
+.my_bookmark_address dt{font-size:2.5rem;font-weight: 600;}
+.my_bookmark_menu dt img{width:150px;}
+.bookmark_list_ul li dl dt,.bookmark_list_ul li dl dd {margin-bottom:1rem;align-self: center;overflow-wrap: anywhere;}
+.my_bookmark_menu dt,.my_bookmark_menu dd{display: inline-block;}
+.my_bookmark_menu dd:nth-child(3){float:right;    margin-top: 2.5rem;}
+.bookmark_list_ul li .menu-detail__desc-area li{display:inline-block;padding: 0 1rem;box-shadow: none;}
+.my_bookmark_menu .menu-detail__desc-area .count input{width:50px;}
+.my_bookmark_price{padding:2rem; background: rgba(255,255,255,0.3);font-size: 2rem;min-height: 70px;line-height: 70px;}
+.my_bookmark_price dl{text-align:right;font-weight: 800;}
+.my_bookmark_price dl dt,.my_bookmark_price dl dd{display:inline;}
+.bookmark_list_ul li dl dd.color_red{color:#d4000b;margin: 0 1rem;}
+.order_btn_click{background:#d4000b;color:#fff;padding:1rem 4rem;    border-radius: 10px;cursor: pointer;}
+.bookmark_list_ul li dl dd.order_btn_click{margin-left:1rem;}
+.bookmark_list_ul li .menu-detail__desc-area li.price_font{font-weight:800;font-size:1.8rem;}
+.my_bookmark_address dd .store_name,.my_bookmark_address dd .store_number_call{font-weight:600;}
+.my_bookmark_address dd .store_number_call{margin-left:1rem;color: #0479d3;}
+.my_bookmark_address dd .store_number_call a{color: #0479d3;}
+.my_bookmark_address dt a{color:#0479d3;font-size:1.5rem;    border-bottom: 1px solid #0479d3;margin-left: 0.5rem;}
+.delete_icon_btn{position:absolute;right:0;top:0;width: 28px;background: #723b0b;padding:1rem 1.5rem 1.5rem;cursor: pointer;border-bottom-left-radius: 20px;}
+.bookmark_list_ul li .my_bookmark_menu{border-bottom:2px dotted #dfcbb9;}
+.bookmark_list_ul li dl dd:nth-child(2){max-width:65%;vertical-align: middle;}
+.delivery_list_ul{margin:0;}
+.delivery_list_ul li{position:relative;    border-bottom: 1px solid #e6e6e6;padding: 1.5rem 0 0.5rem;}
+/*.delivery_list_ul li .inline_block li:first-child,.delivery_list_ul li .inline_block li:nth-child(2){display:inline-block;margin-left: 0;}*/
+.delivery_list_ul li .l-radio{display: inline-block;width:5%;max-width: 24px;}
+.delivery_list_ul li .inline_block{display: inline-block;    vertical-align: text-top;    width: 93%;}
+.delivery_list_ul li .inline_block li{margin-bottom:1.2rem;position: unset;    border-bottom: 0;padding: 0;}
+.delivery_list_ul li .inline_block li .store_name{border:1px solid #ccc;padding:0.3rem 0.5rem;font-size: 13px;color: #6e6e6e;margin-right: 0.5rem;}
+.time_info_icon{background:#eeddce;padding:0.5rem 1.5rem;border-radius: 10px;font-size:13px;color: #5e350b;}
+.store_info_icon{font-size:13px;color:#999;    margin-top: -3px;}
+.delivery_list_ul li .inline_block .delete_icon_btn{background: none;font-size:3rem;color:#5c3104;}
+.delivery_list_ul li .inline_block li .alarm_icon {vertical-align: text-bottom;width: 15px;margin-right: 2px;}
+.delivery_list_footer_box{    background: #F5ECE4; padding: 4rem;border-top: 1px solid #000;font-size:1.5rem;}
+.delivery_list_footer_ul{display: flex;justify-content: space-between;}
+.delivery_list_btn{background:#8e4902;padding:1rem 3rem;border:1px solid #5e350b;color: #fff;cursor: pointer;}
+.delivery_list_footer_ul li:last-child{color:#830608;line-height: 39px;}
+.delivery_list_footer_box_check{margin-top: 1rem;font-size:1.5rem;}
+.delivery_list_footer_box_check .delivery_list_footer_ul li{white-space: pre-line;line-height: 1.4;color: #999;    font-size: 1.2rem;}
+.delivery_list_footer_box_check .delivery_list_footer_ul li span{font-size:1.5rem;}
+.delivery_list_ch_btn{    background: #d4000b;color: #fff;text-align: center;padding: 1.5rem 0;margin-top: 1rem;font-size:1.5rem;cursor: pointer;}
+.l-radio input[type="radio"] + label{cursor: pointer;}
 
 @media (max-width: 905px){
 .order_info_minutiae .sys-pro{width:100%;max-width: 100%;}
 .order_info_minutiae{display:block;}
 .my_page_order_main .cart__order-table .item-desc{flex-direction: initial;}
+}
+@media (max-width: 840px){
+.order_list_table_th_left li .receipt{font-size:1.2rem;font-weight:500;border:1px solid #eee;color:#999;padding: 0.5rem;}
+.order_list_table_th_left li, .order_list_table_th_right li{font-size:1.2rem;margin: 0;line-height: 1.8;}
+.order_list_table_th_left li:last-child{display:block;}
+.order_list_table{position:relative;padding-bottom: 70px;}
+.order_list_table_th_right{position:absolute;bottom:10px;    width: 100%;    text-align: center;}
+.order_list_table_tr{padding: 1rem 0;}
+.order_list_table_tr, .order_list_table_td{display:block;}
+.order_list_table_td li{width:100%;}
+.order_list_table_td li:first-child div{display:inline-block;}
+.order_list_table_td li:first-child div.G_font_S{margin-left:0.5rem;    font-size: 1.2rem;}
+.order_menu_name{text-align:left;}
+.order_list_table_td li:last-child{height:auto;overflow:hidden;position: absolute;top:8px;}
+.order_list_table_th_right li{width:49%;display: inline-block;text-align: center;    height:45px;line-height:45px;}
+.order_list_table_th_right li:first-child{background:#212121;color:#fff;}
+.order_list_table_th_right li:last-child{background:#EB080C;color:#fff;}
+.order_list_table_td{border-bottom:0;padding: 2rem 0 0.3rem;}
+.tab_list{padding:2rem 0;}
+.tab_list li{font-size:1.7rem;}
+.order_list_table_td li:last-child div:first-child{font-size:1.2rem;margin-right: 7px;}
+.order_tab_list_small li{font-size:1.2rem;}
+.mobile_tel{display:block;}
+.order_list_table_th_left li b, .order_list_table_th_right li b{font-weight:500;}
+}
+@media (max-width: 745px){
+.my_bookmark_menu dd:nth-child(3){margin-top:0;position:absolute;right:0;top:0;}
+.my_bookmark_menu dt img {
+    width: 100px;
+}
+.bookmark_list_ul li .menu-detail__desc-area li{margin-bottom:0;margin-top:1.5rem;    padding: 0 0.2rem;}
+.menu-detail__desc-area .count{height:3.5rem;}
+.delete_icon_btn{width:20px;}
+.my_bookmark_address dt{font-size:2rem;}
+.bookmark_list_ul li dl dd.order_btn_click{font-size:1.5rem;margin-left: 0;height:50px;line-height: 50px;padding:0;text-align: center;display: block;margin-top: 0.5rem;}
+.my_bookmark_price{font-size:1.8rem;min-height: 38px;line-height: 38px;}
+.my_bookmark_menu dt, .my_bookmark_menu dd{display:block;}
+.bookmark_list_ul li .my_bookmark_menu{position:relative;}
+.bookmark_list_ul li{padding:2.5rem;}
+.bookmark_list_ul li dl dd:nth-child(2){max-width:100%;}
+.delivery_list_footer_ul{display: block;}
+.delivery_list_btn{text-align:center;    padding: 1.5rem 3rem;}
+.delivery_list_footer_box{padding: 3rem 2rem;}
 }
 @media (max-width: 500px){
 .my_correction_main .left_line{width:100%;}
@@ -93,10 +219,43 @@
 .order_list_info_table th{min-width:80px;}
 .receipt_table th{padding-left:2rem;}
 .receipt_table td{padding-right:2rem;}
+.bookmark_list_ul li{font-size:1.2rem;}
+.my_bookmark_address dt {
+    font-size: 1.8rem;
+}
+.bookmark_list_ul li .menu-detail__desc-area li.price_font{font-size:1.5rem;}
+.menu-detail__desc-area .count {
+    height: 3rem;
+}
+.my_bookmark_price {
+    font-size: 1.8rem;}
+.bookmark_list_ul li dl dd.order_btn_click{height:40px;line-height: 40px;}
+.bookmark_list_ul li .my_bookmark_price dl dd{margin:0;}
 }
 @media (max-width: 320px){
 .my_correction_main .l-inner{width:92%;}
 .terms-cnt-width{padding: 1.6rem 2% !important;}
+.order_list_table{font-size:1.2rem;}
+.btn_detail{width:75px;}
+.order_list_table_th_left li, .order_list_table_th_right li{font-size:1rem;}
+.order_list_table_th_right li{height:35px;line-height: 35px;}
+.order_list_table {padding-bottom:55px;}
+.request{font-size:1.5rem;}
+.order_list_table_td li:last-child div:first-child {font-size: 1rem;}
+.bookmark_list_ul li {
+    padding: 1.5rem 0.9rem;
+}
+.menu-detail__desc-area .count button img {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+.my_bookmark_price {
+    font-size: 1.5rem;    padding: 1rem;
+}
+.menu-detail__desc-area .count button{width:2rem;height: 2rem;}
+.delivery_list_footer_box {
+    padding: 3rem 1rem;
+}
 }
 @media (max-width: 280px){
 .order_list_icon li div img{height:40px;}
