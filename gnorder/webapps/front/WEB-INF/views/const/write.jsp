@@ -22,12 +22,9 @@
 	</script>   
   	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <link rel="stylesheet" href="/resources/assets/css/common_layout.css" type="text/css" />
-    <link rel="stylesheet" href="/resources/assets/css/layout.css" type="text/css" />
-    <link rel="stylesheet" href="/resources/assets/css/common_v1.css" type="text/css" /><!---- cns제작추가---->
+  
     <title>온라인 창업상담</title>
-	<script type="text/javascript">
+    <script type="text/javascript">
 $(document).ready(function(){
 	
 	var param = new Object();
@@ -40,18 +37,17 @@ $(document).ready(function(){
 	param.use_yn ='Y';
 	getCodeListSelBox($("#tel1"), param, "선택", ""); 
 	
-	$("#domain").hide();
-	
 	$('#selectEmail').change(function(){
+		$("#selectEmail option:selected").each(function () {
 			if($(this).val() == '1'){ //직접입력일 경우
 				 $("#domain").show();
 				 $("#domain").val('');//값 초기화
 				 $("#domain").attr("disabled", false); //활성화
 			}else{ //직접입력이 아닐경우
-				 $("#domain").hide();
 				 $("#domain").val($(this).text());//선택값 입력
 				 $("#domain").attr("disabled", true); //비활성화
 			}
+		});
 	});
 	
 	if(getDevice() == 4){
@@ -119,9 +115,9 @@ $(document).ready(function(){
 				return;
 			}
 		} 
-		if($("#const_cont").val().replace(/(<([^>]+)>)/gi, "").length < 10){
+		if($("#summernote").val().replace(/(<([^>]+)>)/gi, "").length < 10){
 			alert("내용은 10자리 이상 입력해주세요.");
-			$("#const_cont").focus();
+			$("#summernote").focus();
 			return;
 		}
 		if(agree_btn != "on" ){
@@ -147,8 +143,9 @@ $(document).ready(function(){
 		obj.cont01 = tel1 + tel2 + tel3; //연락처
 		obj.cont02 = email + "@" + domain //이메일
 		obj.cont03 = $("#sido").val(); //가맹지역
-		obj.content = $("#const_cont").val().replace(/(<([^>]+)>)/gi, "");
-	
+		/* obj.content = $("#const_cont").val().replace(/(<([^>]+)>)/gi, ""); */
+		obj.content = $("#summernote").val();
+		
 		var data = JSON.stringify(obj);
 		var url = '/brd/const/save';
 		
@@ -161,6 +158,17 @@ $(document).ready(function(){
 		alert("등록 완료하였습니다.");
 		window.location.reload();
 	}
+</script>
+
+<script>
+/*따라다니는 날개 ( 창업문의 )*/	
+	$(document).ready(function(){
+		var currentPosition = parseInt($(".quickmenu").css("top"));
+		$(window).scroll(function() {
+		var position = $(window).scrollTop(); 
+		$(".quickmenu").stop().animate({"top":position+currentPosition+"px"},400);
+		});
+	});
 </script>
 </head>
 
@@ -182,7 +190,7 @@ $(document).ready(function(){
         <form id="brdForm" name="brdForm" method="post">
 		
             <article class="l-layout founded join payment">
-                <div class="l-inner const_div">
+                <div class="l-inner const_div founded_online_main">
                     <div class="l-title">창업안내</div>
 
                     <div class="founded__page-tab">
@@ -190,7 +198,14 @@ $(document).ready(function(){
                         <a href="/brd/const/process">프로세스 및 비용</a>
                         <a href="/brd/const/write" class="is-active">온라인 창업상담</a>
                     </div>
-
+					<div class="quickmenu">
+					  <ul>
+						<li>
+							창업문의
+						</li>
+						<li>1899-9458</li>
+					  </ul>
+					</div>
                     <div class="founded__page-tab-tit">기본정보</div>
 
                     <!-- 기본정보 -->
@@ -266,8 +281,8 @@ $(document).ready(function(){
                                 <label for="user-phone" class="title">문의사항</label>
                                 <div class="right">
                                     <div class="msg-select-box">
-                                        <div class="textarea-area mt0">
-                                            <textarea id="const_cont" name="const_cont" placeholder="매장 요청사항을 입력해주세요."></textarea>
+                                        <div class="textarea-area mt0 summernote_style">
+                                            <textarea id="summernote" name="const_cont" placeholder="매장 요청사항을 입력해주세요."></textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -301,8 +316,8 @@ $(document).ready(function(){
                         
                     </section>
 					<div class="founded__btn call_btn">
-						<a href="tel:16619494" id="phone">
-                        <button type="button" class="l-btn line"><span class="phone"></span>전화상담</button></a>
+						<a href="tel:18999458" id="phone">
+                        <button type="button" class="l-btn line"><span class="phone"></span>전화상담 1899 - 9458</button></a>
 					</div>
                      <!-- // 버튼 영역  -->
                 </div>
@@ -320,7 +335,9 @@ $(document).ready(function(){
         </div>
     </div>
     <!-- end of :: wrap -->
-
-
+    
+    <!-- Start bootstrap footer script  -->
+    <jsp:include page="/WEB-INF/views/include/footer_script.jsp"></jsp:include>
+    <!-- End bootstrap footer script  -->
 </body> 
 </html> 

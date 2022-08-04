@@ -367,17 +367,6 @@
                                                         </td>
                                                     </tr>
 													<tr>
-                                                        <td>스윗 볼케이노</td>
-                                                        <td>스윗볼케이노 소스</td>
-                                                        <td>우유, 대두, 밀, 돼지고기, 토마토, 쇠고기</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td></td>
-                                                        <td>스윗마그마 소스</td>
-                                                        <td> 우유, 대두, 밀, 돼지고기, 토마토, 쇠고기
-                                                        </td>
-                                                    </tr>
-													<tr>
                                                         <td>갈비천왕</td>
                                                         <td>갈비양념 소스</td>
                                                         <td>우유, 대두, 밀, 토마토, 닭고기, 쇠고기, 조개류(굴)</td>
@@ -726,7 +715,7 @@
                                                         <td>달걀,우유,대두,밀,토마토,돼지고기,닭고기,쇠고기</td>
                                                     </tr>
 													<tr>
-                                                        <td>굽네 티마 마살라 소스</td>
+                                                        <td>굽네 티카 마살라 소스</td>
                                                         <td></td>
                                                         <td>우유,대두,밀,토마토,돼지고기,닭고기,쇠고기</td>
                                                     </tr>
@@ -754,7 +743,7 @@
                             </div> -->
 							
 							<div class="result-btn" style="display: block;margin: 4rem auto;text-align: center;">
-                                <a href="javascript:loginnet('');"><button type="button" class="l-btn" style="border-color:#D4000B;background:#D4000B;">온라인주문</button></a>
+                                <!--<a href="javascript:loginnet('');">--><a href="javascript:alert('긴급 점검 중 입니다.');"><button type="button" class="l-btn" style="border-color:#D4000B;background:#D4000B;">온라인주문</button></a>
                             </div>
 							
                         </div>

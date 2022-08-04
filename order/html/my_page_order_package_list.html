@@ -33,7 +33,6 @@
     <script src="../assets/js/main/main.js"></script>
     <script src="../assets/js/common/jquery.nice-select.js"></script><!---- cns제작추가---->
     <script src="../assets/js/main/main_banner_header.js"></script><!----cns 추가 -------->
-
 <script>
 $(function(){
 	$('.delivery_list_ul li').each(function(){
@@ -131,7 +130,7 @@ $(function(){
 						</div>
 						<div class="delivery_list_footer_box">
 							<ul class="delivery_list_footer_ul">
-								<li class="delivery_list_btn">+ 배달주소 등록</li>
+								<li class="delivery_list_btn order_package_btn">+ 배달주소 등록</li>
 								<li>* 배달주소는 최대 10개까지만 등록 가능합니다.</li>
 							</ul>
 
@@ -168,8 +167,8 @@ $(function(){
             <!-- 참고: 스크립트로 load 됩니다. include 폴더 mobile-nav.html  -->
         </div>
 		
-		<div id="popup_04">
-			<!-- 참고: 스크립트로 load 됩니다. include 폴더 popup_03.html  이메일무단수집거부-->
+		<div id="popup_06">
+			<!-- 참고: 스크립트로 load 됩니다. include 폴더 popup_06.html  이메일무단수집거부-->
 		</div>
     </div>
     <!-- end of :: wrap -->
@@ -179,7 +178,7 @@ $(function(){
             $('#footer').load("../include/footer.html");
             $('.aside').load("../include/aside.html");
             $('#mobile-nav').load("../include/mobile-nav.html");
-			$('#popup_04').load("../html/popup/popup_04.html");
+			$('#popup_06').load("../html/popup/popup_06.html");
             
             $('select').niceSelect();/*--- cns추가 ---*/
 			
@@ -197,16 +196,16 @@ $(function(){
 				else $(".all-chk").prop("checked", true); 
 			});	
 			
-			// 탈퇴하기 버튼 
-            $('.user_out').click(function () {
-                $(".user_out-moadl .dimmed-bg").removeClass("l-hidden");
-                $(".user_out-moadl").removeClass("l-hidden");
+			// 포장주문 배달주소등록
+            $('.order_package_btn').click(function () {
+                $(".order_package-moadl .dimmed-bg").removeClass("l-hidden");
+                $(".order_package-moadl").removeClass("l-hidden");
             });
 
             
             // 팝업 닫기 버튼 구현
             function closePopupFunc() {
-                $(".user_out-moadl").addClass("l-hidden");
+                $(".order_package-moadl").addClass("l-hidden");
             }
             const closeBtnElem = document.querySelectorAll(".closeBtn");
             closeBtnElem.forEach(e => e.addEventListener('click', closePopupFunc));
@@ -221,6 +220,7 @@ $(function(){
 		  });
         })
     </script>
+	 
 </body>
 
 </html>

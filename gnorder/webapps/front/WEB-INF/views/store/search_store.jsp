@@ -3,10 +3,28 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<% String sysMode = (String)request.getAttribute("sysMode"); %>
+<% 
+String sysMode = (String)request.getAttribute("sysMode"); 
+
+//m 도메인 카카오키 체크
+String domain = request.getServerName();
+if ( domain.startsWith("m.") ) {
+	sysMode = "M";
+} 
+%>
 <!DOCTYPE html>
 <html lang="kor" dir="ltr">
-<head>
+<head> 
+<%-- http 접속시 지도api 사용불가 --%>
+<% if( sysMode.equals("P") ) { %>
+<script type="text/javascript">     
+if (document.location.protocol == 'http:') {          
+    document.location.href = document.location.href.replace('http:', 'https:');     
+}
+</script>
+<% } %> 
+<%-- http 접속시 지도api 사용불가 --%>
+
    <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
     <!-- KAKAO MAP API DEV KEY - http://localhost:8080-->
     <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5e7828c6cb316f52b765dd216c667253&libraries=services"></script> -->
@@ -105,7 +123,7 @@
                                 </div>
                                 <div class="search-list-area">
                                     <div class="result-num">
-                                        내 주변 검색결과 <span id="loc_cnt"></span>개
+                                        검색결과 <span id="loc_cnt"></span>개
                                     </div>
                                     <div class="result-list l-scroll-style" id="srchLocList">
 
@@ -115,14 +133,13 @@
                             <!--  매장명 검색  -->
                             <div class="tab-desc l-hidden">
                                 <div class="input-btn-area">
-                                    <input type="text" placeholder="매장명을 입력해주세요." id="br_name">
-                                    <button type="button" class="search-btn" onclick="goSearch('N')"><img
-                                            src="/resources/assets/images/icon/c-store-search.png" alt="검색이미지"></button>
+                                    <input type="text" placeholder="매장명을 입력해주세요." id="br_name" onkeyup="searchEnter(this)">
+                                    <button type="button" class="search-btn" onclick="goSearch('N')"><img  src="/resources/assets/images/icon/c-store-search.png" alt="검색이미지"></button>
                                 </div>
                                 <!-- 참고 : class l-hidden 제거시 활성화   -->
                                 <div class="search-list-area l-hidden" id="srchNameDiv">
                                     <div class="result-num">
-                                        내 주변 검색결과 <span>10</span>개
+                                        검색결과 <span id="nm_cnt"></span>개
                                     </div>
                                     <div class="result-list l-scroll-style" id="srchNameList">
                                     </div>
@@ -294,7 +311,7 @@
         	if ( obj.result == common._trans_success_code ) { 
         		var promList = obj.body.store_list.store_list;
         		var listTxt = "";
-        		
+        		positions =[];
         		if(promList.length>0){
         			for (var i = 0; i < promList.length; i++) {	
         				var promoObj = promList[i];	 
@@ -347,10 +364,12 @@
         			} 
         		} 
         		if($("#loc_btn").hasClass("disabled") === true) {
+        			$("#nm_cnt").html(promList.length);
 	        		$("#srchNameDiv").removeClass('l-hidden');
 	        		$('#srchNameList').empty();
             		$('#srchNameList').html(listTxt);
            		}else{
+           			$("#loc_cnt").html(promList.length);
            			$('#srchLocList').empty();
             		$('#srchLocList').html(listTxt);
            		}
@@ -472,11 +491,8 @@
                     }
                     listTxt+='<td><button class="'+offClass+'"></button></td>'; */
                     listTxt+='<td class="l-num">'+storeList[i].tel1+'</td>';
-                    var disCount= "";
-                    if(storeList[i].pack_amt !=0){
-                    	disCount="-";
-                    }
-                    listTxt+='<td class="l-num">'+disCount+storeList[i].pack_amt+'</td>';
+                    
+                    listTxt+='<td class="l-num">'+numberFormatComma(storeList[i].pack_amt)+'</td>';
                    /*  var dlvTime = '-';
                     if(replaceNull(storeList[i].dlv_time,'')!=""){
                     	dlvTime=storeList[i].dlv_time+'min';
@@ -527,6 +543,11 @@
     		$('#storeInfo > tbody').html(listTxt);
     		var pagingHTML = createPagingHTML(obj.body.store_list.pageNum, total_cnt ,obj.body.store_list.listCnt, 'searchStorePaging');
     		$(".l-paging-num").html(pagingHTML);
+        }
+        function searchEnter(obj){
+     		 if(event.keyCode == '13') {
+     			goSearch('N');
+     		 } 
         }
     </script>
 </body>

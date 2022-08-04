@@ -267,12 +267,14 @@ function goBrdView(brd_id, seq){
 
 
 function loginnet(urlstr){
+    alert('긴급 점검 중 입니다.');
+	/*
 	if (urlstr == "") {
 		urlstr = "/order/delivery.aspx";
 	}
 	$("#userurl").val(urlstr);
 	var ofrm = document.loginnet;
 	ofrm.action = "<%=SystemConstant.AUTHDT%>";
-	ofrm.submit();
+	ofrm.submit();*/
 }
 </script> 

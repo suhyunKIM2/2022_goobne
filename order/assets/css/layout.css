@@ -2430,6 +2430,8 @@ section {
 
 .store__search-tab .tab-desc .search-btn img {
   border-radius: 3px;
+  width:auto;
+  height:100%;
 }
 
 .store__search-tab .tab-desc .input-btn-area {
@@ -2545,12 +2547,12 @@ section {
 }
 
 .store__search-tab .tab-desc .search-list-area .result-list .list .icon.bk {
-  background: url(../images/icon/l-map-off.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
   background-size: 100%;
 }
 
 .store__search-tab .tab-desc .search-list-area .result-list .list .icon.red {
-  background: url(../images/icon/l-map-on.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
   background-size: 100%;
 }
 
@@ -2685,12 +2687,12 @@ section {
 }
 
 .store__map .map-icon-item .map-icon .icon.bk {
-  background: url(../images/icon/l-map-off.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
   background-size: 100%;
 }
 
 .store__map .map-icon-item .map-icon .icon.red {
-  background: url(../images/icon/l-map-on.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
   background-size: 100%;
 }
 

@@ -13,10 +13,10 @@
     GnMember user = sessFtr.getGnMember();     
 	String class_id = "";
 	if( request.getServletPath().contains("/WEB-INF/views/menu/menu_list.jsp") ) class_id = request.getParameter("class_id");
-%>  
-<head>
+%><head>
 <meta name="robots" content="index,nofollow">
 </head>
+  
 <div class="aside__dimmed-bg l-hidden"></div>
 <div class="aside__lnb">
     <div class="aside__lnb-inner">
@@ -34,12 +34,13 @@
            <!-- 오픈시 온라인 주문으로 넘김  <a href="<%=SystemConstant.LOGIN%>" class="link">Login</a>  -->
            <!-- 로그인 처리 --> <a href="/account/login" class="link">Login</a> 
             <span class="bar"></span>
-            <a href="<%=SystemConstant.JOIN%>" class="link">Join</a>
+<!--            <a href="<%=SystemConstant.JOIN%>" class="link">Join</a> -->
+            <a href="javascript:alert('긴급 점검 중 입니다.');" class="link">Join</a>
           </div>
         <% } %>
         <div class="aside__scroll">
             <ul class="aside__lnb-list">
-                <li><a href="javascript:loginnet('')">주문하기</a></li>
+                <li><!--<a href="javascript:loginnet('')">--><a href="javascript:alert('긴급 점검 중 입니다.');">주문하기</a></li>
                 <li class="list-arrow">
                     <a href="#none">메뉴소개</a>
 					<ul class="dept <% if( request.getServletPath().contains("/WEB-INF/views/menu/menu_main.jsp") || request.getServletPath().contains("/WEB-INF/views/menu/menu_list.jsp") ) { %>is-show<% } %>">

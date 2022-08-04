@@ -13,10 +13,10 @@
     SessionFactoryFront sessFtr = new SessionFactoryFront(request);
     GnMember user = sessFtr.getGnMember();  
     GnLocation loc = sessFtr.getGnLocation();
-%>  
-<head>
+%><head>
 <meta name="robots" content="index,nofollow">
 </head>
+  
 <div class="loading-bar on"></div>
 <div class="inner">
     <div class="logo">
@@ -26,7 +26,7 @@
     </div>  
     <div class="menu">
         <ul>
-            <li><a href="javascript:loginnet('')">주문하기</a></li>
+            <li><!--<a href="javascript:loginnet('')">--><a href="javascript:alert('긴급 점검 중 입니다.');">주문하기</a></li>
             <li><a href="/menu/menu_main">메뉴소개</a></li>
             <li><a href="/store/search_store">매장찾기</a></li>
             <li><a href="/brd/const/franchise">창업안내</a></li>

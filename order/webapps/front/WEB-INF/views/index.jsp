@@ -171,6 +171,9 @@ $(document).ready(function(){
 <!----S: 설정 시간 이후 바뀐 팝업 리스트---->
 <div id="new">
 <div class="slider single-item04">
+	<div class="list_slider">
+            <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32010"><img src="/resources/assets/images/popup/popup_20220804_1.svg" style="image-rendering:auto;"></a>
+    </div>
     <div class="list_slider">
             <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32010"><img src="/resources/assets/images/popup/220726_popup_ricotta.jpg" style="image-rendering:auto;"></a>
     </div>
@@ -271,7 +274,8 @@ $(document).ready(function(){
                     <%-- 메인 플로팅 배너 order, e-coupon s --%>
                     <div class="goobne-btn-box wow fadeInUp">
                             <button class="order">
-                                <a href="<%=SystemConstant.ORDER%>"><span>Order</span></a>
+                                <!-- <a href="<%=SystemConstant.ORDER%>"><span>Order</span></a> -->
+								<a href="javascript:alert('긴급 점검 중 입니다.');"><span>Order</span></a>
                             </button>
 							<button class="universe_go" onClick="window.open('http://www.xn--9i1b89owjy5lfa431as3k.com/')">
                                 <span>입장하기</span>
