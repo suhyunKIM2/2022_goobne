@@ -144,7 +144,7 @@ $(document).ready(function(){
 <!----S: 설정 시간 이전 바뀐 팝업 리스트---->
 <div class="window" id="window">
 <div id="ori">
-     <div class="slider single-item04">
+     <div class="slider single-item04"> 
     <div class="list_slider">
             <a href="https://www.goobne.co.kr/brd/event/view?seq=30092"><img src="/resources/assets/images/popup/220713_collabo_everland.jpg" style="image-rendering:auto;"></a>
     </div>
@@ -171,8 +171,8 @@ $(document).ready(function(){
 <!----S: 설정 시간 이후 바뀐 팝업 리스트---->
 <div id="new">
 <div class="slider single-item04">
-	<div class="list_slider">
-            <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32010"><img src="/resources/assets/images/popup/popup_20220804_1.svg" style="image-rendering:auto;"></a>
+    <div class="list_slider">
+            <img src="/resources/assets/images/popup/popup_20220804_3.svg" style="image-rendering:auto;">
     </div>
     <div class="list_slider">
             <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32010"><img src="/resources/assets/images/popup/220726_popup_ricotta.jpg" style="image-rendering:auto;"></a>

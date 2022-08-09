@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /etc
+Disallow: /customer
+Sitemap: https://www.goobne.co.kr/sitemap.xml
+Allow:/
