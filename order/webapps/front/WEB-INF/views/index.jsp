@@ -17,8 +17,7 @@
 <!DOCTYPE html>
 <html lang="kor" dir="ltr">
 <head>
-    <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include>
-	<script src="/resources/assets/js/main/popup_main.js"></script>
+    <jsp:include page="/WEB-INF/views/include/header.jsp"></jsp:include> 
     <script>
 	    new WOW().init();
 	</script>
@@ -36,164 +35,33 @@
 	     </c:if>
       </c:forEach>
 	  }
+	  
 	</style>
-	<%-- 메인배너 배경처리 --%>
-<meta charset="utf-8">
-<script>
- $( window ).ready( function() {
-$('.no-js').addClass('visible');
-});
- $(window).load(function(){
-	 $('.goobne-tv-wrap').slick('refresh');
- });
-</script>
-<style>
-.main-box{height:calc(100% - 85px);}/*2차 오픈시 빼기*/
-#window .single-item04 img{max-height: 100%;    display: inline-block;}
-#window .single-item04 .slick-dots{bottom:0;}
-#window .single-item04 .slick-dots{text-align:center;padding-left:0;background: rgba(0,0,0,0.5);padding:0.1% 2%;border-radius: 20px;margin:auto;position:absolute;left:50%;transform: translateX(-50%);bottom:0;}
-#window .single-item04 .slick-dots li {display:inline-block;    vertical-align: middle;    margin: 0 3px;line-height: 26px;height:26px;}
-#window .single-item04 .slick-dots li a{font-size:1.5em;    text-decoration: none;    color: #fff;    line-height: 23px;    cursor: pointer;}
-#window .single-item04 .slick-dots li.slick-active a{font-size:3em;}
-#window .single-item04 .slick-dots li a:hover{border-bottom:0; }
-#ori,#new{visibility: hidden;}
-</style>
-<script>
-$(document).ready(function(){
-
- // 이벤트종료시점 기록
-  var countDownDate = new Date("07/29/2022 23:59:59").getTime();//팝업 노출 시간 설정
-
-  var x = setInterval(function() {
-
-    var now = new Date().getTime();
-    var distance = countDownDate - now;
-
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    if ( hours < 10 ){hours = "0" + hours; }
-    else if ( hours > 9 ){ hours = hours; }
-
-    if ( minutes < 10 ){minutes = "0" + minutes; }
-    else if ( minutes > 9 ){ minutes = minutes; }
-
-    if ( seconds < 10 ){seconds = "0" + seconds; }
-    else if ( seconds > 9 ){ seconds = seconds; }
-
-
-
-
-// 타임이벤트 진행 타이머
-    document.getElementById("newcountdown").innerHTML = days + " : " + hours + " : "
-    + minutes + " : " + seconds;
-    document.getElementById("ori").style.display="block";
-    document.getElementById("ori").style.visibility="visible";
-    document.getElementById("new").style.display="none";
-    document.getElementById("new").style.visibility="hidden";
-    //document.getElementById("new").className =" display_none";
-// 이벤트 마감시 보여질 문구
-    if (distance < 0) {
-      clearInterval(x);
-      //document.getElementById("timesale").innerHTML = "<div class='endtxt'>이벤트가 마감되었습니다.</div>";
-      document.getElementById("ori").style.display="none";
-      document.getElementById("ori").style.visibility="hidden";
-    document.getElementById("new").style.display="block";// 임시 반대처리
-    document.getElementById("new").style.visibility="visible";// 임시 반대처리
-	document.getElementById("mask_popup").style.display="block";// 임시 반대처리
-    document.getElementById("mask_popup").style.visibility="visible";// 임시 반대처리
-    }
-  }, 0);
-
-
-	 /*레이어팝업 슬라이드*/
-     $('.single-item04').slick({
-      swipe : true,
-      autoplay:false,
-      autoplaySpeed:500,
-      /*fade:true,*/
-      cssEase:"ease",
-      easing:"ease",
-      centerMode: true,
-      centerPadding: '0',
-      dots: true,
-      arrows:false,
-      autoplay : true,			// 자동 스크롤 사용 여부
-      autoplaySpeed : 3000,
-      customPaging : function(slider, i) {
-      var thumb = $(slider.$slides[i]).data();
-      // return '<a>'+(i+1)+'</a>';
-      return '<a>&bull;</a>';
-    },
-    });
-
-
-
- });
-  </script>
-
+	<%-- 메인배너 배경처리 --%> 
+	<script>
+	 $( window ).ready( function() {
+		$('.no-js').addClass('visible');
+	 });
+	 $(window).load(function(){
+		 $('.goobne-tv-wrap').slick('refresh');
+	 });
+	</script> 
 </head>
 
-<body class="no-js">
-	<!---S: 메인팝업--->
+<body class="no-js"> 
+    
+	<c:set var="pcnt" value="0"/>
+    <c:forEach var="banner" items="${banner}" varStatus="status">
+	    <c:if test="${banner.bnnr_type eq '60'}">
+	      <c:set var="pcnt" value="${pcnt + 1}"/> 
+	    </c:if>
+    </c:forEach> 
+    <c:if test="${pcnt > 0 }">
+	<!---S: 메인팝업---> 
+    <jsp:include page="/WEB-INF/views/include/popup.jsp"></jsp:include>
+    <!---E: 메인팝업--->
+    </c:if>
 
-<div id="mask_popup"></div>
-<span id="newcountdown" style="font-size:0;display:none;"></span>
-<!----S: 설정 시간 이전 바뀐 팝업 리스트---->
-<div class="window" id="window">
-<div id="ori">
-     <div class="slider single-item04"> 
-    <div class="list_slider">
-            <a href="https://www.goobne.co.kr/brd/event/view?seq=30092"><img src="/resources/assets/images/popup/220713_collabo_everland.jpg" style="image-rendering:auto;"></a>
-    </div>
-    <div class="list_slider">
-            <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32010"><img src="/resources/assets/images/popup/220726_popup_ricotta.jpg" style="image-rendering:auto;"></a>
-    </div>
-    <div class="list_slider">
-            <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32018"><img src="/resources/assets/images/popup/220726_popup_pepperbss.jpg" style="image-rendering:auto;"></a>
-    </div>
-    <div class="list_slider">
-            <a href="http://www.goobne.co.kr/brd/event/get_view?seq=30065"><img src="/resources/assets/images/popup/220722_popup_popupstore.jpg" style="image-rendering:auto;"></a>
-    </div>
-    </div>
-    <div class="btn_wrap btn_blk">
-        <ul class="popup_btn_ul ori">
-            <li id="todayPopChk" class="web_order" onClick="javascript:todaycloseWin();" style="background:#323232;">오늘 하루 보지 않기</li>
-            <li id="closePopChk" class="main_pop_close close" onClick="javascript:closeWin();" style="background:#323232;">닫기</li>
-        </ul>
-    </div>
-
-</div>
-<!----E: 설정 시간 이전 바뀐 팝업 리스트---->
-
-<!----S: 설정 시간 이후 바뀐 팝업 리스트---->
-<div id="new">
-<div class="slider single-item04">
-    <div class="list_slider">
-            <img src="/resources/assets/images/popup/popup_20220804_3.svg" style="image-rendering:auto;">
-    </div>
-    <div class="list_slider">
-            <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32010"><img src="/resources/assets/images/popup/220726_popup_ricotta.jpg" style="image-rendering:auto;"></a>
-    </div>
-    <div class="list_slider">
-            <a href="https://www.goobne.co.kr/menu/menu_view?class_id=&item_id=32018"><img src="/resources/assets/images/popup/220726_popup_pepperbss.jpg" style="image-rendering:auto;"></a>
-    </div>
-    <div class="list_slider">
-            <a href="http://www.goobne.co.kr/brd/event/get_view?seq=30065"><img src="/resources/assets/images/popup/220722_popup_popupstore.jpg" style="image-rendering:auto;"></a>
-    </div>
-    </div>
-    <div class="btn_wrap btn_blk">
-        <ul class="popup_btn_ul ori">
-            <li id="todayPopChk" class="web_order" onClick="javascript:todaycloseWin();" style="background:#9f1818;">오늘 하루 보지 않기</li>
-            <li id="closePopChk" class="main_pop_close close" onClick="javascript:closeWin();" style="background:#9f1818;">닫기</li>
-        </ul>
-    </div>
-
-</div>
-</div>
-<!----E: 설정 시간 이후 바뀐 팝업 리스트---->
     <!-- start of :: wrap -->
     <div id="wrap">
         <!-- start of :: header -->
@@ -274,8 +142,7 @@ $(document).ready(function(){
                     <%-- 메인 플로팅 배너 order, e-coupon s --%>
                     <div class="goobne-btn-box wow fadeInUp">
                             <button class="order">
-                                <!-- <a href="<%=SystemConstant.ORDER%>"><span>Order</span></a> -->
-								<a href="javascript:alert('긴급 점검 중 입니다.');"><span>Order</span></a>
+                                <a href="<%=SystemConstant.ORDER%>"><span>Order</span></a> 
                             </button>
 							<button class="universe_go" onClick="window.open('http://www.xn--9i1b89owjy5lfa431as3k.com/')">
                                 <span>입장하기</span>

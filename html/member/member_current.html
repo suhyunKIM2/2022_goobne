@@ -1,0 +1,338 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+ </head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">회원 관리 현황</h1>
+                        <a href="#" class="d-sm-inline-block btn btn-sm btn-GG shadow-sm mb_g"><i
+                                class="fas fa-download fa-sm text-white-50"></i> 엑셀다운로드</a>
+                    </div>
+                    <div class ="day_box">
+                        <input type="text" id="datepicker" placeholder="0000-00-00"> ~ <input type="text" id="datepicker2" placeholder="0000-00-00">
+                        <button type="button" onClick="" class="btn_set"> 검색</button>
+                    </div>
+                    <!-- Pie Chart -->
+                     
+                        
+                        
+                        <div class="col-xl-4 col-lg-5">
+                        <h3>월별</h3>
+                        <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>합계</th>
+                                    <th>1월</th>
+                                    <th>2월</th>
+                                    <th>3월</th>
+                                    <th>4월</th>
+                                    <th>5월</th>
+                                    <th>6월</th>
+                                    <th>7월</th>
+                                    <th>8월</th>
+                                    <th>9월</th>
+                                    <th>10월</th>
+                                    <th>11월</th>
+                                    <th>12월</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>회원수</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>마케팅동의</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>휴먼고객수</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <h3>회원 유형수</h3>
+                        <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>합계</th>
+                                    <th>1월</th>
+                                    <th>2월</th>
+                                    <th>3월</th>
+                                    <th>4월</th>
+                                    <th>5월</th>
+                                    <th>6월</th>
+                                    <th>7월</th>
+                                    <th>8월</th>
+                                    <th>9월</th>
+                                    <th>10월</th>
+                                    <th>11월</th>
+                                    <th>12월</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>카카오</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>네이버</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>일반회원</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        
+                        <h3>성별/세대</h3>
+                        <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>합계</th>
+                                    <th>10대</th>
+                                    <th>20대</th>
+                                    <th>30대</th>
+                                    <th>40대</th>
+                                    <th>50대</th>
+                                    <th>60대이상</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>회원수 (남)</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>회원수 (여)</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        
+                        <h3>지역별 (사업부별)</h3>
+                        <table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>합계</th>
+                                    <th>강북</th>
+                                    <th>강남</th>
+                                    <th>영남</th>
+                                    <th>중호</th>
+                                    <th>강원</th>
+                                    <th>제주</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>회원수</td>
+                                    <td>N</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                             </tbody>
+                        </table>
+                        
+                    </div>
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+   
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script>   
+</body>
+
+</html>

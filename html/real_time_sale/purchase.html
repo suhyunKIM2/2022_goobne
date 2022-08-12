@@ -1,0 +1,397 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+ </head>
+<body id="page-top" style="min-width:1472px;">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">주문내역</h1>
+                    </div>
+                    
+                    <!-- Pie Chart -->
+                     
+                        <div class="col-xl-4 col-lg-5">
+                        <table class="table table-bordered table_main order_table_list" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th class="bg-gray-200">매체</th>
+                                            <th class="bg-gray-200">유형</th>
+                                            <th class="bg-gray-200">e-쿠폰</th>
+                                            <th class="bg-gray-200">금액권</th>
+                                            <th class="bg-gray-200">선결제</th>
+                                            <th class="bg-gray-200">후불카드</th>
+                                            <th class="bg-gray-200">후불현금</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th colspan="2">총 취소 주문</th>
+                                            <th colspan="5">10건 <span class="red_font">(50,000원)</span></th>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <th colspan="2">합계</th>
+                                            <th colspan="5">178건 <span class="red_font">(4,502,300원)</span></th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td rowspan="3">PC</td>
+                                            <td>배달</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>포장</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>합계</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                        </tr>
+                                        <tr>
+                                            <td rowspan="3">Mobile</td>
+                                            <td>배달</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>포장</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                        </tr>
+                                       <tr>
+                                            <td>합계</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                            <td>35건<br>(2,000,000원)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+								<ul class="inline_block_ul list_sch_ul">
+									<li class="tab_li tab_on">전체주문</li>
+									<li class="tab_li">온라인주문</li>
+									<li class="tab_li">모바일</li>
+									<li class="border_none"><span class="red_font code_time">01:00초</span> 후 새로고침</li>
+									<li class="border_none">
+										<a href="#" class="shadow-sm btn btn-danger btn-icon-split btn-sm refresh_btn">
+                                       	 	<span class="text">새로고침</span>
+                                    	</a>
+									</li>
+									<li class="border_none"><a href="#" class="d-sm-inline-block btn btn-sm btn-GG shadow-sm mb_g" style="width:100%;"><i
+									class="fas fa-download fa-sm text-white-50"></i> 엑셀다운로드</a></li>
+								</ul>
+								<div class="reference_div">
+									<ul class="left_ui">
+										<li>노출설정</li>
+										<li>
+											<select class="selectpicker">
+												<option>10개</option>
+												<option>30개</option>
+												<option>50개</option>
+												<option>100개</option>
+											</select>
+										</li>
+									</ul>
+									<ul class="right_ui">
+										<li>
+											<select class="selectpicker">
+												<option>전체</option>
+												<option>주문번호</option>
+												<option>회원이름</option>
+												<option>주문매장</option>
+												<option>아이디</option>
+												<option>핸드폰번호</option>
+											</select>
+										</li>
+										<li><input type="text" placeholder="검색어를 입력해주세요."></li>
+										<li>기간설정</li>
+										<li>
+											<ul class="date_ul">
+												<li><input type="text" id="datepicker" placeholder="0000-00-00"></li>
+												<li>~</li> 
+												<li><input type="text" id="datepicker2" placeholder="0000-00-00"></li>
+												<li><button type="button" onClick="" class="btn_set"> 검색</button></li>
+												<li><button type="button" onClick="" class="btn_set btn-secondary"> 초기화</button></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div id="pur">
+								<table class="table table-bordered table_main" id="dataTable" width="100%" cellspacing="0">
+									<tr>
+										<th>no</th>
+										<th>주문번호</th>
+										<th>주문채널</th>
+										<th>매장코드</th>
+										<th>매장명</th>
+										<th>아이디</th>
+										<th>고객명</th>
+										<th>전화번호</th>
+										<th>주문상태</th>
+										<th>결제종류</th>
+										<th>주문금액</th>
+										<th>주문시간/예약시간</th>
+									</tr>
+									<tr class="list_tr new_on" onClick="location.href='/html/real_time_sale/purchase_view.html'"><!--노랑색 background 관제시스템 주문내역에 표시 되는데.. 무슨 의미인지는 모르겠음--->
+										<td>2041</td>
+										<td class="text-primary">C118261300</td>
+										<td><div class="back_mo">모바일</div></td>
+										<td>002113</td>
+										<td>부산낙민점</td>
+										<td>20220810225717452091</td>
+										<td>홍길동</td>
+										<td>01011112222</td>
+										<td>매장확인(승인)</td>
+										<td>e-쿠폰(후결제)</td>
+										<td>23,000</td>
+										<td>2022-00-00 00:00:00</td>
+									</tr>
+									<tr class="list_tr" onClick="location.href='/html/real_time_sale/purchase_view.html'">
+										<td>2040</td>
+										<td class="text-primary">C118261299</td>
+										<td><div class="back_pc">PC</div></td>
+										<td>002113</td>
+										<td>부산낙민점</td>
+										<td>20220810225717452091</td>
+										<td>홍길동</td>
+										<td>01011112222</td>
+										<td>매장확인(승인)</td>
+										<td>e-쿠폰(후결제)</td>
+										<td>23,000</td>
+										<td>2022-00-00 00:00:00</td>
+									</tr>
+								</table>
+								</div>
+                               </div>
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+			<div class="container_page">
+                <div class="row row_page">
+                    <div class="col">
+                        <ul class="pagination">
+                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+   
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+<!-- S: include summernote(에디터) css/js -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="/html/js/summernote/js/summernote-lite.js"></script>
+    <script src="/html/js/summernote/js/summernote.js"></script>
+<!-- E: include summernote(에디터) css/js -->
+
+<!-- S: 파일업로드 -->
+    <script src="/html/js/file_upload.js"></script> 
+<!-- E: 파일업로드 -->
+
+<!-- S: 버튼식체크박스 -->
+    <script src="/html/js/btn_checkbox.js"></script> 
+<!-- E: 버튼식체크박스 -->
+
+<!-- S: 아코디언메뉴 -->
+<script src="/html/js/accodian_menu.js"></script> 
+<!-- E: 아코디언메뉴 -->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+        });
+    </script>
+    <script type="text/javascript">
+	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script> 
+<script>
+$(document).ready(function(){
+var timer = null;
+		var isRunning = false;
+
+				var display = $('.code_time');
+				var leftSec = 60;//1분동안 
+				// 남은 시간
+				// 이미 타이머가 작동중이면 중지
+				if (isRunning){
+					clearInterval(timer);
+					display.html("");
+					startTimer(leftSec, display);
+				}else{
+				startTimer(leftSec, display);
+
+				}
+		
+
+		function startTimer(count, display) {// 1분마다 table 새로고침
+					
+					var minutes, seconds;
+					timer = setInterval(function () {
+					minutes = parseInt(count / 60, 10);
+					seconds = parseInt(count % 60, 10);
+
+					minutes = minutes < 10 ? "0" + minutes : minutes;
+					seconds = seconds < 10 ? "0" + seconds : seconds;
+
+					display.html(minutes + ":" + seconds + "초");
+
+					// 타이머 끝
+					if (--count < 0) {
+					 clearInterval(timer);
+					$('#content #pur').load(location.href + '#content #pur table');//table테이터 새로고침
+					 startTimer(leftSec, display); 
+					}
+				}, 1000);
+		}
+		
+	$(".refresh_btn").click(function(e){//새로고침 누를시	
+		clearInterval(timer);
+		$('#content #pur').load(location.href + '#content #pur');
+		startTimer(leftSec, display);
+	});
+	
+	//tab 탭
+			var $tabblink = $(".list_sch_ul li.tab_li").click(function() {
+			var idx = $tabblink.index(this);
+			$(".list_sch_ul li.tab_li").removeClass("tab_on");
+			$(".list_sch_ul li.tab_li").eq(idx).addClass("tab_on");
+		  });
+});
+</script>
+</body>
+
+</html>

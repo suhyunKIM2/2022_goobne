@@ -30,6 +30,41 @@
         new WOW().init();
 
     </script>
+	<style> 
+#window .single-item04 img{max-height: 100%; display: inline-block;}
+#window .single-item04 .slick-dots{bottom:0;}
+#window .single-item04 .slick-dots{text-align:center;padding-left:0;background: rgba(0,0,0,0.5);padding:0.1% 2%;border-radius: 20px;margin:auto;position:absolute;left:50%;transform: translateX(-50%);bottom:0;}
+#window .single-item04 .slick-dots li {display:inline-block;    vertical-align: middle;    margin: 0 3px;line-height: 26px;height:26px;}
+#window .single-item04 .slick-dots li a{font-size:1.5em;    text-decoration: none;    color: #fff;    line-height: 23px;    cursor: pointer;}
+#window .single-item04 .slick-dots li.slick-active a{font-size:3em;}
+#window .single-item04 .slick-dots li a:hover{border-bottom:0; }
+#ori {visibility: hidden;}
+</style>
+	<script>
+$(document).ready(function(){ 
+     //$('#popbg').empty(); 
+     /*레이어팝업 슬라이드*/
+     $('.single-item04').slick({
+	      swipe : true,
+	      autoplay:false,
+	      autoplaySpeed:500,
+	      /*fade:true,*/
+	      cssEase:"ease",
+	      easing:"ease",
+	      centerMode: true,
+	      centerPadding: '0',
+	      dots: true,
+	      arrows:false,
+	      autoplay : true,			// 자동 스크롤 사용 여부
+	      autoplaySpeed : 3000,
+	      customPaging : function(slider, i) {  
+	      var thumb = $(slider.$slides[i]).data();
+	      // return '<a>'+(i+1)+'</a>';
+	      return '<a>&bull;</a>';
+	    },
+    }); 
+ });
+</script>
 	
   <script>
 $(document).ready(function(){
@@ -108,6 +143,9 @@ $(document).ready(function(){
 <div id="new">
     <div class="slider single-item04">
         <div class="list_slider">
+            <a href="https://www.goobne.co.kr/event/event_view.jsp?dt=60905"><img src="https://www.goobne.co.kr/2021renew_img/popup/220623_popup_tday.jpg" ></a>
+        </div>
+		<div class="list_slider">
             <a href="https://www.goobne.co.kr/event/event_view.jsp?dt=60905"><img src="https://www.goobne.co.kr/2021renew_img/popup/220623_popup_tday.jpg" ></a>
         </div>
     </div>

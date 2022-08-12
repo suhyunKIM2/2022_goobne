@@ -1,0 +1,360 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+ </head>
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">판매데이터</h1>
+                    </div>
+                    
+                    <!-- Pie Chart -->
+                     
+                        <div class="col-xl-4 col-lg-5">
+							<div class="reference_div" style="justify-content: flex-end;">
+								<ul class="right_ui">
+									<li>
+										<ul class="date_ul">
+											<li><input type="text" id="datepicker" placeholder="0000-00-00"></li>
+											<li>~</li> 
+											<li><input type="text" id="datepicker2" placeholder="0000-00-00"></li>
+											<li><button type="button" onClick="" class="btn_set"> 검색</button></li>
+											<li><button type="button" onClick="" class="btn_set btn-secondary"> 초기화</button></li>
+											<li class="border_none"><a href="#" class="d-sm-inline-block btn btn-GG shadow-sm mb_g" style="width:100%;"><i
+									class="fas fa-download fa-sm text-white-50"></i> 엑셀다운로드</a></li>
+										</ul>
+									</li>
+								</ul>
+								</div>
+								<!---주문번호 조회 후 동일시 rowspan 적용하게 스크립트 적용됨 하단 참고---->
+								<table class="table table-bordered table_main border_2px_red" id="dataTable" width="100%" cellspacing="0">
+									<thead>
+										<tr>
+											<th colspan="17" class="bg-red-200 line_border_bottom_2px_red">굽네치킨 온라인 주문 매장별 판매데이터</th>
+										</tr>
+										<tr>
+											<th class="bg-gray-200">일시</th>
+											<th class="bg-gray-200">주문번호</th>
+											<th class="bg-gray-200">매장코드</th>
+											<th class="bg-gray-200">매장명</th>
+											<th class="bg-gray-200">아이디</th>
+											<th class="bg-gray-200">연락처</th>
+											<th class="bg-gray-200">이름</th>
+											<th class="bg-gray-200">주소</th>
+											<th class="bg-gray-200">주문유형</th>
+											<th class="bg-gray-200">주문메뉴</th>
+											<th class="bg-gray-200">수량(개)</th>
+											<th class="bg-gray-200">가격</th>
+											<th class="bg-gray-200">결제종류</th>
+										</tr>
+									</thead>
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261306</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>배달주문</td>
+										<td class="order_list_td">고추바사삭순살</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">41,000</td>
+										<td class="order_list_td text-primary">후결제(카드)</td>
+									</tr>
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261306</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>배달주문</td>
+										<td class="order_list_td">시카고피자</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">19,000</td>
+										<td class="order_list_td text-primary">선결제(카드)</td>
+									</tr>
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261306</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>배달주문</td>
+										<td class="order_list_td">배달비</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">3,000</td>
+										<td class="order_list_td text-primary">선결제(카드)</td>
+									</tr>
+									
+									
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261388</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>배달주문</td>
+										<td class="order_list_td">고추바사삭순살</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">41,000</td>
+										<td class="order_list_td text-primary">후결제(카드)</td>
+									</tr>
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261388</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>배달주문</td>
+										<td class="order_list_td">시카고피자</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">19,000</td>
+										<td class="order_list_td text-primary">e-쿠폰</td>
+									</tr>
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261388</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>배달주문</td>
+										<td class="order_list_td">소떡소떡</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">3,000</td>
+										<td class="order_list_td text-primary">선결제(카드)</td>
+									</tr>
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261388</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>배달주문</td>
+										<td class="order_list_td">배달비</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">3,000</td>
+										<td class="order_list_td text-primary">선결제(카드)</td>
+									</tr>
+									<tr class="order_list_tr">
+										<td>20220812</td>
+										<td class="text-primary">C218261389</td>
+										<td>002772</td>
+										<td>신당역점</td>
+										<td>20220811115717452375</td>
+										<td>01000000000</td>
+										<td>홍길동</td>
+										<td>서울특별시 땡땡구 땡땡로 00길, 100 000동 0000호</td>
+										<td>포장주문</td>
+										<td class="order_list_td">오리지널</td>
+										<td class="order_list_td">1</td>
+										<td class="order_list_td">18,000</td>
+										<td class="order_list_td text-primary">후불결제(카드)</td>
+									</tr>
+								</table>
+								
+                               </div>
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+ 
+   
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+<!-- S: include summernote(에디터) css/js -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="/html/js/summernote/js/summernote-lite.js"></script>
+    <script src="/html/js/summernote/js/summernote.js"></script>
+<!-- E: include summernote(에디터) css/js -->
+
+<!-- S: 파일업로드 -->
+    <script src="/html/js/file_upload.js"></script> 
+<!-- E: 파일업로드 -->
+
+<!-- S: 버튼식체크박스 -->
+    <script src="/html/js/btn_checkbox.js"></script> 
+<!-- E: 버튼식체크박스 -->
+
+<!-- S: 아코디언메뉴 -->
+<script src="/html/js/accodian_menu.js"></script> 
+<!-- E: 아코디언메뉴 -->
+
+     <script>
+         $(document).ready(function() {
+          $('select').niceSelect();
+          // 팝업 닫기 추가 
+          $('.close').on('click', function(){
+            $('.modal').modal('hide');
+            console.log("click close");
+            });
+			
+		//table 주문번호 같을 시 동적rowspan
+		var table = [];
+		var table_count = 1;
+		var k = 0;
+		  $(".border_2px_red tbody").find("tr").each(function(i,v) {
+			table.push($(v).find("td:nth-child(2)").text());
+		  })
+		  for(var i=0; i<table.length; i++) {
+			for(var j=i+1; j<table.length; j++) {
+			  if(table[i] == table[j]) {
+				table_count +=1;
+				k+=1;
+			  }
+			}
+			$(".border_2px_red tbody").find("tr")[i].children[0].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[1].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[2].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[3].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[4].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[5].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[6].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[7].setAttribute("rowspan", table_count);
+			$(".border_2px_red tbody").find("tr")[i].children[8].setAttribute("rowspan", table_count);
+			if(table_count > 1) {
+			  for(var q = 1; q < table_count; q++) {
+				$(".border_2px_red tbody").find("tr")[i+q].children[0].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[1].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[2].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[3].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[4].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[5].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[6].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[7].style.display = "none";
+				$(".border_2px_red tbody").find("tr")[i+q].children[8].style.display = "none";
+			  }
+			}
+			table_count = 1;
+			i=k;
+			k++;
+		  }
+        });
+    </script>
+    <script type="text/javascript">
+	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script> 
+</body>
+
+</html>

@@ -1,0 +1,511 @@
+﻿ <!DOCTYPE html>
+<html lang="ko">
+ <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>굽네치킨 BackOffice</title>
+ <script src="/html/js/includepath.js"></script>
+
+ <header data-include-path="/html/include/header_doc.html"></header>
+
+
+ </head>
+<body id="page-top" style="min-width:1238px; ">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        
+        <!-- Sidebar 공통 왼쪽 메뉴 -->
+        <div data-include-path="/html/include/nav_left.html"></div>
+    <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar 공통 top-->
+                <div class="ham"></div><div data-include-path="/html/include/header.html"></div>
+                
+            <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4 container_auto">
+                        <h1 class="h3 mb-0 text-gray-900">매장상세페이지</h1>
+                    </div>
+                    <div class="col-xl-4 col-lg-5">
+                    
+                    <div class="tab-content">
+                      <div class="tab-pane fade show active">
+                      
+                       <div class="left_line line_50">
+                             <div  class="margin-bottom_7"><b style="float:left;margin-right:1%;">개점일 :</b> <b>2022.00.00</b></div>
+                             <div><b style="float:left;margin-right:1%;margin-top:6px;">금일휴무 :</b></div> 
+                            <div>
+                                <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                            </div>
+                        </div>
+                        <div class="left_line line_50" style="text-align: right;">
+                             <div class="margin-bottom_7">
+                                 <b style="margin-right:1%;margin-top:6px;">개점/폐점 :</b> 
+                                 <span class="btn-circle btn-lg btn-lg_round btn-danger">ON</span> <!--- on 일때 class : btn-danger , off일때 class : btn-secondary  아래 태그 참고--->
+                                 <span class="btn-circle btn-lg btn-lg_round btn-secondary" style="display: none;">OFF</span>
+                            </div>
+                             
+                            <div  class="margin-bottom_7"> 
+                                <b style="margin-right:1%;margin-top:6px;">사업자 번호 :</b> 
+                                <span>000-00-00000</span>
+                            </div>
+                        </div>
+                        
+                         <table class="table table-bordered table_S_box dataTable" id="dataTable" width="100%" cellspacing="0">
+                             <colgroup>
+                                 <col style="width:10%;">
+                                 <col style="width:35%;">
+                                 <col style="width:10%;">
+                                 <col style="width:45%;">
+                             </colgroup>
+                             <tr>
+                                 <th class="bg-gray-200">매장코드번호</th>
+                                <td>
+                                   000001
+                                 </td>
+                                <th class="bg-gray-200">매장</th>
+                                <td>
+                                    발산역점
+                                 </td>
+                                 
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200">주소</th>
+                                      <td>
+                                         서울특별시 땡떙구 땡땡동 땡땡땡 00-00
+                                      </td>
+                                    <th class="bg-gray-200">연락처</th>
+                                      <td>
+                                          <ul style="margin-bottom:0;">
+                                             <li>010-000-0000</li>
+                                             <li style="margin-top:5px;">010-000-0000</li>
+                                         </ul>
+                                      </td>
+                                   
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200">PG</th>
+                                      <td>
+                                          <div class="key_input"><input type="number" placeholder="MID값"></div> 
+                                           <div class="key_input"><input type="number" placeholder="SignKey값"></div>
+                                           <div class="key_input"><input type="number" placeholder="PassWord값"></div> 
+                                      </td>
+                                    <th class="bg-gray-200">PG파일</th>
+                                  <td>
+                                      <div class="preview_img_div preview_img_div_table">
+                                            <div class="filebox bs3-primary preview-image">   
+                                              <input class="upload-name" value="파일선택" disabled="disabled" style="width: 54%;">
+
+                                              <label for="input_file">업로드</label> 
+                                              <input type="file" id="input_file" class="upload-hidden"> 
+                                            </div>                        
+                                        </div>
+                                    </td> 
+                                      
+                                </tr>
+                                <tr style="border-top: 2px solid #337ab7;">
+                                     <th class="bg-gray-200">주문 오픈시간</th>
+                                     <td>
+                                        <ul class="list_inline">
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                    <option>14</option>
+                                                    <option>15</option>
+                                                    <option>16</option>
+                                                    <option>17</option>
+                                                    <option>18</option>
+                                                    <option>19</option>
+                                                    <option>20</option>
+                                                    <option>21</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                    <option>24</option>
+                                                </select>
+                                            </li>
+                                            <li><spna>:</span></li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>05</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                    <option>30</option>
+                                                    <option>35</option>
+                                                    <option>40</option>
+                                                    <option>45</option>
+                                                    <option>50</option>
+                                                    <option>55</option>
+                                                </select>
+                                            </li>
+                                        </ul> 
+                                     </td>
+                                     <th class="bg-gray-200">주문 마감시간</th>
+                                     <td>
+                                        <ul class="list_inline">
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>01</option>
+                                                    <option>02</option>
+                                                    <option>03</option>
+                                                    <option>04</option>
+                                                    <option>05</option>
+                                                    <option>06</option>
+                                                    <option>07</option>
+                                                    <option>08</option>
+                                                    <option>09</option>
+                                                    <option>10</option>
+                                                    <option>11</option>
+                                                    <option>12</option>
+                                                    <option>13</option>
+                                                    <option>14</option>
+                                                    <option>15</option>
+                                                    <option>16</option>
+                                                    <option>17</option>
+                                                    <option>18</option>
+                                                    <option>19</option>
+                                                    <option>20</option>
+                                                    <option>21</option>
+                                                    <option>22</option>
+                                                    <option>23</option>
+                                                    <option>24</option>
+                                                </select>
+                                            </li>
+                                            <li><spna>:</span></li>
+                                            <li>
+                                                <select class="selectpicker">
+                                                    <option>00</option>
+                                                    <option>05</option>
+                                                    <option>10</option>
+                                                    <option>15</option>
+                                                    <option>20</option>
+                                                    <option>25</option>
+                                                    <option>30</option>
+                                                    <option>35</option>
+                                                    <option>40</option>
+                                                    <option>45</option>
+                                                    <option>50</option>
+                                                    <option>55</option>
+                                                </select>
+                                            </li>
+                                        </ul> 
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <th class="bg-gray-200">온라인주문 가능여부</th>
+                                     <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                     </td>
+                                     <th class="bg-gray-200">홈페이지 노출여부</th>
+                                     <td>
+                                        <div>
+                                            <label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label>
+                                        </div>
+                                     </td>
+                                </tr>
+                                
+                                <tr>
+                                     <th class="bg-gray-200">포장주문</th>
+                                     <td class="text-top-padding-top">
+                                        <ul class="list_inline selected_hidden">
+                                          <li>
+                                              <b style="display:block;margin-bottom: 5px; ">포장결제</b>
+                                              <select class="selectpicker">
+                                                <option>불가능</option>
+                                                <option>후불결제만 가능</option>
+                                                <option>선결제만 가능</option>
+                                                <option>모두가능</option>
+                                            </select>
+                                          </li>
+                                          <li class="hidden_option"><b style="display:block;margin-bottom: 5px; ">포장할인</b> <input type="number" style="height:42px;line-height: 42px;"></li>
+                                          <li class="hidden_option time_select"><b style="display:block;margin-bottom: 5px; ">준비시간</b> 
+                                              <select class="selectpicker" id="selectBox" name="selectBox">
+                                                <option>15분</option>
+                                                <option>25분</option>
+                                                <option>35분</option>
+                                                <option>45분</option>
+                                                <option>65분</option>
+                                                <option>75분</option>
+                                                <option>85분</option>
+                                                <option>90분</option>
+                                            </select>
+                                          </li>
+                                        </ul>
+                                     </td>
+                                     <th class="bg-gray-200">배달주문</th>
+                                     <td class="text-top-padding-top"> 
+                                        <ul class="list_inline selected_hidden">
+                                          <li>
+                                              <b style="display:block;margin-bottom: 5px; ">배달비 결제</b>
+                                              <select class="selectpicker">
+                                                <option>불가능</option>
+                                                <option>후불결제만 가능</option>
+                                                <option>선결제만 가능</option>
+                                                <option>모두가능</option>
+                                            </select>
+                                          </li>
+                                          <li class="hidden_option  padding_s_5">
+                                              <b style="display:block;margin-bottom: 5px; ">배달비</b> 
+                                              <ul class="take_out_list take_out_list_option">
+                                                <li>0~1km <input type="number" style="width:100px;"></li>
+                                                <li>1~2km <input type="number" style="width:100px;"></li>
+                                                <li>2~3km <input type="number" style="width:100px;"></li>
+                                                <li>3~4km <input type="number" style="width:100px;"></li>
+                                              </ul>
+                                          </li>
+                                          <li class="hidden_option time_select"><b style="display:block;margin-bottom: 5px; ">준비시간</b> 
+                                              <select class="selectpicker" id="selectBox" name="selectBox">
+                                                <option>15분</option>
+                                                <option>25분</option>
+                                                <option>35분</option>
+                                                <option>45분</option>
+                                                <option>65분</option>
+                                                <option>75분</option>
+                                                <option>85분</option>
+                                                <option>90분</option>
+                                            </select>
+                                          </li>
+                                          
+                                        </ul>
+                                     </td>
+                                </tr>
+                                <tr>
+                                     <th class="bg-gray-200"><span class="font-weight-bold text-primary" style="display: block;">오리지널</span> 퀵픽업 주문</th>
+                                     <td class="text-top-padding-top">
+                                        <ul class="list_inline selected_hidden">
+                                          <li>
+                                              <b style="display:block;margin-bottom: 5px; ">픽업결제</b>
+                                              <select class="selectpicker">
+                                                <option>불가능</option>
+                                                <option>후불결제만 가능</option>
+                                                <option>선결제만 가능</option>
+                                                <option>모두가능</option>
+                                            </select>
+                                          </li>
+                                          <li class="hidden_option"><b style="display:block;margin-bottom: 5px; ">픽업할인</b> <input type="number" style="height:42px;line-height: 42px;"></li>
+                                          <li class="hidden_option"><b style="display:block;margin-bottom: 5px; ">준비시간</b> 
+                                             <span class="font-weight-bold text-primary" style="margin-left:12px;">15분</span>
+                                          </li>
+                                        </ul>
+                                     </td>
+                                     <th class="bg-gray-200">드라이빙픽업 주문</th>
+                                     <td class="text-top-padding-top"> 
+                                        <ul class="list_inline selected_hidden">
+                                          <li>
+                                              <b style="display:block;margin-bottom: 5px; ">픽업 결제</b>
+                                              <select class="selectpicker">
+                                                <option>불가능</option>
+                                                <option>후불결제만 가능</option>
+                                                <option>선결제만 가능</option>
+                                                <option>모두가능</option>
+                                            </select>
+                                          </li>
+                                          <li class="hidden_option"><b style="display:block;margin-bottom: 5px;padding:0 5%; ">픽업할인</b> <input type="number" style="height:42px;line-height: 42px;"></li>
+                                          <li class="hidden_option time_select"><b style="display:block;margin-bottom: 5px; ">준비시간</b> 
+                                              <select class="selectpicker" id="selectBox" name="selectBox">
+                                                <option>15분</option>
+                                                <option>25분</option>
+                                                <option>35분</option>
+                                                <option>45분</option>
+                                                <option>65분</option>
+                                                <option>75분</option>
+                                                <option>85분</option>
+                                                <option>90분</option>
+                                            </select>
+                                          </li>
+                                        </ul>
+                                     </td>
+                                </tr>
+                                <tr>
+                                    <th class="bg-gray-200"> 결제 수단</th>
+                                     <td colspan="3">
+                                         <ul class="list_inline list_inline_pay">
+                                              <li><b>e-쿠폰</b><label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label></li>
+                                              <li><b>카드결제</b><label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label></li>
+                                              <li><b>네이버페이</b><label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label></li>
+                                              <li><b>멤버쉽쿠폰</b><label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label></li>
+                                              <li><b>e-금액권</b><label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label></li>
+                                              <li><b>카카오페이</b><label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label></li>
+                                              <li><b>페이코</b><label class="switch-button"> <input type="checkbox" checked/> <span class="onoff-switch"></span> </label></li>
+                                          </ul>
+                                     </td>
+                                </tr>
+                                <tr style="border-top: 2px solid #337ab7;">
+                                    <th class="bg-gray-200"> 매장 위치 좌표</th>
+                                    <td colspan="3">
+                                        <div class="api_div"></div>
+                                        <!--- 좌표 기입 박스 --->
+                                        <ul class="list_inline api_input_box">
+                                            <li><input type="number" placeholder="x축 좌표를 넣어주세요."></li>
+                                            <li><input type="number" placeholder="y축 좌표를 넣어주세요."</li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                            </table>
+                           
+                        </div>
+                        
+                     </div>
+                 </div>
+                  
+                  <div class="col-xl-4 col-lg-5" style="text-align: center;margin: 2% auto 5%;    clear: both;">
+                            <ul class="list_inline">
+                                <li style="float: left;">
+                                    <a href="#" class="btn btn-secondary btn-icon-split btn-S">
+                                        <span class="text ">목록</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="btn btn-secondary btn-icon-split btn-S">
+                                        <span class="text">취소</span>
+                                    </a>
+                                </li>
+                                
+                                <li>
+                                    <a href="#" class="btn btn-primary btn-icon-split btn-S">
+                                       <span class="text">저장</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        
+                </div>
+                <!-- /.container-fluid -->
+
+                
+            </div>
+            <!-- End of Main Content -->
+       
+
+            <!-- Footer 공통 footer-->
+            <footer data-include-path="/html/include/footer.html"></footer>
+            
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+
+
+
+
+   
+
+<!-- Bootstrap core JavaScript -->
+    <script src="/html/vendor/jquery/jquery.min.js"></script>
+    <script src="/html/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="/html/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/html/js/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/html/vendor/chart.js/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/html/js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/html/js/calendar.js"></script> <!--- 캘린더----> 
+    <script src="/html/js/jquery.nice-select.js"></script> <!--- 셀렉박스---->
+    <script src="/html/js/all_checkbox.js"></script> <!--- 전체선택&해제 체크박스---->
+ <!--- S: modal_popup ---->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="/html/js/modal_popup.js"></script>  
+<!--- E: modal_popup---->
+
+<!-- S: include summernote(에디터) css/js -->
+	<link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+	<script src="/html/js/summernote/js/summernote-lite.js"></script>
+    <script src="/html/js/summernote/js/summernote.js"></script>
+<!-- E: include summernote(에디터) css/js -->
+
+<!-- S: 파일업로드 -->
+    <script src="/html/js/file_upload.js"></script> 
+<!-- E: 파일업로드 -->
+
+<!-- S: 버튼식체크박스 -->
+    <script src="/html/js/btn_checkbox.js"></script> 
+<!-- E: 버튼식체크박스 -->
+
+    <script>
+    $(document).ready(function() {
+      $('select').niceSelect();
+      // 팝업 닫기 추가 
+      $('.close').on('click', function(){
+        $('.modal').modal('hide');
+        console.log("click close");
+        });
+    /*selected hidden 추가*/
+     $('.selected_hidden .nice-select .list li').attr('id','selected');
+      $('.selected_hidden .nice-select .list li:nth-child(1)').attr('id','selected_on');
+         $(".selected_hidden .nice-select .list li#selected_on").click(function(){
+             //$(".list_inline .hidden_option").hide();
+         $(this).parent().parent().parent('.selected_hidden li').nextAll('.hidden_option').hide();   
+        });
+         $(".selected_hidden .nice-select .list li#selected").click(function(){
+                //$(".list_inline .hidden_option").show();
+            $(this).parent().parent().parent('.selected_hidden li').nextAll('.hidden_option').show();    
+        });
+       if($(".selected_hidden .nice-select .list li:nth-child(1)").hasClass("selected") === true) {
+         $('.hidden_option').css('display','none');
+
+        } 
+    });
+    </script>
+    <script type="text/javascript">
+	// 전화번호 입력 시 input type ="number" 일때 입력 숫자 제한 수 
+  function maxLengthCheck(object){
+    if (object.value.length > object.maxLength){
+      //object.maxLength : 매게변수 오브젝트의 maxlength 속성 값입니다.
+      object.value = object.value.slice(0, object.maxLength);
+    }    
+  }
+  
+</script>
+</body>
+
+</html>
