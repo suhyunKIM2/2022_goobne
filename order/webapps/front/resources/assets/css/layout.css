@@ -8,7 +8,7 @@ section {
 
 /* ============ 이벤트 영역 ==============*/
 .event .color-1,.event .color-2,.event .color-3,.event .color-4,.event .color-5,.event .color-6 {
-  background:rgba(143,78,78,0.5)
+  background:rgba(50,50,50,0.5)
 }
 
 .event__tab {
@@ -2430,8 +2430,6 @@ section {
 
 .store__search-tab .tab-desc .search-btn img {
   border-radius: 3px;
-  width:auto;
-  height:100%;
 }
 
 .store__search-tab .tab-desc .input-btn-area {
@@ -2547,12 +2545,12 @@ section {
 }
 
 .store__search-tab .tab-desc .search-list-area .result-list .list .icon.bk {
-  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
+  background: url(../images/icon/l-map-off.svg) center no-repeat;
   background-size: 100%;
 }
 
 .store__search-tab .tab-desc .search-list-area .result-list .list .icon.red {
-  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
+  background: url(../images/icon/l-map-on.svg) center no-repeat;
   background-size: 100%;
 }
 
@@ -2656,7 +2654,6 @@ section {
   color: #1B1B1B;
   margin-bottom: 8px;
   line-height: 1.4;
-
 }
 
 .store__map .map-icon-item .desc .info .num {
@@ -2688,12 +2685,12 @@ section {
 }
 
 .store__map .map-icon-item .map-icon .icon.bk {
-  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
+  background: url(../images/icon/l-map-off.svg) center no-repeat;
   background-size: 100%;
 }
 
 .store__map .map-icon-item .map-icon .icon.red {
-  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
+  background: url(../images/icon/l-map-on.svg) center no-repeat;
   background-size: 100%;
 }
 

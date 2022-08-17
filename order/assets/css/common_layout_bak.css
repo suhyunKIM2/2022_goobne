@@ -409,18 +409,18 @@
 }
 
 .l-map-icon {
-  width: 2.4rem;
-  height: 3rem;
+  width: 1.8rem;
+  height: 2.6rem;
   margin: auto;
 }
 
 .l-map-icon.bk {
-  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
+  background: url(../images/icon/l-map-bk.svg) center no-repeat;
   background-size: 100%;
 }
 
 .l-map-icon.red {
-  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
+  background: url(../images/icon/l-map-red.svg) center no-repeat;
   background-size: 100%;
 }
 
@@ -483,7 +483,7 @@
   position: relative;
   border-radius: 10px;
   overflow: hidden !important;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.2rem;
   background-color: #fff;
 }
 
@@ -651,28 +651,23 @@
 .l-coupon {
   width: 2rem;
   height: 2rem;
-  background: url(../images/icon/l-coupon_on.svg) center no-repeat;
+  background: url(../images/icon/l-coupon.svg) center no-repeat;
   background-size: contain;
 }
 
 .l-coupon.disabled {
-  /*opacity: 0.5;*/
-   background: url(../images/icon/l-coupon_off.svg) center no-repeat;
-   background-size: 100%;
-   opacity: 0.4;
+  opacity: 0.5;
 }
 
 .l-receipt {
-  width: 1.8rem;
-  height: 1.8rem;
-  background: url(../images/icon/l-receipt_on.svg) center no-repeat;
+  width: 2rem;
+  height: 2rem;
+  background: url(../images/icon/l-receipt.svg) center no-repeat;
   background-size: contain;
 }
 
 .l-receipt.disabled {
-  /*opacity: 0.5;*/
-   background: url(../images/icon/l-receipt_off.svg) center no-repeat;
-   background-size: 100%;
+  opacity: 0.5;
 }
 
 .l-cart {
@@ -684,7 +679,6 @@
 
 .l-cart.disabled {
   opacity: 0.5;
-  
 }
 
 .l-paging-num {
@@ -832,7 +826,7 @@
 }
 
 .l-badge-wrap {
-  /*margin-bottom: 9px;*/
+  margin-bottom: 9px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -841,9 +835,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height:22px;
 }
-.menu-detail__desc-area .l-badge-wrap{margin-bottom: 1rem;}
+
 .l-badge-wrap .l-num {
   font-weight: 500 !important;
   color: #fff;
@@ -1233,7 +1226,7 @@
   font-weight: 400;
   color: #6B6B6B;
 }
-.aside__lnb-list > li .dept > li > a.active{font-weight:800;color:#a74c00;}
+
 .aside__num {
   padding-bottom: 3rem;
 }

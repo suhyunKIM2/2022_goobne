@@ -552,6 +552,7 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 .cart__order-table .item-desc .name{margin-top:0;}
 .mo_minus_icon{display: none;    color: #dc0003;}
 
+
 @keyframes hide {
   from {
     opacity: 1;
@@ -838,8 +839,10 @@ input.input_style{border:1px solid #000;height:40px;line-height: 40px;border-rad
 }
 @media (max-width: 320px){
 .l-inner {
-    width: 100%;
+    width: 95%;
 }
+.store__search-tab .tab-desc{    padding: 1.6rem 0.5rem;}
+.search-select-area .nice-select{margin:0;}
 .menu-view .l-inner{width:95%;}
 .coupon_list li{width:auto;margin: 0;margin-bottom: 1rem;}
 .coupon_list li .coupon_list_bg{width:250px;height:151px;background-size:250px auto;}

@@ -8,7 +8,7 @@ section {
 
 /* ============ 이벤트 영역 ==============*/
 .event .color-1,.event .color-2,.event .color-3,.event .color-4,.event .color-5,.event .color-6 {
-  background:rgba(143,78,78,0.5)
+  background:rgba(50,50,50,0.5)
 }
 
 .event__tab {

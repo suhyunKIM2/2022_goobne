@@ -415,12 +415,12 @@
 }
 
 .l-map-icon.bk {
-  background: url(../images/icon/l-map-off.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
   background-size: 100%;
 }
 
 .l-map-icon.red {
-  background: url(../images/icon/l-map-on.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
   background-size: 100%;
 }
 
@@ -658,6 +658,8 @@
 .l-coupon.disabled {
   /*opacity: 0.5;*/
    background: url(../images/icon/l-coupon_off.svg) center no-repeat;
+   background-size: 100%;
+   opacity: 0.4;
 }
 
 .l-receipt {
@@ -670,6 +672,7 @@
 .l-receipt.disabled {
   /*opacity: 0.5;*/
    background: url(../images/icon/l-receipt_off.svg) center no-repeat;
+   background-size: 100%;
 }
 
 .l-cart {
@@ -681,6 +684,7 @@
 
 .l-cart.disabled {
   opacity: 0.5;
+  
 }
 
 .l-paging-num {
