@@ -2255,9 +2255,9 @@ section {
 }
 
 .menu-detail__desc-area .msg {
-  font-size: 1.3rem;
+  font-size: 0.8rem;
   font-weight: s400;
-  color: #6B6B6B;
+  color: #b4b4b4;
   margin-top: 0.8rem;
 }
 
@@ -2333,9 +2333,9 @@ section {
     font-size: 1.2rem;
   }
   .menu-detail__desc-area .msg {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     font-weight: s400;
-    color: #6B6B6B;
+    color: #b4b4b4;
     margin-top: 0.6rem;
     word-break: keep-all;
   }
@@ -2430,6 +2430,8 @@ section {
 
 .store__search-tab .tab-desc .search-btn img {
   border-radius: 3px;
+  width:auto;
+  height:100%;
 }
 
 .store__search-tab .tab-desc .input-btn-area {
@@ -2545,12 +2547,12 @@ section {
 }
 
 .store__search-tab .tab-desc .search-list-area .result-list .list .icon.bk {
-  background: url(../images/icon/l-map-off.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
   background-size: 100%;
 }
 
 .store__search-tab .tab-desc .search-list-area .result-list .list .icon.red {
-  background: url(../images/icon/l-map-on.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
   background-size: 100%;
 }
 
@@ -2654,6 +2656,7 @@ section {
   color: #1B1B1B;
   margin-bottom: 8px;
   line-height: 1.4;
+
 }
 
 .store__map .map-icon-item .desc .info .num {
@@ -2685,12 +2688,12 @@ section {
 }
 
 .store__map .map-icon-item .map-icon .icon.bk {
-  background: url(../images/icon/l-map-off.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-off.svg) center no-repeat;
   background-size: 100%;
 }
 
 .store__map .map-icon-item .map-icon .icon.red {
-  background: url(../images/icon/l-map-on.svg) center no-repeat;
+  background: url(https://www.goobne.co.kr/resources/assets/images/icon/l-map-on.svg) center no-repeat;
   background-size: 100%;
 }
 

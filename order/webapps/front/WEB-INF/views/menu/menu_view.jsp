@@ -230,7 +230,7 @@
 							<div class="half menu-detail__img-area" style="width:100%;padding:0;">
                             <div class="desc-box" style="margin-top: 2rem;">
                             	 <div class="drop-box">
-                            	 	<button type="button" class="arrow-btn">원산지<i class="arrow"></i></button>
+                            	 	<button type="button" class="arrow-btn">원산지 정보보기<i class="arrow"></i></button>
                             	 	<div class="drop">
                             	 		<button type="button" class="close"><img src="/resources/assets/images/icon/a-close.svg" alt="닫기"></button>
                             	 		<p class="drop__tit">원산지 정보보기</p>
@@ -743,7 +743,7 @@
                             </div> -->
 							
 							<div class="result-btn" style="display: block;margin: 4rem auto;text-align: center;">
-                                <!--<a href="javascript:loginnet('');">--><a href="javascript:alert('긴급 점검 중 입니다.');"><button type="button" class="l-btn" style="border-color:#D4000B;background:#D4000B;">온라인주문</button></a>
+                                <a href="javascript:loginnet('');"><button type="button" class="l-btn" style="border-color:#D4000B;background:#D4000B;">온라인주문</button></a>
                             </div>
 							
                         </div>

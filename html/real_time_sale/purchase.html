@@ -124,7 +124,7 @@
 									<li class="tab_li">모바일</li>
 									<li class="border_none"><span class="red_font code_time">01:00초</span> 후 새로고침</li>
 									<li class="border_none">
-										<a href="#" class="shadow-sm btn btn-danger btn-icon-split btn-sm refresh_btn">
+										<a class="shadow-sm btn btn-danger btn-icon-split btn-sm refresh_btn">
                                        	 	<span class="text">새로고침</span>
                                     	</a>
 									</li>
@@ -380,7 +380,7 @@ var timer = null;
 		
 	$(".refresh_btn").click(function(e){//새로고침 누를시	
 		clearInterval(timer);
-		$('#content #pur').load(location.href + '#content #pur');
+		$('#content #pur').load(location.href + '#content #pur table');
 		startTimer(leftSec, display);
 	});
 	

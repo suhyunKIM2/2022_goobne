@@ -1,6 +1,7 @@
 <%@ page contentType="text/html; charset=utf8" %>
 <%@ page import="com.gncns.goobne.config.SystemConstant" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>  
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,16 +9,18 @@
 <meta name="author" content="">
 <title><%=SystemConstant.SITE_TITLE%></title>
 <!-- Custom fonts for this template-->
-<link href="<%=SystemConstant.SITE_PATH%>/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<jsp:useBean id="today" class="java.util.Date" />
+<fmt:formatDate value="${today}" pattern="yyyyMMddhhmm" var="nowDate"/>
+<link href="<%=SystemConstant.SITE_PATH%>/resources/vendor/fontawesome-free/css/all.min.css?v=${nowDate}" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
  
             
 <!-- Custom styles for this template-->
-<link href="<%=SystemConstant.SITE_PATH%>/resources/css/sb-admin-2.min.css" rel="stylesheet">
-<link href="<%=SystemConstant.SITE_PATH%>/resources/css/common.css" rel="stylesheet">
+<link href="<%=SystemConstant.SITE_PATH%>/resources/css/sb-admin-2.min.css?v=${nowDate}" rel="stylesheet">
+<link href="<%=SystemConstant.SITE_PATH%>/resources/css/common.css?v=${nowDate}" rel="stylesheet">
 
 <!-- Select박스 for this template-->  
-<link href="<%=SystemConstant.SITE_PATH%>/resources/css/nice-select.css" rel="stylesheet">
+<link href="<%=SystemConstant.SITE_PATH%>/resources/css/nice-select.css?v=${nowDate}" rel="stylesheet">
 <script src="<%=SystemConstant.SITE_PATH%>/resources/js/jquery-1.10.2.js"></script>
 <script src="<%=SystemConstant.SITE_PATH%>/resources/js/jquery.form.js"></script>
 
@@ -26,7 +29,7 @@
 <script src="<%=SystemConstant.SITE_PATH%>/resources/js/file_common.js"></script>
 
 <!-- 공통 dev 커스텀 css -->
-<script src="<%=SystemConstant.SITE_PATH%>/resources/css/style.css"></script>
+<script src="<%=SystemConstant.SITE_PATH%>/resources/css/style.css?v=${nowDate}"></script>
 
 <!-- 공통 커스텀 js -->
 <script type="text/javascript">

@@ -63,6 +63,8 @@
 <link rel="stylesheet" href="/resources/assets/css/common_v1.css?v=${nowDate }" type="text/css" />
 <link rel="stylesheet" href="/resources/assets/css/login_out.css?v=${nowDate }" type="text/css" />
 <link rel="stylesheet" href="/resources/assets/css/main/popup_main.css?v=${nowDate }" type="text/css" />
+<link rel="stylesheet" href="/resources/assets/css/verification_code.css?v=${nowDate }" type="text/css" />
+<link rel="stylesheet" href="/resources/assets/css/my_page.css?v=${nowDate }" type="text/css" />
  
 <script src="/resources/assets/js/common/jquery-3.5.1.min.js"></script>
 <script src="/resources/assets/js/common/swiper-bundle.min.js"></script>

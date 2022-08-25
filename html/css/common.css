@@ -124,6 +124,10 @@ ul.list_ul_bottom{margin-bottom:0;}
     height:50px;
 	float:left;
   }
+  .menu_container .filebox .upload-display{    max-width: 100%;
+    height: 250px;
+    max-height: 100%;
+    display: block;}
 .upload-display_block{min-width: 250px;
     min-height: 250px;
   }
@@ -504,8 +508,22 @@ a:hover{text-decoration: none;color:#000;}
 .list_inline_calc li input[type=number] {
   -moz-appearance: textfield;
 }
-
-.left_box_mobile_sms{width:30%;float:left;border:1px solid #000;height: 732px;}
+.table_line_flex{display: flex;align-items: flex-start;}
+.left_box_mobile_sms{border: 1px solid #cfcfcf;background:#fff;margin-right:1rem;width: 100%;}
+.left_box_mobile_sms .list_table_sms th{border-top:0;border-right: 1px solid #eee;}
+.left_box_mobile_sms .list_table_sms th:first-child{min-width:60px;width: 0%;}
+.left_box_mobile_sms .list_table_sms th:last-child{border-right:0;}
+.left_box_mobile_sms .list_table_sms td{border-right:1px solid #eee;border-bottom:1px solid #eee;text-align: center;}
+.left_box_mobile_sms .list_table_sms td:last-child{border-right:0;}
+.left_box_mobile_sms .list_table_sms td,.left_box_mobile_sms .list_table_sms th{min-width: auto;}
+.left_box_mobile_sms .list_table_sms input{border: 1px solid #e8e8e8;height: 30px;line-height: 30px;padding-left:1rem;    width: 100%;margin-left: 0;}
+.left_box_mobile_sms .list_table_sms input[type="checkbox"]{width:20px;height:20px;margin-left: 5px;}
+.table_line_flex input{padding-left:1rem;}
+.table_line_flex .nice-select .list{top:auto;bottom:29px;}
+.table_line_flex .sms_title{width:100%;padding:0.5rem;margin-left:0;}
+.table_line_flex  .table_S_box#dataTable{margin:0;}
+.table_line_flex .table_S_box th,.table_line_flex .table_S_box td{min-width: auto;padding: 1%;}
+.left_line_float{float:left;}
 
 /*카테고리관리*/
 .info_text_small{font-weight:500;
@@ -686,6 +704,12 @@ a:hover{text-decoration: none;color:#000;}
 .chart-pie {
     height: calc(20rem - 100px) !important;
 }
+.table_line_flex .day_box input{width:100px;    font-size: 0.8rem; padding-left: 0;}
+.table_line_flex .left_line .nice-select{font-size:0.8rem;}
+}
+@media (max-width: 1208px){
+
+.left_line_float{float:none;}
 }
 @media (max-width: 1148px){
 .card.shadow.mb-4.mb_g{width:100%;display: inline-block;}
@@ -702,6 +726,7 @@ a:hover{text-decoration: none;color:#000;}
 .text-gray-800 {
     width: 100%;
 }
+
 }
 @media (max-width: 840px){
 .card.shadow.mb-4.mb_g .card-body{width:49%;}

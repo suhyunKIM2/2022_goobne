@@ -283,7 +283,7 @@ section.level_section{display: none !important;}
 @media (max-width: 375px){
 .list_inline_block li.box_bg_b:first-child{display: block;}
 .level_mobile{margin: auto;}
-.level_mobile .room-list-empty-room{padding:0.1rem 2rem;top:11px;}
+.level_mobile .room-list-empty-room{/*padding:0.1rem 2rem;*/top:11px;}
 }
 @media (max-width: 320px){
 .list_inline_block li.box_bg_b {
